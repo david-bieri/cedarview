@@ -34,9 +34,11 @@ const ITEMS = [
   { id: "s5", t: "Ceiling patches", ph: 1, room: "Garage", trade: "Drywall" },
   { id: "s6", t: "Dead tree removal", ph: 1, room: "Yard", trade: "Tree" },
   { id: "s7", t: "Brush removal", ph: 1, room: "Yard", trade: "Landscaping" },
+  { id: "s9", t: "Replace rotted wood siding — west side", ph: 1, room: "Exterior", trade: "Carpentry", note: "Outside the master bath and the 2nd-floor bedroom, west elevation. Open it up far enough to find where the water is getting in — rot outside a wet room is often a flashing or shower-wall leak, not weather." },
+  { id: "s8", t: "Weed killer — front yard", ph: 1, room: "Yard", trade: "Landscaping", note: "Apply 10–14 days before mulching so the weeds actually die back. Treating after the mulch goes down wastes both." },
 
   // 02 — wash
-  { id: "w1", t: "Pressure wash facade", ph: 2, room: "Exterior", trade: "Exterior", blocked: ["b6"] },
+  { id: "w1", t: "Pressure wash facade", ph: 2, room: "Exterior", trade: "Exterior", blocked: ["b6", "s9"], note: "Repair the rot first — a pressure washer will tear soft siding apart." },
   { id: "w2", t: "Pressure wash deck", ph: 2, room: "Exterior", trade: "Exterior", blocked: ["b6"] },
   { id: "w3", t: "Pressure wash balcony", ph: 2, room: "Balcony", trade: "Exterior", blocked: ["b6", "s4"] },
 
@@ -46,7 +48,8 @@ const ITEMS = [
   { id: "t3", t: "Shoe molding + trim", ph: 3, room: "Master bath", trade: "Carpentry" },
   { id: "t4", t: "Fix trim / shoe molding", ph: 3, room: "Downstairs bath", trade: "Carpentry" },
   { id: "t5", t: "Patch wall scars from gate removal", ph: 3, room: "Library", trade: "Drywall", added: true, blocked: ["s1"] },
-  { id: "t6", t: "Caulk + spot-prime all patches", ph: 3, room: "Whole house", trade: "Paint", added: true, blocked: ["t1", "t5", "s5"] },
+  { id: "t6", t: "Caulk + spot-prime all patches", ph: 3, room: "Whole house", trade: "Paint", added: true, blocked: ["t1", "t5", "t7", "s5"] },
+  { id: "t7", t: "Patch ceiling cracks", ph: 3, room: "Master bath", trade: "Drywall", note: "Check whether the crack is active before filling it — a moving or moisture-driven crack reopens through the patch." },
 
   // 04 — paint
   { id: "c1", t: "Paint ceiling", ph: 4, room: "Play room", trade: "Paint" },
@@ -60,6 +63,7 @@ const ITEMS = [
   { id: "c9", t: "Paint", ph: 4, room: "Downstairs bath", trade: "Paint", blocked: ["b7", "t4"] },
   { id: "c10", t: "Paint exterior doors", ph: 4, room: "Exterior", trade: "Paint", blocked: ["w1"] },
   { id: "c11", t: "Paint door trusses", ph: 4, room: "Garage", trade: "Paint", blocked: ["s5"] },
+  { id: "c13", t: "Prime + paint replacement siding", ph: 4, room: "Exterior", trade: "Paint", added: true, blocked: ["s9", "w1"], note: "Bare replacement boards need primer plus topcoat, or they read as a patch from the street." },
   { id: "c12", t: "Seal / stain balcony wood", ph: 4, room: "Balcony", trade: "Paint", added: true, blocked: ["w3"], note: "Sealing over dirt fails within a season." },
 
   // 05 — fixtures & hardware
@@ -96,13 +100,14 @@ const ITEMS = [
   // 07 — final clean
   { id: "z1", t: "Clean gutters, fasten nails", ph: 7, room: "Exterior", trade: "Cleaning" },
   { id: "z2", t: "Clean skylights", ph: 7, room: "Exterior", trade: "Cleaning" },
-  { id: "z3", t: "Mulch beds", ph: 7, room: "Yard", trade: "Landscaping", blocked: ["s6", "s7"], note: "Last outdoor act — mulch shows the footprints of every trade that walks past it." },
+  { id: "z2b", t: "Sweep brush debris, remove weeds", ph: 7, room: "Driveway", trade: "Landscaping", blocked: ["s7", "w1"], note: "Do the driveway cracks in the same pass as the front-yard weed killer — one mix, one trip." },
+  { id: "z3", t: "Mulch beds", ph: 7, room: "Yard", trade: "Landscaping", blocked: ["s6", "s7", "s8"], note: "Last outdoor act — mulch shows the footprints of every trade that walks past it." },
   { id: "z4", t: "Whole-house carpet cleaning", ph: 7, room: "Whole house", trade: "Cleaning", blockAll: true, note: "The final interior task, after every other person has left the house." },
 ];
 
 const STORAGE_KEY = "cedarview:punchlist:v1";
 const ROOM_ORDER = [
-  "Exterior", "Yard", "Back patio", "Back steps", "Porch", "Balcony", "Garage",
+  "Exterior", "Yard", "Driveway", "Back patio", "Back steps", "Porch", "Balcony", "Garage",
   "Mudroom", "Laundry", "Kitchen", "Family room / corridor", "Library", "Play room",
   "Master BR", "Master bath", "Main toilet", "Downstairs bath", "Bath #1", "Bath #2",
   "Airlie's room", "Clara's room", "Cole's room", "Greta's room", "Whole house",
