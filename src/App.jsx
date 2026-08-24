@@ -13,110 +13,47 @@ const PHASES = [
   { id: 7, code: "07", name: "Final clean", hint: "After everyone leaves", color: "#4F8464" },
 ];
 
-const ITEMS = [
-  // 00 — book & order
-  { id: "b1", t: "Book radon contractor", ph: 0, room: "Exterior", trade: "Radon", note: "Discharge point is a standard inspection flag — fix before it's written up." },
-  { id: "b2", t: "Book electrician — one visit", ph: 0, room: "Whole house", trade: "Electrical", note: "Ten jobs on this list are electrical. One trip charge." },
-  { id: "b3", t: "Buy all light fixtures", ph: 0, room: "Whole house", trade: "Purchase", note: "Must be in hand before the electrician arrives." },
-  { id: "b4", t: "Measure & order play room carpet", ph: 0, room: "Play room", trade: "Purchase", note: "1–3 week material lead time." },
-  { id: "b5", t: "Measure & order master blinds", ph: 0, room: "Master BR", trade: "Purchase", note: "Inside-mount width and drop." },
-  { id: "b6", t: "Book pressure washing", ph: 0, room: "Exterior", trade: "Exterior", note: "Weather-dependent. Needs a dry window plus 48–72h drying." },
-  { id: "b7", t: "Decide: paint main toilet + downstairs bath?", ph: 0, room: "Whole house", trade: "Decision", note: "Both were left as “Paint?” in the notebook. Small rooms, cheap coat, reads well in photos." },
-  { id: "b8", t: "Confirm paint colors, pull match chips", ph: 0, room: "Whole house", trade: "Decision", note: "No leftover cans? Take a 2×2in chip from an inconspicuous spot. Touch-ups in the wrong sheen look worse than none." },
-  { id: "b9", t: "Get range make + model", ph: 0, room: "Kitchen", trade: "Purchase", note: "Needed to order the knob." },
-  { id: "b10", t: "Measure master toilet rough-in", ph: 0, room: "Master bath", trade: "Purchase", note: "Wall to bolt centers, usually 12in." },
-
-  // 01 — demo & structure
-  { id: "s1", t: "Remove gate / stud supports", ph: 1, room: "Library", trade: "Carpentry" },
-  { id: "s2", t: "Rebuild back steps — 4x4s, iron rods", ph: 1, room: "Back steps", trade: "Carpentry" },
-  { id: "s3", t: "Pipe support at ceiling", ph: 1, room: "Mudroom", trade: "Carpentry" },
-  { id: "s4", t: "Balcony wood stabilization", ph: 1, room: "Balcony", trade: "Carpentry" },
-  { id: "s5", t: "Ceiling patches", ph: 1, room: "Garage", trade: "Drywall" },
-  { id: "s6", t: "Dead tree removal", ph: 1, room: "Yard", trade: "Tree" },
-  { id: "s7", t: "Brush removal", ph: 1, room: "Yard", trade: "Landscaping" },
-  { id: "s9", t: "Replace rotted wood siding — west side", ph: 1, room: "Exterior", trade: "Carpentry", note: "Outside the master bath and the 2nd-floor bedroom, west elevation. Open it up far enough to find where the water is getting in — rot outside a wet room is often a flashing or shower-wall leak, not weather." },
-  { id: "s8", t: "Weed killer — front yard", ph: 1, room: "Yard", trade: "Landscaping", note: "Apply 10–14 days before mulching so the weeds actually die back. Treating after the mulch goes down wastes both." },
-
-  // 02 — wash
-  { id: "w1", t: "Pressure wash facade", ph: 2, room: "Exterior", trade: "Exterior", blocked: ["b6", "s9"], note: "Repair the rot first — a pressure washer will tear soft siding apart." },
-  { id: "w2", t: "Pressure wash deck", ph: 2, room: "Exterior", trade: "Exterior", blocked: ["b6"] },
-  { id: "w3", t: "Pressure wash balcony", ph: 2, room: "Balcony", trade: "Exterior", blocked: ["b6", "s4"] },
-
-  // 03 — patch & trim
-  { id: "t1", t: "Patch shelf holes", ph: 3, room: "Master BR", trade: "Drywall" },
-  { id: "t2", t: "Door trim at entrance", ph: 3, room: "Master BR", trade: "Carpentry" },
-  { id: "t3", t: "Shoe molding + trim", ph: 3, room: "Master bath", trade: "Carpentry" },
-  { id: "t4", t: "Fix trim / shoe molding", ph: 3, room: "Downstairs bath", trade: "Carpentry" },
-  { id: "t5", t: "Patch wall scars from gate removal", ph: 3, room: "Library", trade: "Drywall", added: true, blocked: ["s1"] },
-  { id: "t6", t: "Caulk + spot-prime all patches", ph: 3, room: "Whole house", trade: "Paint", added: true, blocked: ["t1", "t5", "t7", "s5"] },
-  { id: "t7", t: "Patch ceiling cracks", ph: 3, room: "Master bath", trade: "Drywall", note: "Check whether the crack is active before filling it — a moving or moisture-driven crack reopens through the patch." },
-
-  // 04 — paint
-  { id: "c1", t: "Paint ceiling", ph: 4, room: "Play room", trade: "Paint" },
-  { id: "c2", t: "Paint drywall — primer + 2 coats", ph: 4, room: "Airlie's room", trade: "Paint", note: "The only room needing a full coat rather than touch-up." },
-  { id: "c3", t: "Paint touch-up", ph: 4, room: "Clara's room", trade: "Paint", blocked: ["b8"] },
-  { id: "c4", t: "Paint touch-up", ph: 4, room: "Cole's room", trade: "Paint", blocked: ["b8"] },
-  { id: "c5", t: "Paint touch-up", ph: 4, room: "Greta's room", trade: "Paint", blocked: ["b8"] },
-  { id: "c6", t: "Paint touch-up", ph: 4, room: "Family room / corridor", trade: "Paint", blocked: ["b8"] },
-  { id: "c7", t: "Trim repaint", ph: 4, room: "Master bath", trade: "Paint", blocked: ["t3"] },
-  { id: "c8", t: "Paint", ph: 4, room: "Main toilet", trade: "Paint", blocked: ["b7"] },
-  { id: "c9", t: "Paint", ph: 4, room: "Downstairs bath", trade: "Paint", blocked: ["b7", "t4"] },
-  { id: "c10", t: "Paint exterior doors", ph: 4, room: "Exterior", trade: "Paint", blocked: ["w1"] },
-  { id: "c11", t: "Paint door trusses", ph: 4, room: "Garage", trade: "Paint", blocked: ["s5"] },
-  { id: "c13", t: "Prime + paint replacement siding", ph: 4, room: "Exterior", trade: "Paint", added: true, blocked: ["s9", "w1"], note: "Bare replacement boards need primer plus topcoat, or they read as a patch from the street." },
-  { id: "c12", t: "Seal / stain balcony wood", ph: 4, room: "Balcony", trade: "Paint", added: true, blocked: ["w3"], note: "Sealing over dirt fails within a season." },
-
-  // 05 — fixtures & hardware
-  { id: "f1", t: "Overhead lights", ph: 5, room: "Kitchen", trade: "Electrical", blocked: ["b2", "b3"] },
-  { id: "f2", t: "Light switch rewiring", ph: 5, room: "Kitchen", trade: "Electrical", blocked: ["b2"] },
-  { id: "f3", t: "Fix lights", ph: 5, room: "Library", trade: "Electrical", blocked: ["b2", "b3"] },
-  { id: "f4", t: "Replace vanity lights", ph: 5, room: "Master bath", trade: "Electrical", blocked: ["b2", "b3"] },
-  { id: "f5", t: "Jacuzzi switch fix / replace", ph: 5, room: "Master bath", trade: "Electrical", blocked: ["b2"], note: "Confirm GFCI requirement for the circuit." },
-  { id: "f6", t: "Fix light / replace", ph: 5, room: "Main toilet", trade: "Electrical", blocked: ["b2", "b3"] },
-  { id: "f7", t: "Shower light fix", ph: 5, room: "Bath #1", trade: "Electrical", blocked: ["b2", "b3"], note: "Must be damp/wet-rated." },
-  { id: "f8", t: "Replace lights", ph: 5, room: "Balcony", trade: "Electrical", blocked: ["b2", "b3"], note: "Exterior-rated." },
-  { id: "f9", t: "Light fixtures — front & back", ph: 5, room: "Exterior", trade: "Electrical", blocked: ["b2", "b3"] },
-  { id: "f10", t: "Smoke detector replacement", ph: 5, room: "Clara's room", trade: "Electrical", blocked: ["b2"], note: "If the house is on interconnected hardwired units, match the model or replace all together." },
-  { id: "f11", t: "Outlet cover", ph: 5, room: "Family room / corridor", trade: "Hardware", blocked: ["c6"] },
-  { id: "f12", t: "Replace door handles", ph: 5, room: "Whole house", trade: "Hardware", note: "Count every door first. One finish throughout." },
-  { id: "f13", t: "Replace exterior door handle", ph: 5, room: "Exterior", trade: "Hardware", blocked: ["c10"] },
-  { id: "f14", t: "Drawer handle replacement", ph: 5, room: "Main toilet", trade: "Hardware" },
-  { id: "f15", t: "Drawer handle replacement", ph: 5, room: "Downstairs bath", trade: "Hardware" },
-  { id: "f16", t: "Drawer handle", ph: 5, room: "Bath #1", trade: "Hardware" },
-  { id: "f17", t: "Towel rack", ph: 5, room: "Bath #2", trade: "Hardware" },
-  { id: "f18", t: "Install blinds", ph: 5, room: "Master BR", trade: "Hardware", blocked: ["b5"] },
-  { id: "f19", t: "Range knob replacement", ph: 5, room: "Kitchen", trade: "Hardware", blocked: ["b9"] },
-  { id: "f20", t: "Replace toilet", ph: 5, room: "Master bath", trade: "Plumbing", blocked: ["b10"] },
-  { id: "f21", t: "Faucet plate", ph: 5, room: "Exterior", trade: "Plumbing", note: "Measure hole spacing before buying." },
-  { id: "f22", t: "Fix umbrella holder", ph: 5, room: "Back patio", trade: "Hardware" },
-  { id: "f23", t: "Porch screen", ph: 5, room: "Porch", trade: "Carpentry" },
-  { id: "f24", t: "Balcony screen door", ph: 5, room: "Balcony", trade: "Carpentry", note: "Measure the opening. Repair vs. replace." },
-  { id: "f25", t: "Fridge butter tray glue", ph: 5, room: "Kitchen", trade: "Hardware" },
-  { id: "f26", t: "Dryer cord connection", ph: 5, room: "Laundry", trade: "Electrical", blocked: ["b2"], note: "Match the cord to the receptacle — 3-prong and 4-prong are not interchangeable. Check which the outlet is before buying." },
-
-  // 06 — flooring
-  { id: "r1", t: "Install carpet", ph: 6, room: "Play room", trade: "Flooring", blocked: ["c1", "b4"], note: "Ceiling paint first. Reversing this is the most expensive mistake available on this list." },
-
-  // 07 — final clean
-  { id: "z1", t: "Clean gutters, fasten nails", ph: 7, room: "Exterior", trade: "Cleaning" },
-  { id: "z2", t: "Clean skylights", ph: 7, room: "Exterior", trade: "Cleaning" },
-  { id: "z2b", t: "Sweep brush debris, remove weeds", ph: 7, room: "Driveway", trade: "Landscaping", blocked: ["s7", "w1"], note: "Do the driveway cracks in the same pass as the front-yard weed killer — one mix, one trip." },
-  { id: "z3", t: "Mulch beds", ph: 7, room: "Yard", trade: "Landscaping", blocked: ["s6", "s7", "s8"], note: "Last outdoor act — mulch shows the footprints of every trade that walks past it." },
-  { id: "z4", t: "Whole-house carpet cleaning", ph: 7, room: "Whole house", trade: "Cleaning", blockAll: true, note: "The final interior task, after every other person has left the house." },
+const ROOMS = [
+  { n: "Family room", f: "Basement" },
+  { n: "Bedroom #4 (Airlie)", f: "Basement" },
+  { n: "Bedroom #5 (Greta)", f: "Basement" },
+  { n: "Bedroom #6 (Clara)", f: "Basement" },
+  { n: "Bedroom #7 (Cole)", f: "Basement" },
+  { n: "Bathroom #4", f: "Basement" },
+  { n: "Mudroom", f: "Basement" },
+  { n: "Master bedroom", f: "First floor" },
+  { n: "Master bathroom", f: "First floor" },
+  { n: "Dining room", f: "First floor" },
+  { n: "Living room", f: "First floor" },
+  { n: "Library", f: "First floor" },
+  { n: "TV room", f: "First floor" },
+  { n: "Kitchen", f: "First floor" },
+  { n: "Breakfast nook", f: "First floor" },
+  { n: "Screened porch", f: "First floor" },
+  { n: "Laundry room", f: "First floor" },
+  { n: "Half-bath", f: "First floor" },
+  { n: "Bedroom #1", f: "Second floor" },
+  { n: "Bedroom #2 (Daisy)", f: "Second floor" },
+  { n: "Bedroom #3 (Heidi)", f: "Second floor" },
+  { n: "Play room", f: "Second floor" },
+  { n: "Bathroom #1", f: "Second floor" },
+  { n: "Bathroom #2", f: "Second floor" },
+  { n: "Balcony", f: "Second floor" },
+  { n: "Garage", f: "Outside" },
+  { n: "Storage room", f: "Outside" },
+  { n: "Exterior", f: "Outside" },
+  { n: "Yard", f: "Outside" },
+  { n: "Driveway", f: "Outside" },
+  { n: "Back patio", f: "Outside" },
+  { n: "Back steps", f: "Outside" },
+  { n: "Whole house", f: "Whole house" },
 ];
 
-const STORAGE_KEY = "cedarview:punchlist:v1";
-const ROOM_ORDER = [
-  "Exterior", "Yard", "Driveway", "Back patio", "Back steps", "Porch", "Balcony", "Garage",
-  "Mudroom", "Laundry", "Kitchen", "Family room / corridor", "Library", "Play room",
-  "Master BR", "Master bath", "Main toilet", "Downstairs bath", "Bath #1", "Bath #2",
-  "Airlie's room", "Clara's room", "Cole's room", "Greta's room", "Whole house",
-];
-
-// rooms you add yourself aren't in ROOM_ORDER — sort them to the end, not the front
+const FLOOR_ORDER = ["Basement", "First floor", "Second floor", "Outside", "Whole house"];
+const roomFloor = (r) => (ROOMS.find((x) => x.n === r) || {}).f || "Unassigned";
 const roomRank = (r) => {
-  const i = ROOM_ORDER.indexOf(r);
-  return i === -1 ? ROOM_ORDER.length : i;
+  const i = ROOMS.findIndex((x) => x.n === r);
+  return i === -1 ? ROOMS.length : i;
 };
 
 const TRADES = [
@@ -124,14 +61,115 @@ const TRADES = [
   "Flooring", "Hardware", "Landscaping", "Paint", "Plumbing", "Purchase", "Radon", "Tree",
 ];
 
-const blankDraft = { t: "", room: "", ph: 5, trade: "", note: "" };
+// sz: S = under an hour, M = half a day, L = a full day or more. Rough, for planning only.
+const SIZES = { S: "under 1h", M: "half day", L: "full day+" };
 
+const blankDraft = { t: "", room: "", ph: 5, trade: "", sz: "S" };
+
+const ITEMS = [
+  // 00 — book & order
+  { id: "b1", t: "Book radon contractor", ph: 0, room: "Exterior", trade: "Radon", sz: "S", sub: true, note: "Discharge point is a standard inspection flag — fix before it's written up." },
+  { id: "b2", t: "Book electrician — one visit", ph: 0, room: "Whole house", trade: "Electrical", sz: "S", sub: true, note: "Ten jobs on this list are electrical. One trip charge." },
+  { id: "b3", t: "Buy all light fixtures", ph: 0, room: "Whole house", trade: "Purchase", sz: "M", note: "Must be in hand before the electrician arrives." },
+  { id: "b4", t: "Measure & order carpet", ph: 0, room: "Play room", trade: "Purchase", sz: "S", note: "1–3 week material lead time." },
+  { id: "b5", t: "Measure & order blinds", ph: 0, room: "Master bedroom", trade: "Purchase", sz: "S", note: "Inside-mount width and drop." },
+  { id: "b6", t: "Book pressure washing", ph: 0, room: "Exterior", trade: "Exterior", sz: "S", note: "Or rent a washer and do it yourself — it's a full day for facade, deck and balcony." },
+  { id: "b7", t: "Decide: paint half-bath + Bathroom #4?", ph: 0, room: "Whole house", trade: "Decision", sz: "S", note: "Both were left as “Paint?” in the notebook. Small rooms, cheap coat, reads well in photos." },
+  { id: "b8", t: "Confirm paint colors, pull match chips", ph: 0, room: "Whole house", trade: "Decision", sz: "S", note: "No leftover cans? Take a 2×2in chip from an inconspicuous spot. Touch-ups in the wrong sheen look worse than none." },
+  { id: "b9", t: "Get range make + model", ph: 0, room: "Kitchen", trade: "Purchase", sz: "S", note: "Needed to order the knob." },
+  { id: "b10", t: "Measure toilet rough-in", ph: 0, room: "Master bathroom", trade: "Purchase", sz: "S", note: "Wall to bolt centers, usually 12in." },
+
+  // 01 — demo & structure
+  { id: "s1", t: "Remove gate / stud supports", ph: 1, room: "Library", trade: "Carpentry", sz: "M" },
+  { id: "s2", t: "Rebuild back steps — 4x4s, iron rods", ph: 1, room: "Back steps", trade: "Carpentry", sz: "L" },
+  { id: "s3", t: "Pipe support at ceiling", ph: 1, room: "Mudroom", trade: "Carpentry", sz: "S" },
+  { id: "s4", t: "Balcony wood stabilization", ph: 1, room: "Balcony", trade: "Carpentry", sz: "L" },
+  { id: "s5", t: "Ceiling patches", ph: 1, room: "Garage", trade: "Drywall", sz: "M" },
+  { id: "s9", t: "Replace rotted wood siding — west side", ph: 1, room: "Exterior", trade: "Carpentry", sz: "L", note: "Outside the master bath and Bedroom #1/#2 level, west elevation. Open it up far enough to find where the water is getting in — rot outside a wet room is often a flashing or shower-wall leak, not weather." },
+  { id: "s6", t: "Dead tree removal", ph: 1, room: "Yard", trade: "Tree", sz: "L", sub: true, note: "The one job on this list where DIY risk is real. Sub it unless the tree is small and clear of everything." },
+  { id: "s7", t: "Brush removal", ph: 1, room: "Yard", trade: "Landscaping", sz: "M" },
+  { id: "s8", t: "Weed killer — front yard", ph: 1, room: "Yard", trade: "Landscaping", sz: "S", note: "Apply 10–14 days before mulching so the weeds actually die back. Treating after the mulch goes down wastes both." },
+
+  // 02 — wash
+  { id: "w1", t: "Pressure wash facade", ph: 2, room: "Exterior", trade: "Exterior", sz: "M", blocked: ["b6", "s9"], note: "Repair the rot first — a pressure washer will tear soft siding apart." },
+  { id: "w2", t: "Pressure wash deck", ph: 2, room: "Exterior", trade: "Exterior", sz: "M", blocked: ["b6"] },
+  { id: "w3", t: "Pressure wash balcony", ph: 2, room: "Balcony", trade: "Exterior", sz: "S", blocked: ["b6", "s4"] },
+
+  // 03 — patch & trim
+  { id: "t1", t: "Patch shelf holes", ph: 3, room: "Master bedroom", trade: "Drywall", sz: "S" },
+  { id: "t2", t: "Door trim at entrance", ph: 3, room: "Master bedroom", trade: "Carpentry", sz: "M" },
+  { id: "t7", t: "Patch ceiling cracks", ph: 3, room: "Master bathroom", trade: "Drywall", sz: "M", note: "Check whether the crack is active before filling it — a moving or moisture-driven crack reopens through the patch. Worth connecting to the siding rot on the same elevation." },
+  { id: "t3", t: "Shoe molding + trim", ph: 3, room: "Master bathroom", trade: "Carpentry", sz: "M" },
+  { id: "t4", t: "Fix trim / shoe molding", ph: 3, room: "Bathroom #4", trade: "Carpentry", sz: "M" },
+  { id: "t5", t: "Patch wall scars from gate removal", ph: 3, room: "Library", trade: "Drywall", sz: "M", added: true, blocked: ["s1"] },
+  { id: "t6", t: "Caulk + spot-prime all patches", ph: 3, room: "Whole house", trade: "Paint", sz: "M", added: true, blocked: ["t1", "t5", "t7", "s5"], note: "One pass with the caulk gun through every patched room. Don't do this room by room." },
+
+  // 04 — paint
+  { id: "c1", t: "Paint ceiling", ph: 4, room: "Play room", trade: "Paint", sz: "M" },
+  { id: "c14", t: "Paint walls", ph: 4, room: "TV room", trade: "Paint", sz: "M", blocked: ["b8"] },
+  { id: "c15", t: "Paint touch-up", ph: 4, room: "Bedroom #1", trade: "Paint", sz: "S", blocked: ["b8"] },
+  { id: "c16", t: "Paint touch-up", ph: 4, room: "Bedroom #2 (Daisy)", trade: "Paint", sz: "S", blocked: ["b8"] },
+  { id: "c17", t: "Paint touch-up", ph: 4, room: "Bedroom #3 (Heidi)", trade: "Paint", sz: "S", blocked: ["b8"] },
+  { id: "c2", t: "Paint drywall — primer + 2 coats", ph: 4, room: "Bedroom #4 (Airlie)", trade: "Paint", sz: "L", note: "The only room needing a full coat rather than touch-up." },
+  { id: "c5", t: "Paint touch-up", ph: 4, room: "Bedroom #5 (Greta)", trade: "Paint", sz: "S", blocked: ["b8"] },
+  { id: "c3", t: "Paint touch-up", ph: 4, room: "Bedroom #6 (Clara)", trade: "Paint", sz: "S", blocked: ["b8"] },
+  { id: "c4", t: "Paint touch-up", ph: 4, room: "Bedroom #7 (Cole)", trade: "Paint", sz: "S", blocked: ["b8"] },
+  { id: "c6", t: "Paint touch-up + corridor", ph: 4, room: "Family room", trade: "Paint", sz: "M", blocked: ["b8"] },
+  { id: "c7", t: "Trim repaint", ph: 4, room: "Master bathroom", trade: "Paint", sz: "M", blocked: ["t3", "t7"] },
+  { id: "c8", t: "Paint", ph: 4, room: "Half-bath", trade: "Paint", sz: "M", blocked: ["b7"] },
+  { id: "c9", t: "Paint", ph: 4, room: "Bathroom #4", trade: "Paint", sz: "M", blocked: ["b7", "t4"] },
+  { id: "c10", t: "Paint exterior doors", ph: 4, room: "Exterior", trade: "Paint", sz: "M", blocked: ["w1"] },
+  { id: "c13", t: "Prime + paint replacement siding", ph: 4, room: "Exterior", trade: "Paint", sz: "M", added: true, blocked: ["s9", "w1"], note: "Bare replacement boards need primer plus topcoat, or they read as a patch from the street." },
+  { id: "c11", t: "Paint door trusses", ph: 4, room: "Garage", trade: "Paint", sz: "M", blocked: ["s5"] },
+  { id: "c12", t: "Seal / stain balcony wood", ph: 4, room: "Balcony", trade: "Paint", sz: "M", added: true, blocked: ["w3"] },
+
+  // 05 — fixtures & hardware
+  { id: "f1", t: "Overhead lights", ph: 5, room: "Kitchen", trade: "Electrical", sz: "S", sub: true, blocked: ["b2", "b3"] },
+  { id: "f2", t: "Light switch rewiring", ph: 5, room: "Kitchen", trade: "Electrical", sz: "S", sub: true, blocked: ["b2"] },
+  { id: "f3", t: "Fix lights", ph: 5, room: "Library", trade: "Electrical", sz: "S", sub: true, blocked: ["b2", "b3"] },
+  { id: "f4", t: "Replace vanity lights", ph: 5, room: "Master bathroom", trade: "Electrical", sz: "S", sub: true, blocked: ["b2", "b3", "c7"] },
+  { id: "f5", t: "Jacuzzi switch fix / replace", ph: 5, room: "Master bathroom", trade: "Electrical", sz: "S", sub: true, blocked: ["b2"], note: "Confirm GFCI requirement for the circuit." },
+  { id: "f6", t: "Fix light / replace", ph: 5, room: "Half-bath", trade: "Electrical", sz: "S", sub: true, blocked: ["b2", "b3", "c8"] },
+  { id: "f7", t: "Shower light fix", ph: 5, room: "Bathroom #1", trade: "Electrical", sz: "S", sub: true, blocked: ["b2", "b3"], note: "Must be damp/wet-rated." },
+  { id: "f8", t: "Replace lights", ph: 5, room: "Balcony", trade: "Electrical", sz: "S", sub: true, blocked: ["b2", "b3"], note: "Exterior-rated." },
+  { id: "f9", t: "Light fixtures — front & back", ph: 5, room: "Exterior", trade: "Electrical", sz: "S", sub: true, blocked: ["b2", "b3", "c10"] },
+  { id: "f10", t: "Smoke detector replacement", ph: 5, room: "Bedroom #6 (Clara)", trade: "Electrical", sz: "S", sub: true, blocked: ["b2"], note: "If the house is on interconnected hardwired units, match the model or replace all together." },
+  { id: "f26", t: "Dryer cord connection", ph: 5, room: "Laundry room", trade: "Electrical", sz: "S", sub: true, blocked: ["b2"], note: "Match the cord to the receptacle — 3-prong and 4-prong are not interchangeable. Check which the outlet is before buying." },
+  { id: "f20", t: "Replace toilet", ph: 5, room: "Master bathroom", trade: "Plumbing", sz: "M", sub: true, blocked: ["b10", "c7"], note: "DIY-able in a half day if the flange is sound. Sub it if you'd rather not find out mid-job." },
+  { id: "f21", t: "Faucet plate", ph: 5, room: "Exterior", trade: "Plumbing", sz: "S", note: "Measure hole spacing before buying." },
+  { id: "f11", t: "Outlet cover", ph: 5, room: "Family room", trade: "Hardware", sz: "S", blocked: ["c6"] },
+  { id: "f12", t: "Replace door handles", ph: 5, room: "Whole house", trade: "Hardware", sz: "L", note: "Count every door first. One finish throughout. Do all of them in one session — it's the same three motions each time." },
+  { id: "f13", t: "Replace exterior door handle", ph: 5, room: "Exterior", trade: "Hardware", sz: "S", blocked: ["c10"] },
+  { id: "f14", t: "Drawer handle replacement", ph: 5, room: "Half-bath", trade: "Hardware", sz: "S", blocked: ["c8"] },
+  { id: "f15", t: "Drawer handle replacement", ph: 5, room: "Bathroom #4", trade: "Hardware", sz: "S", blocked: ["c9"] },
+  { id: "f16", t: "Drawer handle", ph: 5, room: "Bathroom #1", trade: "Hardware", sz: "S" },
+  { id: "f17", t: "Towel rack", ph: 5, room: "Bathroom #2", trade: "Hardware", sz: "S" },
+  { id: "f18", t: "Install blinds", ph: 5, room: "Master bedroom", trade: "Hardware", sz: "S", blocked: ["b5"] },
+  { id: "f19", t: "Range knob replacement", ph: 5, room: "Kitchen", trade: "Hardware", sz: "S", blocked: ["b9"] },
+  { id: "f25", t: "Fridge butter tray glue", ph: 5, room: "Kitchen", trade: "Hardware", sz: "S" },
+  { id: "f22", t: "Fix umbrella holder", ph: 5, room: "Back patio", trade: "Hardware", sz: "S" },
+  { id: "f23", t: "Porch screen", ph: 5, room: "Screened porch", trade: "Carpentry", sz: "M" },
+  { id: "f24", t: "Balcony screen door", ph: 5, room: "Balcony", trade: "Carpentry", sz: "M", note: "Measure the opening. Repair vs. replace." },
+
+  // 06 — flooring
+  { id: "r1", t: "Install carpet", ph: 6, room: "Play room", trade: "Flooring", sz: "M", sub: true, blocked: ["c1", "b4"], note: "Usually bundled with the carpet purchase. Ceiling paint first — reversing this is the most expensive mistake available on this list." },
+
+  // 07 — final clean
+  { id: "z1", t: "Clean gutters, fasten nails", ph: 7, room: "Exterior", trade: "Cleaning", sz: "M" },
+  { id: "z2", t: "Clean skylights", ph: 7, room: "Exterior", trade: "Cleaning", sz: "S" },
+  { id: "z2b", t: "Sweep brush debris, remove weeds", ph: 7, room: "Driveway", trade: "Landscaping", sz: "S", blocked: ["s7", "w1"], note: "Do the driveway cracks in the same pass as the front-yard weed killer — one mix, one trip." },
+  { id: "z3", t: "Mulch beds", ph: 7, room: "Yard", trade: "Landscaping", sz: "L", blocked: ["s6", "s7", "s8"], note: "Last outdoor act — mulch shows the footprints of every trade that walks past it." },
+  { id: "z4", t: "Whole-house carpet cleaning", ph: 7, room: "Whole house", trade: "Cleaning", sz: "M", sub: true, blockAll: true, note: "The final interior task, after every other person has left the house." },
+];
+
+const STORAGE_KEY = "cedarview:punchlist:v2";
 /* ---------------------------------- app ---------------------------------- */
 
 export default function PunchList() {
   const [done, setDone] = useState({});
   const [notes, setNotes] = useState({});
   const [custom, setCustom] = useState([]);
+  const [owners, setOwners] = useState({});
   const [adding, setAdding] = useState(false);
   const [draft, setDraft] = useState(blankDraft);
   const [loaded, setLoaded] = useState(false);
@@ -151,6 +189,7 @@ export default function PunchList() {
           setDone(parsed.done || {});
           setNotes(parsed.notes || {});
           setCustom(parsed.custom || []);
+          setOwners(parsed.owners || {});
         }
       } catch (e) {
         /* first run — nothing saved yet */
@@ -159,12 +198,14 @@ export default function PunchList() {
     })();
   }, []);
 
-  const persist = async (nextDone, nextNotes, nextCustom = custom) => {
+  const persist = async (nextDone, nextNotes, nextCustom = custom, nextOwners = owners) => {
     setSaveState("saving");
     try {
       localStorage.setItem(
         STORAGE_KEY,
-        JSON.stringify({ done: nextDone, notes: nextNotes, custom: nextCustom })
+        JSON.stringify({
+          done: nextDone, notes: nextNotes, custom: nextCustom, owners: nextOwners,
+        })
       );
       setSaveState("saved");
       setTimeout(() => setSaveState("idle"), 1200);
@@ -227,6 +268,21 @@ export default function PunchList() {
     persist(nextDone, nextNotes, nextCustom);
   };
 
+  // who does it: defaults come from the item (electrical/plumbing/specialist = sub),
+  // and any override the user has set wins.
+  const ownerOf = (item) => owners[item.id] || { mode: item.sub ? "sub" : "diy", who: "" };
+
+  const setOwner = (id, patch) => {
+    const cur = owners[id] || {};
+    const base = allItems.find((i) => i.id === id);
+    const next = {
+      ...owners,
+      [id]: { mode: base.sub ? "sub" : "diy", who: "", ...cur, ...patch },
+    };
+    setOwners(next);
+    persist(done, notes, custom, next);
+  };
+
   const isBlocked = (item) => {
     if (item.blockAll) return allItems.some((o) => o.ph !== 7 && !done[o.id]);
     if (!item.blocked) return false;
@@ -268,6 +324,18 @@ export default function PunchList() {
   });
 
   const groups = useMemo(() => {
+    if (groupBy === "trade") {
+      const ts = [...new Set(visible.map((i) => i.trade))].sort();
+      return ts.map((t) => ({
+        key: t,
+        label: t,
+        sub: `${allItems.filter((i) => i.trade === t && done[i.id]).length}/${
+          allItems.filter((i) => i.trade === t).length
+        } complete`,
+        color: muted,
+        items: visible.filter((i) => i.trade === t),
+      }));
+    }
     if (groupBy === "phase") {
       return PHASES.map((p) => ({
         key: p.id,
@@ -283,19 +351,21 @@ export default function PunchList() {
     return shown.map((r) => ({
       key: r,
       label: r,
-      sub: `${allItems.filter((i) => i.room === r && done[i.id]).length}/${
-        allItems.filter((i) => i.room === r).length
-      } complete`,
-      color: "#6E7873",
+      sub: roomFloor(r),
+      color: muted,
       items: visible.filter((i) => i.room === r),
     }));
   }, [visible, groupBy, done, allItems]);
 
   const copyOpen = () => {
-    const lines = allItems.filter((i) => !done[i.id] && !isBlocked(i)).map(
-      (i) => `- ${i.room}: ${i.t}`
-    );
-    const text = `Cedarview — ready to start (${lines.length})\n\n${lines.join("\n")}`;
+    const ready = allItems.filter((i) => !done[i.id] && !isBlocked(i));
+    const mine = ready.filter((i) => ownerOf(i).mode === "diy");
+    const subs = ready.filter((i) => ownerOf(i).mode === "sub");
+    const fmt = (list) =>
+      list.map((i) => `- ${i.room} (${roomFloor(i.room)}): ${i.t}`).join("\n");
+    const text =
+      `Cedarview — ready to start\n\nMe (${mine.length})\n${fmt(mine)}` +
+      (subs.length ? `\n\nSubcontract (${subs.length})\n${fmt(subs)}` : "");
     try {
       navigator.clipboard.writeText(text);
       setCopied(true);
@@ -374,8 +444,9 @@ export default function PunchList() {
       <div style={S.controls}>
         <div style={S.segment}>
           {[
-            ["phase", "By phase"],
-            ["room", "By room"],
+            ["phase", "Phase"],
+            ["room", "Room"],
+            ["trade", "Trade"],
           ].map(([v, l]) => (
             <button
               key={v}
@@ -507,6 +578,7 @@ export default function PunchList() {
               const isDone = !!done[i.id];
               const blocked = !isDone && isBlocked(i);
               const expanded = open === i.id;
+              const own = ownerOf(i);
               return (
                 <div
                   key={i.id}
@@ -544,10 +616,25 @@ export default function PunchList() {
                         {i.mine && <span style={S.addedTag}>yours</span>}
                       </div>
                       <div style={S.itemMeta}>
-                        {groupBy === "phase" ? i.room : `${P(i.ph).code} ${P(i.ph).name}`}
+                        {groupBy === "room"
+                          ? `${P(i.ph).code} ${P(i.ph).name}`
+                          : `${i.room} · ${roomFloor(i.room)}`}
                         <span style={S.dot}>·</span>
                         {i.trade}
+                        <span style={S.dot}>·</span>
+                        {SIZES[i.sz] || ""}
                         {notes[i.id] ? <span style={S.hasNote}>· note</span> : null}
+                      </div>
+                      <div style={S.ownerLine}>
+                        <span
+                          style={{
+                            ...S.ownerChip,
+                            borderColor: own.mode === "sub" ? "#8A5A2B" : "#6E7873",
+                            color: own.mode === "sub" ? "#8A5A2B" : muted,
+                          }}
+                        >
+                          {own.mode === "sub" ? own.who || "Subcontract" : "Me"}
+                        </span>
                       </div>
                       {blocked && (
                         <div style={S.blocked}>Waiting on — {blockerNames(i)}</div>
@@ -557,6 +644,30 @@ export default function PunchList() {
 
                   {expanded && (
                     <div style={S.expand}>
+                      <div style={S.ownerRow}>
+                        <div style={S.segment}>
+                          {[
+                            ["diy", "I'll do it"],
+                            ["sub", "Subcontract"],
+                          ].map(([m, l]) => (
+                            <button
+                              key={m}
+                              onClick={() => setOwner(i.id, { mode: m })}
+                              style={{ ...S.segBtn, ...(own.mode === m ? S.segBtnOn : {}) }}
+                            >
+                              {l}
+                            </button>
+                          ))}
+                        </div>
+                        {own.mode === "sub" && (
+                          <input
+                            value={own.who}
+                            onChange={(e) => setOwner(i.id, { who: e.target.value })}
+                            placeholder="Who — name or company"
+                            style={{ ...S.input, flex: 1 }}
+                          />
+                        )}
+                      </div>
                       {i.note && <p style={S.builtNote}>{i.note}</p>}
                       <textarea
                         value={notes[i.id] || ""}
@@ -740,6 +851,12 @@ const S = {
     color: muted, border: `1px solid #C6CCC7`, borderRadius: 2, padding: "1px 4px", marginLeft: 7,
   },
   itemMeta: { fontFamily: mono, fontSize: 10.5, color: muted, marginTop: 3 },
+  ownerLine: { marginTop: 5 },
+  ownerChip: {
+    display: "inline-block", fontFamily: mono, fontSize: 9.5, letterSpacing: "0.06em",
+    textTransform: "uppercase", border: "1px solid", borderRadius: 2, padding: "1px 5px",
+  },
+  ownerRow: { display: "flex", gap: 8, alignItems: "center", marginBottom: 9, flexWrap: "wrap" },
   dot: { margin: "0 5px" },
   hasNote: { marginLeft: 5 },
   blocked: {
