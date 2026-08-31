@@ -87,6 +87,7 @@ const ITEMS = [
   { id: "s3", t: "Pipe support at ceiling", ph: 1, room: "Mudroom", trade: "Carpentry", sz: "S" },
   { id: "s4", t: "Balcony wood stabilization", ph: 1, room: "Balcony", trade: "Carpentry", sz: "L" },
   { id: "s5", t: "Ceiling patches", ph: 1, room: "Garage", trade: "Drywall", sz: "M" },
+  { id: "s13", t: "Remove coax cables", ph: 1, room: "Play room", trade: "Electrical", sz: "S", added: true, note: "Low-voltage, nothing live — pull the cable back and take the mud rings out with it. If any of them turns out to be a real junction box rather than a cable pass-through, leave it accessible and fit a blank plate instead of burying it." },
   { id: "s9", t: "Replace rotted wood siding — west side", ph: 1, room: "Exterior", trade: "Carpentry", sz: "L", note: "Outside the master bath and Bedroom #1/#2 level, west elevation. Open it up far enough to find where the water is getting in — rot outside a wet room is often a flashing or shower-wall leak, not weather." },
   { id: "s10", t: "Replace failing deck boards", ph: 1, room: "Deck", trade: "Carpentry", sz: "L", added: true, note: "Before the deck gets pressure washed — no point cleaning boards that are coming out. Look at the joists while the deck is open; soft boards usually mean water has been sitting on the framing underneath." },
   { id: "s11", t: "Fix failing mailbox top", ph: 1, room: "Exterior", trade: "Carpentry", sz: "S", added: true },
@@ -106,11 +107,13 @@ const ITEMS = [
   { id: "t7", t: "Patch ceiling cracks", ph: 3, room: "Master bathroom", trade: "Drywall", sz: "M", note: "Check whether the crack is active before filling it — a moving or moisture-driven crack reopens through the patch. Worth connecting to the siding rot on the same elevation." },
   { id: "t3", t: "Shoe molding + trim", ph: 3, room: "Master bathroom", trade: "Carpentry", sz: "M" },
   { id: "t4", t: "Fix trim / shoe molding", ph: 3, room: "Bathroom #4", trade: "Carpentry", sz: "M" },
+  { id: "t8", t: "Patch coax box holes", ph: 3, room: "Play room", trade: "Drywall", sz: "M", added: true, blocked: ["s13"], note: "Half a day of elapsed time, not of work — mesh or a plug cut to fit, then two or three thin coats with drying time between. Rushing it in one thick coat is what makes a patch show through the paint." },
   { id: "t5", t: "Patch wall scars from gate removal", ph: 3, room: "Library", trade: "Drywall", sz: "M", added: true, blocked: ["s1"] },
-  { id: "t6", t: "Caulk + spot-prime all patches", ph: 3, room: "Whole house", trade: "Paint", sz: "M", added: true, blocked: ["t1", "t5", "t7", "s5"], note: "One pass with the caulk gun through every patched room. Don't do this room by room." },
+  { id: "t6", t: "Caulk + spot-prime all patches", ph: 3, room: "Whole house", trade: "Paint", sz: "M", added: true, blocked: ["t1", "t5", "t7", "t8", "s5"], note: "One pass with the caulk gun through every patched room. Don't do this room by room." },
 
   // 04 — paint
   { id: "c1", t: "Paint ceiling", ph: 4, room: "Play room", trade: "Paint", sz: "M" },
+  { id: "c19", t: "Paint touch-up", ph: 4, room: "Play room", trade: "Paint", sz: "S", added: true, blocked: ["t8", "b8"], note: "Spot coat over the patched box holes. Feather it well past the patch — a primed patch under one thin dab still reads as a circle in raking light." },
   { id: "c14", t: "Paint walls", ph: 4, room: "TV room", trade: "Paint", sz: "M", blocked: ["b8"] },
   { id: "c15", t: "Paint touch-up", ph: 4, room: "Bedroom #1", trade: "Paint", sz: "S", blocked: ["b8"] },
   { id: "c16", t: "Paint touch-up", ph: 4, room: "Bedroom #2 (Daisy)", trade: "Paint", sz: "S", blocked: ["b8"] },
@@ -160,7 +163,7 @@ const ITEMS = [
   { id: "f24", t: "Balcony screen door", ph: 5, room: "Balcony", trade: "Carpentry", sz: "M", note: "Measure the opening. Repair vs. replace." },
 
   // 06 — flooring
-  { id: "r1", t: "Install carpet", ph: 6, room: "Play room", trade: "Flooring", sz: "M", sub: true, blocked: ["c1", "b4"], note: "Usually bundled with the carpet purchase. Ceiling paint first — reversing this is the most expensive mistake available on this list." },
+  { id: "r1", t: "Install carpet", ph: 6, room: "Play room", trade: "Flooring", sz: "M", sub: true, blocked: ["c1", "c19", "b4"], note: "Usually bundled with the carpet purchase. Ceiling paint first — reversing this is the most expensive mistake available on this list." },
 
   // 07 — final clean
   { id: "z1", t: "Clean gutters, fasten nails", ph: 7, room: "Exterior", trade: "Cleaning", sz: "M" },
