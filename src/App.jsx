@@ -45,6 +45,7 @@ const ROOMS = [
   { n: "Yard", f: "Outside" },
   { n: "Driveway", f: "Outside" },
   { n: "Back patio", f: "Outside" },
+  { n: "Deck", f: "Outside" },
   { n: "Back steps", f: "Outside" },
   { n: "Whole house", f: "Whole house" },
 ];
@@ -78,6 +79,7 @@ const ITEMS = [
   { id: "b8", t: "Confirm paint colors, pull match chips", ph: 0, room: "Whole house", trade: "Decision", sz: "S", note: "No leftover cans? Take a 2×2in chip from an inconspicuous spot. Touch-ups in the wrong sheen look worse than none." },
   { id: "b9", t: "Get range make + model", ph: 0, room: "Kitchen", trade: "Purchase", sz: "S", note: "Needed to order the knob." },
   { id: "b10", t: "Measure toilet rough-in", ph: 0, room: "Master bathroom", trade: "Purchase", sz: "S", note: "Wall to bolt centers, usually 12in." },
+  { id: "b11", t: "Confirm existing deck & balcony finish", ph: 0, room: "Exterior", trade: "Decision", sz: "S", added: true, note: "Ask the paint specialists what went on originally and match it. Stain soaks into the wood, paint sits on top — paint will cover stain, but stain won't take over paint. Settle this before buying anything for the seal/stain job." },
 
   // 01 — demo & structure
   { id: "s1", t: "Remove gate / stud supports", ph: 1, room: "Library", trade: "Carpentry", sz: "M" },
@@ -86,13 +88,16 @@ const ITEMS = [
   { id: "s4", t: "Balcony wood stabilization", ph: 1, room: "Balcony", trade: "Carpentry", sz: "L" },
   { id: "s5", t: "Ceiling patches", ph: 1, room: "Garage", trade: "Drywall", sz: "M" },
   { id: "s9", t: "Replace rotted wood siding — west side", ph: 1, room: "Exterior", trade: "Carpentry", sz: "L", note: "Outside the master bath and Bedroom #1/#2 level, west elevation. Open it up far enough to find where the water is getting in — rot outside a wet room is often a flashing or shower-wall leak, not weather." },
+  { id: "s10", t: "Replace failing deck boards", ph: 1, room: "Deck", trade: "Carpentry", sz: "L", added: true, note: "Before the deck gets pressure washed — no point cleaning boards that are coming out. Look at the joists while the deck is open; soft boards usually mean water has been sitting on the framing underneath." },
+  { id: "s11", t: "Fix failing mailbox top", ph: 1, room: "Exterior", trade: "Carpentry", sz: "S", added: true },
+  { id: "s12", t: "Remove dead electrical wire", ph: 1, room: "Exterior", trade: "Electrical", sz: "S", added: true, note: "Verified dead and disconnected at the box." },
   { id: "s6", t: "Dead tree removal", ph: 1, room: "Yard", trade: "Tree", sz: "L", sub: true, note: "The one job on this list where DIY risk is real. Sub it unless the tree is small and clear of everything." },
   { id: "s7", t: "Brush removal", ph: 1, room: "Yard", trade: "Landscaping", sz: "M" },
   { id: "s8", t: "Weed killer — front yard", ph: 1, room: "Yard", trade: "Landscaping", sz: "S", note: "Apply 10–14 days before mulching so the weeds actually die back. Treating after the mulch goes down wastes both." },
 
   // 02 — wash
   { id: "w1", t: "Pressure wash facade", ph: 2, room: "Exterior", trade: "Exterior", sz: "M", blocked: ["b6", "s9"], note: "Repair the rot first — a pressure washer will tear soft siding apart." },
-  { id: "w2", t: "Pressure wash deck", ph: 2, room: "Exterior", trade: "Exterior", sz: "M", blocked: ["b6"] },
+  { id: "w2", t: "Pressure wash deck", ph: 2, room: "Exterior", trade: "Exterior", sz: "M", blocked: ["b6", "s10"] },
   { id: "w3", t: "Pressure wash balcony", ph: 2, room: "Balcony", trade: "Exterior", sz: "S", blocked: ["b6", "s4"] },
 
   // 03 — patch & trim
@@ -121,7 +126,8 @@ const ITEMS = [
   { id: "c10", t: "Paint exterior doors", ph: 4, room: "Exterior", trade: "Paint", sz: "M", blocked: ["w1"] },
   { id: "c13", t: "Prime + paint replacement siding", ph: 4, room: "Exterior", trade: "Paint", sz: "M", added: true, blocked: ["s9", "w1"], note: "Bare replacement boards need primer plus topcoat, or they read as a patch from the street." },
   { id: "c11", t: "Paint door trusses", ph: 4, room: "Garage", trade: "Paint", sz: "M", blocked: ["s5"] },
-  { id: "c12", t: "Seal / stain balcony wood", ph: 4, room: "Balcony", trade: "Paint", sz: "M", added: true, blocked: ["w3"] },
+  { id: "c12", t: "Seal / stain balcony, deck & front steps", ph: 4, room: "Exterior", trade: "Paint", sz: "L", added: true, blocked: ["b11", "w3", "w2", "s10"], note: "One job, three surfaces. Buy the material once and run all three in a single pass — separate batches on separate weekends will not match." },
+  { id: "c18", t: "Repaint mailbox", ph: 4, room: "Exterior", trade: "Paint", sz: "S", added: true, blocked: ["s11"] },
 
   // 05 — fixtures & hardware
   { id: "f1", t: "Overhead lights", ph: 5, room: "Kitchen", trade: "Electrical", sz: "S", sub: true, blocked: ["b2", "b3"] },
@@ -147,6 +153,8 @@ const ITEMS = [
   { id: "f18", t: "Install blinds", ph: 5, room: "Master bedroom", trade: "Hardware", sz: "S", blocked: ["b5"] },
   { id: "f19", t: "Range knob replacement", ph: 5, room: "Kitchen", trade: "Hardware", sz: "S", blocked: ["b9"] },
   { id: "f25", t: "Fridge butter tray glue", ph: 5, room: "Kitchen", trade: "Hardware", sz: "S" },
+  { id: "f27", t: "Fix cabinet door hinge", ph: 5, room: "Kitchen", trade: "Hardware", sz: "S", added: true, note: "A door that sags or won't sit flush usually needs the hinge adjusted, not replaced — cup hinges have separate screws for side, depth and height. If the screw holes in the carcass are stripped, glue a dowel or matchstick in and re-drive rather than moving to a fatter screw." },
+  { id: "f28", t: "Glue cabinet slat next to fridge", ph: 5, room: "Kitchen", trade: "Carpentry", sz: "S", added: true, note: "Scrape the old glue off both faces first — fresh glue won't bond to a glazed joint. Clamp it, or pull it tight with painter's tape, and leave it overnight." },
   { id: "f22", t: "Fix umbrella holder", ph: 5, room: "Back patio", trade: "Hardware", sz: "S" },
   { id: "f23", t: "Porch screen", ph: 5, room: "Screened porch", trade: "Carpentry", sz: "M" },
   { id: "f24", t: "Balcony screen door", ph: 5, room: "Balcony", trade: "Carpentry", sz: "M", note: "Measure the opening. Repair vs. replace." },
@@ -179,6 +187,7 @@ export default function PunchList() {
   const [phaseFilter, setPhaseFilter] = useState(null);
   const [open, setOpen] = useState(null);
   const [copied, setCopied] = useState(false);
+  const [resetArmed, setResetArmed] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -375,7 +384,13 @@ export default function PunchList() {
     }
   };
 
-  const resetAll = () => {
+  const resetProgress = () => {
+    if (!resetArmed) {
+      setResetArmed(true);
+      setTimeout(() => setResetArmed(false), 4000);
+      return;
+    }
+    setResetArmed(false);
     setDone({});
     persist({}, notes);
   };
@@ -591,6 +606,7 @@ export default function PunchList() {
                   <div style={S.itemRow}>
                     <button
                       onClick={() => toggle(i.id)}
+                      className="check"
                       style={{
                         ...S.check,
                         borderColor: isDone ? P(i.ph).color : "#B7BEB9",
@@ -697,14 +713,24 @@ export default function PunchList() {
         <button onClick={copyOpen} style={S.footBtn}>
           {copied ? "Copied" : "Copy what's ready to start"}
         </button>
-        <button onClick={resetAll} style={{ ...S.footBtn, ...S.footBtnQuiet }}>
-          Reset all
+        <button
+          onClick={resetProgress}
+          style={{
+            ...S.footBtn,
+            ...S.footBtnQuiet,
+            ...(resetArmed ? S.footBtnArmed : {}),
+          }}
+        >
+          {resetArmed ? "Tap again to clear" : "Reset progress"}
         </button>
         <div style={S.saveNote}>
           {saveState === "saving" && "Saving…"}
           {saveState === "saved" && "Saved"}
           {saveState === "error" && "Couldn't save — changes are in this session only"}
-          {saveState === "idle" && "Progress saves automatically"}
+          {saveState === "idle" &&
+            (resetArmed
+              ? "Clears ticks only — notes, added items and who's doing what are kept"
+              : "Progress saves automatically")}
         </div>
       </footer>
     </div>
@@ -720,12 +746,20 @@ button { font: inherit; cursor: pointer; }
 button:disabled { opacity: .4; cursor: not-allowed; }
 input, select, textarea { font: inherit; }
 .deck::-webkit-scrollbar { height: 0; }
+/* The tick box stays 24px visually, but the tap target is stretched to ~44px.
+   Insets stay inside the row's own padding and gap, so this never overlaps
+   the item body button next to it. */
+.check { position: relative; }
+.check::before {
+  content: ""; position: absolute;
+  top: -10px; bottom: -10px; left: -12px; right: -6px;
+}
 button:focus-visible, textarea:focus-visible { outline: 2px solid #14211D; outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 `;
 
 const ink = "#14211D";
-const muted = "#6E7873";
+const muted = "#525A56";  // AA 4.5:1 on paper, surface and the #CDD3CF segment
 const paper = "#DDE1DE";
 const surface = "#F4F6F3";
 const disp = "'Barlow Condensed', system-ui, sans-serif";
@@ -788,7 +822,7 @@ const S = {
   },
   segBtnOn: { backgroundColor: surface, color: ink, fontWeight: 500 },
   clearFilter: {
-    margin: "8px 18px 0", border: "none", background: "none", padding: 0,
+    margin: "0 18px", border: "none", background: "none", padding: "14px 0",
     fontFamily: mono, fontSize: 11, color: muted, textDecoration: "underline",
   },
 
@@ -805,7 +839,8 @@ const S = {
   },
   addRow: { display: "flex", gap: 8 },
   input: {
-    width: "100%", fontFamily: body, fontSize: 14, padding: "9px 10px",
+    // 16px is the floor: below it iOS Safari zooms the page on focus.
+    width: "100%", fontFamily: body, fontSize: 16, padding: "9px 10px",
     border: `1px solid #C6CCC7`, borderRadius: 2, backgroundColor: paper,
     color: ink, minWidth: 0,
   },
@@ -866,7 +901,8 @@ const S = {
   expand: { padding: "0 12px 12px 46px" },
   builtNote: { fontSize: 13, color: muted, lineHeight: 1.5, margin: "0 0 8px" },
   textarea: {
-    width: "100%", fontFamily: body, fontSize: 13, padding: 8, borderRadius: 2,
+    // 16px for the same reason as S.input.
+    width: "100%", fontFamily: body, fontSize: 16, padding: 8, borderRadius: 2,
     border: `1px solid #C6CCC7`, backgroundColor: paper, color: ink, resize: "vertical",
   },
   expandFoot: {
@@ -875,7 +911,7 @@ const S = {
   },
   doneStamp: { fontFamily: mono, fontSize: 10, color: muted },
   removeBtn: {
-    marginLeft: "auto", border: "none", background: "none", padding: 0,
+    marginLeft: "auto", border: "none", background: "none", padding: "14px 0 14px 16px",
     fontFamily: mono, fontSize: 10, color: "#8A5A2B", textDecoration: "underline",
   },
 
@@ -885,6 +921,7 @@ const S = {
     padding: "9px 14px", borderRadius: 2, fontFamily: mono, fontSize: 11,
     letterSpacing: "0.04em",
   },
-  footBtnQuiet: { backgroundColor: "transparent", color: ink },
+  footBtnQuiet: { backgroundColor: "transparent", color: ink, marginLeft: "auto" },
+  footBtnArmed: { borderColor: "#8A5A2B", color: "#8A5A2B" },
   saveNote: { width: "100%", fontFamily: mono, fontSize: 10, color: muted, marginTop: 8 },
 };
