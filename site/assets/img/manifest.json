@@ -1,0 +1,2474 @@
+[
+  {
+    "name": "hero-twilight",
+    "alt": "Cedarview House at twilight, every interior light on, seen from the drive",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1199,
+    "aspect": 1.3344,
+    "color": "#382808",
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwBACdASoYABIAPxFwsFAsJiSisBgMAYAiCWMAvdAR9SQFxo2v+Q5oH0lhCdjc+pAAyxIVNlWJxfd9UVDDOpjpGsdbtRRAj0c4CYOwevp6IRRLZjxSkhhnOAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/hero-twilight-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/hero-twilight-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/hero-twilight-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/hero-twilight-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/hero-twilight-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/hero-twilight-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/hero-twilight-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/hero-twilight-1600.jpg"
+        }
+      ]
+    },
+    "group": "hero"
+  },
+  {
+    "name": "exterior-front",
+    "alt": "Front of the house in autumn, natural white brick and dark window frames",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#282828",
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAwCdASoYABAAPxF8tFGsKCUisAgBgCIJZACsABrqpqtvVAAA926ZlaGF4o5fr7aZhDtpcSZYq6UsO2w8M0YTRTnnXInT1epTd1/t1RM7PtnH2r5tODx0ddOaWI231YpYpYAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-front-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-front-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-front-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-front-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-front-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-front-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-front-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-front-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "exterior-approach",
+    "alt": "The house from the end of the cul-de-sac, framed by autumn trees",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#687898",
+    "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoYABAAPxF0sVAsJySisAgBgCIJagCdMoAJZ69CPqQ65CYUAP7c1fPqtMT9XMgC3jEfUg/yhpzNPipD3nW6EBWv6F87y3DN152FKEhuplqzgGE419qxJSfAoucZGZODiWo3QGZCAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-approach-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-approach-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-approach-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-approach-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-approach-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-approach-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-approach-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-approach-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "entrance-steps",
+    "alt": "Brick steps up to the front entrance with the composite deck landing",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoYABAAPxF4slEsJ6SisAgBgCIJaACo9CGKvYCK7HrvCGFpAAD+BIVFQTF4RpwBQq70P+hLZNMZxJZKOz3T8eB8NJwPDTbZPtfmPKLQF32fLjGGHuCGh57ybZ5/+O4kWKhzY8AA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/entrance-steps-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/entrance-steps-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/entrance-steps-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/entrance-steps-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/entrance-steps-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/entrance-steps-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/entrance-steps-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/entrance-steps-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "front-door",
+    "alt": "The cobalt-blue front door in the natural white brick",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACwAwCdASoYABAAPxF2slEsJySisAgBgCIJZADCgGjNdtOj8i21eAD+61Kt8IQfhJarrYdSU47FqOS5xZNXT01xbctBobHEWHlSPv/dt+ujdOkx9L2OmvQtwoI2fWEVJv7E33I1o4YQAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/front-door-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/front-door-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/front-door-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/front-door-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/front-door-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/front-door-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/front-door-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/front-door-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "deck-landing",
+    "alt": "The deck landing beside the entrance, woods behind",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#685858",
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYABAAPxFyslAsJqSisAgBgCIJbACdIIjCUCUaFCU6m7AA/obGCgIVYJMBqrW7Mqfa/JHk2SVXS4YMN5/rwJ2cX6NETETy4fn+c2Ozxu/JU7MhFZfgWkMAAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/deck-landing-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/deck-landing-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/deck-landing-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/deck-landing-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/deck-landing-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/deck-landing-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/deck-landing-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/deck-landing-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "entrance-terrace",
+    "alt": "Stone-paved terrace at the entrance with the blue door",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#a8a898",
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAwCdASoYABAAPxF0sFCsJqSisAgBgCIJYwCdACFQJUGEbB90AADiH0FcPB2tapGCmK/LgrLeY5Mp/Qwah+1FOXjCyzvUaM9Glk9ovyTf5kjPpN1sLKQA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/entrance-terrace-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/entrance-terrace-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/entrance-terrace-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/entrance-terrace-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/entrance-terrace-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/entrance-terrace-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/entrance-terrace-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/entrance-terrace-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "exterior-rear",
+    "alt": "The rear of the house and screened porch from the lawn",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#88c8f8",
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQBACdASoYABAAPxFysVCsJqSisAgBgCIJbACdMoAC6304cUVtR1ZH5MiAAOHBuIMUvo1HcJ0NfWWGLpCcASJ7VKe4W+DVatiSNr0N18JAhZhGvGAG/YimxyTXW7/ox+PnPosAAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-rear-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-rear-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-rear-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-rear-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-rear-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-rear-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-rear-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-rear-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "exterior-rear-porch",
+    "alt": "Screened porch and rear elevation with the fire pit",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#b8b8b8",
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACQAwCdASoYABAAPxF0slCsJqSisAgBgCIJZACdAB5i/PadVVvgAOEM8DLR9mXgVZ60Mh3FGu9xF9vSCW3SeVcSmrtfBYTMyuC/msz97WRWYnbUl3x5iVtXyB9aAAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-rear-porch-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-rear-porch-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-rear-porch-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-rear-porch-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-rear-porch-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-rear-porch-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-rear-porch-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-rear-porch-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "grounds-path",
+    "alt": "Gravel path through the wooded grounds",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#f8e8d8",
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYABAAPxF2sVAsJ6SisAgBgCIJaAAAMVtZZ8oGCt3IqAD2HoRCn+IJyrC94JfQgSny8f/SGS71dOj1MdjWzsqGnsyJZeH+pK2FszTtC8HSc9uo+gAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/grounds-path-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/grounds-path-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/grounds-path-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/grounds-path-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/grounds-path-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/grounds-path-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/grounds-path-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/grounds-path-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "grounds-woods",
+    "alt": "The wooded lot behind the house",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#080808",
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYABAAPxFysFAsJqSisAgBgCIJYgC/OAyvLiJVw4UNQAAAyS8aFc4qEbdiqgOD3DroQopdkf+ychB5N+jzdg8vuLRPFNWzJJwOPhNL7GAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/grounds-woods-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/grounds-woods-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/grounds-woods-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/grounds-woods-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/grounds-woods-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/grounds-woods-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/grounds-woods-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/grounds-woods-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "lot-aerial",
+    "alt": "Aerial view of the house and lot from above",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#a89898",
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAwCdASoYABAAPxF6tFAsKCUisAgBgCIJaAAAQR04bmRmyUsWgIkAAP01TE5cocByJwqG7I15RIPn3I8YZIOvz5nh1aXcjBm3Bqx8m5VLUuoZCdf/ePwNRiZtm60fvYn9cAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lot-aerial-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lot-aerial-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lot-aerial-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lot-aerial-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lot-aerial-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lot-aerial-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lot-aerial-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lot-aerial-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "lot-aerial-roof",
+    "alt": "Aerial view over the roof toward the woods",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#b8a8a8",
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPxFysFCsJqSisAgBgCIJagC7IDZDMe0vHizCpy2AAAD6/H1lH1LqCk5wsdhnDqSM9KVhyzftCM1OMkEeQKSaHRTZnFSR2xzdMX0sTsZZtfxaqpP9WA94299FagAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lot-aerial-roof-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lot-aerial-roof-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lot-aerial-roof-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lot-aerial-roof-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lot-aerial-roof-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lot-aerial-roof-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lot-aerial-roof-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lot-aerial-roof-1600.jpg"
+        }
+      ]
+    },
+    "group": "exterior"
+  },
+  {
+    "name": "view-south-ridge",
+    "alt": "Drone view south over the autumn canopy toward the Ellett ridgeline",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8e8e8",
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQBACdASoYABAAPxF0sVCsJqSisAgBgCIJaACdMoGv/gPGIBek0cjKaXoAAP5bKd1Ph0fQ8wZGT+mvykw+FZlZseG0da26eZZyqjKkdCNJPfz3JjcScAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/view-south-ridge-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/view-south-ridge-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/view-south-ridge-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/view-south-ridge-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/view-south-ridge-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/view-south-ridge-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/view-south-ridge-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/view-south-ridge-1600.jpg"
+        }
+      ]
+    },
+    "group": "view"
+  },
+  {
+    "name": "view-south-wide",
+    "alt": "Wide drone view south, the mountains across the valley",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8d8e8",
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoYABAAPxFysFAsJqSisAgBgCIJaACdACHKg2vFvqgA/eHc8RBF4OM8/DQ4643Zw9u+Jozbo/EKLRl6FNXSUjIG1HwoAAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/view-south-wide-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/view-south-wide-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/view-south-wide-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/view-south-wide-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/view-south-wide-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/view-south-wide-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/view-south-wide-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/view-south-wide-1600.jpg"
+        }
+      ]
+    },
+    "group": "view"
+  },
+  {
+    "name": "view-south-ridge-close",
+    "alt": "The ridgeline to the south above the trees",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#b8d8e8",
+    "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAwCdASoYABAAPxF0slCsJqSisAgBgCIJagCdAB4zdk6mOPf+gAD8bumduDx4zq1Bzw5YRIrfmiBEmJ5hWSC4WscR7UwYjGENO/0lNjG7+xbbgAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/view-south-ridge-close-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/view-south-ridge-close-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/view-south-ridge-close-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/view-south-ridge-close-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/view-south-ridge-close-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/view-south-ridge-close-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/view-south-ridge-close-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/view-south-ridge-close-1600.jpg"
+        }
+      ]
+    },
+    "group": "view"
+  },
+  {
+    "name": "view-valley",
+    "alt": "Drone view over Blacksburg toward the mountains",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#a8d8f8",
+    "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoYABAAPxF0sVCsJqSisAgBgCIJaACdMoADTKGAxSD7UEt4AP6RQ/PyUFIOdsVMgsIUWRQwSzgUdUamjEgVIJeGTKIthZpcAeVVTi1meAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/view-valley-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/view-valley-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/view-valley-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/view-valley-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/view-valley-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/view-valley-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/view-valley-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/view-valley-1600.jpg"
+        }
+      ]
+    },
+    "group": "view"
+  },
+  {
+    "name": "living-room",
+    "alt": "Living room with the open oak stair and sliding doors to the deck",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "pair": "living-room",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwBACdASoYABAAPxF0sFCsJqSisAgBgCIJYgC7MoADgNDZR4VRJ21kTgAA/sOD1ThsIz/bwFPmPNYnHpqSYBdbtz8X97rlMcVB6vWhv1sFrjHwUXKKpUdxns1sj76+wAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-1600.jpg"
+        }
+      ]
+    },
+    "group": "main",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Living room with the open oak stair and sliding doors to the deck, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
+  },
+  {
+    "name": "living-room-stair",
+    "alt": "The open-tread oak staircase rising from the living room",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwBACdASoYABAAPxF2sVCsJySisAgBgCIJYwCdMoADAVcD1Q5qsrIKuTM8AAD+r5cO0li2yD8AVnW1ViMEbLIuXDTjlVQs3QM4VggV5zNeSiwNScre/wrTbAAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-stair-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-stair-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-stair-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-stair-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-stair-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-stair-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-stair-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-stair-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "family-room",
+    "alt": "Family room with cedar feature wall, stone floor and built-ins",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoYABAAPxFysFAsJqSisAgBgCIJQBOgBFJkunZ6yPtsYAD+WzCQUx5G+wzPVDrKvkjJo/pecXb2ZOkFpREYjFP0k+xQ8orz91GctKdkLpKgAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/family-room-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/family-room-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/family-room-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/family-room-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/family-room-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/family-room-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/family-room-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/family-room-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "family-room-cedar",
+    "alt": "Cedar-clad wall and ceiling in the family room",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoYABAAPxFysVCsJqSisAgBgCIJQBOgBDueDrIEMJlqwUGAAP6YEg3tJjpiOcqXAxGBNqELdaZpLV1sQrx7SjHe0WhJon+Ikx8mFEFhkKMBimAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/family-room-cedar-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/family-room-cedar-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/family-room-cedar-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/family-room-cedar-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/family-room-cedar-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/family-room-cedar-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/family-room-cedar-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/family-room-cedar-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "family-room-fireplace",
+    "alt": "Fireplace with white built-in cabinetry and bookshelves",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8c8b8",
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYABAAPxFysFAsJqSisAgBgCIJQBOgA9JiwecMOCk0RfSAAPzYcfQ8yRzPyMTwhj+XdaMVCe3ZTrYovMDDMUNldp2GQrXEW6EOxeL9DMm+mjxQAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/family-room-fireplace-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/family-room-fireplace-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/family-room-fireplace-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/family-room-fireplace-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/family-room-fireplace-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/family-room-fireplace-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/family-room-fireplace-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/family-room-fireplace-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "library",
+    "alt": "Library with white built-in shelving and oak floor",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoYABAAPxF4tFGsJyUisAgBgCIJQBdgBH/+gQfmS95EXpbAAP5ZmuBJeCkyP22pTj8p6zFsiCJ6w24ymPKKqpOGheDYc1Aw/7d2Y3Vjm7BuB0suItAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/library-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/library-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/library-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/library-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/library-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/library-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/library-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/library-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "dining",
+    "alt": "Dining room with corner windows onto the trees",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYABAAPxF2slEsJySisAgBgCIJYgC7ACHfTy7MYaAZRUgA/sNEa7B6+yNnz+zSQxrDeXlkU+wZM8KDWAbdBfU9DfCiYOwKkooiep3eEOBzJD5QhX3kAAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/dining-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/dining-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/dining-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/dining-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/dining-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/dining-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/dining-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/dining-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "kitchen",
+    "alt": "Kitchen with cherry cabinets, granite island and range hood",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "pair": "kitchen",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#582818",
+    "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoYABAAPxFysVCsJqSisAgBgCIJYgCdMoAC+jIYJ5kgAgpr2A8AAPjiQ5TqQIUHNnkMI6pr+scgnCHsIe6qCnDfAIWKZApC1dQ3Hg5HyOnhCO5/LtOjXE/Y0PMJQ1mnvu/KzPkjPr8d381wAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-1600.jpg"
+        }
+      ]
+    },
+    "group": "main",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Kitchen with cherry cabinets, granite island and range hood, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
+  },
+  {
+    "name": "kitchen-island",
+    "alt": "Kitchen island and skylight",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8c8",
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYABAAPxFysFCsJqSisAgBgCIJZACdMoACrobBTAwiY0RtCQAA+2JblsANaSAgNvdgoqLIznNB6+Vx/i51u+teJFOM3cKkrKQT0zka7ZsBZ8B6E4N1Y8HfJGex3/AA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-island-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-island-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-island-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-island-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-island-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-island-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-island-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-island-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "kitchen-window",
+    "alt": "Kitchen sink window onto the woods",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#582818",
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAwCdASoYABAALtGIxGIkLCwsDADQS0AE6coACEMGeGp8AP7o3CYZRPsXygGCtZVlVXGEZpGd22AAVGa+X44IQYKUZOUiYRTDXtVDq5JJfnXf5yjb/65SC2q2tHHAQAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-window-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-window-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-window-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-window-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-window-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-window-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-window-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-window-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "breakfast-room",
+    "alt": "Breakfast room with sliding doors to the deck",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYABAAPxFysVAsJqSisAgBgCIJQBbZBDvjE98unZ7vZAAA/tNjyCM4kTFR0E7A8AFdntSbTQD7sIY7RWqgDwpybPsP9gSPwIvXNGLeoigAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/breakfast-room-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/breakfast-room-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/breakfast-room-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/breakfast-room-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/breakfast-room-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/breakfast-room-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/breakfast-room-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/breakfast-room-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "screened-porch",
+    "alt": "Screened porch with cedar ceiling",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#a89888",
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYABAAPxFysVAsJqSisAgBgCIJZACdMoAA5Z3JubzC4AAA8nP4Egcmm0bXjVLt/DeSTriKwQ9BlJfsPqCsuwEup7vhAkSGwC9+mHdyJ0RaYuMvjnKFwH/gAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/screened-porch-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/screened-porch-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/screened-porch-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/screened-porch-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/screened-porch-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/screened-porch-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/screened-porch-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/screened-porch-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "screened-porch-view",
+    "alt": "Screened porch looking out to the lawn",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYABAAPxFysVAsJqSisAgBgCIJYgCdACPMBNpRSZkS6ysAAP5ag2vL9MiU7eOcQ+n3WMyjUGyqmeETmfD5zlxbaXp3xi7twRD2zdybOcoGYvRdIop1SNppbALgAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/screened-porch-view-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/screened-porch-view-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/screened-porch-view-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/screened-porch-view-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/screened-porch-view-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/screened-porch-view-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/screened-porch-view-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/screened-porch-view-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "primary-bath",
+    "alt": "Primary bath with double vanity and skylit marble shower",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoYABAAPxFysVAsJqSisAgBgCIJaQDKAAigoO2tPoAA/rGFL/o3P3d/uz/qtcdP1NguP//Tu+oLYCaMZT/mRrzTLEJAegAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bath-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bath-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bath-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bath-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bath-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bath-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bath-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bath-1600.jpg"
+        }
+      ]
+    },
+    "group": "upper"
+  },
+  {
+    "name": "primary-bath-skylight",
+    "alt": "Skylight over the soaking tub in the primary bath",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoYABAAPxFysFCsJqSisAgBgCIJZwDE2BTgHM+IgWHwAPuPqjvx2jhmysJXtc5hwP13qGcg/Mzsd3zhh9W/kcmgqYoAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bath-skylight-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bath-skylight-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bath-skylight-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bath-skylight-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bath-skylight-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bath-skylight-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bath-skylight-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bath-skylight-1600.jpg"
+        }
+      ]
+    },
+    "group": "upper"
+  },
+  {
+    "name": "upper-landing",
+    "alt": "Upper landing with oak slat balustrade",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8c8",
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYABAAPxFwsFAsJiSisAgBgCIJYgCdAB6BNlsVp2Wyr6RgAO+RiTLXa2rS4gMK6K91kb/JbL0nvk6Fe6z5RAslKb/UvlLtUScoe8xnXEV8B1PFlcswnCRw34AAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/upper-landing-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/upper-landing-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/upper-landing-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/upper-landing-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/upper-landing-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/upper-landing-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/upper-landing-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/upper-landing-1600.jpg"
+        }
+      ]
+    },
+    "group": "upper"
+  },
+  {
+    "name": "upper-hall",
+    "alt": "Upper hallway with cedar ceiling",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoYABAAPxFysFAsJqSisAgBgCIJagCdMoAA/zl74aATjADuiObSiTUh4ZVfcxX2l0uMaDeljKtpG9brPCG585yKvFfCjeu3Z0L9jAlr4aZwLYLVL5coKpGnzWZLQz9oAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/upper-hall-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/upper-hall-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/upper-hall-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/upper-hall-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/upper-hall-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/upper-hall-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/upper-hall-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/upper-hall-1600.jpg"
+        }
+      ]
+    },
+    "group": "upper"
+  },
+  {
+    "name": "primary-bedroom",
+    "alt": "Primary bedroom with sliding doors onto the balcony",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "pair": "primary-bedroom",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoYABAAPxF8tFGsKCUisAgBgCIJZwDKACHf3niCJ77/KfoAAP7S2hHq4xzkzodcxE1Q//0SUlwNOyNHSMG2/NNilOSAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bedroom-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bedroom-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bedroom-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bedroom-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bedroom-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bedroom-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bedroom-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bedroom-1600.jpg"
+        }
+      ]
+    },
+    "group": "upper",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bedroom-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bedroom-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bedroom-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bedroom-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bedroom-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bedroom-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bedroom-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bedroom-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Primary bedroom with sliding doors onto the balcony, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
+  },
+  {
+    "name": "bedroom-main-corner",
+    "alt": "Bedroom with corner windows and oak floor",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPxF2sVCsJySisAgBgCIJYgC7ACHHrCsRM8yB5bhOAP7DRNVtuHhGXoJrIpoB/X8pLHkeD4agm4SIopdmdGGWSMIZE4ZNC5RAs0nMlbKivcL0tTgA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/bedroom-main-corner-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/bedroom-main-corner-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/bedroom-main-corner-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/bedroom-main-corner-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/bedroom-main-corner-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/bedroom-main-corner-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/bedroom-main-corner-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/bedroom-main-corner-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "lower-level-bedroom-1",
+    "alt": "Lower-level bedroom with egress window and light oak floor",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoYABAAPxF0sVCsJqSisAgBgCIJZQDCgCFqrHvK9fmud5SQAP6YI3Zycinolxhr51Thm30Ta1uGY6SdpNcxG2XVDQNLqVhgTwAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-1-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-1-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-1-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-1-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-1-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-1-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-1-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-1-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "lower-level-bedroom-2",
+    "alt": "Lower-level bedroom with egress window",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAwCdASoYABAAPxF0sFAsJySisAgBgCIJZQDE2CHhVhTuJP4xYv2AAP7DePdqx+Ur5OeDMAUyDQb9Oxi2gAJ/81lza7iBbbr0AAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-2-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-2-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-2-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-2-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-2-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-2-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-2-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-2-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "lower-level-rec-room",
+    "alt": "Lower-level recreation room",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoYABAAPxF0sFAsJySisAgBgCIJYwC2yCHLcgm5Zif7zIAA/tMBOHqAEY/JWaLfX+XsceD6wMeBrMkxBMIw/BZ5/8xy+AAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-rec-room-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-rec-room-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-rec-room-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-rec-room-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-rec-room-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-rec-room-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-rec-room-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-rec-room-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "lower-level-bath",
+    "alt": "Lower-level full bath",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoYABAAPxFwsFAsJiSisAgBgCIJZQDKACHHhWQoq/Q7y2BWungA/o6cWJkUcbK+FcPAYKkyzPF4TfLOqrXQuP1V+aIn11TanBeK6b01d8R1qgUwAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bath-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bath-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bath-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bath-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bath-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bath-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bath-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bath-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "lower-level-workshop",
+    "alt": "Workshop with built-in benches on the lower level",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYABAAPxF0sVCsJqSisAgBgCIJYwC7ABrKHCG2gnbnY0AA/jvoFPM5rNu74obO1qSVTCAYCEsyrHWgRQd3jiYwRJ1lGJCdZwsQQeyVi3QAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-workshop-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-workshop-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-workshop-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-workshop-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-workshop-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-workshop-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-workshop-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-workshop-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "lower-level-gym",
+    "alt": "Lower-level room used as a gym",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAgCdASoYABAABABoJZQDIuExGBqqI2D6RX6TUAD+3oem3KOpT3xLMBdhjaVjbaozPaNfJ5ONXcPjK6AAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-gym-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-gym-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-gym-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-gym-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-gym-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-gym-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-gym-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-gym-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "plan-main-floor",
+    "alt": "Measured floor plan, main floor",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1022,
+    "aspect": 1.5656,
+    "color": "#f8f8f8",
+    "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAgCdASoYAA8APxF0sFAsJySisAgBgCIJZwAAfj4AAP7vRtmX0FxdQJn03T4a4/UDcYZhwhKafd2xb8OgAAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/plan-main-floor-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/plan-main-floor-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/plan-main-floor-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/plan-main-floor-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/plan-main-floor-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/plan-main-floor-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/plan-main-floor-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/plan-main-floor-1600.jpg"
+        }
+      ]
+    },
+    "group": "plans"
+  },
+  {
+    "name": "plan-upper-floor",
+    "alt": "Measured floor plan, upper floor",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1022,
+    "aspect": 1.5656,
+    "color": "#f8f8f8",
+    "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAwCdASoYAA8APxF0sVCsJqSisAgBgCIJZQCdACHfwA2gUWBexAD+4CDmojgbqBTkkwRp1zLwKULCsHAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/plan-upper-floor-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/plan-upper-floor-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/plan-upper-floor-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/plan-upper-floor-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/plan-upper-floor-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/plan-upper-floor-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/plan-upper-floor-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/plan-upper-floor-1600.jpg"
+        }
+      ]
+    },
+    "group": "plans"
+  },
+  {
+    "name": "plan-lower-level",
+    "alt": "Measured floor plan, lower level",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1022,
+    "aspect": 1.5656,
+    "color": "#f8f8f8",
+    "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAwCdASoYAA8APxFOv1osIqgkmAGAIgllAMTYId7a3D4VlWV4MAD+6q5pqBsz4pH1mSbQRqWf9oDquvRWhIAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/plan-lower-level-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/plan-lower-level-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/plan-lower-level-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/plan-lower-level-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/plan-lower-level-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/plan-lower-level-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/plan-lower-level-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/plan-lower-level-1600.jpg"
+        }
+      ]
+    },
+    "group": "plans"
+  },
+  {
+    "name": "primary-balcony",
+    "alt": "Balcony off the primary bedroom with cable railing, looking into the trees",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8b8a8",
+    "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoYABAAPxGCtFIsKaUisAgBgCIJZgCdL1yFF+v4hUIvGtegAP6Q0zHTxRPmbk2Bhs9VY7wTbmYL95xdP0Jy/MdKly3yQN490aV/DlgprIhV68m/8el5Syvm3mEB67TB4lHn1AAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-balcony-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-balcony-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-balcony-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-balcony-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-balcony-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-balcony-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-balcony-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-balcony-1600.jpg"
+        }
+      ]
+    },
+    "group": "upper"
+  }
+]

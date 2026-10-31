@@ -1,5 +1,33 @@
 # cedarview
 
+One repo, one GitHub Pages site, two things in it:
+
+| Path | What | Source |
+|---|---|---|
+| `/` → **cedarview.house** | The listing website for 709 Cedarview Drive | `site/` (plain HTML/CSS/JS, built by `site/scripts/`) |
+| `/prep-7c3/` | The private punch-list app used during listing prep | `src/` (React + Vite) |
+
+The punch list sits on a non-obvious path because it holds private notes and the listing site is public and promoted; it is still `noindex` and unlinked. Change the path in `vite.config.js` (`base`) if you want another.
+
+## Build and deploy
+
+`npm run build` builds both into `dist/`: the listing site first (`scripts/build-site.mjs` runs `site/`'s image → PDF → page pipeline and copies the publishable files), then the punch-list app into `dist/prep-7c3/`. The workflow in `.github/workflows/deploy.yml` does the same on every push to `main` and publishes `dist/` to GitHub Pages. `CNAME` at the root carries the custom domain.
+
+**Listing site facts** live only in `site/data/site.json`; `site/README.md` and `site/STYLE.md` explain the rules. To change the price or a date: edit that file, commit, push.
+
+**Photos:** `site/assets/src/` holds the curated originals (tracked). The responsive renditions in `site/assets/img/` are generated at build time and are git-ignored; only `manifest.json` there is tracked.
+
+**Local:**
+```bash
+npm ci && (cd site && npm ci)
+pip install pillow reportlab pypdf
+npm run build && npx serve dist      # or: python3 -m http.server -d dist 8080
+```
+
+---
+
+## Punch-list app (original notes)
+
 Static, single-page punch list for listing prep. React + Vite, no backend. Progress is stored in the browser's `localStorage`.
 
 Live at `https://<your-username>.github.io/cedarview/`

@@ -1,0 +1,593 @@
+{
+  "_readme": "Single source of truth for cedarview.house. Every fact, figure, date and label on the page and in the PDF comes from this file. Values marked TBC are placeholders awaiting the owner's confirmation; the build renders them as visible placeholders and the review flags them. Edit here, then run `npm run build`.",
+  "site": {
+    "name": "Cedarview House",
+    "tagline": "Cedarview House · Blacksburg, Virginia",
+    "campaign": "Facing Ellett",
+    "domain": "cedarview.house",
+    "url": "https://cedarview.house",
+    "language": "en-US",
+    "noindex": true,
+    "listingLive": false,
+    "description": "Natural white brick and cedar contemporary on a private 1-acre cul-de-sac in Blacksburg, Virginia. 8 bedrooms, 5,305 finished sq ft, fully rewired, finished lower-level suite with its own entrance, mountain views to the south toward Ellett, GLO Fiber.",
+    "ogImage": "assets/img/hero-twilight-1600.jpg",
+    "ogImageAlt": "Cedarview House at twilight, every interior light on, seen from the drive",
+    "ogImageWidth": 1600,
+    "ogImageHeight": 1199,
+    "analytics": {
+      "provider": "Cloudflare Web Analytics",
+      "token": "TBC_CLOUDFLARE_TOKEN",
+      "scriptSrc": "https://static.cloudflareinsights.com/beacon.min.js"
+    },
+    "repo": "cedarview-house"
+  },
+  "property": {
+    "address": {
+      "street": "709 Cedarview Drive",
+      "city": "Blacksburg",
+      "state": "VA",
+      "stateName": "Virginia",
+      "zip": "24060",
+      "country": "US",
+      "county": "Montgomery County",
+      "neighborhood": "Forest Hills"
+    },
+    "geo": {
+      "latitude": 37.2157,
+      "longitude": -80.3884
+    },
+    "price": {
+      "amount": 995000,
+      "currency": "USD",
+      "display": "$995,000"
+    },
+    "status": "Coming soon",
+    "style": "Natural white brick and cedar contemporary",
+    "yearBuilt": 1983,
+    "bedrooms": {
+      "total": 8,
+      "main": 1,
+      "upper": 3,
+      "lower": 4,
+      "_note": "Lower-level bedrooms qualify on egress, ceiling height and floor area; closets are not required."
+    },
+    "bathrooms": {
+      "full": 3,
+      "threeQuarter": 1,
+      "half": 1,
+      "display": "3 full, 1 three-quarter, 1 half",
+      "byLevel": [
+        {
+          "level": "Main floor",
+          "baths": "1 full (primary, with shower and jacuzzi) · 1 half"
+        },
+        {
+          "level": "Upper floor",
+          "baths": "1 full · 1 three-quarter"
+        },
+        {
+          "level": "Lower level",
+          "baths": "1 full"
+        }
+      ]
+    },
+    "garage": "2-car garage",
+    "floorArea": {
+      "unit": "sq ft",
+      "main": 2511,
+      "upper": 1303,
+      "lower": 1491,
+      "aboveGround": 3814,
+      "total": 5305,
+      "display": "5,305 finished sq ft",
+      "source": "Measured floor plans",
+      "excluded": {
+        "_note": "Measured but not counted in finished area (from the floor plans)",
+        "garage": 539,
+        "storageWorkshop": 388,
+        "screenedPorch": 228,
+        "porch": 110,
+        "balcony": 212,
+        "utility": 91,
+        "openToBelow": 248,
+        "unit": "sq ft"
+      }
+    },
+    "lot": {
+      "acresDeed": "TBC",
+      "acresCounty": 1.02,
+      "display": "About 1 acre",
+      "displayLong": "About 1 acre, wooded, on a cul-de-sac",
+      "character": [
+        "wooded",
+        "cul-de-sac",
+        "private"
+      ],
+      "_note": "Use the deed figure once confirmed; the county records 1.02 acres"
+    },
+    "view": {
+      "direction": "south",
+      "toward": "Ellett",
+      "display": "Year-round mountain views to the south, toward Ellett"
+    },
+    "internet": {
+      "provider": "GLO Fiber",
+      "type": "fiber",
+      "display": "GLO Fiber internet"
+    },
+    "mls": {
+      "number": "TBC_MLS_NUMBER",
+      "system": "TBC"
+    },
+    "tour": {
+      "matterportUrl": "https://my.matterport.com/show/?m=GC6VjEgsCfd&mls=1",
+      "label": "Take the 3D tour",
+      "matterportId": "GC6VjEgsCfd"
+    },
+    "video": {
+      "verticalWalkthrough": "assets/video/cedarview-vertical.mp4",
+      "poster": "assets/img/hero-twilight-1200.jpg",
+      "photographerEmbed": "https://show.tours/v/69ybGPk"
+    },
+    "exterior": {
+      "brick": "Natural white brick with cedar siding on the upper storey",
+      "door": "Cobalt-blue front door",
+      "deck": "Composite deck",
+      "windows": "Dark window frames"
+    }
+  },
+  "atAGlance": [
+    {
+      "label": "Finished space",
+      "value": "5,305 sq ft",
+      "detail": "2,511 main · 1,303 upper · 1,491 lower"
+    },
+    {
+      "label": "Lot",
+      "value": "About 1 acre",
+      "detail": "Wooded, on a cul-de-sac · screened porch, deck and fire pit"
+    },
+    {
+      "label": "Bedrooms and baths",
+      "value": "8 bedrooms",
+      "detail": "1 main · 3 upper · 4 lower · 3 full, 1 three-quarter, 1 half bath"
+    },
+    {
+      "label": "Built and updated",
+      "value": "Built 1983",
+      "detail": "Fully rewired · lower level completely finished · GLO Fiber internet"
+    },
+    {
+      "label": "The view",
+      "value": "South, toward Ellett",
+      "detail": "Year-round mountain views"
+    }
+  ],
+  "sections": {
+    "house": {
+      "heading": "The house",
+      "paragraphs": [
+        "A natural white brick and cedar contemporary from 1983, set back on a wooded acre at the end of a cul-de-sac. Inside, cedar walls and ceilings, an open oak stair and tall windows carry the woods into the house; the main floor opens to the south, so the mountains are in view from the living room, the kitchen and the deck.",
+        "The house has been fully rewired, and the lower level is completely finished. The interior has been freshly painted throughout and is shown empty, with three rooms virtually staged and labelled as such."
+      ],
+      "grounds": {
+        "heading": "The grounds",
+        "intro": "About an acre of woods on a cul-de-sac, with a screened porch, a deck and a fire pit facing the trees."
+      }
+    },
+    "lowerLevel": {
+      "heading": "Lower-level suite",
+      "paragraphs": [
+        "The finished lower level has its own exterior entrance and a full bath. Its four bedrooms each have an egress window; the plan also shows a recreation room, an exercise room, a workshop and a mudroom.",
+        "Altogether the lower level adds 1,491 sq ft of finished space to the 3,814 sq ft above ground."
+      ],
+      "facts": [
+        "Own exterior entrance",
+        "4 bedrooms, each with an egress window",
+        "1 full bath",
+        "1,491 finished sq ft"
+      ]
+    },
+    "tour": {
+      "heading": "3D tour and floor plans",
+      "intro": "Walk through the house room by room, or download the measured floor plans.",
+      "floorPlans": [
+        {
+          "label": "Main floor",
+          "sqft": 2511,
+          "file": "assets/img/plan-main-floor-1600.jpg"
+        },
+        {
+          "label": "Upper floor",
+          "sqft": 1303,
+          "file": "assets/img/plan-upper-floor-1600.jpg"
+        },
+        {
+          "label": "Lower level",
+          "sqft": 1491,
+          "file": "assets/img/plan-lower-level-1600.jpg"
+        }
+      ]
+    },
+    "updates": {
+      "heading": "Updates",
+      "intro": "Dated work and permits. The full specification sheet lists every updated system by date and permit number.",
+      "specSheet": {
+        "file": "assets/cedarview-specs.pdf",
+        "label": "Download the spec sheet (PDF)",
+        "title": "Improvements and specifications"
+      },
+      "items": [
+        {
+          "date": "TBC",
+          "work": "Full electrical rewiring",
+          "permit": "TBC_PERMIT",
+          "finalInspection": "TBC"
+        },
+        {
+          "date": "TBC",
+          "work": "Lower level completely finished: four bedrooms with egress windows, full bath, exterior entrance",
+          "permit": "TBC_PERMIT",
+          "finalInspection": "TBC"
+        },
+        {
+          "date": "2026",
+          "work": "New deck boards",
+          "permit": "n/a",
+          "finalInspection": "n/a"
+        },
+        {
+          "date": "2026",
+          "work": "Interior repainted throughout",
+          "permit": "n/a",
+          "finalInspection": "n/a"
+        }
+      ]
+    },
+    "view": {
+      "heading": "The view",
+      "paragraphs": [
+        "The deck faces due south, toward Ellett. The ridgeline is visible from the house in every season, and the low western sun lights it from the side in the late afternoon."
+      ],
+      "video": "assets/video/drone-reveal.mp4",
+      "videoPoster": "assets/img/view-south-1200.jpg",
+      "dailySunsetNote": "Daily sunset clips are posted here while the listing is live."
+    },
+    "blacksburg": {
+      "heading": "Life in Blacksburg",
+      "paragraphs": [
+        "Cedarview Drive is in Forest Hills, an established wooded neighbourhood of Blacksburg, a university town in the New River Valley and home to Virginia Tech and its Corporate Research Center. Downtown, the campus and the surrounding trails are all a short drive from the house.",
+        "LewisGale Hospital Montgomery is in Blacksburg; Carilion New River Valley Medical Center is in neighbouring Christiansburg."
+      ],
+      "driveTimes": [
+        {
+          "to": "Virginia Tech campus",
+          "minutes": "TBC"
+        },
+        {
+          "to": "Downtown Blacksburg",
+          "minutes": "TBC"
+        },
+        {
+          "to": "Corporate Research Center",
+          "minutes": "TBC"
+        },
+        {
+          "to": "Trails",
+          "minutes": "TBC"
+        }
+      ],
+      "_note": "Drive times TBC — fill in from a measured drive, not an estimate"
+    },
+    "ownersLetter": {
+      "heading": "What we'll miss",
+      "signature": "The owners",
+      "paragraphs": [
+        "TBC — the owner's letter in the owner's own words: the morning light, the first snow on the ridge, the best walk from the door."
+      ]
+    },
+    "visit": {
+      "heading": "Visit",
+      "intro": "Showings and inquiries go to the listing agent.",
+      "event": {
+        "name": "Sunset at Cedarview",
+        "date": "TBC",
+        "time": "5:30 to 7:00 pm",
+        "note": "RSVP evening on the deck"
+      }
+    }
+  },
+  "agent": {
+    "name": "TBC_AGENT_NAME",
+    "title": "Listing agent",
+    "brokerage": "TBC_BROKERAGE_NAME",
+    "phone": "TBC_PHONE",
+    "phoneHref": "tel:+1TBC",
+    "email": "TBC_EMAIL",
+    "licenseState": "Virginia"
+  },
+  "footer": {
+    "brokerageLine": "Listed by {agent.name}, {agent.brokerage}",
+    "mlsLine": "MLS # {property.mls.number}",
+    "equalHousing": "Equal Housing Opportunity. This property is offered without regard to race, color, religion, sex, handicap, familial status or national origin.",
+    "stagingNote": "Some photographs are virtually staged to show furniture placement; each is labelled \"Virtually staged\" on the image. Furniture and decor only; no changes to walls, floors, windows, fixtures or the view.",
+    "copyrightYear": 2026
+  },
+  "labels": {
+    "virtuallyStaged": "Virtually staged",
+    "lowerLevel": "finished lower level",
+    "lowerLevelSuite": "lower-level suite"
+  },
+  "wordingRules": {
+    "banned": [
+      "executive",
+      "multi-generational",
+      "multigenerational",
+      "perfect for families",
+      "luxury remodel",
+      "5,400",
+      "5400",
+      "basement",
+      "Mbps",
+      "Gbps",
+      "gigabit"
+    ],
+    "preferred": {
+      "basement": "finished lower level / lower-level suite",
+      "5,400+ sq ft": "5,305 finished sq ft",
+      "complete luxury remodel": "fully rewired; lower level completely finished",
+      "fiber speeds": "GLO Fiber (no speed unless a plan is quoted)"
+    },
+    "principle": "Describe the house and the place, never the buyer."
+  },
+  "specSheet": {
+    "title": "Cedarview House — Improvements and specifications",
+    "subtitle": "709 Cedarview Drive, Blacksburg, Virginia",
+    "bedroomsByLevel": [
+      {
+        "level": "Main floor",
+        "bedrooms": 1,
+        "baths": "1 full (primary; shower and jacuzzi) · 1 half",
+        "sqft": 2511
+      },
+      {
+        "level": "Upper floor",
+        "bedrooms": 3,
+        "baths": "1 full · 1 three-quarter",
+        "sqft": 1303
+      },
+      {
+        "level": "Lower level",
+        "bedrooms": 4,
+        "baths": "1 full",
+        "sqft": 1491
+      }
+    ],
+    "appliances": [
+      {
+        "room": "Kitchen",
+        "item": "TBC",
+        "brand": "TBC",
+        "year": "TBC"
+      }
+    ],
+    "systems": [
+      {
+        "system": "Electrical",
+        "detail": "Fully rewired",
+        "date": "TBC",
+        "permit": "TBC_PERMIT",
+        "finalInspection": "TBC"
+      },
+      {
+        "system": "Lower level",
+        "detail": "Completely finished: 4 bedrooms with egress windows, full bath, exterior entrance",
+        "date": "TBC",
+        "permit": "TBC_PERMIT",
+        "finalInspection": "TBC"
+      },
+      {
+        "system": "Deck",
+        "detail": "New deck boards",
+        "date": "2026",
+        "permit": "n/a",
+        "finalInspection": "n/a"
+      },
+      {
+        "system": "Interior",
+        "detail": "Repainted throughout",
+        "date": "2026",
+        "permit": "n/a",
+        "finalInspection": "n/a"
+      }
+    ],
+    "internet": "GLO Fiber",
+    "disclaimer": "Figures from measured floor plans and county and permit records. Buyers should verify all information independently."
+  },
+  "channels": [
+    {
+      "key": "instagram",
+      "name": "Instagram",
+      "utm": {
+        "source": "instagram",
+        "medium": "social",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "facebook",
+      "name": "Facebook",
+      "utm": {
+        "source": "facebook",
+        "medium": "social",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "facebook-ads",
+      "name": "Facebook ads",
+      "utm": {
+        "source": "facebook",
+        "medium": "paid",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "tiktok",
+      "name": "TikTok",
+      "utm": {
+        "source": "tiktok",
+        "medium": "social",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "youtube",
+      "name": "YouTube Shorts",
+      "utm": {
+        "source": "youtube",
+        "medium": "social",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "linkedin",
+      "name": "LinkedIn",
+      "utm": {
+        "source": "linkedin",
+        "medium": "social",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "nextdoor",
+      "name": "Nextdoor",
+      "utm": {
+        "source": "nextdoor",
+        "medium": "social",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "yard-sign",
+      "name": "Yard sign QR",
+      "utm": {
+        "source": "yard-sign",
+        "medium": "qr",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "mls",
+      "name": "MLS",
+      "utm": {
+        "source": "mls",
+        "medium": "referral",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "email",
+      "name": "Personal notes and briefs",
+      "utm": {
+        "source": "email",
+        "medium": "email",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "vt-hr",
+      "name": "VT HR relocation",
+      "utm": {
+        "source": "vt-hr",
+        "medium": "referral",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "hospital-recruiting",
+      "name": "Hospital physician recruitment",
+      "utm": {
+        "source": "hospital-recruiting",
+        "medium": "referral",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "crc-hr",
+      "name": "CRC employer HR",
+      "utm": {
+        "source": "crc-hr",
+        "medium": "referral",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "nova-richmond-ads",
+      "name": "NoVA and Richmond housing ads",
+      "utm": {
+        "source": "meta",
+        "medium": "paid",
+        "campaign": "facing-ellett-remote"
+      }
+    }
+  ],
+  "images": {
+    "manifest": "assets/img/manifest.json",
+    "sourceDir": "assets/src",
+    "hero": "hero-twilight",
+    "stagedRooms": [
+      "living-room",
+      "primary-bedroom",
+      "kitchen"
+    ],
+    "sizes": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "galleryTarget": "35 to 40 curated photos",
+    "stagedSuffix": "-staged",
+    "_staging": "For each name in stagedRooms, the unstaged original is <name>.jpg and the staged version <name>-staged.jpg. The pipeline burns the label onto the staged file only and pairs the two in the manifest; the gallery toggles between them."
+  },
+  "tbc": [
+    "Deed lot acreage (county: 1.02)",
+    "Rewiring: date, permit number, final inspection date",
+    "Lower level finish: date, permit number, final inspection date",
+    "Appliances: make, model year",
+    "Realtor name, brokerage, phone, email",
+    "MLS number",
+    "Cloudflare Web Analytics token",
+    "Owner's letter text",
+    "Drive times to campus, downtown, CRC, trails",
+    "Sunset at Cedarview event date"
+  ],
+  "photographer": {
+    "name": "Brian Sowers Photography",
+    "deliveryPage": "https://show.tours/RVsABNt4t0vW02QqQHBV",
+    "licence": "Covers owner's website and social posts (confirmed by owner)",
+    "credit": "Photography: Brian Sowers Photography"
+  },
+  "design": {
+    "_note": "Measured from the listing photographs (hero twilight, front elevation, door, deck, family room). Cream ground, cobalt accent from the front door, rust from the deck, honey oak from stair and floors, ridge blue for the View band.",
+    "palette": {
+      "cream": "#EFE9DC",
+      "creamDeep": "#E3DBC9",
+      "ink": "#1D2430",
+      "cobalt": "#2B4C8C",
+      "cobaltDeep": "#1F3A6E",
+      "rust": "#8C4A2E",
+      "oak": "#B8864C",
+      "ridge": "#2E3A4F",
+      "twilight": "#3B4A66",
+      "muted": "#5B6170",
+      "rule": "#CFC6B4"
+    },
+    "type": {
+      "display": "Fraunces",
+      "text": "Inter"
+    },
+    "direction": "B hero and gallery, C numbered and ruled structure below"
+  }
+}

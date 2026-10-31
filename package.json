@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:site && npm run build:app",
+    "build:site": "node scripts/build-site.mjs",
+    "build:app": "vite build --outDir dist/prep-7c3 --emptyOutDir false",
     "preview": "vite preview"
   },
   "dependencies": {

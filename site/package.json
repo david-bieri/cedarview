@@ -1,0 +1,16 @@
+{
+  "name": "cedarview-house",
+  "private": true,
+  "description": "Single-property site for 709 Cedarview Dr, Blacksburg, VA — cedarview.house",
+  "scripts": {
+    "images": "node scripts/build-images.mjs",
+    "pdf": "python3 pdf/build_spec_sheet.py",
+    "page": "node scripts/build-page.mjs",
+    "build": "npm run images && npm run pdf && npm run page",
+    "serve": "python3 -m http.server 8080",
+    "lighthouse": "node scripts/lighthouse.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

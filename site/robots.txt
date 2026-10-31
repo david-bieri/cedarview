@@ -1,0 +1,3 @@
+# Site is pre-launch. Remove the Disallow and the <meta name="robots" content="noindex"> tag on listing day.
+User-agent: *
+Disallow: /

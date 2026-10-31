@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// base MUST match the repo name for a GitHub Pages project site,
-// or every asset 404s. Change this if you rename the repo.
+// The punch-list app is served under this subpath of the listing site (cedarview.house).
+// Deliberately not a guessable word: the page holds private notes.
 export default defineConfig({
   plugins: [react()],
-  base: "/cedarview/",
+  base: "/prep-7c3/",
 });

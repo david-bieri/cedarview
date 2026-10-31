@@ -1,4 +1,7 @@
 node_modules
 dist
+site/node_modules
+site/assets/img/*.webp
+site/assets/img/*.jpg
 .DS_Store
 *.local
