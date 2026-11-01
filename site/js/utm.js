@@ -1,6 +1,6 @@
 /* UTM capture for cedarview.house — sessionStorage only, no cookies.
    On load, any utm_* query parameters are stored for the session and
-   exposed as data-utm on the tel: and mailto: links in the Visit section. */
+   exposed as data-utm on the tel: and mailto: links in the Visit section and the sticky showing bar. */
 (function () {
   'use strict';
   var KEY = 'cedarview-utm';
@@ -14,6 +14,6 @@
   } catch (e) { stored = Object.keys(found).length ? found : null; }
   if (!stored) return;
   var summary = Object.keys(stored).map(function (k) { return k.replace('utm_', '') + '=' + stored[k]; }).join(';');
-  var links = document.querySelectorAll('#visit a[data-utm]');
+  var links = document.querySelectorAll('#visit a[data-utm], #cta-bar a[data-utm]');
   for (var i = 0; i < links.length; i++) links[i].setAttribute('data-utm', summary);
 })();

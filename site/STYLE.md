@@ -30,9 +30,9 @@ No greens: the house has none, and they fight the autumn photos.
 Type: Fraunces 300/400 for display, Inter for everything else. Structure: direction B's full-bleed hero and square-tile gallery, then direction C's numbered, ruled sections (01 The house … 08 Visit).
 
 ## Photo order (from `assets/src/photos.json`, 46 of the photographer's 121)
-1. Hero: twilight exterior (#0).
+1. Hero: twilight exterior (#0), then the daylight front elevation (#1, `exterior-front`) full width directly beneath it — the twilight shot sells the mood, the daylight shot explains the house. #1 therefore does not repeat in the grounds gallery.
 2. The house gallery, lead tile 2×2: living room with the oak stair (#48), then family room (#52), fireplace (#55), kitchen (#72), front door (#31), stair (#49), screened porch (#79), primary bath (#61), dining (#56), library (#50), kitchen island (#73), breakfast room (#76), upper landing (#84), primary bedroom (#86).
-3. The grounds: front in autumn (#1), approach (#22), rear with fire pit (#39), path (#35), woods (#34), lot aerials (#5, #6).
+3. The grounds: approach (#22), rear with fire pit (#39), path (#35), woods (#34), lot aerials (#5, #6).
 4. Lower level: bedroom 1 (#101) lead, bedroom 2 (#103), rec room (#108), bath (#111), workshop (#112), gym (#115).
 5. Plans: #117–120.
 6. The view: ridge wide (#11) lead, #12, #13, #10.
@@ -48,5 +48,8 @@ Staged rooms (living-room, primary-bedroom, kitchen): unstaged original is `<nam
 - Re-shoot or drop: garage with bins and bikes (#81, #82), balcony with chairs, gym with the weight bench (#115, #116).
 - The staged versions of the three rooms.
 
+## Placeholders
+A `TBC` value is never shown. The build leaves the line, row or section out and says so; `npm run check` fails if one leaks. Write nothing on the page that reads as a note to ourselves ("not yet added", "to be confirmed", "see site.json"): if the fact is not confirmed, the page says nothing, and the spec sheet prints "on request".
+
 ## Launch day
-`site.noindex` → false, `site.listingLive` → true, `property.status` → "For sale", `robots.txt` Disallow → Allow, `npm run build`, commit, push. Same day as the MLS.
+`site.noindex` → false, `site.listingLive` → true, `property.status` → "For sale", `robots.txt` Disallow → Allow, `npm run build` (the check now insists on the agent's contact details), commit, push. Same day as the MLS.

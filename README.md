@@ -13,7 +13,7 @@ The punch list sits on a non-obvious path because it holds private notes and the
 
 `npm run build` builds both into `dist/`: the listing site first (`scripts/build-site.mjs` runs `site/`'s image → PDF → page pipeline and copies the publishable files), then the punch-list app into `dist/prep-7c3/`. The workflow in `.github/workflows/deploy.yml` does the same on every push to `main` and publishes `dist/` to GitHub Pages. `CNAME` at the root carries the custom domain.
 
-**Listing site facts** live only in `site/data/site.json`; `site/README.md` and `site/STYLE.md` explain the rules. To change the price or a date: edit that file, commit, push.
+**Listing site facts** live only in `site/data/site.json`; `site/README.md` and `site/STYLE.md` explain the rules. To change the price or a date: edit that file, commit, push. Values still marked `TBC` are left off the public page and listed by the build; `npm run check` (part of the build, so also of the deploy) fails if one ever leaks.
 
 **Photos:** `site/assets/src/` holds the curated originals (tracked). The responsive renditions in `site/assets/img/` are generated at build time and are git-ignored; only `manifest.json` there is tracked.
 

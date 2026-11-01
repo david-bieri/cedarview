@@ -2,27 +2,39 @@
 
 Single-page site for 709 Cedarview Drive, Blacksburg, Virginia. Plain HTML, CSS and a little JavaScript; hosted on GitHub Pages at https://cedarview.house.
 
-## One rule
+## Two rules
 **Every fact lives in `data/site.json`.** Price, dates, permits, square footage, agent details, labels — nothing else hard-codes a fact. To change the price or a date: edit `data/site.json`, run `npm run build`, commit, push.
+
+**A placeholder never reaches the public page.** A value that still begins with `TBC` is simply left out: a drive time with no minutes is not listed, work without a dated permit goes in a plain "Major work" list instead of the table, the owner's letter is not a section until it is written, the contact block, sticky showing bar and footer lines wait for the agent's details, and the analytics beacon is not loaded without a token. The build prints what was left out, and `npm run check` (the last step of `npm run build`) fails if a `TBC` ever makes it into `index.html` or the spec-sheet PDF. To proofread the placeholders, `npm run review` writes `review.html` (git-ignored) with every one of them highlighted.
 
 ## Layout
 - `data/site.json` — single source of truth
-- `assets/src/` — original photos (add the 35–40 curated JPEGs here; staged rooms named per `images.stagedRooms`)
+- `assets/src/` — original photos (the curated JPEGs from the photographer; staged rooms named per `images.stagedRooms`)
 - `scripts/build-images.mjs` — WebP + JPEG fallback at several widths, writes `assets/img/manifest.json`, burns "Virtually staged" onto staged images
 - `pdf/build_spec_sheet.py` — writes `assets/cedarview-specs.pdf` from `site.json`
+- `pdf/build_plans.py` — writes the floor-plan PDFs in `assets/plans/` (one per plan plus all three together) from the plan images
 - `scripts/build-page.mjs` — writes `index.html` from `site.json` and the image manifest
-- `css/`, `js/` — page styles and the small amount of script (gallery, lazy loading)
+- `scripts/check-launch.mjs` — fails the build on a leaked placeholder, a bad `tel:`/`mailto:` link or a missing local file; stricter once `site.listingLive` is true
+- `css/`, `js/` — page styles; `js/gallery.js` (gallery and lightbox), `js/site.js` (phone section menu, sticky showing bar, click-to-start 3D tour with a no-WebGL fallback), `js/utm.js`
 - `CNAME`, `robots.txt` — GitHub Pages domain; crawling blocked until launch
+
+## Page structure worth knowing
+- The twilight hero is followed by the daylight front elevation (`images.daylight`), full width, so the form of the house reads before anyone scrolls. That photo is dropped from the grounds gallery so it appears once.
+- The 3D tour shows a still of the house (`property.tour.poster`) with a Start button; the Matterport iframe is created only on click. A browser without WebGL gets a one-line note instead of a black canvas, and the direct "Open the tour in Matterport" link is always there.
+- Floor plans: "View" opens the plan in the lightbox; "PDF" downloads a real PDF. The old links said PDF and pointed at JPEGs.
+- The sticky "Schedule a showing" bar (`cta`) appears once the hero scrolls away and hides while the Visit section is on screen. It is only rendered once `agent.phone` or `agent.email` is set.
+- Below 48rem the section list collapses into a "Sections" menu.
 
 ## Build
 ```
-npm run build      # images → pdf → page
+npm run build      # images → pdf → page → check
+npm run review     # review.html with every TBC placeholder highlighted
 npm run serve      # http://localhost:8080
 ```
 
 ## Launch-day checklist
-1. Set `site.noindex` to `false` and `site.listingLive` to `true` in `data/site.json`; replace `robots.txt` Disallow with Allow.
-2. Fill every `TBC` value in `data/site.json` (see the `tbc` list at the bottom).
+1. Fill every `TBC` value in `data/site.json` — `npm run check` lists them by path. The agent's name, phone (E.164 in `phoneHref`) and email, the MLS number, the permit dates and numbers, measured drive times, the owner's letter.
+2. Set `site.noindex` to `false` and `site.listingLive` to `true`; replace `robots.txt` Disallow with Allow. From then on the check refuses to build without the agent's contact details.
 3. `npm run build`, commit, push.
 
 ## Lighthouse

@@ -4,9 +4,11 @@
   "description": "Single-property site for 709 Cedarview Dr, Blacksburg, VA — cedarview.house",
   "scripts": {
     "images": "node scripts/build-images.mjs",
-    "pdf": "python3 pdf/build_spec_sheet.py",
+    "pdf": "python3 pdf/build_spec_sheet.py && python3 pdf/build_plans.py",
     "page": "node scripts/build-page.mjs",
-    "build": "npm run images && npm run pdf && npm run page",
+    "check": "node scripts/check-launch.mjs",
+    "build": "npm run images && npm run pdf && npm run page && npm run check",
+    "review": "PREVIEW_TBC=1 PAGE_OUT=review.html node scripts/build-page.mjs",
     "serve": "python3 -m http.server 8080",
     "lighthouse": "node scripts/lighthouse.mjs"
   },

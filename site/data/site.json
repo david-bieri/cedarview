@@ -1,5 +1,5 @@
 {
-  "_readme": "Single source of truth for cedarview.house. Every fact, figure, date and label on the page and in the PDF comes from this file. Values marked TBC are placeholders awaiting the owner's confirmation; the build renders them as visible placeholders and the review flags them. Edit here, then run `npm run build`.",
+  "_readme": "Single source of truth for cedarview.house. Every fact, figure, date and label on the page and in the PDF comes from this file. Values marked TBC are placeholders awaiting the owner's confirmation: the public build leaves them out entirely (a section, row or line with a TBC value is simply not rendered) and `npm run check` lists what is still missing; `npm run review` writes review.html with every placeholder shown. Edit here, then run `npm run build`.",
   "site": {
     "name": "Cedarview House",
     "tagline": "Cedarview House · Blacksburg, Virginia",
@@ -122,6 +122,10 @@
     "tour": {
       "matterportUrl": "https://my.matterport.com/show/?m=GC6VjEgsCfd&mls=1",
       "label": "Take the 3D tour",
+      "startLabel": "Start the 3D tour",
+      "openLabel": "Open the tour in Matterport",
+      "poster": "living-room-stair",
+      "noWebglNote": "The interactive tour needs WebGL, which this browser has turned off. Open the tour in Matterport, or try another browser.",
       "matterportId": "GC6VjEgsCfd"
     },
     "video": {
@@ -190,28 +194,39 @@
     },
     "tour": {
       "heading": "3D tour and floor plans",
-      "intro": "Walk through the house room by room, or download the measured floor plans.",
+      "intro": "Walk through the house room by room, or view and download the measured floor plans.",
+      "plansHeading": "Floor plans",
+      "viewLabel": "View the {label} plan",
+      "pdfLabel": "PDF",
+      "allPlansPdf": "assets/plans/cedarview-floor-plans.pdf",
+      "allPlansLabel": "Download all three plans (PDF)",
       "floorPlans": [
         {
           "label": "Main floor",
           "sqft": 2511,
-          "file": "assets/img/plan-main-floor-1600.jpg"
+          "image": "plan-main-floor",
+          "file": "assets/plans/main-floor.pdf"
         },
         {
           "label": "Upper floor",
           "sqft": 1303,
-          "file": "assets/img/plan-upper-floor-1600.jpg"
+          "image": "plan-upper-floor",
+          "file": "assets/plans/upper-floor.pdf"
         },
         {
           "label": "Lower level",
           "sqft": 1491,
-          "file": "assets/img/plan-lower-level-1600.jpg"
+          "image": "plan-lower-level",
+          "file": "assets/plans/lower-level.pdf"
         }
       ]
     },
     "updates": {
       "heading": "Updates",
       "intro": "Dated work and permits. The full specification sheet lists every updated system by date and permit number.",
+      "undatedHeading": "Major work",
+      "undatedNote": "Dates and permit records for this work are available on request.",
+      "_undated": "An item whose date, permit or finalInspection is still TBC is listed under undatedHeading with undatedNote; once all three are filled in it moves into the dated table.",
       "specSheet": {
         "file": "assets/cedarview-specs.pdf",
         "label": "Download the spec sheet (PDF)",
@@ -259,13 +274,14 @@
         "Cedarview Drive is in Forest Hills, an established wooded neighbourhood of Blacksburg, a university town in the New River Valley and home to Virginia Tech and its Corporate Research Center. Downtown, the campus and the surrounding trails are all a short drive from the house.",
         "LewisGale Hospital Montgomery is in Blacksburg; Carilion New River Valley Medical Center is in neighbouring Christiansburg."
       ],
+      "driveTimesHeading": "By car from the house",
       "driveTimes": [
         {
-          "to": "Virginia Tech campus",
+          "to": "Virginia Tech campus (Burruss Hall)",
           "minutes": "TBC"
         },
         {
-          "to": "Downtown Blacksburg",
+          "to": "Downtown Blacksburg (Main Street)",
           "minutes": "TBC"
         },
         {
@@ -273,11 +289,23 @@
           "minutes": "TBC"
         },
         {
-          "to": "Trails",
+          "to": "Huckleberry Trail (Blacksburg trailhead)",
+          "minutes": "TBC"
+        },
+        {
+          "to": "LewisGale Hospital Montgomery",
+          "minutes": "TBC"
+        },
+        {
+          "to": "I-81 (exit 118, Christiansburg)",
+          "minutes": "TBC"
+        },
+        {
+          "to": "Roanoke-Blacksburg Regional Airport",
           "minutes": "TBC"
         }
       ],
-      "_note": "Drive times TBC — fill in from a measured drive, not an estimate"
+      "_note": "Drive times TBC — fill in from a measured drive at an off-peak hour, not an estimate. A destination with a TBC time is not rendered; delete any you do not want to show."
     },
     "ownersLetter": {
       "heading": "What we'll miss",
@@ -289,6 +317,8 @@
     "visit": {
       "heading": "Visit",
       "intro": "Showings and inquiries go to the listing agent.",
+      "introPending": "Showing details will be posted here when the listing goes live.",
+      "_intro": "introPending is used instead of intro while the agent's contact details are still TBC.",
       "event": {
         "name": "Sunset at Cedarview",
         "date": "TBC",
@@ -304,7 +334,14 @@
     "phone": "TBC_PHONE",
     "phoneHref": "tel:+1TBC",
     "email": "TBC_EMAIL",
-    "licenseState": "Virginia"
+    "licenseState": "Virginia",
+    "_note": "The contact block, the sticky showing bar, the footer brokerage line and the structured-data provider are rendered only once name, phone and email are filled in. phoneHref is the E.164 form, e.g. tel:+15405551234."
+  },
+  "cta": {
+    "showing": "Schedule a showing",
+    "email": "Email",
+    "tour": "3D tour",
+    "_note": "Sticky bar that appears once the hero scrolls out of view; hidden while the Visit section is on screen. Rendered only when agent.phone or agent.email is set."
   },
   "footer": {
     "brokerageLine": "Listed by {agent.name}, {agent.brokerage}",
@@ -536,6 +573,9 @@
     "manifest": "assets/img/manifest.json",
     "sourceDir": "assets/src",
     "hero": "hero-twilight",
+    "daylight": "exterior-front",
+    "daylightCaption": "The house in daylight: natural white brick, cedar on the upper storey, the cobalt door.",
+    "_daylight": "Shown full width directly under the twilight hero so the form of the house reads before anyone scrolls; it is dropped from the grounds gallery so it appears once.",
     "stagedRooms": [
       "living-room",
       "primary-bedroom",
@@ -560,7 +600,7 @@
     "MLS number",
     "Cloudflare Web Analytics token",
     "Owner's letter text",
-    "Drive times to campus, downtown, CRC, trails",
+    "Drive times (measured, off-peak) to the destinations in sections.blacksburg.driveTimes",
     "Sunset at Cedarview event date"
   ],
   "photographer": {

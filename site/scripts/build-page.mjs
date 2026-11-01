@@ -14,8 +14,12 @@
  * Design direction (site.json `design.direction`): a full-bleed hero and a square-tiled
  * gallery, then numbered, hairline-ruled sections. Colours come only from `design.palette`.
  *
- * Nothing on the page is hard-coded; values beginning with "TBC" are rendered
- * as-is inside <span class="tbc"> so the owner can spot them before launch.
+ * Nothing on the page is hard-coded. Values beginning with "TBC" are placeholders
+ * awaiting the owner; the public page never shows them. A line, row, list item or
+ * whole section whose data is still TBC is left out, and what was left out is
+ * printed at the end of the build (and checked by scripts/check-launch.mjs).
+ * PREVIEW_TBC=1 (npm run review) renders every placeholder inside <span class="tbc">
+ * instead, for proofreading; pair it with PAGE_OUT=review.html so index.html stays public.
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -33,37 +37,47 @@ const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const attr = esc;
+const REVIEW = Boolean(process.env.PREVIEW_TBC);
 const isTbc = (v) => typeof v === 'string' && v.startsWith('TBC');
-/** Escape a value; wrap it in <span class="tbc"> when it is a TBC placeholder. */
-const t = (v) => (isTbc(v) ? `<span class="tbc">${esc(v)}</span>` : esc(v));
-/** True when a site-relative asset path exists on disk; missing assets render as a labelled placeholder, never a dead link. */
+/** Everything the public build left out because its value is still TBC; printed at the end. */
+const omitted = [];
+const omit = (what) => { if (!omitted.includes(what)) omitted.push(what); };
+/** Escape a value. A TBC placeholder renders as a marked span in review mode and as nothing in public mode. */
+const t = (v) => (isTbc(v) ? (REVIEW ? `<span class="tbc">${esc(v)}</span>` : (omit(v), '')) : esc(v));
+/** True when every value is confirmed (none begins with TBC). */
+const ready = (...vals) => vals.every((v) => !isTbc(v));
+/** True when a site-relative asset path exists on disk; missing assets never become dead links. */
 const exists = async (rel) => fs.access(path.join(ROOT, rel)).then(() => true, () => false);
-const missing = (what) => `<span class="tbc">${esc(what)} not yet added</span>`;
+const missing = (what) => (REVIEW ? `<span class="tbc">${esc(what)} not yet added</span>` : (omit(what), ''));
 const get = (obj, dotted) => dotted.split('.').reduce((o, k) => (o == null ? undefined : o[k]), obj);
-/** Resolve "{a.b.c}" placeholders from site.json, escaping and TBC-wrapping each piece. */
-const resolveLine = (line) => line.split(/(\{[a-zA-Z0-9_.]+\})/g).map((part) => {
-  const m = part.match(/^\{([a-zA-Z0-9_.]+)\}$/);
-  if (!m) return esc(part);
-  const v = get(data, m[1]);
-  return v === undefined ? esc(part) : t(v);
-}).join('');
+/** Resolve "{a.b.c}" placeholders from site.json. Returns '' in public mode if any piece is still TBC. */
+const resolveLine = (line) => {
+  const parts = line.split(/(\{[a-zA-Z0-9_.]+\})/g);
+  const values = parts.map((p) => { const m = p.match(/^\{([a-zA-Z0-9_.]+)\}$/); return m ? get(data, m[1]) : undefined; });
+  if (!REVIEW && values.some(isTbc)) { omit(line); return ''; }
+  return parts.map((part, i) => (values[i] === undefined ? esc(part) : t(values[i]))).join('');
+};
+const p = (html) => (html ? `<p>${html}</p>` : '');
 const num = (n) => Number(n).toLocaleString(site.language);
 const abs = (p) => `${site.url}/${p}`;
-const paragraphs = (arr) => arr.map((p) => `<p>${t(p)}</p>`).join('\n');
+const paragraphs = (arr) => arr.map((para) => p(t(para))).filter(Boolean).join('\n');
 const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 const pad2 = (n) => String(n).padStart(2, '0');
 
 // ---------- images ----------
 const heroImg = manifest.find((i) => i.name === data.images.hero) || manifest.find((i) => i.group === 'hero');
+// Daylight exterior shown directly under the hero (images.daylight); it then stays out of the grounds gallery.
+const daylightImg = data.images.daylight ? manifest.find((i) => i.name === data.images.daylight) : null;
 const viewImgs = manifest.filter((i) => i.group === 'view');
 const viewImg = viewImgs[0];
-const exteriorImgs = manifest.filter((i) => i.group === 'exterior');
+const exteriorImgs = manifest.filter((i) => i.group === 'exterior' && i !== daylightImg);
 const lowerImgs = manifest.filter((i) => i.group === 'lower');
 const planImgs = manifest.filter((i) => i.group === 'plans');
+const tourPoster = manifest.find((i) => i.name === data.property.tour.poster) || manifest.find((i) => i.group === 'main') || heroImg;
 // Main gallery: the interior groups; exterior, lower and view photographs have their own galleries.
 const galleryImgs = manifest.filter((i) => !['hero', 'plans', 'view', 'exterior', 'lower'].includes(i.group));
-// Every non-hero photograph gets one index into the lightbox list; paired tiles carry both variants under one index.
-const lightboxList = manifest.filter((i) => i.group !== 'hero' && i.group !== 'plans');
+// Every non-hero image (the plans included) gets one index into the lightbox list; paired tiles carry both variants under one index.
+const lightboxList = manifest.filter((i) => i.group !== 'hero');
 const lbIndex = new Map(lightboxList.map((img, i) => [img.name, i]));
 
 const srcset = (list) => list.map((s) => `${s.src} ${s.w}w`).join(', ');
@@ -136,6 +150,13 @@ const S = data.sections;
 const P = data.property;
 const A = data.agent;
 const glanceHeading = 'At a glance';
+// The owner's letter is a section only once it is written; a placeholder letter is worse than none.
+const letterReady = REVIEW || S.ownersLetter.paragraphs.every((x) => ready(x));
+if (!letterReady) omit('Owner\'s letter (section not rendered)');
+// Contact: each line renders on its own once confirmed; the block, the sticky bar and the footer line need the agent's name.
+const hasPhone = ready(A.phone) && !/TBC/.test(A.phoneHref);
+const hasEmail = ready(A.email);
+const hasAgent = ready(A.name, A.brokerage);
 const navItems = [
   ['glance', glanceHeading],
   ['house', S.house.heading],
@@ -144,19 +165,25 @@ const navItems = [
   ['updates', S.updates.heading],
   ['view', S.view.heading],
   ['blacksburg', S.blacksburg.heading],
-  ['letter', S.ownersLetter.heading],
+  ...(letterReady ? [['letter', S.ownersLetter.heading]] : []),
   ['visit', S.visit.heading],
 ];
 
-const tourButton = (cls = 'btn') => (isTbc(P.tour.matterportUrl)
-  ? `<a class="${cls}" href="#tour">${esc(P.tour.label)}</a>`
-  : `<a class="${cls}" href="${attr(P.tour.matterportUrl)}" target="_blank" rel="noopener">${esc(P.tour.label)}</a>`);
+const tourHref = isTbc(P.tour.matterportUrl) ? '#tour' : P.tour.matterportUrl;
+const tourExternal = !isTbc(P.tour.matterportUrl);
+const tourButton = (cls = 'btn', label = P.tour.label) => (tourExternal
+  ? `<a class="${cls}" href="${attr(tourHref)}" target="_blank" rel="noopener">${esc(label)}</a>`
+  : `<a class="${cls}" href="#tour">${esc(label)}</a>`);
 
+// On wide screens the list is always open (details[open]); js/site.js collapses it into a "Sections" menu on phones.
 const nav = `<nav class="topnav" aria-label="Sections">
 <a class="brand" href="#top">${esc(site.name)}</a>
+<details class="nav-menu" id="nav-menu" open>
+<summary>Sections</summary>
 <ul>
 ${navItems.map(([id, label]) => `<li><a href="#${id}">${esc(label)}</a></li>`).join('\n')}
 </ul>
+</details>
 </nav>`;
 
 const hero = `<header class="hero" id="top">
@@ -173,6 +200,23 @@ ${tourButton('btn btn-cream')}
 </div>
 </div>
 </header>`;
+
+// Daylight exterior directly under the hero, so the architecture reads before anyone scrolls.
+const daylight = daylightImg ? `<figure class="daylight">
+<button type="button" class="tile-btn" data-lb="${lbIndex.get(daylightImg.name)}" aria-label="${attr(`Enlarge: ${daylightImg.alt}`)}">
+${picture(daylightImg, { sizes: '100vw', eager: true, className: 'daylight-img' })}
+</button>
+${data.images.daylightCaption ? `<figcaption class="wrap">${esc(data.images.daylightCaption)}</figcaption>` : ''}
+</figure>` : '';
+
+// Sticky showing / contact bar: rendered only when there is someone to contact; js/site.js shows it after the hero.
+const ctaBar = (hasPhone || hasEmail) ? `<div class="cta-bar" id="cta-bar" hidden>
+<div class="cta-inner">
+${hasPhone ? `<a class="btn" href="${attr(A.phoneHref)}" data-utm="">${esc(data.cta.showing)}</a>` : `<a class="btn" href="#visit">${esc(data.cta.showing)}</a>`}
+${hasEmail ? `<a class="cta-link" href="mailto:${attr(A.email)}" data-utm="">${esc(data.cta.email)}</a>` : ''}
+${tourExternal ? `<a class="cta-link" href="${attr(tourHref)}" target="_blank" rel="noopener">${esc(data.cta.tour)}</a>` : ''}
+</div>
+</div>` : (omit('Sticky showing bar (needs agent phone or email)'), '');
 
 /** Numbered section head (direction C): hairline rule, two-digit eyebrow, Fraunces heading. */
 let secNo = 0;
@@ -210,52 +254,72 @@ ${S.lowerLevel.facts.map((f) => `<li>${t(f)}</li>`).join('\n')}
 ${gallery(lowerImgs, 'lower-gallery', { cls: 'gallery-plain' })}
 </section>`;
 
-const tourEmbed = isTbc(P.tour.matterportUrl)
-  ? `<div class="tour-placeholder" role="note"><p><span class="tbc">${esc(P.tour.matterportUrl)}</span></p>${tourButton()}</div>`
-  : `<div class="tour-frame"><iframe src="${attr(P.tour.matterportUrl)}" title="${attr(P.tour.label)}" loading="lazy" allow="xr-spatial-tracking; fullscreen" allowfullscreen></iframe></div>
-<p>${tourButton()}</p>`;
+// The 3D tour: a still of the house with a "Start" button, and the iframe is only created on click (js/site.js).
+// Browsers without WebGL get a one-line note instead of a black canvas, and the direct Matterport link is always there.
+const tourEmbed = tourExternal
+  ? `<figure class="tour-frame" id="tour-frame" data-tour-src="${attr(P.tour.matterportUrl)}" data-tour-title="${attr(P.tour.label)}" style="background-color:${attr(tourPoster.color)}">
+${picture(tourPoster, { sizes: '(min-width: 72rem) 68rem, 100vw', className: 'tour-poster' })}
+<button type="button" class="btn tour-start" id="tour-start" hidden>${esc(P.tour.startLabel)}</button>
+<figcaption class="tour-links"><a href="${attr(P.tour.matterportUrl)}" target="_blank" rel="noopener">${esc(P.tour.openLabel)} &#8599;</a>
+<span class="muted" id="tour-note" hidden>${esc(P.tour.noWebglNote)}</span></figcaption>
+</figure>`
+  : (REVIEW ? `<div class="tour-placeholder" role="note"><p><span class="tbc">${esc(P.tour.matterportUrl)}</span></p></div>` : (omit('3D tour (Matterport URL)'), ''));
 
-// Floor plans: link the PDF when it exists; otherwise fall back to the plan image's largest JPEG from the manifest.
-const planFor = (fp) => planImgs.find((i) => i.name === `plan-${slug(fp.label)}`);
+// Floor plans: "View" opens the plan image in the lightbox; "PDF" downloads the real PDF written by pdf/build_plans.py.
+const planFor = (fp) => planImgs.find((i) => i.name === (fp.image || `plan-${slug(fp.label)}`));
+const viewLabel = (fp) => (S.tour.viewLabel || 'View the {label} plan').replace('{label}', String(fp.label).toLowerCase());
 const planLinks = (await Promise.all(S.tour.floorPlans.map(async (fp) => {
   const pdf = await exists(fp.file);
   const img = planFor(fp);
-  const href = pdf ? fp.file : (img ? largest(img.sources.jpg).src : null);
-  const link = href ? `<a href="${attr(href)}"${pdf ? ' download' : ' target="_blank" rel="noopener"'}>${t(fp.label)}${pdf ? ' (PDF)' : ''}</a>` : `${t(fp.label)} — ${missing('floor plan')}`;
-  return `<li>${link} <span class="muted">${num(fp.sqft)} ${esc(P.floorArea.unit)}</span></li>`;
+  const view = img ? `<button type="button" class="link-btn" data-lb="${lbIndex.get(img.name)}">${esc(viewLabel(fp))}</button>` : `${t(fp.label)} ${missing('floor plan')}`;
+  const dl = pdf ? ` <span class="sep" aria-hidden="true">·</span> <a href="${attr(fp.file)}" download aria-label="${attr(`Download the ${String(fp.label).toLowerCase()} plan as a PDF`)}">${esc(S.tour.pdfLabel || 'PDF')}</a>` : '';
+  return `<li><span>${view}${dl}</span><span class="muted">${num(fp.sqft)} ${esc(P.floorArea.unit)}</span></li>`;
 }))).join('\n');
-const planThumbs = (await Promise.all(planImgs.map(async (img) => {
+const allPlans = (S.tour.allPlansPdf && await exists(S.tour.allPlansPdf))
+  ? `<p><a class="btn btn-outline" href="${attr(S.tour.allPlansPdf)}" download>${esc(S.tour.allPlansLabel || 'Download all plans (PDF)')}</a></p>` : '';
+const planThumbs = planImgs.map((img) => {
   const fp = S.tour.floorPlans.find((f) => planFor(f) === img);
-  const pdf = fp && await exists(fp.file);
-  const href = pdf ? fp.file : largest(img.sources.jpg).src;
-  return `<a class="plan-thumb" href="${attr(href)}"${pdf ? ' download' : ' target="_blank" rel="noopener"'}>
+  return `<button type="button" class="plan-thumb" data-lb="${lbIndex.get(img.name)}" aria-label="${attr(`Enlarge: ${fp ? fp.label + ' plan' : img.alt}`)}">
 ${picture(img, { sizes: '(min-width: 40rem) 25vw, 50vw' })}
 <span>${fp ? t(fp.label) : esc(img.alt)}</span>
-</a>`;
-}))).join('\n');
+</button>`;
+}).join('\n');
 
 const tour = `<section id="tour" class="wrap sec" aria-labelledby="tour-h">
 ${secHead(S.tour.heading, 'tour')}
-<p>${t(S.tour.intro)}</p>
+${p(t(S.tour.intro))}
 ${tourEmbed}
+<h3 class="sub">${esc(S.tour.plansHeading || 'Floor plans')}</h3>
 <ul class="plans">
 ${planLinks}
 </ul>
 ${planImgs.length ? `<div class="plan-grid">
 ${planThumbs}
 </div>` : ''}
+${allPlans}
 </section>`;
 
-const updates = `<section id="updates" class="wrap sec" aria-labelledby="updates-h">
-${secHead(S.updates.heading, 'updates')}
-<p>${t(S.updates.intro)}</p>
-<table class="updates">
+// Work with a confirmed date, permit and inspection goes in the table; the rest is listed plainly with a note, never with blanks.
+const dated = S.updates.items.filter((u) => REVIEW || ready(u.date, u.permit, u.finalInspection));
+const undated = S.updates.items.filter((u) => !dated.includes(u));
+undated.forEach((u) => omit(`Updates: date/permit/inspection for "${u.work}"`));
+const updatesTable = dated.length ? `<table class="updates">
 <thead><tr><th scope="col">Date</th><th scope="col">Work</th><th scope="col">Permit</th><th scope="col">Final inspection</th></tr></thead>
 <tbody>
-${S.updates.items.map((u) => `<tr><td data-th="Date">${t(u.date)}</td><td data-th="Work">${t(u.work)}</td><td data-th="Permit">${t(u.permit)}</td><td data-th="Final inspection">${t(u.finalInspection)}</td></tr>`).join('\n')}
+${dated.map((u) => `<tr><td data-th="Date">${t(u.date)}</td><td data-th="Work">${t(u.work)}</td><td data-th="Permit">${t(u.permit)}</td><td data-th="Final inspection">${t(u.finalInspection)}</td></tr>`).join('\n')}
 </tbody>
-</table>
-<p><a class="btn" href="${attr(S.updates.specSheet.file)}" download>${t(S.updates.specSheet.label)}</a></p>
+</table>` : '';
+const updatesList = undated.length ? `<h3 class="sub-tight">${esc(S.updates.undatedHeading || 'Also done')}</h3>
+<ul class="facts">
+${undated.map((u) => `<li>${esc(u.work)}</li>`).join('\n')}
+</ul>
+<p class="muted small">${esc(S.updates.undatedNote || 'Dates and permit records available on request.')}</p>` : '';
+const updates = `<section id="updates" class="wrap sec" aria-labelledby="updates-h">
+${secHead(S.updates.heading, 'updates')}
+${p(t(S.updates.intro))}
+${updatesList}
+${updatesTable}
+${(await exists(S.updates.specSheet.file)) ? `<p><a class="btn" href="${attr(S.updates.specSheet.file)}" download>${t(S.updates.specSheet.label)}</a></p>` : ''}
 </section>`;
 
 const viewPoster = viewImg.sources.jpg.find((s) => s.w === 1200) || largest(viewImg.sources.jpg);
@@ -270,7 +334,7 @@ const view = `<section id="view" class="sec sec-view" aria-labelledby="view-h">
 <div class="band view-band">
 <div class="wrap">
 ${paragraphs(S.view.paragraphs)}
-<p class="band-note">${t(S.view.dailySunsetNote)}${(await exists(S.view.video)) ? '' : ` ${missing('Drone reveal video')}`}</p>
+${(site.listingLive || REVIEW) ? `<p class="band-note">${t(S.view.dailySunsetNote)}${(await exists(S.view.video)) ? '' : ` ${missing('Drone reveal video')}`}</p>` : ((await exists(S.view.video)) ? '' : (omit('Drone reveal video (sunset note hidden until listingLive)'), ''))}
 </div>
 </div>
 <div class="wrap">
@@ -278,41 +342,50 @@ ${gallery(viewImgs.slice(1), 'view-gallery', { cls: 'gallery-row', sizes: ROW_SI
 </div>
 </section>`;
 
+// Drive times: only measured ones are shown; the list is dropped altogether until at least one is in.
+const driveTimes = S.blacksburg.driveTimes.filter((d) => REVIEW || ready(d.minutes));
+S.blacksburg.driveTimes.filter((d) => !driveTimes.includes(d)).forEach((d) => omit(`Drive time to ${d.to}`));
+const driveList = driveTimes.length ? `<div>
+<h3 class="sub-tight">${esc(S.blacksburg.driveTimesHeading || 'By car from the house')}</h3>
+<ul class="drive">
+${driveTimes.map((d) => `<li><span>${t(d.to)}</span><span class="muted">${t(d.minutes)} min</span></li>`).join('\n')}
+</ul>
+</div>` : '';
 const blacksburg = `<section id="blacksburg" class="wrap sec" aria-labelledby="blacksburg-h">
 ${secHead(S.blacksburg.heading, 'blacksburg')}
 <div class="split">
 <div>${paragraphs(S.blacksburg.paragraphs)}</div>
-<ul class="drive">
-${S.blacksburg.driveTimes.map((d) => `<li><span>${t(d.to)}</span><span class="muted">${t(d.minutes)} minutes</span></li>`).join('\n')}
-</ul>
+${driveList}
 </div>
 </section>`;
 
-const letter = `<section id="letter" class="sec letter" aria-labelledby="letter-h">
+const letter = letterReady ? `<section id="letter" class="sec letter" aria-labelledby="letter-h">
 <div class="wrap">
 ${secHead(S.ownersLetter.heading, 'letter')}
 ${paragraphs(S.ownersLetter.paragraphs)}
 <p class="signature">${t(S.ownersLetter.signature)}</p>
 </div>
-</section>`;
+</section>` : '';
 
 const ev = S.visit.event;
-const visit = `<section id="visit" class="wrap sec" aria-labelledby="visit-h">
-${secHead(S.visit.heading, 'visit')}
-<p>${t(S.visit.intro)}</p>
-<div class="split">
-<address class="agent">
-<strong>${t(A.name)}</strong><br>
-${t(A.title)}, ${t(A.brokerage)}<br>
-<a href="${attr(A.phoneHref)}" data-utm="">${t(A.phone)}</a><br>
-<a href="mailto:${attr(A.email)}" data-utm="">${t(A.email)}</a>
-</address>
-<div class="event">
+const agentBlock = (REVIEW || hasAgent || hasPhone || hasEmail) ? `<address class="agent">
+${(REVIEW || hasAgent) ? `<strong>${t(A.name)}</strong><br>
+${t(A.title)}, ${t(A.brokerage)}<br>` : ''}
+${(REVIEW || hasPhone) ? `<a href="${attr(A.phoneHref)}" data-utm="">${t(A.phone)}</a><br>` : ''}
+${(REVIEW || hasEmail) ? `<a href="mailto:${attr(A.email)}" data-utm="">${t(A.email)}</a>` : ''}
+</address>` : (omit('Agent name, brokerage, phone, email (contact block not rendered)'), '');
+const eventBlock = (REVIEW || ready(ev.date)) ? `<div class="event">
 <h3>${t(ev.name)}</h3>
 <p>${t(ev.date)} · ${t(ev.time)}</p>
 <p class="muted">${t(ev.note)}</p>
-</div>
-</div>
+</div>` : (omit(`Event "${ev.name}": date (event not rendered)`), '');
+const visit = `<section id="visit" class="wrap sec" aria-labelledby="visit-h">
+${secHead(S.visit.heading, 'visit')}
+${p(t((REVIEW || hasPhone || hasEmail) ? S.visit.intro : (S.visit.introPending || S.visit.intro)))}
+${(agentBlock || eventBlock) ? `<div class="split">
+${agentBlock}
+${eventBlock}
+</div>` : ''}
 </section>`;
 
 const ehoSvg = `<svg class="eho" viewBox="0 0 48 48" width="40" height="40" role="img" aria-label="Equal Housing Opportunity"><path d="M24 6 4 22h6v18h28V22h6z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M16 25h16M16 32h16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>`;
@@ -320,8 +393,8 @@ const ehoSvg = `<svg class="eho" viewBox="0 0 48 48" width="40" height="40" role
 const footer = `<footer id="footer">
 <div class="wrap">
 <h2 class="visually-hidden">Listing information</h2>
-<p>${resolveLine(data.footer.brokerageLine)}</p>
-<p>${resolveLine(data.footer.mlsLine)}</p>
+${p(resolveLine(data.footer.brokerageLine))}
+${p(resolveLine(data.footer.mlsLine))}
 <p class="eho-line">${ehoSvg}<span>${esc(data.footer.equalHousing)}</span></p>
 <p class="muted">${esc(data.footer.stagingNote)}</p>
 <p class="muted small">${esc(data.photographer.credit)}</p>
@@ -373,15 +446,17 @@ const ld = {
     yearBuilt: P.yearBuilt,
   },
   offers: { '@type': 'Offer', price: P.price.amount, priceCurrency: P.price.currency, availability: 'https://schema.org/PreOrder', url: site.url },
-  provider: {
+};
+if (hasAgent) {
+  ld.provider = {
     '@type': 'RealEstateAgent',
     name: A.name,
-    telephone: A.phone,
-    email: A.email,
+    ...(hasPhone ? { telephone: A.phone } : {}),
+    ...(hasEmail ? { email: A.email } : {}),
     worksFor: { '@type': 'Organization', name: A.brokerage },
     parentOrganization: { '@type': 'Organization', name: A.brokerage },
-  },
-};
+  };
+}
 
 // LAUNCH_PREVIEW=1 renders the page as it will be on listing day (no noindex) for audits; it never changes site.json.
 const noindex = (site.noindex && !process.env.LAUNCH_PREVIEW)
@@ -394,7 +469,7 @@ const fontsHref = `https://fonts.googleapis.com/css2?family=${encodeURIComponent
 
 // Palette tokens are emitted from site.json so the stylesheet never carries a colour of its own.
 const tokens = Object.entries(PAL).map(([k, v]) => `--${k}:${v}`).join(';');
-const criticalCss = `:root{${tokens};--display:"${TYPE.display}",Georgia,"Times New Roman",serif;--text:"${TYPE.text}",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color-scheme:light}*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;font-family:var(--text);color:var(--ink);background:var(--cream);line-height:1.55}.hero{position:relative;display:grid;grid-template-rows:auto 1fr;background:var(--ridge);color:var(--cream)}.hero-media{position:relative;grid-row:1;height:min(62svh,34rem);min-height:20rem}.hero-media picture,.hero-img{display:block;width:100%;height:100%}.hero-img{object-fit:cover}.topnav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;gap:.5rem;padding:0 .5rem;min-height:3rem;background:rgba(29,36,48,.55);color:var(--cream)}.topnav ul{display:flex;gap:.25rem;margin:0;padding:0;list-style:none;overflow-x:auto;white-space:nowrap}.topnav a{display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .6rem;color:inherit;text-decoration:none;font-size:.9rem}.hero-text{grid-row:2;padding:1.75rem 1rem 2.25rem}.hero h1{margin:.25rem 0 .5rem;font-family:var(--display);font-weight:300;font-size:clamp(2rem,6vw,3.6rem);line-height:1.08;letter-spacing:-.01em}@media(min-width:48rem){.hero{display:block;height:min(88svh,56rem);min-height:36rem}.hero-media{position:absolute;inset:0;height:100%}.hero-text{position:absolute;inset:auto 0 0 0;padding:6rem 2rem 3rem;background:linear-gradient(transparent,rgba(29,36,48,.82))}}`;
+const criticalCss = `:root{${tokens};--display:"${TYPE.display}",Georgia,"Times New Roman",serif;--text:"${TYPE.text}",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color-scheme:light}*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;font-family:var(--text);color:var(--ink);background:var(--cream);line-height:1.55}.hero{position:relative;display:grid;grid-template-rows:auto 1fr;background:var(--ridge);color:var(--cream)}.hero-media{position:relative;grid-row:1;height:min(62svh,34rem);min-height:20rem}.hero-media picture,.hero-img{display:block;width:100%;height:100%}.hero-img{object-fit:cover}.topnav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:0 .5rem;min-height:3rem;background:rgba(29,36,48,.55);color:var(--cream)}.topnav ul{display:flex;gap:.25rem;margin:0;padding:0;list-style:none;overflow-x:auto;white-space:nowrap}.topnav a{display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .6rem;color:inherit;text-decoration:none;font-size:.9rem}.nav-menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .75rem;font-size:.9rem;font-weight:500}.nav-menu summary::-webkit-details-marker{display:none}.nav-menu summary::after{content:"";display:inline-block;width:.45em;height:.45em;margin-left:.5em;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:translateY(-.15em) rotate(45deg)}.nav-menu[open] summary::after{transform:translateY(.1em) rotate(-135deg)}@media(max-width:47.99rem){.nav-menu{position:static}.nav-menu ul{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;padding:.5rem 0 .75rem;background:rgba(29,36,48,.94);white-space:normal}.nav-menu ul a{width:100%;padding:0 1.25rem}}@media(min-width:48rem){.nav-menu summary{display:none}}.hero-text{grid-row:2;padding:1.75rem 1rem 2.25rem}.hero h1{margin:.25rem 0 .5rem;font-family:var(--display);font-weight:300;font-size:clamp(2rem,6vw,3.6rem);line-height:1.08;letter-spacing:-.01em}@media(min-width:48rem){.hero{display:block;height:min(88svh,56rem);min-height:36rem}.hero-media{position:absolute;inset:0;height:100%}.hero-text{position:absolute;inset:auto 0 0 0;padding:6rem 2rem 3rem;background:linear-gradient(transparent,rgba(29,36,48,.82))}}`;
 
 const head = `<!DOCTYPE html>
 <html lang="${attr(site.language)}">
@@ -422,21 +497,23 @@ ${noindex}
 <link rel="preload" as="image" imagesrcset="${attr(srcset(heroImg.sources.webp))}" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="${attr(analyticsOrigin)}" crossorigin>
+${ready(site.analytics.token) ? `<link rel="preconnect" href="${attr(analyticsOrigin)}" crossorigin>` : ''}
 <style>${criticalCss}</style>
 <link rel="stylesheet" href="${attr(fontsHref)}" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="${attr(fontsHref)}"></noscript>
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>
 <script defer src="js/gallery.js"></script>
+<script defer src="js/site.js"></script>
 <script defer src="js/utm.js"></script>
-<script defer src="${attr(site.analytics.scriptSrc)}" data-cf-beacon='${JSON.stringify({ token: site.analytics.token })}'></script>
+${ready(site.analytics.token) ? `<script defer src="${attr(site.analytics.scriptSrc)}" data-cf-beacon='${JSON.stringify({ token: site.analytics.token })}'></script>` : (omit('Cloudflare Web Analytics token (beacon not loaded)'), '')}
 </head>`;
 
 const html = `${head}
 <body>
 <a class="skip" href="#glance">Skip to content</a>
 ${hero}
+${daylight}
 <main>
 ${glance}
 ${house}
@@ -449,12 +526,14 @@ ${letter}
 ${visit}
 </main>
 ${footer}
+${ctaBar}
 ${lightbox}
 </body>
 </html>
 `;
 
 await fs.writeFile(process.env.PAGE_OUT ? path.resolve(process.env.PAGE_OUT) : path.join(ROOT, 'index.html'), html);
+if (omitted.length) console.log(`left out of the page until confirmed (${omitted.length}):\n  - ${omitted.join('\n  - ')}`);
 
 // ---------- tracked links ----------
 const tracked = data.channels.map((c) => {

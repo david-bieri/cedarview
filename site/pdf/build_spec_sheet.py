@@ -3,13 +3,17 @@
 
 Every fact, figure, date, name and label in the PDF is read from site.json.
 Nothing property-specific is hard-coded here. Placeholder values ("TBC...")
-are rendered exactly as they appear so the owner can find and replace them.
+never reach the public PDF: a cell still TBC prints as "on request", a row that
+is nothing but placeholders is dropped, and footer lines that need the agent or
+the MLS number are left out until those are confirmed. PREVIEW_TBC=1 renders
+the placeholders as they are, for proofreading.
 
 Run from anywhere:  python3 pdf/build_spec_sheet.py
 """
 
 import datetime as _dt
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -57,14 +61,42 @@ def resolve(template, d):
     return re.sub(r"\{([a-zA-Z0-9_.]+)\}", lambda m: str(get(d, m.group(1))), template)
 
 
+REVIEW = bool(os.environ.get("PREVIEW_TBC"))
+ON_REQUEST = "on request"
+OMITTED = []
+
+
+def is_tbc(v):
+    return isinstance(v, str) and v.startswith("TBC")
+
+
+def ready(*vals):
+    return not any(is_tbc(v) for v in vals)
+
+
+def omit(what):
+    if what not in OMITTED:
+        OMITTED.append(what)
+
+
+def pub(v):
+    """A TBC value becomes 'on request' in the public PDF (unchanged in review mode)."""
+    if is_tbc(v) and not REVIEW:
+        omit(v)
+        return ON_REQUEST
+    return v
+
+
 def s(v):
     """Stringify a site.json value for display; escape for Paragraph markup."""
+    v = pub(v)
     if isinstance(v, (int, float)) and not isinstance(v, bool):
         return escape(f"{v:,}" if isinstance(v, int) else str(v))
     return escape(str(v))
 
 
 def raw(v):
+    v = pub(v)
     return f"{v:,}" if isinstance(v, int) and not isinstance(v, bool) else str(v)
 
 
@@ -146,10 +178,18 @@ def build(d):
     build_date = _dt.date.today().isoformat()
     W = letter[0] - 2 * 0.8 * inch  # usable width
 
-    # footer text, resolved from site.json
-    footer_lines = [
-        resolve(foot["brokerageLine"], d) + " · " + raw(agent["phone"]) + " · " + raw(agent["email"]),
-        resolve(foot["mlsLine"], d),
+    # footer text, resolved from site.json; lines that need the agent or MLS number wait until those are confirmed
+    footer_lines = []
+    if REVIEW or ready(agent["name"], agent["brokerage"]):
+        contact = [x for x in (agent["phone"], agent["email"]) if REVIEW or ready(x)]
+        footer_lines.append(" · ".join([resolve(foot["brokerageLine"], d)] + [raw(x) for x in contact]))
+    else:
+        omit("footer: agent and brokerage line")
+    if REVIEW or ready(prop["mls"]["number"]):
+        footer_lines.append(resolve(foot["mlsLine"], d))
+    else:
+        omit("footer: MLS number line")
+    footer_lines += [
         foot["equalHousing"],
         spec["disclaimer"],
         "Built " + build_date + " from site.json · " + raw(site["url"]),
@@ -177,7 +217,7 @@ def build(d):
         bottomMargin=1.25 * inch,
         title=spec["title"],
         subject=spec["subtitle"],
-        author=raw(agent["name"]),
+        author=raw(agent["name"]) if (REVIEW or ready(agent["name"])) else site["name"],
         creator="pdf/build_spec_sheet.py",
     )
     F = []
@@ -257,14 +297,19 @@ def build(d):
     else:
         print("note: sections.updates.items matches specSheet.systems (same dates, permits, inspections); not repeated")
 
-    # 6. Appliances
-    F.append(P("Appliances", "h2"))
-    F.append(table(
-        ["Room", "Item", "Brand", "Year"],
-        [[a["room"], a["item"], a["brand"], a["year"]] for a in spec["appliances"]],
-        [W * 0.22, W * 0.36, W * 0.26, W * 0.16],
-        bold_first=True,
-    ))
+    # 6. Appliances (a row that is nothing but placeholders is dropped; the section waits until one row is real)
+    appliances = [a for a in spec["appliances"] if REVIEW or ready(a["item"])]
+    for a in spec["appliances"]:
+        if a not in appliances:
+            omit("appliances: %s" % a["room"])
+    if appliances:
+        F.append(P("Appliances", "h2"))
+        F.append(table(
+            ["Room", "Item", "Brand", "Year"],
+            [[a["room"], a["item"], a["brand"], a["year"]] for a in appliances],
+            [W * 0.22, W * 0.36, W * 0.26, W * 0.16],
+            bold_first=True,
+        ))
 
     # 7. Internet  (provider only; no speed is ever printed)
     F.append(P("Internet", "h2"))
@@ -279,7 +324,7 @@ def build(d):
         [
             ["Lot", lot["displayLong"]],
             ["Acreage (county)", lot["acresCounty"]],
-            ["Acreage (deed)", lot["acresDeed"]],
+        ] + ([["Acreage (deed)", lot["acresDeed"]]] if (REVIEW or ready(lot["acresDeed"])) else (omit("lot: deed acreage"), [])[1]) + [
             ["View", view["display"]],
             ["Year built", str(prop["yearBuilt"])],
             ["Style", prop["style"]],
@@ -311,6 +356,10 @@ def check(d):
     if re.search(r"\d\s*(mb|gb)(ps|/s)\b", low):
         hits.append("<internet speed>")
     assert not hits, "BANNED WORDING FOUND IN PDF: %r" % hits
+    # the public PDF carries no placeholder, ever
+    if not REVIEW:
+        leaked = re.findall(r"\bTBC\w*", text)
+        assert not leaked, "PLACEHOLDER LEAKED INTO PDF: %r" % sorted(set(leaked))
     # a few spot checks that the sheet really carries site.json's values
     for must in (d["specSheet"]["title"], d["footer"]["equalHousing"], d["property"]["price"]["display"]):
         flat = re.sub(r"\s+", " ", must)
@@ -329,6 +378,8 @@ def main():
         print("BUILD FAILED:", e, file=sys.stderr)
         sys.exit(1)
     print("ok: wrote %s (%d page%s); banned-word check passed" % (OUT.relative_to(ROOT), pages, "" if pages == 1 else "s"))
+    if OMITTED:
+        print("printed as '%s' or left out until confirmed (%d): %s" % (ON_REQUEST, len(OMITTED), "; ".join(OMITTED)))
 
 
 if __name__ == "__main__":
