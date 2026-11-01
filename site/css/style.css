@@ -156,6 +156,20 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 .plan-thumb:hover img { border-color: var(--cobalt); }
 .plan-thumb span { text-decoration: underline; text-underline-offset: .15em; }
 .plans .sep { color: var(--muted); }
+
+/* nearby places: groups by how you get there, minutes with a mode glyph */
+.place-grid { display: grid; gap: 2rem 3rem; }
+@media (min-width: 48rem) { .place-grid { grid-template-columns: 1fr 1fr; } }
+.place-group .sub-tight { margin-top: 0; }
+.places { list-style: none; margin: 0; padding: 0; }
+.place { padding: .75rem 0; border-bottom: 1px solid var(--rule); }
+.place:last-child { border-bottom: 0; }
+.place-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .25rem 1rem; }
+.times { display: inline-flex; flex-wrap: wrap; gap: .25rem .9rem; font-size: .9rem; color: var(--muted); white-space: nowrap; }
+.time { display: inline-flex; align-items: center; gap: .3rem; }
+.time svg { color: var(--oak); flex: none; }
+.place-blurb { margin: .2rem 0 0; font-size: .95rem; color: var(--muted); max-width: none; }
+.dir { white-space: nowrap; font-size: .85rem; }
 .sub-tight { margin-top: 1.5rem; font-size: 1.25rem; }
 
 /* updates table */

@@ -271,41 +271,168 @@
     "blacksburg": {
       "heading": "Life in Blacksburg",
       "paragraphs": [
-        "Cedarview Drive is in Forest Hills, an established wooded neighbourhood of Blacksburg, a university town in the New River Valley and home to Virginia Tech and its Corporate Research Center. Downtown, the campus and the surrounding trails are all a short drive from the house.",
-        "LewisGale Hospital Montgomery is in Blacksburg; Carilion New River Valley Medical Center is in neighbouring Christiansburg."
+        "Cedarview Drive is in Forest Hills, an established wooded neighbourhood on the south side of Blacksburg, a university town in the New River Valley and home to Virginia Tech and its Corporate Research Center.",
+        "The nearest parks and the neighbourhood pool are a walk from the door; the shops on South Main are a short ride; campus, downtown and the library are a few minutes by car or bike. LewisGale Hospital Montgomery is in Blacksburg; Carilion New River Valley Medical Center is in neighbouring Christiansburg."
       ],
-      "driveTimesHeading": "By car from the house",
-      "driveTimes": [
+      "placesHeading": "Nearby",
+      "placesIntro": "Times from Google Maps, from the house, measured on a Sunday evening in November 2026.",
+      "_places": "Each place lists the modes that make sense for it: walk for Grissom Lane, bike and drive for South Main and campus, drive only for the hospital, I-81 and the airport. Minutes are Google Maps figures read from the house at an off-peak hour (see `measured`); a TBC minute is simply not shown. `maps` is the destination string for the Directions link, which opens Google Maps with the first listed mode preset so anyone can check the figure.",
+      "groups": [
         {
-          "to": "Virginia Tech campus (Burruss Hall)",
-          "minutes": "TBC"
+          "heading": "A walk from the door",
+          "places": [
+            {
+              "name": "Piedmont Pool",
+              "blurb": "The neighbourhood's outdoor pool, open through the summer.",
+              "maps": "Piedmont Pool, 1753 Grissom Ln, Blacksburg, VA 24060",
+              "times": {
+                "walk": 12,
+                "bike": 5
+              }
+            },
+            {
+              "name": "Nellie's Cave Park",
+              "blurb": "Woods and trails, a playground, a ball field and a picnic shelter.",
+              "maps": "Nellies Cave Park, 1900 Grissom Ln, Blacksburg, VA 24060",
+              "times": {
+                "walk": 15
+              }
+            },
+            {
+              "name": "The Meadow",
+              "blurb": "The neighbourhood's open green, off Grissom Lane.",
+              "maps": "The Meadow, Blacksburg, VA 24060",
+              "times": {
+                "walk": 16
+              }
+            }
+          ]
         },
         {
-          "to": "Downtown Blacksburg (Main Street)",
-          "minutes": "TBC"
+          "heading": "A short ride",
+          "places": [
+            {
+              "name": "First & Main and the Gables",
+              "blurb": "Restaurants, boutiques and the daily errands, on South Main.",
+              "maps": "First & Main, 1490 S Main St, Blacksburg, VA 24060",
+              "times": {
+                "bike": 8,
+                "drive": 5,
+                "walk": 24
+              }
+            },
+            {
+              "name": "Kroger, South Main",
+              "blurb": "The big grocery, with a pharmacy.",
+              "maps": "Kroger, 1322 S Main St, Blacksburg, VA 24060",
+              "times": {
+                "bike": 8,
+                "drive": 5,
+                "walk": 25
+              }
+            },
+            {
+              "name": "Blacksburg Library",
+              "blurb": "The public library, and the Blacksburg end of the paved Huckleberry Trail.",
+              "maps": "Blacksburg Library, 200 Miller St SW, Blacksburg, VA 24060",
+              "times": {
+                "bike": 12,
+                "drive": 6
+              }
+            },
+            {
+              "name": "Downtown, Main Street",
+              "blurb": "Cafés and restaurants, the Lyric Theatre, the Saturday farmers market.",
+              "maps": "Blacksburg Farmers Market, 108 W Roanoke St, Blacksburg, VA 24060",
+              "times": {
+                "bike": 13,
+                "drive": 8
+              }
+            }
+          ]
         },
         {
-          "to": "Corporate Research Center",
-          "minutes": "TBC"
+          "heading": "Campus",
+          "places": [
+            {
+              "name": "The Drillfield",
+              "blurb": "The centre of the Virginia Tech campus; Burruss Hall is on its north side.",
+              "maps": "Drillfield, Virginia Tech, Blacksburg, VA 24061",
+              "times": {
+                "drive": 11,
+                "bike": 15
+              }
+            },
+            {
+              "name": "Lane Stadium",
+              "blurb": "Home of the Hokies, six or seven Saturdays a year.",
+              "maps": "Lane Stadium, 185 Beamer Way, Blacksburg, VA 24061",
+              "times": {
+                "drive": 8,
+                "bike": 17
+              }
+            },
+            {
+              "name": "Corporate Research Center",
+              "blurb": "Virginia Tech's research park: offices, labs, a fitness centre and trails.",
+              "maps": "Virginia Tech Corporate Research Center, 1715 Pratt Dr, Blacksburg, VA 24060",
+              "times": {
+                "drive": 8,
+                "bike": 20
+              }
+            }
+          ]
         },
         {
-          "to": "Huckleberry Trail (Blacksburg trailhead)",
-          "minutes": "TBC"
-        },
-        {
-          "to": "LewisGale Hospital Montgomery",
-          "minutes": "TBC"
-        },
-        {
-          "to": "I-81 (exit 118, Christiansburg)",
-          "minutes": "TBC"
-        },
-        {
-          "to": "Roanoke-Blacksburg Regional Airport",
-          "minutes": "TBC"
+          "heading": "Farther afield",
+          "places": [
+            {
+              "name": "LewisGale Hospital Montgomery",
+              "blurb": "Blacksburg's hospital, on South Main.",
+              "maps": "LewisGale Hospital Montgomery, 3700 S Main St, Blacksburg, VA 24060",
+              "times": {
+                "drive": 8
+              }
+            },
+            {
+              "name": "I-81, exit 118",
+              "blurb": "Christiansburg; Roanoke is about 40 miles up the interstate.",
+              "maps": "Exit 118 Park & Ride, 2005 Roanoke St, Christiansburg, VA 24073",
+              "times": {
+                "drive": 13
+              }
+            },
+            {
+              "name": "Roanoke-Blacksburg Regional Airport",
+              "blurb": "ROA, via I-81.",
+              "maps": "Roanoke-Blacksburg Regional Airport, 5202 Aviation Dr NW, Roanoke, VA 24012",
+              "times": {
+                "drive": 43
+              }
+            }
+          ]
         }
       ],
-      "_note": "Drive times TBC — fill in from a measured drive at an off-peak hour, not an estimate. A destination with a TBC time is not rendered; delete any you do not want to show."
+      "modes": {
+        "walk": {
+          "label": "on foot",
+          "short": "walk",
+          "travelmode": "walking"
+        },
+        "bike": {
+          "label": "by bike",
+          "short": "bike",
+          "travelmode": "bicycling"
+        },
+        "drive": {
+          "label": "by car",
+          "short": "drive",
+          "travelmode": "driving"
+        }
+      },
+      "directionsLabel": "Directions",
+      "origin": "709 Cedarview Dr, Blacksburg, VA 24060",
+      "measured": "2026-11-01"
     },
     "ownersLetter": {
       "heading": "What we'll miss",
@@ -328,14 +455,23 @@
     }
   },
   "agent": {
-    "name": "TBC_AGENT_NAME",
-    "title": "Listing agent",
-    "brokerage": "TBC_BROKERAGE_NAME",
-    "phone": "TBC_PHONE",
-    "phoneHref": "tel:+1TBC",
+    "name": "Kelly Griffin",
+    "title": "Principal Broker",
+    "brokerage": "TRINITY Real Estate",
+    "address": {
+      "street": "202 S Main St, Ste 201",
+      "city": "Blacksburg",
+      "state": "VA",
+      "zip": "24060"
+    },
+    "phone": "540-455-3184",
+    "phoneLabel": "cell",
+    "phoneHref": "tel:+15404553184",
+    "office": "540-655-8819",
+    "officeHref": "tel:+15406558819",
     "email": "TBC_EMAIL",
     "licenseState": "Virginia",
-    "_note": "The contact block, the sticky showing bar, the footer brokerage line and the structured-data provider are rendered only once name, phone and email are filled in. phoneHref is the E.164 form, e.g. tel:+15405551234."
+    "_note": "The cell is the showing number and drives the tel: links and the sticky bar; the office line is shown beneath it. Email is rendered once filled in. phoneHref is the E.164 form."
   },
   "cta": {
     "showing": "Schedule a showing",
@@ -596,12 +732,11 @@
     "Rewiring: date, permit number, final inspection date",
     "Lower level finish: date, permit number, final inspection date",
     "Appliances: make, model year",
-    "Realtor name, brokerage, phone, email",
     "MLS number",
     "Cloudflare Web Analytics token",
     "Owner's letter text",
-    "Drive times (measured, off-peak) to the destinations in sections.blacksburg.driveTimes",
-    "Sunset at Cedarview event date"
+    "Sunset at Cedarview event date",
+    "Agent email"
   ],
   "photographer": {
     "name": "Brian Sowers Photography",

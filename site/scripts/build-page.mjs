@@ -342,21 +342,46 @@ ${gallery(viewImgs.slice(1), 'view-gallery', { cls: 'gallery-row', sizes: ROW_SI
 </div>
 </section>`;
 
-// Drive times: only measured ones are shown; the list is dropped altogether until at least one is in.
-const driveTimes = S.blacksburg.driveTimes.filter((d) => REVIEW || ready(d.minutes));
-S.blacksburg.driveTimes.filter((d) => !driveTimes.includes(d)).forEach((d) => omit(`Drive time to ${d.to}`));
-const driveList = driveTimes.length ? `<div>
-<h3 class="sub-tight">${esc(S.blacksburg.driveTimesHeading || 'By car from the house')}</h3>
-<ul class="drive">
-${driveTimes.map((d) => `<li><span>${t(d.to)}</span><span class="muted">${t(d.minutes)} min</span></li>`).join('\n')}
-</ul>
-</div>` : '';
-const blacksburg = `<section id="blacksburg" class="wrap sec" aria-labelledby="blacksburg-h">
-${secHead(S.blacksburg.heading, 'blacksburg')}
-<div class="split">
-<div>${paragraphs(S.blacksburg.paragraphs)}</div>
-${driveList}
+// Nearby places, grouped by how you get there. A mode's minutes show only when measured; the Directions link opens
+// Google Maps from the house with the place's first mode preset, so every figure on the page can be checked in one tap.
+const B = S.blacksburg;
+const MODES = B.modes || {};
+const modeIcon = {
+  walk: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="13.5" cy="4" r="2" fill="currentColor"/><path d="M10 22l2.5-7 2 2V22M8 13l2-5 3-1 3 3 3 1M12.5 8l-2 5 3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  bike: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="5.5" cy="17" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18.5" cy="17" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 17l4-8h5l4 8M9.5 9l3 8M12 7h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  drive: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 13l2-5h12l2 5v5H4zM4 13h16M7 18v2M17 18v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="15.5" r="1" fill="currentColor"/><circle cx="16" cy="15.5" r="1" fill="currentColor"/></svg>',
+};
+const directionsUrl = (place, mode) => {
+  const q = new URLSearchParams({ api: '1', origin: B.origin, destination: place.maps, travelmode: (MODES[mode] && MODES[mode].travelmode) || 'driving' });
+  return `https://www.google.com/maps/dir/?${q}`;
+};
+const placeTimes = (place) => Object.entries(place.times || {}).filter(([, v]) => REVIEW || ready(v));
+Object.values(B.groups || []).forEach((g) => g.places.forEach((pl) => Object.entries(pl.times || {}).forEach(([m, v]) => { if (isTbc(v)) omit(`Minutes ${MODES[m] ? MODES[m].label : m} to ${pl.name}`); })));
+const placeRow = (pl) => {
+  const times = placeTimes(pl);
+  const firstMode = Object.keys(pl.times || {})[0] || 'drive';
+  return `<li class="place">
+<div class="place-head"><strong>${esc(pl.name)}</strong>
+${times.length ? `<span class="times">${times.map(([m, v]) => `<span class="time" title="${attr(`${t(v)} minutes ${MODES[m] ? MODES[m].label : m}`)}">${modeIcon[m] || ''}<span>${t(v)} min</span><span class="visually-hidden"> ${esc(MODES[m] ? MODES[m].label : m)}</span></span>`).join('')}</span>` : ''}
 </div>
+<p class="place-blurb">${esc(pl.blurb)} <a class="dir" href="${attr(directionsUrl(pl, firstMode))}" target="_blank" rel="noopener" aria-label="${attr(`${B.directionsLabel || 'Directions'} to ${pl.name}`)}">${esc(B.directionsLabel || 'Directions')} &#8599;</a></p>
+</li>`;
+};
+const placeGroups = (B.groups || []).map((g) => `<div class="place-group">
+<h3 class="sub-tight">${esc(g.heading)}</h3>
+<ul class="places">
+${g.places.map(placeRow).join('\n')}
+</ul>
+</div>`).join('\n');
+const anyTime = (B.groups || []).some((g) => g.places.some((pl) => placeTimes(pl).length));
+const blacksburg = `<section id="blacksburg" class="wrap sec" aria-labelledby="blacksburg-h">
+${secHead(B.heading, 'blacksburg')}
+${paragraphs(B.paragraphs)}
+${(B.groups || []).length ? `<h3 class="sub">${esc(B.placesHeading || 'Nearby')}</h3>
+${anyTime ? p(esc(B.placesIntro)) : ''}
+<div class="place-grid">
+${placeGroups}
+</div>` : ''}
 </section>`;
 
 const letter = letterReady ? `<section id="letter" class="sec letter" aria-labelledby="letter-h">
@@ -370,8 +395,10 @@ ${paragraphs(S.ownersLetter.paragraphs)}
 const ev = S.visit.event;
 const agentBlock = (REVIEW || hasAgent || hasPhone || hasEmail) ? `<address class="agent">
 ${(REVIEW || hasAgent) ? `<strong>${t(A.name)}</strong><br>
-${t(A.title)}, ${t(A.brokerage)}<br>` : ''}
-${(REVIEW || hasPhone) ? `<a href="${attr(A.phoneHref)}" data-utm="">${t(A.phone)}</a><br>` : ''}
+${t(A.title)}, ${t(A.brokerage)}<br>
+${A.address ? `<span class="muted">${esc(A.address.street)}, ${esc(A.address.city)}, ${esc(A.address.state)} ${esc(A.address.zip)}</span><br>` : ''}` : ''}
+${(REVIEW || hasPhone) ? `<a href="${attr(A.phoneHref)}" data-utm="">${t(A.phone)}</a>${A.phoneLabel ? ` <span class="muted small">(${esc(A.phoneLabel)})</span>` : ''}<br>` : ''}
+${(A.office && ready(A.office) && !/TBC/.test(A.officeHref || '')) ? `<a href="${attr(A.officeHref)}" data-utm="">${esc(A.office)}</a> <span class="muted small">(office)</span><br>` : ''}
 ${(REVIEW || hasEmail) ? `<a href="mailto:${attr(A.email)}" data-utm="">${t(A.email)}</a>` : ''}
 </address>` : (omit('Agent name, brokerage, phone, email (contact block not rendered)'), '');
 const eventBlock = (REVIEW || ready(ev.date)) ? `<div class="event">
