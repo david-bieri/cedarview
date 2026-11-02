@@ -469,7 +469,7 @@
     "phoneHref": "tel:+15404553184",
     "office": "540-655-8819",
     "officeHref": "tel:+15406558819",
-    "email": "TBC_EMAIL",
+    "email": "kelly@trinitynrv.com",
     "licenseState": "Virginia",
     "_note": "The cell is the showing number and drives the tel: links and the sticky bar; the office line is shown beneath it. Email is rendered once filled in. phoneHref is the E.164 form."
   },
@@ -735,8 +735,7 @@
     "MLS number",
     "Cloudflare Web Analytics token",
     "Owner's letter text",
-    "Sunset at Cedarview event date",
-    "Agent email"
+    "Sunset at Cedarview event date"
   ],
   "photographer": {
     "name": "Brian Sowers Photography",
