@@ -320,18 +320,6 @@
               },
               "lat": 37.2078924,
               "lng": -80.3897673
-            },
-            {
-              "name": "Blacksburg Municipal Golf Course",
-              "blurb": "Nine hilly holes on Graves Avenue, open to all, and the walking trail that loops the course.",
-              "maps": "Blacksburg Municipal Golf Course, 800 Graves Ave, Blacksburg, VA 24060",
-              "times": {
-                "walk": "TBC",
-                "bike": "TBC",
-                "drive": "TBC"
-              },
-              "lat": 37.2260246,
-              "lng": -80.396141
             }
           ]
         },
@@ -374,6 +362,17 @@
               "lng": -80.4126303
             },
             {
+              "name": "Blacksburg Municipal Golf Course",
+              "blurb": "Nine hilly holes on Graves Avenue, open to all, and the walking trail that loops the course.",
+              "maps": "Blacksburg Municipal Golf Course, 800 Graves Ave, Blacksburg, VA 24060",
+              "times": {
+                "bike": 15,
+                "drive": 7
+              },
+              "lat": 37.2260246,
+              "lng": -80.396141
+            },
+            {
               "name": "Downtown, Main Street",
               "blurb": "Cafés and restaurants, the Lyric Theatre, the Saturday farmers market.",
               "maps": "Blacksburg Farmers Market, 108 W Roanoke St, Blacksburg, VA 24060",
@@ -389,8 +388,8 @@
               "blurb": "Private club east of the house: golf, a clubhouse restaurant and views to the mountains.",
               "maps": "Blacksburg Country Club, 1064 Clubhouse Rd, Blacksburg, VA 24060",
               "times": {
-                "drive": "TBC",
-                "bike": "TBC"
+                "drive": 9,
+                "bike": 20
               },
               "lat": 37.214767,
               "lng": -80.3585922
@@ -860,8 +859,7 @@
     "Owner's letter text",
     "Sunset at Cedarview event date",
     "First reel (sections.view.reels.items) and its poster",
-    "Album photos for the seasons strip (album.items)",
-    "Minutes to Blacksburg Municipal Golf Course (walk/bike/drive) and Blacksburg Country Club (drive/bike) — Google Maps from the house"
+    "Album photos for the seasons strip (album.items)"
   ],
   "photographer": {
     "name": "Brian Sowers Photography",
