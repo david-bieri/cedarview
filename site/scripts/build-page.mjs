@@ -339,8 +339,61 @@ ${(site.listingLive || REVIEW) ? `<p class="band-note">${t(S.view.dailySunsetNot
 </div>
 <div class="wrap">
 ${gallery(viewImgs.slice(1), 'view-gallery', { cls: 'gallery-row', sizes: ROW_SIZES })}
+${await reelsBlock()}
+${await albumBlock()}
 </div>
 </section>`;
+
+// Reels: newest clip large (9:16, muted, poster), up to six earlier posters that swap it in. Nothing until the first exists.
+async function reelsBlock() {
+  const R = S.view.reels;
+  if (!R) return '';
+  const items = [];
+  for (const it of R.items || []) {
+    const file = `${R.dir}/${it.file}.mp4`, poster = `${R.dir}/${it.file}.jpg`;
+    if (!(await exists(file))) { omit(`Reel "${it.file}" (file missing)`); continue; }
+    items.push({ ...it, src: file, poster: (await exists(poster)) ? poster : null });
+  }
+  if (!items.length) { omit('Reels (none yet)'); return ''; }
+  items.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+  const [first, ...rest] = items;
+  const dateFmt = (d) => (d ? new Date(`${d}T12:00:00`).toLocaleDateString(site.language, { day: 'numeric', month: 'long', year: 'numeric' }) : '');
+  const reelData = items.map((it) => ({ src: it.src, poster: it.poster, caption: it.caption, date: dateFmt(it.date) }));
+  return `<div class="reels" id="reels">
+<h3 class="sub">${esc(R.heading)}</h3>
+${p(esc(R.intro))}
+<div class="reel-stage">
+<video id="reel-video" class="reel" controls muted playsinline preload="none"${first.poster ? ` poster="${attr(first.poster)}"` : ''} width="1080" height="1920">
+<source src="${attr(first.src)}" type="video/mp4">
+</video>
+<p class="reel-cap"><span id="reel-cap">${esc(first.caption || '')}</span> <span class="muted" id="reel-date">${esc(dateFmt(first.date))}</span></p>
+</div>
+${rest.length ? `<h4 class="reel-earlier">${esc(R.earlierLabel || 'Earlier')}</h4>
+<div class="reel-row">
+${rest.slice(0, 6).map((it, i) => `<button type="button" class="reel-thumb" data-reel="${i + 1}" aria-label="${attr(`Play: ${it.caption || it.file}`)}">${it.poster ? `<img src="${attr(it.poster)}" alt="" loading="lazy" decoding="async" width="270" height="480">` : `<span class="reel-noposter"></span>`}<span>${esc(dateFmt(it.date))}</span></button>`).join('\n')}
+</div>` : ''}
+<script type="application/json" id="reel-data">${JSON.stringify(reelData).replace(/</g, '\\u003c')}</script>
+</div>`;
+}
+
+// The owners' album: a strip of phone photos, each carrying the album label burned on by scripts/build-album.mjs.
+async function albumBlock() {
+  const AL = data.album;
+  if (!AL) return '';
+  const man = (await exists(AL.manifest)) ? JSON.parse(await fs.readFile(path.join(ROOT, AL.manifest), 'utf8')) : [];
+  if (!man.length) { omit('Album photos (none yet)'); return ''; }
+  const cards = man.map((img) => `<figure class="album-tile">
+${picture(img, { sizes: '(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw' })}
+<figcaption>${img.season ? `<span class="album-season">${esc(img.season)}</span> ` : ''}${esc(img.caption)}</figcaption>
+</figure>`).join('\n');
+  return `<div class="album" id="album">
+<h3 class="sub">${esc(AL.heading)}</h3>
+${p(esc(AL.intro))}
+<div class="album-strip">
+${cards}
+</div>
+</div>`;
+}
 
 // Nearby places, grouped by how you get there. A mode's minutes show only when measured; the Directions link opens
 // Google Maps from the house with the place's first mode preset, so every figure on the page can be checked in one tap.
@@ -374,9 +427,72 @@ ${g.places.map(placeRow).join('\n')}
 </ul>
 </div>`).join('\n');
 const anyTime = (B.groups || []).some((g) => g.places.some((pl) => placeTimes(pl).length));
+
+// The map: Leaflet (vendored at build time into js/ and css/) with pins coloured by group. All data the script
+// needs is embedded as JSON, so js/map.js carries no facts of its own. Without JS (or in print) the pre-rendered
+// still in map.fallbackImage is shown, with the lists below doing the real work.
+const M = B.map;
+const themeColors = B.themeColors || {};
+const leafletSrc = path.join(ROOT, 'node_modules', 'leaflet', 'dist');
+let mapBlock = '';
+if (M && (await exists('node_modules/leaflet/dist/leaflet.js'))) {
+  await fs.copyFile(path.join(leafletSrc, 'leaflet.js'), path.join(ROOT, 'js', 'leaflet.js'));
+  await fs.copyFile(path.join(leafletSrc, 'leaflet.css'), path.join(ROOT, 'css', 'leaflet.css'));
+  const mapData = {
+    house: M.house, zoom: M.zoom || 14, tiles: M.tiles, walkArea: M.walkArea, allLabel: M.allLabel || 'All',
+    colors: Object.fromEntries(Object.entries(themeColors).map(([g, k]) => [g, PAL[k] || k])),
+    accent: PAL.cobalt, cream: PAL.cream, ink: PAL.ink,
+    groups: (B.groups || []).map((g) => ({
+      heading: g.heading, color: PAL[themeColors[g.heading]] || PAL.ink,
+      places: g.places.filter((pl) => !pl.offMap && pl.lat && pl.lng).map((pl) => ({
+        name: pl.name, blurb: pl.blurb, lat: pl.lat, lng: pl.lng, fit: pl.fit !== false,
+        times: placeTimes(pl).map(([m, v]) => `${v} min ${MODES[m] ? MODES[m].label : m}`),
+        directions: directionsUrl(pl, Object.keys(pl.times || {})[0] || 'drive'),
+        directionsLabel: B.directionsLabel || 'Directions',
+      })),
+    })),
+  };
+  const fallbackPng = M.fallbackImage && (await exists(M.fallbackImage));
+  // Tile-free schematic drawn at build time: the same pins and walking area on the cream ground. Used when the PNG
+  // from `npm run map-image` is absent, and always for print (the live tiles do not print).
+  const schematic = (() => {
+    const pts = mapData.groups.flatMap((g) => g.places.map((pl) => ({ ...pl, color: g.color })));
+    const lats = [...pts.map((x) => x.lat), M.house.lat], lngs = [...pts.map((x) => x.lng), M.house.lng];
+    const pad = 0.004;
+    const minLat = Math.min(...lats) - pad, maxLat = Math.max(...lats) + pad, minLng = Math.min(...lngs) - pad, maxLng = Math.max(...lngs) + pad;
+    const W = 1200, H = 760;
+    const kx = Math.cos((M.house.lat * Math.PI) / 180);
+    const sx = W / ((maxLng - minLng) * kx), sy = H / (maxLat - minLat), s = Math.min(sx, sy);
+    const ox = (W - (maxLng - minLng) * kx * s) / 2, oy = (H - (maxLat - minLat) * s) / 2;
+    const X = (lng) => ox + (lng - minLng) * kx * s, Y = (lat) => oy + (maxLat - lat) * s;
+    const poly = (M.walkArea && M.walkArea.polygon) ? `<polygon points="${M.walkArea.polygon.map(([la, lo]) => `${X(lo).toFixed(1)},${Y(la).toFixed(1)}`).join(' ')}" fill="${PAL.cobalt}" fill-opacity=".12" stroke="${PAL.cobalt}" stroke-opacity=".6" stroke-width="1.5"/>` : '';
+    const pins = pts.map((pl) => `<g><circle cx="${X(pl.lng).toFixed(1)}" cy="${Y(pl.lat).toFixed(1)}" r="7" fill="${pl.color}" stroke="${PAL.cream}" stroke-width="2.5"/><text x="${(X(pl.lng) + 11).toFixed(1)}" y="${(Y(pl.lat) + 4).toFixed(1)}" font-family="Inter, system-ui, sans-serif" font-size="15" fill="${PAL.ink}">${esc(pl.name)}</text></g>`).join('');
+    const house = `<circle cx="${X(M.house.lng).toFixed(1)}" cy="${Y(M.house.lat).toFixed(1)}" r="10" fill="${PAL.ink}" stroke="${PAL.cream}" stroke-width="3"/><text x="${(X(M.house.lng) + 15).toFixed(1)}" y="${(Y(M.house.lat) + 5).toFixed(1)}" font-family="Fraunces, Georgia, serif" font-size="18" fill="${PAL.ink}">${esc(M.house.label)}</text>`;
+    return `<svg class="map-fallback map-schematic" viewBox="0 0 ${W} ${H}" role="img" aria-label="${attr(`Schematic map: ${site.name} and the nearby places, not to scale with streets`)}"><rect width="${W}" height="${H}" fill="${PAL.creamDeep}"/>${poly}${pins}${house}<text x="16" y="${H - 14}" font-family="Inter, system-ui, sans-serif" font-size="13" fill="${PAL.muted}">Schematic: positions to scale, streets not shown.</text></svg>`;
+  })();
+  const fallback = fallbackPng
+    ? `<img class="map-fallback" src="${attr(M.fallbackImage)}" alt="${attr(`Map of Blacksburg with ${site.name} and the nearby places pinned`)}" loading="lazy" decoding="async">`
+    : schematic;
+  mapBlock = `<h3 class="sub">${esc(M.heading)}</h3>
+${p(esc(M.intro))}
+<div class="map-chips" id="map-chips" role="group" aria-label="Show pins for" hidden>
+<button type="button" data-theme="" aria-pressed="true">${esc(M.allLabel || 'All')}</button>
+${(B.groups || []).map((g) => `<button type="button" data-theme="${attr(g.heading)}" aria-pressed="false"><span class="dot" style="background:${attr(PAL[themeColors[g.heading]] || PAL.ink)}"></span>${esc(g.heading)}</button>`).join('\n')}
+</div>
+<figure class="map-fig">
+<div class="map" id="map" aria-label="${attr(`Map of places near ${site.name}`)}">
+${fallback}
+</div>
+${M.walkArea ? `<figcaption class="muted small"><span class="walk-swatch" aria-hidden="true"></span> ${esc(M.walkArea.label)} &middot; Map data &copy; OpenStreetMap contributors, tiles &copy; CARTO</figcaption>` : ''}
+</figure>
+<script type="application/json" id="map-data">${JSON.stringify(mapData).replace(/</g, '\\u003c')}</script>`;
+  if (!fallbackPng) console.log('note: no assets/img/map-fallback.png (npm run map-image on a machine with Chrome and internet); the build-time schematic is used for no-JS and print');
+}
+
 const blacksburg = `<section id="blacksburg" class="wrap sec" aria-labelledby="blacksburg-h">
 ${secHead(B.heading, 'blacksburg')}
 ${paragraphs(B.paragraphs)}
+${mapBlock}
 ${(B.groups || []).length ? `<h3 class="sub">${esc(B.placesHeading || 'Nearby')}</h3>
 ${anyTime ? p(esc(B.placesIntro)) : ''}
 <div class="place-grid">
@@ -529,6 +645,9 @@ ${ready(site.analytics.token) ? `<link rel="preconnect" href="${attr(analyticsOr
 <link rel="stylesheet" href="${attr(fontsHref)}" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="${attr(fontsHref)}"></noscript>
 <link rel="stylesheet" href="css/style.css">
+${mapBlock ? `<link rel="stylesheet" href="css/leaflet.css">
+<script defer src="js/leaflet.js"></script>
+<script defer src="js/map.js"></script>` : ''}
 <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>
 <script defer src="js/gallery.js"></script>
 <script defer src="js/site.js"></script>

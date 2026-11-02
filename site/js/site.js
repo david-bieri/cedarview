@@ -41,6 +41,29 @@
     }
   }
 
+  // ----- reels: an earlier poster swaps its clip into the stage -----
+  var reelData = document.getElementById('reel-data');
+  var reelVideo = document.getElementById('reel-video');
+  if (reelData && reelVideo) {
+    var reels = [];
+    try { reels = JSON.parse(reelData.textContent); } catch (e) { reels = []; }
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.reel-thumb[data-reel]');
+      if (!btn) return;
+      var r = reels[parseInt(btn.getAttribute('data-reel'), 10)];
+      if (!r) return;
+      reelVideo.pause();
+      if (r.poster) reelVideo.poster = r.poster; else reelVideo.removeAttribute('poster');
+      reelVideo.querySelector('source').src = r.src;
+      reelVideo.load();
+      var cap = document.getElementById('reel-cap'), date = document.getElementById('reel-date');
+      if (cap) cap.textContent = r.caption || '';
+      if (date) date.textContent = r.date || '';
+      reelVideo.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      reelVideo.play().catch(function () {});
+    });
+  }
+
   // ----- 3D tour -----
   var frame = document.getElementById('tour-frame');
   var start = document.getElementById('tour-start');

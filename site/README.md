@@ -39,3 +39,8 @@ npm run serve      # http://localhost:8080
 
 ## Lighthouse
 `npm run lighthouse` audits a launch-mode copy of the page (noindex off, built in a temp dir; the repo is untouched). The committed page keeps `noindex` until listing day, which alone lowers Lighthouse's SEO score. Needs Chrome on PATH or `CHROME_PATH`.
+
+## The map, the reels and the album
+- **Map** (`sections.blacksburg.map`): Leaflet with CARTO/OpenStreetMap tiles, no API key, no cookies. Pins come from `sections.blacksburg.groups` (each place has `lat`/`lng`; `offMap: true` keeps the airport off it, `fit: false` keeps I-81 out of the opening frame). Pin colour per group is `themeColors`. The 15-minute walking wash is a hand-simplified polygon from the measured routes. For no-JS and print the build draws a schematic (pins to scale, no streets); `npm run map-image` on a machine with Chrome and internet replaces it with a real still at `assets/img/map-fallback.png`.
+- **Reels** (`sections.view.reels`): drop `<name>.mp4` (9:16, H.264, 1080×1920, 15–30 s, muted, captions burned in, under 15 MB) and `<name>.jpg` poster into `assets/video/reels/`, add `{file, caption, date}` to `items`. Newest shows large, up to six earlier posters beneath; the block is absent until the first clip exists. `npm run check` refuses any video over `maxBytes`.
+- **Album** (`album`): phone photos into `assets/album/`, listed in `items` as `{file, season, caption}`. `scripts/build-album.mjs` sizes them and burns "From the owners' album" on every rendition (bottom-right, serif italic — the mirror of the staging label). The "A year on Cedarview Drive" strip appears under The View once at least one file exists. No faces of children; nothing that dates the house.

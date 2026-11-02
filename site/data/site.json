@@ -266,7 +266,16 @@
       ],
       "video": "assets/video/drone-reveal.mp4",
       "videoPoster": "assets/img/view-south-1200.jpg",
-      "dailySunsetNote": "Daily sunset clips are posted here while the listing is live."
+      "dailySunsetNote": "Daily sunset clips are posted here while the listing is live.",
+      "reels": {
+        "heading": "Lately",
+        "intro": "Short clips from the house, newest first. The same clips go out on Instagram and TikTok.",
+        "earlierLabel": "Earlier",
+        "dir": "assets/video/reels",
+        "maxBytes": 15000000,
+        "_note": "Each reel: a 9:16 H.264 MP4 (1080x1920, 15-30 s, muted, captions burned in) under 15 MB in assets/video/reels/, with a JPEG poster of the same name. Newest first; the page shows the newest large and up to six earlier posters. Nothing renders until the first item is here and its file exists. Types: sunset (fixed tripod spot on the deck, time-lapse), walk-from-the-door (front door to the pool gate, 4x, real minutes in the caption), room-at-its-hour (10 s static, breakfast room at 7:30, living room at 4 pm).",
+        "items": []
+      }
     },
     "blacksburg": {
       "heading": "Life in Blacksburg",
@@ -288,7 +297,9 @@
               "times": {
                 "walk": 12,
                 "bike": 5
-              }
+              },
+              "lat": 37.2117264,
+              "lng": -80.3926553
             },
             {
               "name": "Nellie's Cave Park",
@@ -296,7 +307,9 @@
               "maps": "Nellies Cave Park, 1900 Grissom Ln, Blacksburg, VA 24060",
               "times": {
                 "walk": 15
-              }
+              },
+              "lat": 37.2095889,
+              "lng": -80.3922556
             },
             {
               "name": "The Meadow",
@@ -304,7 +317,9 @@
               "maps": "The Meadow, Blacksburg, VA 24060",
               "times": {
                 "walk": 16
-              }
+              },
+              "lat": 37.2078924,
+              "lng": -80.3897673
             }
           ]
         },
@@ -319,7 +334,9 @@
                 "bike": 8,
                 "drive": 5,
                 "walk": 24
-              }
+              },
+              "lat": 37.2133262,
+              "lng": -80.4021911
             },
             {
               "name": "Kroger, South Main",
@@ -329,7 +346,9 @@
                 "bike": 8,
                 "drive": 5,
                 "walk": 25
-              }
+              },
+              "lat": 37.216728,
+              "lng": -80.4027316
             },
             {
               "name": "Blacksburg Library",
@@ -338,7 +357,9 @@
               "times": {
                 "bike": 12,
                 "drive": 6
-              }
+              },
+              "lat": 37.2259447,
+              "lng": -80.4126303
             },
             {
               "name": "Downtown, Main Street",
@@ -347,7 +368,9 @@
               "times": {
                 "bike": 13,
                 "drive": 8
-              }
+              },
+              "lat": 37.2291826,
+              "lng": -80.4144849
             }
           ]
         },
@@ -361,7 +384,9 @@
               "times": {
                 "drive": 11,
                 "bike": 15
-              }
+              },
+              "lat": 37.2274294,
+              "lng": -80.4222303
             },
             {
               "name": "Lane Stadium",
@@ -370,7 +395,9 @@
               "times": {
                 "drive": 8,
                 "bike": 17
-              }
+              },
+              "lat": 37.2199873,
+              "lng": -80.4180643
             },
             {
               "name": "Corporate Research Center",
@@ -379,7 +406,9 @@
               "times": {
                 "drive": 8,
                 "bike": 20
-              }
+              },
+              "lat": 37.2047812,
+              "lng": -80.4117825
             }
           ]
         },
@@ -392,7 +421,9 @@
               "maps": "LewisGale Hospital Montgomery, 3700 S Main St, Blacksburg, VA 24060",
               "times": {
                 "drive": 8
-              }
+              },
+              "lat": 37.1872989,
+              "lng": -80.4108939
             },
             {
               "name": "I-81, exit 118",
@@ -400,7 +431,10 @@
               "maps": "Exit 118 Park & Ride, 2005 Roanoke St, Christiansburg, VA 24073",
               "times": {
                 "drive": 13
-              }
+              },
+              "lat": 37.1333382,
+              "lng": -80.3711065,
+              "fit": false
             },
             {
               "name": "Roanoke-Blacksburg Regional Airport",
@@ -408,7 +442,10 @@
               "maps": "Roanoke-Blacksburg Regional Airport, 5202 Aviation Dr NW, Roanoke, VA 24012",
               "times": {
                 "drive": 43
-              }
+              },
+              "lat": 37.3205785,
+              "lng": -79.9703762,
+              "offMap": true
             }
           ]
         }
@@ -432,7 +469,71 @@
       },
       "directionsLabel": "Directions",
       "origin": "709 Cedarview Dr, Blacksburg, VA 24060",
-      "measured": "2026-11-01"
+      "measured": "2026-11-01",
+      "map": {
+        "heading": "On the map",
+        "intro": "Pins by how you get there. Tap a pin for the place and its directions.",
+        "house": {
+          "lat": 37.2156623,
+          "lng": -80.3883716,
+          "label": "Cedarview House"
+        },
+        "walkArea": {
+          "label": "About 15 minutes on foot",
+          "minutes": 15,
+          "_note": "Hand-simplified from the measured walking routes to the pool, Nellie's Cave Park and the Meadow; not an isochrone service.",
+          "polygon": [
+            [
+              37.2205,
+              -80.385
+            ],
+            [
+              37.22,
+              -80.3905
+            ],
+            [
+              37.216,
+              -80.395
+            ],
+            [
+              37.211,
+              -80.3955
+            ],
+            [
+              37.207,
+              -80.3925
+            ],
+            [
+              37.206,
+              -80.388
+            ],
+            [
+              37.2085,
+              -80.3835
+            ],
+            [
+              37.214,
+              -80.3815
+            ]
+          ]
+        },
+        "allLabel": "All",
+        "zoom": 14,
+        "tiles": {
+          "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+          "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>",
+          "subdomains": "abcd",
+          "maxZoom": 19
+        },
+        "fallbackImage": "assets/img/map-fallback.png",
+        "_note": "Leaflet with CARTO light tiles over OpenStreetMap data: no API key, no tracking cookies. Places with offMap: true (the airport) keep their list row but are not pinned, so the map stays on Blacksburg. The theme colours come from design.palette: walk = cobalt, short ride = oak, campus = ridge, farther = rust. A place with fit: false (I-81) is pinned but left out of the opening frame so the map stays on town; its theme chip zooms out to it."
+      },
+      "themeColors": {
+        "A walk from the door": "cobalt",
+        "A short ride": "oak",
+        "Campus": "twilight",
+        "Farther afield": "rust"
+      }
     },
     "ownersLetter": {
       "heading": "What we'll miss",
@@ -735,7 +836,9 @@
     "MLS number",
     "Cloudflare Web Analytics token",
     "Owner's letter text",
-    "Sunset at Cedarview event date"
+    "Sunset at Cedarview event date",
+    "First reel (sections.view.reels.items) and its poster",
+    "Album photos for the seasons strip (album.items)"
   ],
   "photographer": {
     "name": "Brian Sowers Photography",
@@ -763,5 +866,14 @@
       "text": "Inter"
     },
     "direction": "B hero and gallery, C numbered and ruled structure below"
+  },
+  "album": {
+    "heading": "A year on Cedarview Drive",
+    "intro": "From the owners' album: the same places through the seasons, on a phone, not the photographer's camera.",
+    "label": "From the owners' album",
+    "dir": "assets/album",
+    "manifest": "assets/img/album-manifest.json",
+    "_note": "Drop phone photos into assets/album/ and list them here (file is the name without extension). The build sizes them, burns the label on every rendition and writes the manifest; the strip appears under The View once at least one listed file exists. No faces of children; nothing that dates the house.",
+    "items": []
   }
 }

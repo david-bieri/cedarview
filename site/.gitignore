@@ -4,3 +4,7 @@ node_modules/
 .lighthouse/
 review.html
 assets/plans/
+js/leaflet.js
+css/leaflet.css
+assets/img/album-*.webp
+assets/img/album-*.jpg

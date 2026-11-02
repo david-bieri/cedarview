@@ -63,6 +63,16 @@ for (const rel of refs) {
   try { await fs.access(path.join(ROOT, rel)); } catch { failures.push(`missing file linked from the page: ${rel}`); }
 }
 
+// 4b. Video files that would bloat the Pages deploy
+const maxVideo = (data.sections.view.reels && data.sections.view.reels.maxBytes) || 15_000_000;
+const videoDir = path.join(ROOT, 'assets', 'video');
+const walkFiles = async (dir) => { const out = []; for (const e of await fs.readdir(dir, { withFileTypes: true }).catch(() => [])) { const p = path.join(dir, e.name); if (e.isDirectory()) out.push(...await walkFiles(p)); else out.push(p); } return out; };
+for (const f of await walkFiles(videoDir)) {
+  if (!/\.(mp4|webm|mov)$/i.test(f)) continue;
+  const { size } = await fs.stat(f);
+  if (size > maxVideo) failures.push(`${path.relative(ROOT, f)} is ${(size / 1e6).toFixed(1)} MB; the limit is ${(maxVideo / 1e6).toFixed(0)} MB (re-export at 1080x1920, H.264, ~6 Mbit/s)`);
+}
+
 // 5. Launch-day conditions
 if (data.site.listingLive) {
   if (data.site.noindex) failures.push('site.listingLive is true but site.noindex is still true');
