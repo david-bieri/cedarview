@@ -520,13 +520,12 @@
         "allLabel": "All",
         "zoom": 14,
         "tiles": {
-          "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-          "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>",
-          "subdomains": "abcd",
+          "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+          "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
           "maxZoom": 19
         },
         "fallbackImage": "assets/img/map-fallback.png",
-        "_note": "Leaflet with CARTO light tiles over OpenStreetMap data: no API key, no tracking cookies. Places with offMap: true (the airport) keep their list row but are not pinned, so the map stays on Blacksburg. The theme colours come from design.palette: walk = cobalt, short ride = oak, campus = ridge, farther = rust. A place with fit: false (I-81) is pinned but left out of the opening frame so the map stays on town; its theme chip zooms out to it."
+        "_note": "Leaflet with OpenStreetMap's standard tiles (CARTO's free basemaps now need an API key): no key, no cookies; the tiles are desaturated in CSS to sit with the palette. Places with offMap: true (the airport) keep their list row but are not pinned, so the map stays on Blacksburg. The theme colours come from design.palette: walk = cobalt, short ride = oak, campus = ridge, farther = rust. A place with fit: false (I-81) is pinned but left out of the opening frame so the map stays on town; its theme chip zooms out to it."
       },
       "themeColors": {
         "A walk from the door": "cobalt",

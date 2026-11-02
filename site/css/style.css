@@ -188,6 +188,8 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 .pin span { display: block; width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 0 0 2px var(--cream), 0 2px 6px rgba(29, 36, 48, .35); }
 .pin-house span { background: var(--ink); box-shadow: 0 0 0 3px var(--cream), 0 0 0 5px var(--ink), 0 3px 8px rgba(29, 36, 48, .4); }
 .leaflet-container { font-family: var(--text); background: var(--creamDeep); }
+.leaflet-tile-pane { filter: grayscale(.55) sepia(.18) saturate(.9) brightness(1.02); }
+@media print { .leaflet-tile-pane { filter: none; } }
 .leaflet-popup-content-wrapper { border-radius: .4rem; color: var(--ink); background: var(--cream); box-shadow: 0 8px 24px rgba(29, 36, 48, .25); }
 .leaflet-popup-tip { background: var(--cream); }
 .leaflet-popup-content { margin: .8rem 1rem; font-size: .9rem; line-height: 1.45; }

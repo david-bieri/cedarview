@@ -483,7 +483,7 @@ ${(B.groups || []).map((g) => `<button type="button" data-theme="${attr(g.headin
 <div class="map" id="map" aria-label="${attr(`Map of places near ${site.name}`)}">
 ${fallback}
 </div>
-${M.walkArea ? `<figcaption class="muted small"><span class="walk-swatch" aria-hidden="true"></span> ${esc(M.walkArea.label)} &middot; Map data &copy; OpenStreetMap contributors, tiles &copy; CARTO</figcaption>` : ''}
+${M.walkArea ? `<figcaption class="muted small"><span class="walk-swatch" aria-hidden="true"></span> ${esc(M.walkArea.label)} &middot; Map Map data &copy; OpenStreetMap contributors, tiles &copy; CARTOcopy; OpenStreetMap contributors</figcaption>` : ''}
 </figure>
 <script type="application/json" id="map-data">${JSON.stringify(mapData).replace(/</g, '\\u003c')}</script>`;
   if (!fallbackPng) console.log('note: no assets/img/map-fallback.png (npm run map-image on a machine with Chrome and internet); the build-time schematic is used for no-JS and print');
