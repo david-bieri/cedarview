@@ -323,10 +323,13 @@ ${(await exists(S.updates.specSheet.file)) ? `<p><a class="btn" href="${attr(S.u
 </section>`;
 
 const viewPoster = viewImg.sources.jpg.find((s) => s.w === 1200) || largest(viewImg.sources.jpg);
-const viewMedia = (await exists(S.view.video))
-  ? `<video class="view-video" controls preload="none" playsinline poster="${attr(viewPoster.src)}" width="${viewImg.width}" height="${viewImg.height}" style="aspect-ratio:${viewImg.width} / ${viewImg.height};background-color:${attr(viewImg.color)}">
+const hasViewVideo = await exists(S.view.video);
+// The view video is 16:9 and muted (the pan's wind noise adds nothing); the lead view photograph is its poster and
+// stays in the gallery beneath, so the still never disappears when the clip is present.
+const viewMedia = hasViewVideo
+  ? `<video class="view-video" controls muted preload="none" playsinline poster="${attr(viewPoster.src)}" width="1280" height="720" style="background-color:${attr(viewImg.color)}">
 <source src="${attr(S.view.video)}" type="video/mp4">
-</video>`
+</video>${S.view.videoCaption ? `<p class="view-caption wrap">${esc(S.view.videoCaption)}</p>` : ''}`
   : picture(viewImg, { sizes: '100vw', className: 'view-img' });
 const view = `<section id="view" class="sec sec-view" aria-labelledby="view-h">
 <div class="wrap">${secHead(S.view.heading, 'view')}</div>
@@ -338,7 +341,7 @@ ${(site.listingLive || REVIEW) ? `<p class="band-note">${t(S.view.dailySunsetNot
 </div>
 </div>
 <div class="wrap">
-${gallery(viewImgs.slice(1), 'view-gallery', { cls: 'gallery-row', sizes: ROW_SIZES })}
+${gallery(hasViewVideo ? viewImgs : viewImgs.slice(1), 'view-gallery', { cls: 'gallery-row', sizes: ROW_SIZES })}
 ${await reelsBlock()}
 ${await albumBlock()}
 </div>

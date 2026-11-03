@@ -251,6 +251,8 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 .sec-view .sec-head { margin-bottom: 2rem; }
 .view-media { background: var(--ridge); }
 .view-media picture, .view-img, .view-video { display: block; width: 100%; height: auto; max-height: 80svh; object-fit: cover; }
+.view-video { aspect-ratio: 16 / 9; max-width: var(--max); margin: 0 auto; }
+.view-caption { padding-top: .75rem !important; padding-bottom: .75rem !important; font-size: .85rem; color: var(--muted); max-width: var(--max); }
 .view-band .wrap { padding-top: 2.5rem; padding-bottom: 2rem; }
 .view-band p { font-family: var(--display); font-weight: 300; font-size: clamp(1.25rem, 2.4vw, 1.75rem); line-height: 1.35; max-width: 48rem; }
 .view-band .band-note { font-family: var(--text); font-size: .9rem; color: var(--rule); margin: 0; }

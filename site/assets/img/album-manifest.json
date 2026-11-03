@@ -245,6 +245,55 @@
   "group": "album"
  },
  {
+  "name": "album-hammock-woodpile",
+  "alt": "The hammock, the woodpile and the picnic table under the pines.",
+  "caption": "The hammock, the woodpile and the picnic table under the pines.",
+  "season": "Autumn",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#382828",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-hammock-woodpile-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-hammock-woodpile-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-hammock-woodpile-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-hammock-woodpile-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-hammock-woodpile-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-hammock-woodpile-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-hammock-woodpile-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-hammock-woodpile-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
   "name": "album-kitchen-board",
   "alt": "A board on the kitchen granite.",
   "caption": "A board on the kitchen granite.",
@@ -386,6 +435,55 @@
     {
      "w": 1500,
      "src": "assets/img/album-autumn-roses-1500.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-autumn-ridge-from-deck",
+  "alt": "The ridge from the deck, the week the colour peaks.",
+  "caption": "The ridge from the deck, the week the colour peaks.",
+  "season": "Autumn",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#f8f8f8",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-autumn-ridge-from-deck-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-autumn-ridge-from-deck-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-autumn-ridge-from-deck-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-autumn-ridge-from-deck-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-autumn-ridge-from-deck-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-autumn-ridge-from-deck-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-autumn-ridge-from-deck-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-autumn-ridge-from-deck-1600.jpg"
     }
    ]
   },
