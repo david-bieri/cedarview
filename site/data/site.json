@@ -116,8 +116,8 @@
       "display": "GLO Fiber internet"
     },
     "mls": {
-      "number": "TBC_MLS_NUMBER",
-      "system": "TBC"
+      "number": "429093",
+      "system": "New River Valley Association of Realtors MLS"
     },
     "tour": {
       "matterportUrl": "https://my.matterport.com/show/?m=GC6VjEgsCfd&mls=1",
@@ -869,7 +869,6 @@
     "Rewiring: date, permit number, final inspection date",
     "Lower level finish: date, permit number, final inspection date",
     "Appliances: make, model year",
-    "MLS number",
     "Cloudflare Web Analytics token",
     "Owner's letter text",
     "Sunset at Cedarview event date"
