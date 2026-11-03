@@ -274,7 +274,14 @@
         "dir": "assets/video/reels",
         "maxBytes": 15000000,
         "_note": "Each reel: a 9:16 H.264 MP4 (1080x1920, 15-30 s, muted, captions burned in) under 15 MB in assets/video/reels/, with a JPEG poster of the same name. Newest first; the page shows the newest large and up to six earlier posters. Nothing renders until the first item is here and its file exists. Types: sunset (fixed tripod spot on the deck, time-lapse), walk-from-the-door (front door to the pool gate, 4x, real minutes in the caption), room-at-its-hour (10 s static, breakfast room at 7:30, living room at 4 pm).",
-        "items": []
+        "items": [
+          {
+            "file": "a-year-on-cedarview-drive",
+            "caption": "A year on Cedarview Drive — fourteen moments from the owners' album.",
+            "date": "2026-11-03",
+            "type": "album"
+          }
+        ]
       }
     },
     "blacksburg": {
@@ -857,9 +864,7 @@
     "MLS number",
     "Cloudflare Web Analytics token",
     "Owner's letter text",
-    "Sunset at Cedarview event date",
-    "First reel (sections.view.reels.items) and its poster",
-    "Album photos for the seasons strip (album.items)"
+    "Sunset at Cedarview event date"
   ],
   "photographer": {
     "name": "Brian Sowers Photography",
@@ -895,6 +900,91 @@
     "dir": "assets/album",
     "manifest": "assets/img/album-manifest.json",
     "_note": "Drop phone photos into assets/album/ and list them here (file is the name without extension). The build sizes them, burns the label on every rendition and writes the manifest; the strip appears under The View once at least one listed file exists. No faces of children; nothing that dates the house.",
-    "items": []
+    "items": [
+      {
+        "file": "spring-cherry",
+        "season": "Spring",
+        "caption": "The cherry in front of the house, the week it blooms.",
+        "source": "IMG_5118"
+      },
+      {
+        "file": "spring-blossom",
+        "season": "Spring",
+        "caption": "Blossom against a blue sky.",
+        "source": "IMG_5135"
+      },
+      {
+        "file": "summer-hydrangeas",
+        "season": "Early summer",
+        "caption": "Hydrangeas.",
+        "source": "IMG_5115"
+      },
+      {
+        "file": "summer-garden-evening",
+        "season": "Summer",
+        "caption": "A summer evening in the garden, seen from upstairs.",
+        "source": "IMG_5109"
+      },
+      {
+        "file": "summer-fire-pit",
+        "season": "Summer",
+        "caption": "S'mores at the fire pit.",
+        "source": "IMG_5137"
+      },
+      {
+        "file": "kitchen-board",
+        "season": "Any Saturday",
+        "caption": "A board on the kitchen granite.",
+        "source": "IMG_5133"
+      },
+      {
+        "file": "porch-set",
+        "season": "Summer",
+        "caption": "The screened porch, set for guests.",
+        "source": "IMG_5140"
+      },
+      {
+        "file": "autumn-roses",
+        "season": "Autumn",
+        "caption": "The last roses by the drive.",
+        "source": "IMG_5136"
+      },
+      {
+        "file": "autumn-dusk-deck",
+        "season": "Autumn",
+        "caption": "Dusk from the deck, the ridge going violet.",
+        "source": "IMG_5134"
+      },
+      {
+        "file": "sunset-facing-ellett",
+        "season": "Late autumn",
+        "caption": "Sunset from the deck, facing Ellett.",
+        "source": "IMG_5111"
+      },
+      {
+        "file": "winter-first-snow",
+        "season": "Winter",
+        "caption": "First snow, at sunrise.",
+        "source": "IMG_5125"
+      },
+      {
+        "file": "winter-sledding",
+        "season": "Winter",
+        "caption": "Sledding on the front lawn.",
+        "source": "IMG_5132"
+      },
+      {
+        "file": "winter-christmas",
+        "season": "December",
+        "caption": "The tree, with snow outside the big window.",
+        "source": "IMG_5124"
+      },
+      {
+        "file": "night-home",
+        "season": "Any evening",
+        "caption": "Home, after dark.",
+        "source": "IMG_5139"
+      }
+    ]
   }
 }

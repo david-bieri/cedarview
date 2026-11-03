@@ -1,1 +1,688 @@
-[]
+[
+ {
+  "name": "album-spring-cherry",
+  "alt": "The cherry in front of the house, the week it blooms.",
+  "caption": "The cherry in front of the house, the week it blooms.",
+  "season": "Spring",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#080808",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-spring-cherry-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-spring-cherry-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-spring-cherry-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-spring-cherry-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-spring-cherry-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-spring-cherry-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-spring-cherry-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-spring-cherry-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-spring-blossom",
+  "alt": "Blossom against a blue sky.",
+  "caption": "Blossom against a blue sky.",
+  "season": "Spring",
+  "date": "",
+  "width": 1500,
+  "height": 2000,
+  "color": "#888878",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-spring-blossom-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-spring-blossom-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-spring-blossom-1200.webp"
+    },
+    {
+     "w": 1500,
+     "src": "assets/img/album-spring-blossom-1500.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-spring-blossom-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-spring-blossom-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-spring-blossom-1200.jpg"
+    },
+    {
+     "w": 1500,
+     "src": "assets/img/album-spring-blossom-1500.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-summer-hydrangeas",
+  "alt": "Hydrangeas.",
+  "caption": "Hydrangeas.",
+  "season": "Early summer",
+  "date": "",
+  "width": 1500,
+  "height": 2000,
+  "color": "#283818",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-summer-hydrangeas-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-summer-hydrangeas-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-summer-hydrangeas-1200.webp"
+    },
+    {
+     "w": 1500,
+     "src": "assets/img/album-summer-hydrangeas-1500.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-summer-hydrangeas-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-summer-hydrangeas-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-summer-hydrangeas-1200.jpg"
+    },
+    {
+     "w": 1500,
+     "src": "assets/img/album-summer-hydrangeas-1500.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-summer-garden-evening",
+  "alt": "A summer evening in the garden, seen from upstairs.",
+  "caption": "A summer evening in the garden, seen from upstairs.",
+  "season": "Summer",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#282818",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-summer-garden-evening-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-summer-garden-evening-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-summer-garden-evening-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-summer-garden-evening-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-summer-garden-evening-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-summer-garden-evening-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-summer-garden-evening-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-summer-garden-evening-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-summer-fire-pit",
+  "alt": "S'mores at the fire pit.",
+  "caption": "S'mores at the fire pit.",
+  "season": "Summer",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#d8d8d8",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-summer-fire-pit-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-summer-fire-pit-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-summer-fire-pit-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-summer-fire-pit-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-summer-fire-pit-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-summer-fire-pit-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-summer-fire-pit-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-summer-fire-pit-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-kitchen-board",
+  "alt": "A board on the kitchen granite.",
+  "caption": "A board on the kitchen granite.",
+  "season": "Any Saturday",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#e8e8e8",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-kitchen-board-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-kitchen-board-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-kitchen-board-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-kitchen-board-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-kitchen-board-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-kitchen-board-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-kitchen-board-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-kitchen-board-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-porch-set",
+  "alt": "The screened porch, set for guests.",
+  "caption": "The screened porch, set for guests.",
+  "season": "Summer",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#f8f8f8",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-porch-set-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-porch-set-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-porch-set-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-porch-set-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-porch-set-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-porch-set-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-porch-set-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-porch-set-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-autumn-roses",
+  "alt": "The last roses by the drive.",
+  "caption": "The last roses by the drive.",
+  "season": "Autumn",
+  "date": "",
+  "width": 1500,
+  "height": 2000,
+  "color": "#484838",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-autumn-roses-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-autumn-roses-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-autumn-roses-1200.webp"
+    },
+    {
+     "w": 1500,
+     "src": "assets/img/album-autumn-roses-1500.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-autumn-roses-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-autumn-roses-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-autumn-roses-1200.jpg"
+    },
+    {
+     "w": 1500,
+     "src": "assets/img/album-autumn-roses-1500.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-autumn-dusk-deck",
+  "alt": "Dusk from the deck, the ridge going violet.",
+  "caption": "Dusk from the deck, the ridge going violet.",
+  "season": "Autumn",
+  "date": "",
+  "width": 1500,
+  "height": 2000,
+  "color": "#f8d8b8",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-autumn-dusk-deck-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-autumn-dusk-deck-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-autumn-dusk-deck-1200.webp"
+    },
+    {
+     "w": 1500,
+     "src": "assets/img/album-autumn-dusk-deck-1500.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-autumn-dusk-deck-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-autumn-dusk-deck-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-autumn-dusk-deck-1200.jpg"
+    },
+    {
+     "w": 1500,
+     "src": "assets/img/album-autumn-dusk-deck-1500.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-sunset-facing-ellett",
+  "alt": "Sunset from the deck, facing Ellett.",
+  "caption": "Sunset from the deck, facing Ellett.",
+  "season": "Late autumn",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#181808",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-sunset-facing-ellett-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-sunset-facing-ellett-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-sunset-facing-ellett-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-sunset-facing-ellett-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-sunset-facing-ellett-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-sunset-facing-ellett-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-sunset-facing-ellett-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-sunset-facing-ellett-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-winter-first-snow",
+  "alt": "First snow, at sunrise.",
+  "caption": "First snow, at sunrise.",
+  "season": "Winter",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#282818",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-winter-first-snow-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-winter-first-snow-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-winter-first-snow-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-winter-first-snow-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-winter-first-snow-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-winter-first-snow-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-winter-first-snow-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-winter-first-snow-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-winter-sledding",
+  "alt": "Sledding on the front lawn.",
+  "caption": "Sledding on the front lawn.",
+  "season": "Winter",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#080808",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-winter-sledding-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-winter-sledding-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-winter-sledding-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-winter-sledding-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-winter-sledding-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-winter-sledding-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-winter-sledding-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-winter-sledding-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-winter-christmas",
+  "alt": "The tree, with snow outside the big window.",
+  "caption": "The tree, with snow outside the big window.",
+  "season": "December",
+  "date": "",
+  "width": 1291,
+  "height": 1721,
+  "color": "#886838",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-winter-christmas-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-winter-christmas-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-winter-christmas-1200.webp"
+    },
+    {
+     "w": 1291,
+     "src": "assets/img/album-winter-christmas-1291.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-winter-christmas-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-winter-christmas-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-winter-christmas-1200.jpg"
+    },
+    {
+     "w": 1291,
+     "src": "assets/img/album-winter-christmas-1291.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-night-home",
+  "alt": "Home, after dark.",
+  "caption": "Home, after dark.",
+  "season": "Any evening",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#080808",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-night-home-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-night-home-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-night-home-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-night-home-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-night-home-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-night-home-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-night-home-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-night-home-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ }
+]

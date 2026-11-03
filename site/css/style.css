@@ -211,7 +211,7 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 .reel-thumb:hover img { outline: 2px solid var(--cobalt); }
 
 /* the owners' album: a horizontal strip of tilted, cream-framed phone photos */
-.album-strip { display: flex; gap: 1.25rem; overflow-x: auto; padding: 1rem .5rem 1.25rem; scrollbar-width: thin; scroll-snap-type: x proximity; }
+.album-strip { display: flex; align-items: flex-start; gap: 1.25rem; overflow-x: auto; padding: 1rem .5rem 1.25rem; scrollbar-width: thin; scroll-snap-type: x proximity; }
 .album-tile { flex: none; width: min(80vw, 18rem); margin: 0; padding: .6rem .6rem 0; background: #fff; border: 1px solid var(--rule); box-shadow: 0 6px 18px rgba(29, 36, 48, .12); transform: rotate(-1.2deg); scroll-snap-align: start; }
 .album-tile:nth-child(even) { transform: rotate(1deg); }
 .album-tile picture, .album-tile img { display: block; width: 100%; height: auto; }
