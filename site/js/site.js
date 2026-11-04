@@ -80,7 +80,7 @@
         var iframe = document.createElement('iframe');
         iframe.src = frame.getAttribute('data-tour-src');
         iframe.title = frame.getAttribute('data-tour-title') || '3D tour';
-        iframe.setAttribute('allow', 'xr-spatial-tracking; fullscreen');
+        iframe.setAttribute('allow', 'fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; magnetometer; xr-spatial-tracking');
         iframe.setAttribute('allowfullscreen', '');
         var poster = frame.querySelector('picture');
         if (poster) poster.replaceWith(iframe); else frame.insertBefore(iframe, frame.firstChild);
