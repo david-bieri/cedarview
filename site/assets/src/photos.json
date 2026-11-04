@@ -22,7 +22,7 @@
             "url_2048": "https://cdn.show.tours/p/eD9lQ83E7vNDQV7ymRkC@fa09ded7da.jpg?w=2048"
         },
         {
-            "index": 22,
+            "index": 2,
             "name": "exterior-approach",
             "group": "exterior",
             "alt": "The house from the end of the cul-de-sac, framed by autumn trees",
@@ -30,7 +30,7 @@
             "url_2048": "https://cdn.show.tours/p/nmP407AwHUo7A7CblJdZ@0e6f4cd4b4.jpg?w=2048"
         },
         {
-            "index": 30,
+            "index": 3,
             "name": "entrance-steps",
             "group": "exterior",
             "alt": "Brick steps up to the front entrance with the composite deck landing",
@@ -38,7 +38,7 @@
             "url_2048": "https://cdn.show.tours/p/haI77aWFCzCE6A4JgIMk@3d30c5f0f2.jpg?w=2048"
         },
         {
-            "index": 31,
+            "index": 4,
             "name": "front-door",
             "group": "exterior",
             "alt": "The cobalt-blue front door in the natural white brick",
@@ -46,7 +46,7 @@
             "url_2048": "https://cdn.show.tours/p/2LyZhEiaX3c0uu7hHmxN@e5488cb09c.jpg?w=2048"
         },
         {
-            "index": 32,
+            "index": 5,
             "name": "deck-landing",
             "group": "exterior",
             "alt": "The deck landing beside the entrance, woods behind",
@@ -54,7 +54,7 @@
             "url_2048": "https://cdn.show.tours/p/s1sRmiaGwicjvhxiMdk5@9a657e5240.jpg?w=2048"
         },
         {
-            "index": 33,
+            "index": 6,
             "name": "entrance-terrace",
             "group": "exterior",
             "alt": "Stone-paved terrace at the entrance with the blue door",
@@ -62,7 +62,7 @@
             "url_2048": "https://cdn.show.tours/p/ZymA2TnNLDo5Or0nnNdn@6938786a10.jpg?w=2048"
         },
         {
-            "index": 38,
+            "index": 7,
             "name": "exterior-rear",
             "group": "exterior",
             "alt": "The rear of the house and screened porch from the lawn",
@@ -70,7 +70,7 @@
             "url_2048": "https://cdn.show.tours/p/XTDFCCzWOMjCrMfY6ZA2@b330218a87.jpg?w=2048"
         },
         {
-            "index": 39,
+            "index": 8,
             "name": "exterior-rear-porch",
             "group": "exterior",
             "alt": "Screened porch and rear elevation with the fire pit",
@@ -78,7 +78,7 @@
             "url_2048": "https://cdn.show.tours/p/ZAJcdytR6JaGDPXT1qbu@a4347d62de.jpg?w=2048"
         },
         {
-            "index": 35,
+            "index": 9,
             "name": "grounds-path",
             "group": "exterior",
             "alt": "Gravel path through the wooded grounds",
@@ -86,7 +86,7 @@
             "url_2048": "https://cdn.show.tours/p/CNxmdGJwCt5iDaUxk7dM@5f8a326e1f.jpg?w=2048"
         },
         {
-            "index": 34,
+            "index": 10,
             "name": "grounds-woods",
             "group": "exterior",
             "alt": "The wooded lot behind the house",
@@ -94,7 +94,7 @@
             "url_2048": "https://cdn.show.tours/p/ZaAtgiCGhXuf4ND7fh3o@082a7bd172.jpg?w=2048"
         },
         {
-            "index": 5,
+            "index": 11,
             "name": "lot-aerial",
             "group": "exterior",
             "alt": "Aerial view of the house and lot from above",
@@ -102,7 +102,7 @@
             "url_2048": "https://cdn.show.tours/p/GTMnAup9WEL2TXJ6KJdk@420b6be4db.jpg?w=2048"
         },
         {
-            "index": 6,
+            "index": 12,
             "name": "lot-aerial-roof",
             "group": "exterior",
             "alt": "Aerial view over the roof toward the woods",
@@ -110,7 +110,7 @@
             "url_2048": "https://cdn.show.tours/p/MBHseSsrP4bw7ei2RNM5@ef8599dd33.jpg?w=2048"
         },
         {
-            "index": 11,
+            "index": 13,
             "name": "view-south-ridge",
             "group": "view",
             "alt": "Drone view south over the autumn canopy toward the Ellett ridgeline",
@@ -118,7 +118,7 @@
             "url_2048": "https://cdn.show.tours/p/lwmwG7LdSnCKVvx3925B@df50020535.jpg?w=2048"
         },
         {
-            "index": 12,
+            "index": 14,
             "name": "view-south-wide",
             "group": "view",
             "alt": "Wide drone view south, the mountains across the valley",
@@ -126,7 +126,7 @@
             "url_2048": "https://cdn.show.tours/p/DnQNnnwGkYdK04CgJ8a1@5b8a80671e.jpg?w=2048"
         },
         {
-            "index": 13,
+            "index": 15,
             "name": "view-south-ridge-close",
             "group": "view",
             "alt": "The ridgeline to the south above the trees",
@@ -134,7 +134,7 @@
             "url_2048": "https://cdn.show.tours/p/9ewxMjOomwHWCYB77XGf@cde0b9f66b.jpg?w=2048"
         },
         {
-            "index": 10,
+            "index": 16,
             "name": "view-valley",
             "group": "view",
             "alt": "Drone view over Blacksburg toward the mountains",
@@ -142,7 +142,7 @@
             "url_2048": "https://cdn.show.tours/p/PfSJlRb9FCW7RxLKFq3J@391afd4b62.jpg?w=2048"
         },
         {
-            "index": 48,
+            "index": 17,
             "name": "living-room",
             "group": "main",
             "alt": "Living room with the open oak stair and sliding doors to the deck",
@@ -150,7 +150,7 @@
             "url_2048": "https://cdn.show.tours/p/J0a9FeMTpoeXicVREXJk@904dd68e67.jpg?w=2048"
         },
         {
-            "index": 49,
+            "index": 18,
             "name": "living-room-stair",
             "group": "main",
             "alt": "The open-tread oak staircase rising from the living room",
@@ -158,7 +158,7 @@
             "url_2048": "https://cdn.show.tours/p/7MBLAzCd9j87BR3a3Rxp@39319c7497.jpg?w=2048"
         },
         {
-            "index": 52,
+            "index": 19,
             "name": "family-room",
             "group": "main",
             "alt": "Family room with cedar feature wall, stone floor and built-ins",
@@ -166,7 +166,7 @@
             "url_2048": "https://cdn.show.tours/p/cASfVGSJu1K61mLnSJco@0f65f1bb63.jpg?w=2048"
         },
         {
-            "index": 53,
+            "index": 20,
             "name": "family-room-cedar",
             "group": "main",
             "alt": "Cedar-clad wall and ceiling in the family room",
@@ -174,7 +174,7 @@
             "url_2048": "https://cdn.show.tours/p/9iC1pSBO2HkfcYBRV8WK@4339cabe7f.jpg?w=2048"
         },
         {
-            "index": 55,
+            "index": 21,
             "name": "family-room-fireplace",
             "group": "main",
             "alt": "Fireplace with white built-in cabinetry and bookshelves",
@@ -182,7 +182,7 @@
             "url_2048": "https://cdn.show.tours/p/xILPQUnU7BCqGYY9yQuu@e37165bc47.jpg?w=2048"
         },
         {
-            "index": 50,
+            "index": 22,
             "name": "library",
             "group": "main",
             "alt": "Library with white built-in shelving and oak floor",
@@ -190,7 +190,7 @@
             "url_2048": "https://cdn.show.tours/p/iedbl7eUrEqWEpnvLYin@faeaf0c66f.jpg?w=2048"
         },
         {
-            "index": 56,
+            "index": 23,
             "name": "dining",
             "group": "main",
             "alt": "Dining room with corner windows onto the trees",
@@ -198,7 +198,7 @@
             "url_2048": "https://cdn.show.tours/p/9jkZCyTdwtRHuco4EuTF@f03326760f.jpg?w=2048"
         },
         {
-            "index": 72,
+            "index": 24,
             "name": "kitchen",
             "group": "main",
             "alt": "Kitchen with cherry cabinets, granite island and range hood",
@@ -206,7 +206,7 @@
             "url_2048": "https://cdn.show.tours/p/G1QAJTblCZbauz3YZ9Od@f494e47c05.jpg?w=2048"
         },
         {
-            "index": 73,
+            "index": 25,
             "name": "kitchen-island",
             "group": "main",
             "alt": "Kitchen island and skylight",
@@ -214,7 +214,7 @@
             "url_2048": "https://cdn.show.tours/p/389pnOLmcvNYj3377oge@595eeb086a.jpg?w=2048"
         },
         {
-            "index": 75,
+            "index": 26,
             "name": "kitchen-window",
             "group": "main",
             "alt": "Kitchen sink window onto the woods",
@@ -222,7 +222,7 @@
             "url_2048": "https://cdn.show.tours/p/UrJ7PXRGesNILzDGmxLb@8c415d391b.jpg?w=2048"
         },
         {
-            "index": 76,
+            "index": 27,
             "name": "breakfast-room",
             "group": "main",
             "alt": "Breakfast room with sliding doors to the deck",
@@ -230,7 +230,7 @@
             "url_2048": "https://cdn.show.tours/p/quGYDkqlxlBB5LGZ0B7N@aa6dbca69d.jpg?w=2048"
         },
         {
-            "index": 79,
+            "index": 28,
             "name": "screened-porch",
             "group": "main",
             "alt": "Screened porch with cedar ceiling",
@@ -238,7 +238,7 @@
             "url_2048": "https://cdn.show.tours/p/kyr4Sk2VXmGckN4QHHiH@513253a3dc.jpg?w=2048"
         },
         {
-            "index": 80,
+            "index": 29,
             "name": "screened-porch-view",
             "group": "main",
             "alt": "Screened porch looking out to the lawn",
@@ -246,7 +246,7 @@
             "url_2048": "https://cdn.show.tours/p/Uzyf2gcRZUv28vdO2NQf@a8e85e8053.jpg?w=2048"
         },
         {
-            "index": 61,
+            "index": 30,
             "name": "primary-bath",
             "group": "upper",
             "alt": "Primary bath with double vanity and skylit marble shower",
@@ -254,7 +254,7 @@
             "url_2048": "https://cdn.show.tours/p/JBupy4eO33vMhRPh2ob2@6b1c14577a.jpg?w=2048"
         },
         {
-            "index": 62,
+            "index": 31,
             "name": "primary-bath-skylight",
             "group": "upper",
             "alt": "Skylight over the soaking tub in the primary bath",
@@ -262,7 +262,7 @@
             "url_2048": "https://cdn.show.tours/p/SgOxysCGqopzRu4aGA74@5aa5ed08da.jpg?w=2048"
         },
         {
-            "index": 84,
+            "index": 32,
             "name": "upper-landing",
             "group": "upper",
             "alt": "Upper landing with oak slat balustrade",
@@ -270,7 +270,7 @@
             "url_2048": "https://cdn.show.tours/p/rLwjGQ4JLgndL3YOHCqn@5fed168014.jpg?w=2048"
         },
         {
-            "index": 85,
+            "index": 33,
             "name": "upper-hall",
             "group": "upper",
             "alt": "Upper hallway with cedar ceiling",
@@ -278,7 +278,7 @@
             "url_2048": "https://cdn.show.tours/p/SodKlPlr6AwsD4JGlNmg@dc7b51c5c0.jpg?w=2048"
         },
         {
-            "index": 86,
+            "index": 34,
             "name": "primary-bedroom",
             "group": "upper",
             "alt": "Primary bedroom with sliding doors onto the balcony",
@@ -286,7 +286,7 @@
             "url_2048": "https://cdn.show.tours/p/bRYlSmaOJmkO94TBUMza@2ab3689d14.jpg?w=2048"
         },
         {
-            "index": 57,
+            "index": 35,
             "name": "bedroom-main-corner",
             "group": "main",
             "alt": "Bedroom with corner windows and oak floor",
@@ -294,7 +294,7 @@
             "url_2048": "https://cdn.show.tours/p/LyB2B97i84Dqvc5QtHFC@53d751a788.jpg?w=2048"
         },
         {
-            "index": 101,
+            "index": 36,
             "name": "lower-level-bedroom-1",
             "group": "lower",
             "alt": "Lower-level bedroom with egress window and light oak floor",
@@ -302,7 +302,7 @@
             "url_2048": "https://cdn.show.tours/p/BGQSfPsOAaaSmhOjKFxb@463faea8d0.jpg?w=2048"
         },
         {
-            "index": 103,
+            "index": 37,
             "name": "lower-level-bedroom-2",
             "group": "lower",
             "alt": "Lower-level bedroom with egress window",
@@ -310,7 +310,7 @@
             "url_2048": "https://cdn.show.tours/p/pjuCJzwwfUA7DfqEyGfW@bbfb47938c.jpg?w=2048"
         },
         {
-            "index": 108,
+            "index": 38,
             "name": "lower-level-rec-room",
             "group": "lower",
             "alt": "Lower-level recreation room",
@@ -318,7 +318,7 @@
             "url_2048": "https://cdn.show.tours/p/pZhO7RjUsIBEAj9dEbE9@e79ffea562.jpg?w=2048"
         },
         {
-            "index": 111,
+            "index": 39,
             "name": "lower-level-bath",
             "group": "lower",
             "alt": "Lower-level full bath",
@@ -326,7 +326,7 @@
             "url_2048": "https://cdn.show.tours/p/O6syJm6SM3DoQg3hXAur@2d73b8d1aa.jpg?w=2048"
         },
         {
-            "index": 112,
+            "index": 40,
             "name": "lower-level-workshop",
             "group": "lower",
             "alt": "Workshop with built-in benches on the lower level",
@@ -334,7 +334,7 @@
             "url_2048": "https://cdn.show.tours/p/q3TuCSA1Eq0pU46a1tKv@fb88bee4b1.jpg?w=2048"
         },
         {
-            "index": 115,
+            "index": 41,
             "name": "lower-level-gym",
             "group": "lower",
             "alt": "Lower-level room used as a gym",
@@ -342,7 +342,7 @@
             "url_2048": "https://cdn.show.tours/p/U8CvHTtYAVNcS5Hrlr07@5a9cc7fa41.jpg?w=2048"
         },
         {
-            "index": 117,
+            "index": 42,
             "name": "plan-main-floor",
             "group": "plans",
             "alt": "Measured floor plan, main floor",
@@ -350,7 +350,7 @@
             "url_2048": "https://cdn.show.tours/p/3i8wPpxEqtW2XJ6Oo0nJ@cc98136374.jpg?w=2048"
         },
         {
-            "index": 118,
+            "index": 43,
             "name": "plan-upper-floor",
             "group": "plans",
             "alt": "Measured floor plan, upper floor",
@@ -358,7 +358,7 @@
             "url_2048": "https://cdn.show.tours/p/aeUUSRm0YLCOtrznfjgb@b24bf618fd.jpg?w=2048"
         },
         {
-            "index": 119,
+            "index": 44,
             "name": "plan-lower-level",
             "group": "plans",
             "alt": "Measured floor plan, lower level",
@@ -366,7 +366,7 @@
             "url_2048": "https://cdn.show.tours/p/3xvWWv3v5Vh7dGmZAMNf@731e3f6fd5.jpg?w=2048"
         },
         {
-            "index": 88,
+            "index": 45,
             "name": "primary-balcony",
             "group": "upper",
             "alt": "Balcony off the primary bedroom with cable railing, looking into the trees",
@@ -383,14 +383,6 @@
         },
         {
             "index": 47,
-            "name": "lower-level-bedroom-3-door",
-            "group": "lower",
-            "alt": "The same bedroom from the window, door to the hall",
-            "url": "https://cdn.show.tours/p/Addey6j5Qg5lQE1UftMY@f6b3b6a053.jpg",
-            "url_2048": "https://cdn.show.tours/p/Addey6j5Qg5lQE1UftMY@f6b3b6a053.jpg?w=2048"
-        },
-        {
-            "index": 48,
             "name": "lower-level-mudroom",
             "group": "lower",
             "alt": "Mudroom with coat hooks and a bench by the lower-level entry",

@@ -2613,8 +2613,59 @@
     "group": "lower"
   },
   {
-    "name": "lower-level-bedroom-3-door",
-    "alt": "The same bedroom from the window, door to the hall",
+    "name": "lower-level-gym",
+    "alt": "The largest lower-level bedroom, shown with gym equipment",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAgCdASoYABAABABoJZQDIuExGBqqI2D6RX6TUAD+3oem3KOpT3xLMBdhjaVjbaozPaNfJ5ONXcPjK6AAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-gym-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-gym-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-gym-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-gym-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-gym-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-gym-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-gym-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-gym-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "lower-level-bath",
+    "alt": "Lower-level full bath",
     "caption": "",
     "staged": false,
     "variant": "photo",
@@ -2622,42 +2673,42 @@
     "height": 1066,
     "aspect": 1.5009,
     "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoYABAAPxF0tFEsJqUisAgBgCIJYwDE2GlfUePQudFE4IIAAP70+PYrj6y8Vn7uA8cqcCbSCzF+XO3SSw+p+9ALbJ5Qi4G+uJrVgAAA",
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoYABAAPxFwsFAsJiSisAgBgCIJZQDKACHHhWQoq/Q7y2BWungA/o6cWJkUcbK+FcPAYKkyzPF4TfLOqrXQuP1V+aIn11TanBeK6b01d8R1qgUwAAA=",
     "sources": {
       "webp": [
         {
           "w": 480,
-          "src": "assets/img/lower-level-bedroom-3-door-480.webp"
+          "src": "assets/img/lower-level-bath-480.webp"
         },
         {
           "w": 800,
-          "src": "assets/img/lower-level-bedroom-3-door-800.webp"
+          "src": "assets/img/lower-level-bath-800.webp"
         },
         {
           "w": 1200,
-          "src": "assets/img/lower-level-bedroom-3-door-1200.webp"
+          "src": "assets/img/lower-level-bath-1200.webp"
         },
         {
           "w": 1600,
-          "src": "assets/img/lower-level-bedroom-3-door-1600.webp"
+          "src": "assets/img/lower-level-bath-1600.webp"
         }
       ],
       "jpg": [
         {
           "w": 480,
-          "src": "assets/img/lower-level-bedroom-3-door-480.jpg"
+          "src": "assets/img/lower-level-bath-480.jpg"
         },
         {
           "w": 800,
-          "src": "assets/img/lower-level-bedroom-3-door-800.jpg"
+          "src": "assets/img/lower-level-bath-800.jpg"
         },
         {
           "w": 1200,
-          "src": "assets/img/lower-level-bedroom-3-door-1200.jpg"
+          "src": "assets/img/lower-level-bath-1200.jpg"
         },
         {
           "w": 1600,
-          "src": "assets/img/lower-level-bedroom-3-door-1600.jpg"
+          "src": "assets/img/lower-level-bath-1600.jpg"
         }
       ]
     },
@@ -2859,57 +2910,6 @@
     "group": "lower"
   },
   {
-    "name": "lower-level-bath",
-    "alt": "Lower-level full bath",
-    "caption": "",
-    "staged": false,
-    "variant": "photo",
-    "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
-    "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoYABAAPxFwsFAsJiSisAgBgCIJZQDKACHHhWQoq/Q7y2BWungA/o6cWJkUcbK+FcPAYKkyzPF4TfLOqrXQuP1V+aIn11TanBeK6b01d8R1qgUwAAA=",
-    "sources": {
-      "webp": [
-        {
-          "w": 480,
-          "src": "assets/img/lower-level-bath-480.webp"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/lower-level-bath-800.webp"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/lower-level-bath-1200.webp"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/lower-level-bath-1600.webp"
-        }
-      ],
-      "jpg": [
-        {
-          "w": 480,
-          "src": "assets/img/lower-level-bath-480.jpg"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/lower-level-bath-800.jpg"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/lower-level-bath-1200.jpg"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/lower-level-bath-1600.jpg"
-        }
-      ]
-    },
-    "group": "lower"
-  },
-  {
     "name": "lower-level-workshop",
     "alt": "Workshop with built-in benches on the lower level",
     "caption": "",
@@ -2955,57 +2955,6 @@
         {
           "w": 1600,
           "src": "assets/img/lower-level-workshop-1600.jpg"
-        }
-      ]
-    },
-    "group": "lower"
-  },
-  {
-    "name": "lower-level-gym",
-    "alt": "The largest lower-level bedroom, shown with gym equipment",
-    "caption": "",
-    "staged": false,
-    "variant": "photo",
-    "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
-    "color": "#c8c8c8",
-    "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAgCdASoYABAABABoJZQDIuExGBqqI2D6RX6TUAD+3oem3KOpT3xLMBdhjaVjbaozPaNfJ5ONXcPjK6AAAA==",
-    "sources": {
-      "webp": [
-        {
-          "w": 480,
-          "src": "assets/img/lower-level-gym-480.webp"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/lower-level-gym-800.webp"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/lower-level-gym-1200.webp"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/lower-level-gym-1600.webp"
-        }
-      ],
-      "jpg": [
-        {
-          "w": 480,
-          "src": "assets/img/lower-level-gym-480.jpg"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/lower-level-gym-800.jpg"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/lower-level-gym-1200.jpg"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/lower-level-gym-1600.jpg"
         }
       ]
     },
