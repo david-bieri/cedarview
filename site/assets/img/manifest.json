@@ -2563,15 +2563,15 @@
   },
   {
     "name": "lower-level-bedroom-3",
-    "alt": "Lower-level bedroom with egress window, closet and walk-in closet",
+    "alt": "Lower-level bedroom with egress window and walk-in closet",
     "caption": "",
     "staged": false,
     "variant": "photo",
     "width": 1600,
     "height": 1066,
     "aspect": 1.5009,
-    "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoYABAAPxF8tFGsKCUisAgBgCIJYwDCgGlEfTtCFMNwPgD+86AZTn7tleYP3qF97OcSVP8WjqtxbRpDZBF0Me1TFyAZD4YAAAA=",
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQBACdASoYABAAPxFwsFAsJiSisAgBgCIJZQAAUp+cqE8H8ZHpx22aAAD+xYGln5M4lOBc+d1c+cuXjV0w7mozgwoah++eFQn+MKogAAA=",
     "sources": {
       "webp": [
         {
@@ -2607,6 +2607,57 @@
         {
           "w": 1600,
           "src": "assets/img/lower-level-bedroom-3-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "lower-level-bedroom-3-door",
+    "alt": "The same bedroom from the window, door to the hall",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoYABAAPxF0tFEsJqUisAgBgCIJYwDE2GlfUePQudFE4IIAAP70+PYrj6y8Vn7uA8cqcCbSCzF+XO3SSw+p+9ALbJ5Qi4G+uJrVgAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-3-door-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-3-door-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-3-door-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-3-door-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-3-door-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-3-door-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-3-door-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-3-door-1600.jpg"
         }
       ]
     },
@@ -2755,6 +2806,57 @@
     "stagedAlt": "Recreation room virtually staged as a lounge with a coffee bar, virtually staged",
     "stagedWidth": 1600,
     "stagedHeight": 893
+  },
+  {
+    "name": "lower-level-mudroom",
+    "alt": "Mudroom with coat hooks and a bench by the lower-level entry",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYABAAPxFwsFAsJiSisAgBgCIJZQAASVkQMYFRW0X/doAA/lRz+ydzBsjMqLu6xbAG/Mp9QIxhCvtqv2PNFjUtHjIJTHcHDQAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-mudroom-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-mudroom-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-mudroom-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-mudroom-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-mudroom-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-mudroom-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-mudroom-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-mudroom-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
   },
   {
     "name": "lower-level-bath",

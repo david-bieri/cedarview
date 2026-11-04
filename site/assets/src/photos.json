@@ -377,9 +377,25 @@
             "index": 46,
             "name": "lower-level-bedroom-3",
             "group": "lower",
-            "alt": "Lower-level bedroom with egress window, closet and walk-in closet",
-            "url": "https://cdn.show.tours/p/2UkdKEyTbUcAl9w9vrxF@6587aecc3f.jpg",
-            "url_2048": "https://cdn.show.tours/p/2UkdKEyTbUcAl9w9vrxF@6587aecc3f.jpg?w=2048"
+            "alt": "Lower-level bedroom with egress window and walk-in closet",
+            "url": "https://cdn.show.tours/p/t04sNmrLFw1KGZrtIWoK@7b72901e78.jpg",
+            "url_2048": "https://cdn.show.tours/p/t04sNmrLFw1KGZrtIWoK@7b72901e78.jpg?w=2048"
+        },
+        {
+            "index": 47,
+            "name": "lower-level-bedroom-3-door",
+            "group": "lower",
+            "alt": "The same bedroom from the window, door to the hall",
+            "url": "https://cdn.show.tours/p/Addey6j5Qg5lQE1UftMY@f6b3b6a053.jpg",
+            "url_2048": "https://cdn.show.tours/p/Addey6j5Qg5lQE1UftMY@f6b3b6a053.jpg?w=2048"
+        },
+        {
+            "index": 48,
+            "name": "lower-level-mudroom",
+            "group": "lower",
+            "alt": "Mudroom with coat hooks and a bench by the lower-level entry",
+            "url": "https://cdn.show.tours/p/EpHnXSWJgMFy0QFGwmJW@22677cfc59.jpg",
+            "url_2048": "https://cdn.show.tours/p/EpHnXSWJgMFy0QFGwmJW@22677cfc59.jpg?w=2048"
         }
     ],
     "all_images": [

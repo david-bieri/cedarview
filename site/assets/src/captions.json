@@ -168,7 +168,11 @@
         "group": "lower"
     },
     "lower-level-bedroom-3": {
-        "alt": "Lower-level bedroom with egress window, closet and walk-in closet",
+        "alt": "Lower-level bedroom with egress window and walk-in closet",
+        "group": "lower"
+    },
+    "lower-level-bedroom-3-door": {
+        "alt": "The same bedroom from the window, door to the hall",
         "group": "lower"
     },
     "lower-level-rec-room": {
@@ -177,6 +181,10 @@
     },
     "lower-level-rec-room-wide": {
         "alt": "Lower-level recreation room, looking toward the hall",
+        "group": "lower"
+    },
+    "lower-level-mudroom": {
+        "alt": "Mudroom with coat hooks and a bench by the lower-level entry",
         "group": "lower"
     },
     "lower-level-bath": {
