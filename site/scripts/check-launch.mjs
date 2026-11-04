@@ -86,7 +86,7 @@ const pending = [];
 const walk = (v, p) => {
   if (typeof v === 'string') { if (v.startsWith('TBC') && !p.startsWith('_') && !/\._/.test(p)) pending.push(p); }
   else if (Array.isArray(v)) v.forEach((x, i) => walk(x, `${p}[${i}]`));
-  else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) if (!k.startsWith('_')) walk(x, p ? `${p}.${k}` : k);
+  else if (v && typeof v === 'object') { if (v.enabled === false) return; for (const [k, x] of Object.entries(v)) if (!k.startsWith('_')) walk(x, p ? `${p}.${k}` : k); }
 };
 walk(data, '');
 

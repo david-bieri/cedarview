@@ -166,6 +166,8 @@ def updates_differ(items, systems):
     if len(items) != len(systems):
         return True
     for it, sy in zip(items, systems):
+        if it.get("undated"):
+            continue
         a = (raw(it["date"]), raw(it["permit"]), raw(it["finalInspection"]))
         b = (raw(sy["date"]), raw(sy["permit"]), raw(sy["finalInspection"]))
         if a != b:
@@ -290,7 +292,7 @@ def build(d):
         F.append(Spacer(1, 3))
         F.append(table(
             ["Date", "Work", "Permit number", "Final inspection"],
-            [[x["date"], x["work"], x["permit"], x["finalInspection"]] for x in upd["items"]],
+            [[x.get("date", ON_REQUEST), x["work"], x.get("permit", ON_REQUEST), x.get("finalInspection", ON_REQUEST)] for x in upd["items"]],
             [W * 0.12, W * 0.56, W * 0.16, W * 0.16],
         ))
         print("note: sections.updates.items differs from specSheet.systems; rendered both")

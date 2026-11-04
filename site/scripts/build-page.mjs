@@ -151,8 +151,8 @@ const P = data.property;
 const A = data.agent;
 const glanceHeading = 'At a glance';
 // The owner's letter is a section only once it is written; a placeholder letter is worse than none.
-const letterReady = REVIEW || S.ownersLetter.paragraphs.every((x) => ready(x));
-if (!letterReady) omit('Owner\'s letter (section not rendered)');
+const letterReady = S.ownersLetter.enabled !== false && (REVIEW || S.ownersLetter.paragraphs.every((x) => ready(x)));
+if (!letterReady && S.ownersLetter.enabled !== false) omit('Owner\'s letter (section not rendered)');
 // Contact: each line renders on its own once confirmed; the block, the sticky bar and the footer line need the agent's name.
 const hasPhone = ready(A.phone) && !/TBC/.test(A.phoneHref);
 const hasEmail = ready(A.email);
@@ -311,9 +311,9 @@ ${allPlans}
 </section>`;
 
 // Work with a confirmed date, permit and inspection goes in the table; the rest is listed plainly with a note, never with blanks.
-const dated = S.updates.items.filter((u) => REVIEW || ready(u.date, u.permit, u.finalInspection));
+const dated = S.updates.items.filter((u) => !u.undated && (REVIEW || ready(u.date, u.permit, u.finalInspection)));
 const undated = S.updates.items.filter((u) => !dated.includes(u));
-undated.forEach((u) => omit(`Updates: date/permit/inspection for "${u.work}"`));
+undated.filter((u) => !u.undated).forEach((u) => omit(`Updates: date/permit/inspection for "${u.work}"`));
 const updatesTable = dated.length ? `<table class="updates">
 <thead><tr><th scope="col">Date</th><th scope="col">Work</th><th scope="col">Permit</th><th scope="col">Final inspection</th></tr></thead>
 <tbody>
@@ -531,11 +531,11 @@ ${(REVIEW || hasPhone) ? `<a href="${attr(A.phoneHref)}" data-utm="">${t(A.phone
 ${(A.office && ready(A.office) && !/TBC/.test(A.officeHref || '')) ? `<a href="${attr(A.officeHref)}" data-utm="">${esc(A.office)}</a> <span class="muted small">(office)</span><br>` : ''}
 ${(REVIEW || hasEmail) ? `<a href="mailto:${attr(A.email)}" data-utm="">${t(A.email)}</a>` : ''}
 </address>` : (omit('Agent name, brokerage, phone, email (contact block not rendered)'), '');
-const eventBlock = (REVIEW || ready(ev.date)) ? `<div class="event">
+const eventBlock = ev.enabled !== false && (REVIEW || ready(ev.date)) ? `<div class="event">
 <h3>${t(ev.name)}</h3>
 <p>${t(ev.date)} · ${t(ev.time)}</p>
 <p class="muted">${t(ev.note)}</p>
-</div>` : (omit(`Event "${ev.name}": date (event not rendered)`), '');
+</div>` : (ev.enabled === false ? '' : (omit(`Event "${ev.name}": date (event not rendered)`), ''));
 const visit = `<section id="visit" class="wrap sec" aria-labelledby="visit-h">
 ${secHead(S.visit.heading, 'visit')}
 ${p(t((REVIEW || hasPhone || hasEmail) ? S.visit.intro : (S.visit.introPending || S.visit.intro)))}

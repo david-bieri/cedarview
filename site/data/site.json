@@ -94,16 +94,15 @@
       }
     },
     "lot": {
-      "acresDeed": "TBC",
+      "acresDeed": 1.02,
       "acresCounty": 1.02,
-      "display": "About 1 acre",
-      "displayLong": "About 1 acre, wooded, on a cul-de-sac",
+      "display": "1.02 acres",
+      "displayLong": "1.02 acres, wooded, on a cul-de-sac",
       "character": [
         "wooded",
         "cul-de-sac",
         "private"
-      ],
-      "_note": "Use the deed figure once confirmed; the county records 1.02 acres"
+      ]
     },
     "view": {
       "direction": "south",
@@ -152,7 +151,7 @@
     },
     {
       "label": "Lot",
-      "value": "About 1 acre",
+      "value": "1.02 acres",
       "detail": "Wooded, on a cul-de-sac · screened porch, deck and fire pit"
     },
     {
@@ -238,16 +237,12 @@
       },
       "items": [
         {
-          "date": "TBC",
           "work": "Full electrical rewiring",
-          "permit": "TBC_PERMIT",
-          "finalInspection": "TBC"
+          "undated": true
         },
         {
-          "date": "TBC",
           "work": "Lower level completely finished: four bedrooms with egress windows, full bath, exterior entrance",
-          "permit": "TBC_PERMIT",
-          "finalInspection": "TBC"
+          "undated": true
         },
         {
           "date": "2026",
@@ -587,7 +582,8 @@
       "signature": "The owners",
       "paragraphs": [
         "TBC — the owner's letter in the owner's own words: the morning light, the first snow on the ridge, the best walk from the door."
-      ]
+      ],
+      "enabled": false
     },
     "visit": {
       "heading": "Visit",
@@ -598,7 +594,8 @@
         "name": "Sunset at Cedarview",
         "date": "TBC",
         "time": "5:30 to 7:00 pm",
-        "note": "RSVP evening on the deck"
+        "note": "RSVP evening on the deck",
+        "enabled": false
       }
     }
   },
@@ -684,28 +681,21 @@
         "sqft": 1491
       }
     ],
-    "appliances": [
-      {
-        "room": "Kitchen",
-        "item": "TBC",
-        "brand": "TBC",
-        "year": "TBC"
-      }
-    ],
+    "appliances": [],
     "systems": [
       {
         "system": "Electrical",
         "detail": "Fully rewired",
-        "date": "TBC",
-        "permit": "TBC_PERMIT",
-        "finalInspection": "TBC"
+        "date": "on request",
+        "permit": "on request",
+        "finalInspection": "on request"
       },
       {
         "system": "Lower level",
         "detail": "Completely finished: 4 bedrooms with egress windows, full bath, exterior entrance",
-        "date": "TBC",
-        "permit": "TBC_PERMIT",
-        "finalInspection": "TBC"
+        "date": "on request",
+        "permit": "on request",
+        "finalInspection": "on request"
       },
       {
         "system": "Deck",
@@ -876,13 +866,7 @@
     "_staging": "For each name in stagedRooms, the unstaged original is <name>.jpg and the staged version <name>-staged.jpg. The pipeline burns the label onto the staged file only and pairs the two in the manifest; the gallery toggles between them."
   },
   "tbc": [
-    "Deed lot acreage (county: 1.02)",
-    "Rewiring: date, permit number, final inspection date",
-    "Lower level finish: date, permit number, final inspection date",
-    "Appliances: make, model year",
-    "Cloudflare Web Analytics token",
-    "Owner's letter text",
-    "Sunset at Cedarview event date"
+    "Cloudflare Web Analytics token (site.analytics.token)"
   ],
   "photographer": {
     "name": "Brian Sowers Photography",
