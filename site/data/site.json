@@ -919,6 +919,18 @@
         "source": "IMG_5135"
       },
       {
+        "file": "spring-azaleas-house",
+        "season": "Late April",
+        "caption": "The house the week the azaleas come out.",
+        "source": "IMG_7139"
+      },
+      {
+        "file": "spring-rhododendron",
+        "season": "Early May",
+        "caption": "The rhododendron by the drive.",
+        "source": "IMG_7306"
+      },
+      {
         "file": "summer-hydrangeas",
         "season": "Early summer",
         "caption": "Hydrangeas.",
@@ -955,6 +967,12 @@
         "source": "IMG_5140"
       },
       {
+        "file": "september-lawn",
+        "season": "September",
+        "caption": "The back lawn, set for a gathering.",
+        "source": "IMG_0637"
+      },
+      {
         "file": "autumn-roses",
         "season": "Autumn",
         "caption": "The last roses by the drive.",
@@ -979,6 +997,12 @@
         "source": "IMG_5111"
       },
       {
+        "file": "autumn-twilight-pumpkins",
+        "season": "Late autumn",
+        "caption": "Twilight, pumpkins on the steps.",
+        "source": "IMG_1318"
+      },
+      {
         "file": "winter-first-snow",
         "season": "Winter",
         "caption": "First snow, at sunrise.",
@@ -995,12 +1019,6 @@
         "season": "December",
         "caption": "The tree, with snow outside the big window.",
         "source": "IMG_5124"
-      },
-      {
-        "file": "night-home",
-        "season": "Any evening",
-        "caption": "Home, after dark.",
-        "source": "IMG_5139"
       }
     ]
   }
