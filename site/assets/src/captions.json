@@ -71,12 +71,16 @@
   "alt": "Living room with the open oak stair and sliding doors to the deck",
   "group": "main"
  },
+ "living-room-stove": {
+  "alt": "Living room with the wood stove under the cedar ceiling",
+  "group": "main"
+ },
  "living-room-stair": {
   "alt": "The open-tread oak staircase rising from the living room",
   "group": "main"
  },
  "family-room": {
-  "alt": "Family room with cedar feature wall, stone floor and built-ins",
+  "alt": "Family room with the fireplace, cedar wall and doors to the screened porch",
   "group": "main"
  },
  "family-room-cedar": {
@@ -135,13 +139,17 @@
   "alt": "Upper hallway with cedar ceiling",
   "group": "upper"
  },
- "primary-bedroom": {
-  "alt": "Primary bedroom with sliding doors onto the balcony",
+ "upper-bedroom": {
+  "alt": "Upper-floor bedroom with ceiling fan and oak floor",
   "group": "upper"
  },
- "bedroom-main-corner": {
-  "alt": "Bedroom with corner windows and oak floor",
-  "group": "main"
+ "primary-bedroom": {
+  "alt": "Primary bedroom with ceiling fan and doors to the balcony",
+  "group": "upper"
+ },
+ "primary-bedroom-door": {
+  "alt": "Primary bedroom from the door, windows onto the trees",
+  "group": "upper"
  },
  "lower-level-bedroom-1": {
   "alt": "Lower-level bedroom with egress window and light oak floor",
@@ -153,6 +161,10 @@
  },
  "lower-level-rec-room": {
   "alt": "Lower-level recreation room",
+  "group": "lower"
+ },
+ "lower-level-rec-room-wide": {
+  "alt": "Lower-level recreation room, looking toward the hall",
   "group": "lower"
  },
  "lower-level-bath": {
@@ -199,5 +211,33 @@
  "exterior-rear-porch-staged": {
   "alt": "Rear elevation with the fire pit virtually staged with chairs",
   "group": "exterior"
+ },
+ "primary-bedroom-staged": {
+  "alt": "Primary bedroom virtually staged as a sitting room with bookshelves",
+  "group": "upper"
+ },
+ "dining-staged": {
+  "alt": "Dining room virtually staged with a table for six",
+  "group": "main"
+ },
+ "family-room-staged": {
+  "alt": "Family room virtually staged with two armchairs by the fire",
+  "group": "main"
+ },
+ "living-room-stove-staged": {
+  "alt": "Living room virtually staged with a sectional by the wood stove",
+  "group": "main"
+ },
+ "primary-bedroom-door-staged": {
+  "alt": "Primary bedroom virtually staged with a bed",
+  "group": "upper"
+ },
+ "upper-bedroom-staged": {
+  "alt": "Upper-floor bedroom virtually staged as a home office",
+  "group": "upper"
+ },
+ "lower-level-rec-room-wide-staged": {
+  "alt": "Recreation room virtually staged as a lounge with a coffee bar",
+  "group": "lower"
  }
 }

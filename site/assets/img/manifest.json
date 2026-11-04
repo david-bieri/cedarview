@@ -415,10 +415,10 @@
     "variant": "photo",
     "pair": "exterior-rear-porch",
     "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
+    "height": 1067,
+    "aspect": 1.4995,
     "color": "#b8b8b8",
-    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACQAwCdASoYABAAPxF0slCsJqSisAgBgCIJZACdAB5i/PadVVvgAOEM8DLR9mXgVZ60Mh3FGu9xF9vSCW3SeVcSmrtfBYTMyuC/msz97WRWYnbUl3x5iVtXyB9aAAAA",
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYABAAPxFysVAsJqSisAgBgCIJZACdAB5i/PbpHfhL6gAA4QzwMtH2ZeBVnrQyHcUa73EX29IloOYPZrCiBm+Gs7t5fXIvbQkBVG6n3s9fRYm2ZzEwuAAA",
     "sources": {
       "webp": [
         {
@@ -960,6 +960,99 @@
     "group": "main"
   },
   {
+    "name": "living-room-stove",
+    "alt": "Living room with the wood stove under the cedar ceiling",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "pair": "living-room-stove",
+    "width": 1600,
+    "height": 1015,
+    "aspect": 1.5764,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoYAA8APxFyslAsJqSisAgBgCIJQBYdhEGhuOp2Sci7p2solgAA/tMUXES4zVpP+2oZKNLtaGe5isJn2VomjvBsGPl0UK6icyKXM4aOuVhhC0Ceue0btCFbWGAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-stove-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-stove-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-stove-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-stove-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-stove-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-stove-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-stove-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-stove-1600.jpg"
+        }
+      ]
+    },
+    "group": "main",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-stove-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-stove-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-stove-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-stove-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/living-room-stove-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/living-room-stove-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/living-room-stove-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/living-room-stove-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Living room virtually staged with a sectional by the wood stove, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1015
+  },
+  {
     "name": "living-room-stair",
     "alt": "The open-tread oak staircase rising from the living room",
     "caption": "",
@@ -1012,15 +1105,16 @@
   },
   {
     "name": "family-room",
-    "alt": "Family room with cedar feature wall, stone floor and built-ins",
+    "alt": "Family room with the fireplace, cedar wall and doors to the screened porch",
     "caption": "",
     "staged": false,
     "variant": "photo",
+    "pair": "family-room",
     "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
+    "height": 968,
+    "aspect": 1.6529,
     "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoYABAAPxFysFAsJqSisAgBgCIJQBOgBFJkunZ6yPtsYAD+WzCQUx5G+wzPVDrKvkjJo/pecXb2ZOkFpREYjFP0k+xQ8orz91GctKdkLpKgAA==",
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQBACdASoYAA4APxFysVAsJqSisAgBgCIJQBOmUDX/wGzrJpFeo6+wgAnAAP61/Z+lSSFrkPCPOTRszH0S8YCs3GR/vrGMYYUWWlX67v7Hh8TZ4WGatRgL5uM6Vopoa0IAAA==",
     "sources": {
       "webp": [
         {
@@ -1059,7 +1153,48 @@
         }
       ]
     },
-    "group": "main"
+    "group": "main",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/family-room-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/family-room-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/family-room-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/family-room-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/family-room-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/family-room-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/family-room-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/family-room-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Family room virtually staged with two armchairs by the fire, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 968
   },
   {
     "name": "family-room-cedar",
@@ -1171,10 +1306,10 @@
     "variant": "photo",
     "pair": "library",
     "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
+    "height": 1067,
+    "aspect": 1.4995,
     "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoYABAAPxF4tFGsJyUisAgBgCIJQBdgBH/+gQfmS95EXpbAAP5ZmuBJeCkyP22pTj8p6zFsiCJ6w24ymPKKqpOGheDYc1Aw/7d2Y3Vjm7BuB0suItAAAA==",
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwBACdASoYABAAPxFwsFAsJiSisAgBgCIJQBdkCYhmf9z9+I5mgtMW9qAA/lma4El4KTI/balOPykyv3s5hdB4Sec23uGfBv2r5tSZUR21Qf5jLIBZcv+Zx3lOQAAA",
     "sources": {
       "webp": [
         {
@@ -1262,11 +1397,12 @@
     "caption": "",
     "staged": false,
     "variant": "photo",
+    "pair": "dining",
     "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
+    "height": 1195,
+    "aspect": 1.3389,
     "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYABAAPxF2slEsJySisAgBgCIJYgC7ACHfTy7MYaAZRUgA/sNEa7B6+yNnz+zSQxrDeXlkU+wZM8KDWAbdBfU9DfCiYOwKkooiep3eEOBzJD5QhX3kAAAA",
+    "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwBACdASoYABIAPxF8s1QsJ6QjKAqpgCIJYwDImBEcnlwjbJfaD8PiPYjD2SoAAP7DWSAvWaKXE1pfpeXhxGm17ntesNeTeJJSri4BBg3GUtuVu3srHMMmRoVr//sjRyXg8v9Kd4izJD2pGmQAAA==",
     "sources": {
       "webp": [
         {
@@ -1305,7 +1441,48 @@
         }
       ]
     },
-    "group": "main"
+    "group": "main",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/dining-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/dining-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/dining-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/dining-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/dining-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/dining-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/dining-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/dining-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Dining room virtually staged with a table for six, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1195
   },
   {
     "name": "kitchen",
@@ -1519,10 +1696,10 @@
     "variant": "photo",
     "pair": "screened-porch",
     "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
-    "color": "#a89888",
-    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYABAAPxFysVAsJqSisAgBgCIJZACdMoAA5Z3JubzC4AAA8nP4Egcmm0bXjVLt/DeSTriKwQ9BlJfsPqCsuwEup7vhAkSGwC9+mHdyJ0RaYuMvjnKFwH/gAAA=",
+    "height": 1206,
+    "aspect": 1.3267,
+    "color": "#985828",
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwBACdASoYABIAPxFyrlCsJqQisBgMAYAiCUAYmwF5/9G9hbWkJFanQ6KU9hGgAP1FQ2nFrbRUC0f5AtETHaA5EEHED/hMuRtoePzL69OILlRY7VvoywsUUYKICZ8cAAA=",
     "sources": {
       "webp": [
         {
@@ -1602,7 +1779,7 @@
     },
     "stagedAlt": "Screened porch virtually staged with a sofa and rattan chairs, virtually staged",
     "stagedWidth": 1600,
-    "stagedHeight": 1195
+    "stagedHeight": 1206
   },
   {
     "name": "screened-porch-view",
@@ -1860,16 +2037,110 @@
     "group": "upper"
   },
   {
-    "name": "primary-bedroom",
-    "alt": "Primary bedroom with sliding doors onto the balcony",
+    "name": "upper-bedroom",
+    "alt": "Upper-floor bedroom with ceiling fan and oak floor",
     "caption": "",
     "staged": false,
     "variant": "photo",
+    "pair": "upper-bedroom",
     "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
+    "height": 1067,
+    "aspect": 1.4995,
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoYABAAPxF0tFEsJqUisAgBgCIJQBdgA9IwQAA8PIJ9SDNgAP7D+TiB+2SM8iIjp5XTUpXHUx9Dt0BaopO7GEpn+7Bq2cmyT0NN4dAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/upper-bedroom-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/upper-bedroom-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/upper-bedroom-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/upper-bedroom-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/upper-bedroom-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/upper-bedroom-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/upper-bedroom-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/upper-bedroom-1600.jpg"
+        }
+      ]
+    },
+    "group": "upper",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/upper-bedroom-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/upper-bedroom-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/upper-bedroom-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/upper-bedroom-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/upper-bedroom-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/upper-bedroom-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/upper-bedroom-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/upper-bedroom-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Upper-floor bedroom virtually staged as a home office, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
+  },
+  {
+    "name": "primary-bedroom",
+    "alt": "Primary bedroom with ceiling fan and doors to the balcony",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "pair": "primary-bedroom",
+    "width": 1600,
+    "height": 1067,
+    "aspect": 1.4995,
     "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoYABAAPxF8tFGsKCUisAgBgCIJZwDKACHf3niCJ77/KfoAAP7S2hHq4xzkzodcxE1Q//0SUlwNOyNHSMG2/NNilOSAAA==",
+    "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAwCdASoYABAAPxF8tFGsKCUisAgBgCIJZwDKACHf3nigcF3mTd0AAP7S2hHq4xze6DNQtILVOpb1BgyvzARybeZG2NwoGAA=",
     "sources": {
       "webp": [
         {
@@ -1908,58 +2179,141 @@
         }
       ]
     },
-    "group": "upper"
-  },
-  {
-    "name": "bedroom-main-corner",
-    "alt": "Bedroom with corner windows and oak floor",
-    "caption": "",
-    "staged": false,
-    "variant": "photo",
-    "width": 1600,
-    "height": 1066,
-    "aspect": 1.5009,
-    "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPxF2sVCsJySisAgBgCIJYgC7ACHHrCsRM8yB5bhOAP7DRNVtuHhGXoJrIpoB/X8pLHkeD4agm4SIopdmdGGWSMIZE4ZNC5RAs0nMlbKivcL0tTgA",
-    "sources": {
+    "group": "upper",
+    "stagedSources": {
       "webp": [
         {
           "w": 480,
-          "src": "assets/img/bedroom-main-corner-480.webp"
+          "src": "assets/img/primary-bedroom-staged-480.webp"
         },
         {
           "w": 800,
-          "src": "assets/img/bedroom-main-corner-800.webp"
+          "src": "assets/img/primary-bedroom-staged-800.webp"
         },
         {
           "w": 1200,
-          "src": "assets/img/bedroom-main-corner-1200.webp"
+          "src": "assets/img/primary-bedroom-staged-1200.webp"
         },
         {
           "w": 1600,
-          "src": "assets/img/bedroom-main-corner-1600.webp"
+          "src": "assets/img/primary-bedroom-staged-1600.webp"
         }
       ],
       "jpg": [
         {
           "w": 480,
-          "src": "assets/img/bedroom-main-corner-480.jpg"
+          "src": "assets/img/primary-bedroom-staged-480.jpg"
         },
         {
           "w": 800,
-          "src": "assets/img/bedroom-main-corner-800.jpg"
+          "src": "assets/img/primary-bedroom-staged-800.jpg"
         },
         {
           "w": 1200,
-          "src": "assets/img/bedroom-main-corner-1200.jpg"
+          "src": "assets/img/primary-bedroom-staged-1200.jpg"
         },
         {
           "w": 1600,
-          "src": "assets/img/bedroom-main-corner-1600.jpg"
+          "src": "assets/img/primary-bedroom-staged-1600.jpg"
         }
       ]
     },
-    "group": "main"
+    "stagedAlt": "Primary bedroom virtually staged as a sitting room with bookshelves, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
+  },
+  {
+    "name": "primary-bedroom-door",
+    "alt": "Primary bedroom from the door, windows onto the trees",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "pair": "primary-bedroom-door",
+    "width": 1600,
+    "height": 1067,
+    "aspect": 1.4995,
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoYABAAPxF2slEsJySisAgBgCIJZQC7ACHdB+wfen/p/QGAAP7DQrgaACqb2I8nbqwcf18sV0qE7CiFDZZvz6jFwBlK/9oAAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bedroom-door-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bedroom-door-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bedroom-door-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bedroom-door-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bedroom-door-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bedroom-door-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bedroom-door-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bedroom-door-1600.jpg"
+        }
+      ]
+    },
+    "group": "upper",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bedroom-door-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bedroom-door-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bedroom-door-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bedroom-door-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/primary-bedroom-door-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/primary-bedroom-door-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/primary-bedroom-door-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/primary-bedroom-door-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Primary bedroom virtually staged with a bed, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
   },
   {
     "name": "lower-level-bedroom-1",
@@ -1972,7 +2326,7 @@
     "height": 1066,
     "aspect": 1.5009,
     "color": "#d8d8d8",
-    "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoYABAAPxF0sVCsJqSisAgBgCIJZQDCgCFqrHvK9fmud5SQAP6YI3Zycinolxhr51Thm30Ta1uGY6SdpNcxG2XVDQNLqVhgTwAAAA==",
+    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQBACdASoYABAAPxF0sFCsJqSisAgBgCIJZQDCgCFqrHvxJ6u4Xr3IgAD+mCN2cnIp6JcYa+dU4Zt9E2Ope3nk+YWkexsS5piz+npYwTAngAAA",
     "sources": {
       "webp": [
         {
@@ -2052,7 +2406,7 @@
     },
     "stagedAlt": "Lower-level bedroom virtually staged with a bed and reading chair, virtually staged",
     "stagedWidth": 1600,
-    "stagedHeight": 1067
+    "stagedHeight": 1066
   },
   {
     "name": "lower-level-bedroom-2",
@@ -2155,6 +2509,99 @@
       ]
     },
     "group": "lower"
+  },
+  {
+    "name": "lower-level-rec-room-wide",
+    "alt": "Lower-level recreation room, looking toward the hall",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "pair": "lower-level-rec-room-wide",
+    "width": 1600,
+    "height": 893,
+    "aspect": 1.7917,
+    "color": "#c8c8c8",
+    "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABwAwCdASoYAA0APxFwsFAsJiSisAgBgCIJYwAAW+nZT+OrQgAA/q6HULfbXhYQTgfoPb2Wb+PBDDtLze/vF47GMAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-rec-room-wide-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-rec-room-wide-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-rec-room-wide-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-rec-room-wide-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-rec-room-wide-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-rec-room-wide-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-rec-room-wide-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-rec-room-wide-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-rec-room-wide-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-rec-room-wide-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-rec-room-wide-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-rec-room-wide-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-rec-room-wide-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-rec-room-wide-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-rec-room-wide-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-rec-room-wide-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Recreation room virtually staged as a lounge with a coffee bar, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 893
   },
   {
     "name": "lower-level-bath",

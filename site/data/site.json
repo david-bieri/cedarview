@@ -177,7 +177,7 @@
       "heading": "The house",
       "paragraphs": [
         "A natural white brick and cedar contemporary from 1983, set back on a wooded acre at the end of a cul-de-sac. Inside, cedar walls and ceilings, an open oak stair and tall windows carry the woods into the house; the main floor opens to the south, so the mountains are in view from the living room, the kitchen and the deck.",
-        "The house has been fully rewired, and the lower level is completely finished. The interior has been freshly painted throughout and is shown empty, with four rooms virtually staged and labelled as such."
+        "The house has been fully rewired, and the lower level is completely finished. The interior has been freshly painted throughout and is shown empty, with eleven views virtually staged by the owners and labelled as such; every one can be toggled back to the photograph."
       ],
       "grounds": {
         "heading": "The grounds",
@@ -851,7 +851,14 @@
       "library",
       "screened-porch",
       "lower-level-bedroom-1",
-      "exterior-rear-porch"
+      "exterior-rear-porch",
+      "primary-bedroom",
+      "dining",
+      "family-room",
+      "living-room-stove",
+      "primary-bedroom-door",
+      "upper-bedroom",
+      "lower-level-rec-room-wide"
     ],
     "sizes": [
       480,
