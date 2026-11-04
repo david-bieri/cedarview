@@ -129,12 +129,14 @@
     },
     "video": {
       "verticalWalkthrough": "assets/video/reels/walkthrough.mp4",
+      "landscapeWalkthrough": "assets/video/walkthrough-16x9.mp4",
+      "landscapePoster": "assets/video/walkthrough-16x9.jpg",
       "poster": "assets/img/hero-twilight-1200.jpg",
       "photographerEmbed": "https://show.tours/v/69ybGPk",
       "walkthroughPoster": "assets/video/reels/walkthrough.jpg",
       "walkthroughHeading": "Walk through",
       "walkthroughCaption": "One minute, drive to deck. Video: Brian Sowers Photography.",
-      "_walkthrough": "Rendered beside the opening paragraphs of The House when the file exists; also the lead reel. Sound on by default here (it carries music) with the browser's own controls."
+      "_walkthrough": "Full-width figure directly under At a glance. Plays the 16:9 landscapeWalkthrough (with landscapePoster) when that file exists; until then the vertical cut is centred in a 16:9 stage over a blurred copy of its poster. Not repeated in the reels. Sound on by default (it carries music) with the browser's own controls."
     },
     "exterior": {
       "brick": "Natural white brick with cedar siding on the upper storey",
@@ -193,7 +195,8 @@
         "4 bedrooms, each with an egress window",
         "1 full bath",
         "1,491 finished sq ft"
-      ]
+      ],
+      "navLabel": "Lower level"
     },
     "tour": {
       "heading": "3D tour and floor plans",
@@ -222,7 +225,8 @@
           "image": "plan-lower-level",
           "file": "assets/plans/lower-level.pdf"
         }
-      ]
+      ],
+      "navLabel": "3D tour"
     },
     "updates": {
       "heading": "Updates",
@@ -272,15 +276,8 @@
         "earlierLabel": "Earlier",
         "dir": "assets/video/reels",
         "maxBytes": 20000000,
-        "_note": "Each reel: a 9:16 H.264 MP4 (1080x1920, 15-30 s, muted, captions burned in) under 15 MB in assets/video/reels/, with a JPEG poster of the same name. Newest first; the page shows the newest large and up to six earlier posters. Nothing renders until the first item is here and its file exists. Types: sunset (fixed tripod spot on the deck, time-lapse), walk-from-the-door (front door to the pool gate, 4x, real minutes in the caption), room-at-its-hour (10 s static, breakfast room at 7:30, living room at 4 pm).",
+        "_note": "Each reel: a 9:16 H.264 MP4 (1080x1920, 15-30 s, muted, captions burned in) under 15 MB in assets/video/reels/, with a JPEG poster of the same name. Newest first; the page shows the newest large and up to six earlier posters. The photographer's fly-through lives under At a glance, not here. Nothing renders until the first item is here and its file exists. Types: sunset (fixed tripod spot on the deck, time-lapse), walk-from-the-door (front door to the pool gate, 4x, real minutes in the caption), room-at-its-hour (10 s static, breakfast room at 7:30, living room at 4 pm).",
         "items": [
-          {
-            "file": "walkthrough",
-            "caption": "Brian Sowers's one-minute fly-through: the drive, the house, the deck, the ridge.",
-            "date": "2026-11-03",
-            "type": "tour",
-            "credit": "Video: Brian Sowers Photography"
-          },
           {
             "file": "view-from-the-deck",
             "caption": "The view from the deck, early November — a slow pan to the ridge.",

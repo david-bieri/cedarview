@@ -157,16 +157,19 @@ if (!letterReady && S.ownersLetter.enabled !== false) omit('Owner\'s letter (sec
 const hasPhone = ready(A.phone) && !/TBC/.test(A.phoneHref);
 const hasEmail = ready(A.email);
 const hasAgent = ready(A.name, A.brokerage);
+// Six items so the bar fits one line at 1024px; Updates, Life in Blacksburg and the letter are reached by scrolling or the footer.
 const navItems = [
   ['glance', glanceHeading],
   ['house', S.house.heading],
-  ['lower-level', S.lowerLevel.heading],
-  ['tour', S.tour.heading],
-  ['updates', S.updates.heading],
+  ['lower-level', S.lowerLevel.navLabel || 'Lower level'],
+  ['tour', S.tour.navLabel || '3D tour'],
   ['view', S.view.heading],
+  ['visit', S.visit.heading],
+];
+const footerNav = [
+  ['updates', S.updates.heading],
   ['blacksburg', S.blacksburg.heading],
   ...(letterReady ? [['letter', S.ownersLetter.heading]] : []),
-  ['visit', S.visit.heading],
 ];
 
 const tourHref = isTbc(P.tour.matterportUrl) ? '#tour' : P.tour.matterportUrl;
@@ -231,19 +234,27 @@ ${data.atAGlance.map((c) => `<li class="card"><span class="card-label">${t(c.lab
 </div>
 </section>`;
 
-// The photographer's vertical fly-through sits beside the opening paragraphs; it is also the lead reel.
+// The photographer's fly-through: a full-width 16:9 figure directly under the facts, before anything else.
+// `landscapeWalkthrough` (16:9) plays plain when it exists; until then the vertical cut stands centred in a
+// 16:9 stage filled with a blurred copy of its own poster, so the frame reads as one piece on a wide screen.
 const WV = P.video || {};
-const walkthrough = (WV.verticalWalkthrough && await exists(WV.verticalWalkthrough)) ? `<figure class="walkthrough">
-<video controls playsinline preload="none"${WV.walkthroughPoster && await exists(WV.walkthroughPoster) ? ` poster="${attr(WV.walkthroughPoster)}"` : ''} width="1080" height="1920">
-<source src="${attr(WV.verticalWalkthrough)}" type="video/mp4">
+const hasLandscape = WV.landscapeWalkthrough && await exists(WV.landscapeWalkthrough);
+const walkSrc = hasLandscape ? WV.landscapeWalkthrough : WV.verticalWalkthrough;
+const walkPoster = hasLandscape
+  ? (WV.landscapePoster && await exists(WV.landscapePoster) ? WV.landscapePoster : null)
+  : (WV.walkthroughPoster && await exists(WV.walkthroughPoster) ? WV.walkthroughPoster : null);
+const walkthrough = (walkSrc && await exists(walkSrc)) ? `<figure class="flythrough" id="flythrough" aria-label="${attr(WV.walkthroughHeading || 'Walk through')}">
+<div class="fly-stage${hasLandscape ? ' landscape' : ' portrait'}"${walkPoster && !hasLandscape ? ` style="background-image:url(${attr(walkPoster)})"` : ''}>
+<video class="fly-video" controls playsinline preload="none"${walkPoster ? ` poster="${attr(walkPoster)}"` : ''} width="${hasLandscape ? 1920 : 1080}" height="${hasLandscape ? 1080 : 1920}">
+<source src="${attr(walkSrc)}" type="video/mp4">
 </video>
-<figcaption><strong>${esc(WV.walkthroughHeading || 'Walk through')}</strong> ${esc(WV.walkthroughCaption || '')}</figcaption>
-</figure>` : (omit('Vertical walkthrough video'), '');
+</div>
+<figcaption class="wrap"><strong>${esc(WV.walkthroughHeading || 'Walk through')}</strong> ${esc(WV.walkthroughCaption || '')}</figcaption>
+</figure>` : (omit('Walkthrough video'), '');
 const house = `<section id="house" class="wrap sec" aria-labelledby="house-h">
 ${secHead(S.house.heading, 'house')}
-<div class="house-intro${walkthrough ? ' has-walkthrough' : ''}">
+<div class="house-intro">
 <div>${paragraphs(S.house.paragraphs)}</div>
-${walkthrough}
 </div>
 <div class="gal-bar">
 ${variantToggle('all', `Show every ${data.labels.virtuallyStaged.toLowerCase()} room as photographed or staged`)}
@@ -336,7 +347,7 @@ ${(await exists(S.updates.specSheet.file)) ? `<p><a class="btn" href="${attr(S.u
 const viewPoster = viewImg.sources.jpg.find((s) => s.w === 1200) || largest(viewImg.sources.jpg);
 const hasViewVideo = await exists(S.view.video);
 // The view video is 16:9 and muted (the pan's wind noise adds nothing); the lead view photograph is its poster and
-// stays in the gallery beneath, so the still never disappears when the clip is present.
+// is left out of the gallery beneath so the same ridge doesn't appear twice in a row.
 const viewMedia = hasViewVideo
   ? `<video class="view-video" controls muted preload="none" playsinline poster="${attr(viewPoster.src)}" width="1280" height="720" style="background-color:${attr(viewImg.color)}">
 <source src="${attr(S.view.video)}" type="video/mp4">
@@ -352,7 +363,7 @@ ${(site.listingLive || REVIEW) ? `<p class="band-note">${t(S.view.dailySunsetNot
 </div>
 </div>
 <div class="wrap">
-${gallery(hasViewVideo ? viewImgs : viewImgs.slice(1), 'view-gallery', { cls: 'gallery-row', sizes: ROW_SIZES })}
+${gallery(viewImgs.slice(1), 'view-gallery', { cls: 'gallery-row', sizes: ROW_SIZES })}
 ${await reelsBlock()}
 ${await albumBlock()}
 </div>
@@ -550,6 +561,7 @@ const ehoSvg = `<svg class="eho" viewBox="0 0 48 48" width="40" height="40" role
 const footer = `<footer id="footer">
 <div class="wrap">
 <h2 class="visually-hidden">Listing information</h2>
+<p class="footer-nav">${footerNav.map(([id, label]) => `<a href="#${id}">${esc(label)}</a>`).join(' <span class="sep" aria-hidden="true">·</span> ')}</p>
 ${p(resolveLine(data.footer.brokerageLine))}
 ${p(resolveLine(data.footer.mlsLine))}
 <p class="eho-line">${ehoSvg}<span>${esc(data.footer.equalHousing)}</span></p>
@@ -676,6 +688,7 @@ ${hero}
 ${daylight}
 <main>
 ${glance}
+${walkthrough}
 ${house}
 ${lower}
 ${tour}

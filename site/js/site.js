@@ -41,6 +41,13 @@
     }
   }
 
+  // ----- the sticky bar steps aside while any clip is playing, so it never covers the controls -----
+  var playing = 0;
+  document.addEventListener('play', function (e) { if (e.target.tagName === 'VIDEO') { playing++; document.body.classList.add('video-playing'); } }, true);
+  var stopped = function (e) { if (e.target.tagName === 'VIDEO' && playing > 0 && --playing === 0) document.body.classList.remove('video-playing'); };
+  document.addEventListener('pause', stopped, true);
+  document.addEventListener('ended', stopped, true);
+
   // ----- reels: an earlier poster swaps its clip into the stage -----
   var reelData = document.getElementById('reel-data');
   var reelVideo = document.getElementById('reel-video');
