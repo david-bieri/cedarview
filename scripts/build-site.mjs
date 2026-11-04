@@ -16,7 +16,7 @@ fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 
 // What the public site needs. Sources, scripts, data and docs stay out of dist/.
-const publish = ['index.html', 'css', 'js', 'robots.txt', 'CNAME', '.nojekyll', 'assets/img', 'assets/plans', 'assets/video', 'assets/cedarview-specs.pdf'];
+const publish = ['index.html', 'sitemap.xml', 'css', 'js', 'robots.txt', 'CNAME', '.nojekyll', 'assets/img', 'assets/plans', 'assets/video', 'assets/cedarview-specs.pdf'];
 for (const rel of publish) {
   const from = path.join(site, rel);
   if (!fs.existsSync(from)) continue;

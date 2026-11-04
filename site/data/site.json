@@ -7,8 +7,8 @@
     "domain": "cedarview.house",
     "url": "https://cedarview.house",
     "language": "en-US",
-    "noindex": true,
-    "listingLive": false,
+    "noindex": false,
+    "listingLive": true,
     "description": "Natural white brick and cedar contemporary on a private 1-acre cul-de-sac in Blacksburg, Virginia. 8 bedrooms, 5,305 finished sq ft, fully rewired, finished lower-level suite with its own entrance, mountain views to the south toward Ellett, GLO Fiber.",
     "ogImage": "assets/img/hero-twilight-1600.jpg",
     "ogImageAlt": "Cedarview House at twilight, every interior light on, seen from the drive",
@@ -41,7 +41,7 @@
       "currency": "USD",
       "display": "$995,000"
     },
-    "status": "Coming soon",
+    "status": "For sale",
     "style": "Natural white brick and cedar contemporary",
     "yearBuilt": 1983,
     "bedrooms": {

@@ -602,7 +602,7 @@ const ld = {
     floorSize: { '@type': 'QuantitativeValue', value: P.floorArea.total, unitCode: 'FTK', unitText: 'SQFT' },
     yearBuilt: P.yearBuilt,
   },
-  offers: { '@type': 'Offer', price: P.price.amount, priceCurrency: P.price.currency, availability: 'https://schema.org/PreOrder', url: site.url },
+  offers: { '@type': 'Offer', price: P.price.amount, priceCurrency: P.price.currency, availability: site.listingLive ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder', url: site.url },
 };
 if (hasAgent) {
   ld.provider = {
@@ -693,6 +693,7 @@ ${lightbox}
 `;
 
 await fs.writeFile(process.env.PAGE_OUT ? path.resolve(process.env.PAGE_OUT) : path.join(ROOT, 'index.html'), html);
+if (!process.env.PAGE_OUT) await fs.writeFile(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${esc(site.url)}/</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod><changefreq>daily</changefreq></url></urlset>\n`);
 if (omitted.length) console.log(`left out of the page until confirmed (${omitted.length}):\n  - ${omitted.join('\n  - ')}`);
 
 // ---------- tracked links ----------
