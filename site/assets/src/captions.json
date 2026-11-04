@@ -112,13 +112,11 @@
         "group": "main"
     },
     "kitchen-night-light": {
-        "alt": "Kitchen in the evening, the recessed lights on their amber night-light setting",
-        "caption": "Kitchen after dark: the recessed LED downlights have a low amber night-light setting, so the kitchen is lit but not bright.",
+        "alt": "Kitchen at night on the amber night-light setting",
         "group": "main"
     },
     "kitchen-night-light-island": {
-        "alt": "Kitchen island and range under the amber night-light setting of the recessed LEDs",
-        "caption": "The same lights from the island side. A late-night glass of water without flooding the room.",
+        "alt": "The island and range under the night-light setting",
         "group": "main"
     },
     "breakfast-room": {
@@ -162,11 +160,11 @@
         "group": "upper"
     },
     "lower-level-bedroom-1": {
-        "alt": "Lower-level bedroom with egress window and light oak floor",
+        "alt": "Lower-level bedroom with three egress windows and a closet",
         "group": "lower"
     },
     "lower-level-bedroom-2": {
-        "alt": "Lower-level bedroom with egress window",
+        "alt": "Lower-level bedroom with corner egress windows",
         "group": "lower"
     },
     "lower-level-rec-room": {
@@ -186,7 +184,7 @@
         "group": "lower"
     },
     "lower-level-gym": {
-        "alt": "Lower-level room used as a gym",
+        "alt": "The largest lower-level bedroom, shown with gym equipment",
         "group": "lower"
     },
     "plan-main-floor": {
