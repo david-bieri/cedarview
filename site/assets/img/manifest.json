@@ -2562,6 +2562,57 @@
     "group": "lower"
   },
   {
+    "name": "lower-level-bedroom-3",
+    "alt": "Lower-level bedroom with egress window, closet and walk-in closet",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1066,
+    "aspect": 1.5009,
+    "color": "#d8d8d8",
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoYABAAPxF8tFGsKCUisAgBgCIJYwDCgGlEfTtCFMNwPgD+86AZTn7tleYP3qF97OcSVP8WjqtxbRpDZBF0Me1TFyAZD4YAAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-3-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-3-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-3-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-3-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-3-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-3-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-3-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-3-1600.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
     "name": "lower-level-rec-room",
     "alt": "Lower-level recreation room",
     "caption": "",

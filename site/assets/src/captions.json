@@ -167,6 +167,10 @@
         "alt": "Lower-level bedroom with corner egress windows",
         "group": "lower"
     },
+    "lower-level-bedroom-3": {
+        "alt": "Lower-level bedroom with egress window, closet and walk-in closet",
+        "group": "lower"
+    },
     "lower-level-rec-room": {
         "alt": "Lower-level recreation room",
         "group": "lower"
