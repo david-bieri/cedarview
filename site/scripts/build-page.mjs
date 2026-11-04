@@ -96,11 +96,13 @@ function picture(img, { sizes, eager = false, priority = false, className = '', 
 </picture>`;
 }
 
-/** The two-button photo / staged control; `scope` is "tile" (one pair) or "all" (every pair in a gallery). */
-const variantToggle = (scope, labelFor) => `<div class="vtoggle" role="group" aria-label="${attr(labelFor)}">
+/** Gallery-wide photo / staged control: a line of text, the active state underlined (js/gallery.js keeps it in step). */
+const variantToggle = (scope, labelFor) => `<div class="vtoggle" role="group" aria-label="${attr(labelFor)}"><span class="vtoggle-lead">Showing:</span>
 <button type="button" data-variant="photo" data-scope="${scope}" aria-pressed="true">As photographed</button>
 <button type="button" data-variant="staged" data-scope="${scope}" aria-pressed="false">${esc(data.labels.virtuallyStaged)}</button>
 </div>`;
+/** Per-photo control: one text link that flips the pair; its label is rewritten by js/gallery.js. */
+const flipLink = (alt) => `<button type="button" class="vflip" data-flip aria-label="${attr(`${alt}: show ${data.labels.virtuallyStaged.toLowerCase()}`)}">Show ${esc(data.labels.virtuallyStaged.toLowerCase())}</button>`;
 
 function galleryFigure(img, position, nearFold, sizes, lead) {
   const idx = lbIndex.get(img.name);
@@ -111,12 +113,12 @@ function galleryFigure(img, position, nearFold, sizes, lead) {
   const pairData = paired ? ` data-pair="${attr(img.pair)}" data-variant="photo"`
     + ` data-photo-webp="${attr(srcset(img.sources.webp))}" data-photo-jpg="${attr(srcset(img.sources.jpg))}" data-photo-src="${attr(largest(img.sources.jpg).src)}" data-photo-alt="${attr(img.alt)}"`
     + ` data-staged-webp="${attr(srcset(img.stagedSources.webp))}" data-staged-jpg="${attr(srcset(img.stagedSources.jpg))}" data-staged-src="${attr(largest(img.stagedSources.jpg).src)}" data-staged-alt="${attr(img.stagedAlt)}"` : '';
-  const badge = paired ? `<span class="badge" hidden>${esc(data.labels.virtuallyStaged)}</span>` : '';
-  const fc = caption || paired ? `<figcaption>${caption}${paired ? variantToggle('tile', `${img.alt}: photo or virtually staged`) : ''}</figcaption>` : '';
+  // A staged pair's caption carries the word (shown only while the staged frame is up) and a one-link flip.
+  const stagedWord = paired ? `<span class="cap-staged" hidden>${caption ? ` &middot; ${esc(data.labels.virtuallyStaged.toLowerCase())}` : esc(data.labels.virtuallyStaged)}</span>` : '';
+  const fc = caption || paired ? `<figcaption><span class="cap-text">${caption}${stagedWord}</span>${paired ? flipLink(img.alt) : ''}</figcaption>` : '';
   return `<figure class="tile${lead && position === 0 ? ' tile-lead' : ''}"${pairData}>
 <button type="button" class="tile-btn" data-lb="${idx}" aria-label="${attr(`Enlarge: ${img.alt}`)}">
 ${picture(img, { sizes: lead && position === 0 ? FEATURE_SIZES : sizes, eager })}
-${badge}
 </button>
 ${fc}
 </figure>`;
@@ -257,6 +259,7 @@ ${secHead(S.house.heading, 'house')}
 <div>${paragraphs(S.house.paragraphs)}</div>
 </div>
 <div class="gal-bar">
+<p class="gal-note">${esc(S.house.stagingLine || data.footer.stagingNote)}</p>
 ${variantToggle('all', `Show every ${data.labels.virtuallyStaged.toLowerCase()} room as photographed or staged`)}
 </div>
 ${gallery(galleryImgs, 'house-gallery', { nearFold: true, lead: true })}
@@ -359,7 +362,7 @@ const view = `<section id="view" class="sec sec-view" aria-labelledby="view-h">
 <div class="band view-band">
 <div class="wrap">
 ${paragraphs(S.view.paragraphs)}
-${(site.listingLive || REVIEW) ? `<p class="band-note">${t(S.view.dailySunsetNote)}${(await exists(S.view.video)) ? '' : ` ${missing('Drone reveal video')}`}</p>` : ((await exists(S.view.video)) ? '' : (omit('Drone reveal video (sunset note hidden until listingLive)'), ''))}
+${(S.view.clipsNote && (site.listingLive || REVIEW)) ? `<p class="band-note">${t(S.view.clipsNote)}</p>` : ''}${(await exists(S.view.video)) ? '' : (REVIEW ? `<p class="band-note">${missing('Drone reveal video')}</p>` : (omit('Drone reveal video'), ''))}
 </div>
 </div>
 <div class="wrap">
@@ -577,7 +580,7 @@ const lightbox = `<div class="lightbox" id="lightbox" role="dialog" aria-modal="
 <button type="button" class="lb-prev" data-lb-prev aria-label="Previous photo">&#8249;</button>
 <figure class="lb-fig">
 <picture><source type="image/webp" id="lb-webp"><img id="lb-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" decoding="async"></picture>
-<figcaption><span id="lb-cap"></span><span class="badge" id="lb-badge" hidden>${esc(data.labels.virtuallyStaged)}</span>
+<figcaption><span id="lb-cap"></span><span class="cap-staged" id="lb-badge" hidden> &middot; ${esc(data.labels.virtuallyStaged.toLowerCase())}</span>
 <div class="vtoggle lb-toggle" id="lb-toggle" role="group" aria-label="Photo or virtually staged" hidden>
 <button type="button" data-lb-variant="photo" aria-pressed="true">As photographed</button>
 <button type="button" data-lb-variant="staged" aria-pressed="false">${esc(data.labels.virtuallyStaged)}</button>

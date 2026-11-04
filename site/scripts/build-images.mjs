@@ -100,20 +100,22 @@ function altFor(name) {
 }
 const stagedAltFrom = (alt) => `${alt}, ${STAGED_LABEL.toLowerCase()}`;
 
-// Translucent dark pill with white label, bottom-left; scales with width so it
-// stays legible at the smallest size.
+// The disclosure in the register of a photo credit: small spaced capitals, white with a soft
+// shadow, centred along the bottom edge so it survives the square and 3:2 crops the gallery
+// applies. No box, so it reads as information rather than a sticker; it scales with width so
+// it stays legible at the smallest rendition.
 function labelOverlay(w, h) {
-  const fontPx = Math.max(16, Math.round(w * 0.034));
-  const padX = Math.round(fontPx * 0.9), padY = Math.round(fontPx * 0.55);
-  const textW = Math.round(STAGED_LABEL.length * fontPx * 0.58);
-  const pillW = textW + padX * 2, pillH = fontPx + padY * 2;
-  const margin = Math.round(w * 0.025);
-  const x = margin, y = h - margin - pillH;
+  const fontPx = Math.max(13, Math.round(w * 0.019));
+  const margin = Math.round(w * 0.028);
+  const x = Math.round(w / 2), y = h - margin;
+  const label = STAGED_LABEL.toUpperCase();
   return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">
-  <rect x="${x}" y="${y}" width="${pillW}" height="${pillH}" rx="${Math.round(pillH / 2)}"
-        fill="#000" fill-opacity="0.62"/>
-  <text x="${x + padX}" y="${y + padY + fontPx * 0.78}" font-family="Helvetica, Arial, sans-serif"
-        font-size="${fontPx}" font-weight="600" fill="#fff">${STAGED_LABEL}</text>
+  <defs><filter id="s" x="-20%" y="-50%" width="140%" height="200%">
+    <feDropShadow dx="0" dy="${Math.max(1, Math.round(fontPx * 0.08))}" stdDeviation="${Math.max(1.2, fontPx * 0.12)}" flood-color="#000" flood-opacity="0.75"/>
+    <feDropShadow dx="0" dy="0" stdDeviation="${fontPx * 0.5}" flood-color="#000" flood-opacity="0.35"/>
+  </filter></defs>
+  <text x="${x}" y="${y}" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="${fontPx}"
+        font-weight="500" letter-spacing="${(fontPx * 0.16).toFixed(1)}" fill="#fff" fill-opacity="0.94" filter="url(#s)">${label}</text>
 </svg>`);
 }
 

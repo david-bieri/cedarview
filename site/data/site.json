@@ -182,7 +182,8 @@
       "grounds": {
         "heading": "The grounds",
         "intro": "About an acre of woods on a cul-de-sac, with a screened porch, a deck and a fire pit facing the trees."
-      }
+      },
+      "stagingLine": "Rooms marked “virtually staged” have furniture added digitally; walls, floors, windows and the view are untouched."
     },
     "lowerLevel": {
       "heading": "Lower-level suite",
@@ -267,12 +268,13 @@
       "paragraphs": [
         "The deck faces due south, toward Ellett. The ridgeline is visible from the house in every season, and the low western sun lights it from the side in the late afternoon."
       ],
+      "clipsNote": "",
+      "_clipsNote": "Optional one-line note under the view paragraphs. Left empty on purpose: the sun sets behind the trees in November, so no daily-sunset promise; the reels block speaks for itself.",
       "video": "assets/video/view-from-the-roof.mp4",
       "videoPoster": "assets/img/view-south-1200.jpg",
-      "dailySunsetNote": "Daily sunset clips are posted here while the listing is live.",
       "reels": {
         "heading": "Lately",
-        "intro": "Short clips from the house, newest first. The same clips go out on Instagram and TikTok.",
+        "intro": "Short clips from the house, added while the listing is live. The same clips go out on Instagram and TikTok.",
         "earlierLabel": "Earlier",
         "dir": "assets/video/reels",
         "maxBytes": 20000000,

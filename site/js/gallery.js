@@ -1,6 +1,6 @@
 /* Gallery and lightbox for cedarview.house — plain JS, keyboard accessible.
-   1. Photo / virtually-staged toggles: per tile (data-scope="tile") and gallery-wide
-      (data-scope="all"); each swaps the <picture> sources, alt and badge in place.
+   1. Photo / virtually-staged: a gallery-wide text toggle (data-scope="all") and a one-link
+      flip per pair (data-flip); each swaps the <picture> sources, alt and caption word in place.
    2. Lightbox: Esc closes, arrow keys navigate, focus is trapped inside the dialog;
       paired images carry both variants and a toggle of their own. */
 (function () {
@@ -17,7 +17,8 @@
     var d = fig.dataset;
     var source = fig.querySelector('source');
     var img = fig.querySelector('img');
-    var badge = fig.querySelector('.badge');
+    var word = fig.querySelector('.cap-staged');
+    var flip = fig.querySelector('[data-flip]');
     var btn = fig.querySelector('[data-lb]');
     if (!source || !img) return;
     source.srcset = variant === STAGED ? d.stagedWebp : d.photoWebp;
@@ -25,11 +26,18 @@
     img.src = variant === STAGED ? d.stagedSrc : d.photoSrc;
     img.alt = variant === STAGED ? d.stagedAlt : d.photoAlt;
     if (btn) btn.setAttribute('aria-label', 'Enlarge: ' + img.alt);
-    if (badge) badge.hidden = variant !== STAGED;
+    if (word) word.hidden = variant !== STAGED;
+    if (flip) {
+      var other = variant === STAGED ? 'as photographed' : STAGED_WORD;
+      flip.textContent = 'Show ' + other;
+      flip.setAttribute('aria-label', d.photoAlt + ': show ' + other);
+    }
     fig.dataset.variant = variant;
-    var group = fig.querySelector('.vtoggle');
-    if (group) setPressed(group, variant);
   }
+  var STAGED_WORD = (function () {
+    var el = document.querySelector('.vtoggle button[data-variant="staged"]');
+    return el ? el.textContent.trim().toLowerCase() : 'virtually staged';
+  })();
   function syncAllToggle() {
     var pairs = document.querySelectorAll('.tile[data-pair]');
     var all = document.querySelectorAll('.vtoggle button[data-scope="all"]');
@@ -42,16 +50,18 @@
     }
   }
   document.addEventListener('click', function (e) {
+    var flip = e.target.closest && e.target.closest('[data-flip]');
+    if (flip) {
+      var f = flip.closest('.tile[data-pair]');
+      if (f) setTile(f, f.dataset.variant === STAGED ? PHOTO : STAGED);
+      syncAllToggle();
+      return;
+    }
     var btn = e.target.closest && e.target.closest('.vtoggle button[data-variant]');
     if (!btn || btn.hasAttribute('data-lb-variant')) return;
     var variant = btn.getAttribute('data-variant');
-    if (btn.getAttribute('data-scope') === 'all') {
-      var pairs = document.querySelectorAll('.tile[data-pair]');
-      for (var i = 0; i < pairs.length; i++) setTile(pairs[i], variant);
-    } else {
-      var fig = btn.closest('.tile[data-pair]');
-      if (fig) setTile(fig, variant);
-    }
+    var pairs = document.querySelectorAll('.tile[data-pair]');
+    for (var i = 0; i < pairs.length; i++) setTile(pairs[i], variant);
     syncAllToggle();
   });
 
@@ -92,7 +102,7 @@
     img.height = v.h;
     img.alt = v.alt;
     img.style.backgroundColor = it.color || '';
-    cap.textContent = it.caption || v.alt;
+    cap.textContent = it.caption || it.alt; // the room, not the variant: the word after it says which is showing
     badge.hidden = !(useStaged || it.staged);
     if (toggle) {
       toggle.hidden = !it.stagedVariant;
