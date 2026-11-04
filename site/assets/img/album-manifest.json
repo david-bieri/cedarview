@@ -98,6 +98,104 @@
   "group": "album"
  },
  {
+  "name": "album-spring-azaleas-house",
+  "alt": "The house the week the azaleas come out.",
+  "caption": "The house the week the azaleas come out.",
+  "season": "Late April",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#c8c8d8",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-spring-azaleas-house-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-spring-azaleas-house-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-spring-azaleas-house-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-spring-azaleas-house-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-spring-azaleas-house-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-spring-azaleas-house-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-spring-azaleas-house-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-spring-azaleas-house-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
+  "name": "album-spring-rhododendron",
+  "alt": "The rhododendron by the drive.",
+  "caption": "The rhododendron by the drive.",
+  "season": "Early May",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#f8f8f8",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-spring-rhododendron-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-spring-rhododendron-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-spring-rhododendron-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-spring-rhododendron-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-spring-rhododendron-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-spring-rhododendron-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-spring-rhododendron-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-spring-rhododendron-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
   "name": "album-summer-hydrangeas",
   "alt": "Hydrangeas.",
   "caption": "Hydrangeas.",
@@ -392,6 +490,55 @@
   "group": "album"
  },
  {
+  "name": "album-september-lawn",
+  "alt": "The back lawn, set for a gathering.",
+  "caption": "The back lawn, set for a gathering.",
+  "season": "September",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#080808",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-september-lawn-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-september-lawn-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-september-lawn-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-september-lawn-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-september-lawn-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-september-lawn-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-september-lawn-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-september-lawn-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
   "name": "album-autumn-roses",
   "alt": "The last roses by the drive.",
   "caption": "The last roses by the drive.",
@@ -588,6 +735,55 @@
   "group": "album"
  },
  {
+  "name": "album-autumn-twilight-pumpkins",
+  "alt": "Twilight, pumpkins on the steps.",
+  "caption": "Twilight, pumpkins on the steps.",
+  "season": "Late autumn",
+  "date": "",
+  "width": 1600,
+  "height": 1200,
+  "color": "#080808",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-autumn-twilight-pumpkins-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-autumn-twilight-pumpkins-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-autumn-twilight-pumpkins-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-autumn-twilight-pumpkins-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-autumn-twilight-pumpkins-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-autumn-twilight-pumpkins-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-autumn-twilight-pumpkins-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-autumn-twilight-pumpkins-1600.jpg"
+    }
+   ]
+  },
+  "group": "album"
+ },
+ {
   "name": "album-winter-first-snow",
   "alt": "First snow, at sunrise.",
   "caption": "First snow, at sunrise.",
@@ -729,55 +925,6 @@
     {
      "w": 1291,
      "src": "assets/img/album-winter-christmas-1291.jpg"
-    }
-   ]
-  },
-  "group": "album"
- },
- {
-  "name": "album-night-home",
-  "alt": "Home, after dark.",
-  "caption": "Home, after dark.",
-  "season": "Any evening",
-  "date": "",
-  "width": 1600,
-  "height": 1200,
-  "color": "#080808",
-  "sources": {
-   "webp": [
-    {
-     "w": 480,
-     "src": "assets/img/album-night-home-480.webp"
-    },
-    {
-     "w": 800,
-     "src": "assets/img/album-night-home-800.webp"
-    },
-    {
-     "w": 1200,
-     "src": "assets/img/album-night-home-1200.webp"
-    },
-    {
-     "w": 1600,
-     "src": "assets/img/album-night-home-1600.webp"
-    }
-   ],
-   "jpg": [
-    {
-     "w": 480,
-     "src": "assets/img/album-night-home-480.jpg"
-    },
-    {
-     "w": 800,
-     "src": "assets/img/album-night-home-800.jpg"
-    },
-    {
-     "w": 1200,
-     "src": "assets/img/album-night-home-1200.jpg"
-    },
-    {
-     "w": 1600,
-     "src": "assets/img/album-night-home-1600.jpg"
     }
    ]
   },
