@@ -267,7 +267,7 @@
       "paragraphs": [
         "The deck faces due south, toward Ellett. The ridgeline is visible from the house in every season, and the low western sun lights it from the side in the late afternoon."
       ],
-      "video": "assets/video/view-from-the-deck.mp4",
+      "video": "assets/video/view-from-the-roof.mp4",
       "videoPoster": "assets/img/view-south-1200.jpg",
       "dailySunsetNote": "Daily sunset clips are posted here while the listing is live.",
       "reels": {
@@ -279,8 +279,8 @@
         "_note": "Each reel: a 9:16 H.264 MP4 (1080x1920, 15-30 s, muted, captions burned in) under 15 MB in assets/video/reels/, with a JPEG poster of the same name. Newest first; the page shows the newest large and up to six earlier posters. The photographer's fly-through lives under At a glance, not here. Nothing renders until the first item is here and its file exists. Types: sunset (fixed tripod spot on the deck, time-lapse), walk-from-the-door (front door to the pool gate, 4x, real minutes in the caption), room-at-its-hour (10 s static, breakfast room at 7:30, living room at 4 pm).",
         "items": [
           {
-            "file": "view-from-the-deck",
-            "caption": "The view from the deck, early November — a slow pan to the ridge.",
+            "file": "view-from-the-roof",
+            "caption": "The view from the roof, early November — a slow pan to the ridge.",
             "date": "2026-11-03",
             "type": "view"
           },
@@ -292,7 +292,7 @@
           }
         ]
       },
-      "videoCaption": "A slow pan from the deck across the autumn canopy to the ridge, early November 2026. From the owners' album.",
+      "videoCaption": "A slow pan from the roof across the autumn canopy to the ridge, early November 2026. From the owners' album.",
       "_video": "The landscape clip plays full-bleed with the first view photo as poster. Replace with a drone reveal when there is one; the pan then belongs in the reels."
     },
     "blacksburg": {
