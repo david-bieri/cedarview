@@ -413,6 +413,7 @@
     "caption": "",
     "staged": false,
     "variant": "photo",
+    "pair": "exterior-rear-porch",
     "width": 1600,
     "height": 1066,
     "aspect": 1.5009,
@@ -456,7 +457,48 @@
         }
       ]
     },
-    "group": "exterior"
+    "group": "exterior",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-rear-porch-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-rear-porch-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-rear-porch-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-rear-porch-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/exterior-rear-porch-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/exterior-rear-porch-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/exterior-rear-porch-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/exterior-rear-porch-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Rear elevation with the fire pit virtually staged with chairs, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
   },
   {
     "name": "grounds-path",
@@ -872,7 +914,6 @@
     "caption": "",
     "staged": false,
     "variant": "photo",
-    "pair": "living-room",
     "width": 1600,
     "height": 1066,
     "aspect": 1.5009,
@@ -916,48 +957,7 @@
         }
       ]
     },
-    "group": "main",
-    "stagedSources": {
-      "webp": [
-        {
-          "w": 480,
-          "src": "assets/img/living-room-staged-480.webp"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/living-room-staged-800.webp"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/living-room-staged-1200.webp"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/living-room-staged-1600.webp"
-        }
-      ],
-      "jpg": [
-        {
-          "w": 480,
-          "src": "assets/img/living-room-staged-480.jpg"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/living-room-staged-800.jpg"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/living-room-staged-1200.jpg"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/living-room-staged-1600.jpg"
-        }
-      ]
-    },
-    "stagedAlt": "Living room with the open oak stair and sliding doors to the deck, virtually staged",
-    "stagedWidth": 1600,
-    "stagedHeight": 1067
+    "group": "main"
   },
   {
     "name": "living-room-stair",
@@ -1169,6 +1169,7 @@
     "caption": "",
     "staged": false,
     "variant": "photo",
+    "pair": "library",
     "width": 1600,
     "height": 1066,
     "aspect": 1.5009,
@@ -1212,7 +1213,48 @@
         }
       ]
     },
-    "group": "main"
+    "group": "main",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/library-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/library-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/library-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/library-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/library-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/library-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/library-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/library-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Library virtually staged as a study, with a desk at the window, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
   },
   {
     "name": "dining",
@@ -1271,7 +1313,6 @@
     "caption": "",
     "staged": false,
     "variant": "photo",
-    "pair": "kitchen",
     "width": 1600,
     "height": 1066,
     "aspect": 1.5009,
@@ -1315,48 +1356,7 @@
         }
       ]
     },
-    "group": "main",
-    "stagedSources": {
-      "webp": [
-        {
-          "w": 480,
-          "src": "assets/img/kitchen-staged-480.webp"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/kitchen-staged-800.webp"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/kitchen-staged-1200.webp"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/kitchen-staged-1600.webp"
-        }
-      ],
-      "jpg": [
-        {
-          "w": 480,
-          "src": "assets/img/kitchen-staged-480.jpg"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/kitchen-staged-800.jpg"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/kitchen-staged-1200.jpg"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/kitchen-staged-1600.jpg"
-        }
-      ]
-    },
-    "stagedAlt": "Kitchen with cherry cabinets, granite island and range hood, virtually staged",
-    "stagedWidth": 1600,
-    "stagedHeight": 1067
+    "group": "main"
   },
   {
     "name": "kitchen-island",
@@ -1517,6 +1517,7 @@
     "caption": "",
     "staged": false,
     "variant": "photo",
+    "pair": "screened-porch",
     "width": 1600,
     "height": 1066,
     "aspect": 1.5009,
@@ -1560,7 +1561,48 @@
         }
       ]
     },
-    "group": "main"
+    "group": "main",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/screened-porch-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/screened-porch-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/screened-porch-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/screened-porch-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/screened-porch-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/screened-porch-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/screened-porch-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/screened-porch-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Screened porch virtually staged with a sofa and rattan chairs, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1195
   },
   {
     "name": "screened-porch-view",
@@ -1823,7 +1865,6 @@
     "caption": "",
     "staged": false,
     "variant": "photo",
-    "pair": "primary-bedroom",
     "width": 1600,
     "height": 1066,
     "aspect": 1.5009,
@@ -1867,48 +1908,7 @@
         }
       ]
     },
-    "group": "upper",
-    "stagedSources": {
-      "webp": [
-        {
-          "w": 480,
-          "src": "assets/img/primary-bedroom-staged-480.webp"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/primary-bedroom-staged-800.webp"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/primary-bedroom-staged-1200.webp"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/primary-bedroom-staged-1600.webp"
-        }
-      ],
-      "jpg": [
-        {
-          "w": 480,
-          "src": "assets/img/primary-bedroom-staged-480.jpg"
-        },
-        {
-          "w": 800,
-          "src": "assets/img/primary-bedroom-staged-800.jpg"
-        },
-        {
-          "w": 1200,
-          "src": "assets/img/primary-bedroom-staged-1200.jpg"
-        },
-        {
-          "w": 1600,
-          "src": "assets/img/primary-bedroom-staged-1600.jpg"
-        }
-      ]
-    },
-    "stagedAlt": "Primary bedroom with sliding doors onto the balcony, virtually staged",
-    "stagedWidth": 1600,
-    "stagedHeight": 1067
+    "group": "upper"
   },
   {
     "name": "bedroom-main-corner",
@@ -1967,6 +1967,7 @@
     "caption": "",
     "staged": false,
     "variant": "photo",
+    "pair": "lower-level-bedroom-1",
     "width": 1600,
     "height": 1066,
     "aspect": 1.5009,
@@ -2010,7 +2011,48 @@
         }
       ]
     },
-    "group": "lower"
+    "group": "lower",
+    "stagedSources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-1-staged-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-1-staged-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-1-staged-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-1-staged-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-bedroom-1-staged-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-bedroom-1-staged-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-bedroom-1-staged-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/lower-level-bedroom-1-staged-1600.jpg"
+        }
+      ]
+    },
+    "stagedAlt": "Lower-level bedroom virtually staged with a bed and reading chair, virtually staged",
+    "stagedWidth": 1600,
+    "stagedHeight": 1067
   },
   {
     "name": "lower-level-bedroom-2",

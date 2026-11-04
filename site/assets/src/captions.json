@@ -183,5 +183,21 @@
  "primary-balcony": {
   "alt": "Balcony off the primary bedroom with cable railing, looking into the trees",
   "group": "upper"
+ },
+ "library-staged": {
+  "alt": "Library virtually staged as a study, with a desk at the window",
+  "group": "main"
+ },
+ "screened-porch-staged": {
+  "alt": "Screened porch virtually staged with a sofa and rattan chairs",
+  "group": "main"
+ },
+ "lower-level-bedroom-1-staged": {
+  "alt": "Lower-level bedroom virtually staged with a bed and reading chair",
+  "group": "lower"
+ },
+ "exterior-rear-porch-staged": {
+  "alt": "Rear elevation with the fire pit virtually staged with chairs",
+  "group": "exterior"
  }
 }

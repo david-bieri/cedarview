@@ -175,7 +175,7 @@
       "heading": "The house",
       "paragraphs": [
         "A natural white brick and cedar contemporary from 1983, set back on a wooded acre at the end of a cul-de-sac. Inside, cedar walls and ceilings, an open oak stair and tall windows carry the woods into the house; the main floor opens to the south, so the mountains are in view from the living room, the kitchen and the deck.",
-        "The house has been fully rewired, and the lower level is completely finished. The interior has been freshly painted throughout and is shown empty, with three rooms virtually staged and labelled as such."
+        "The house has been fully rewired, and the lower level is completely finished. The interior has been freshly painted throughout and is shown empty, with four rooms virtually staged and labelled as such."
       ],
       "grounds": {
         "heading": "The grounds",
@@ -851,9 +851,10 @@
     "daylightCaption": "The house in daylight: natural white brick, cedar on the upper storey, the cobalt door.",
     "_daylight": "Shown full width directly under the twilight hero so the form of the house reads before anyone scrolls; it is dropped from the grounds gallery so it appears once.",
     "stagedRooms": [
-      "living-room",
-      "primary-bedroom",
-      "kitchen"
+      "library",
+      "screened-porch",
+      "lower-level-bedroom-1",
+      "exterior-rear-porch"
     ],
     "sizes": [
       480,
@@ -863,7 +864,7 @@
     ],
     "galleryTarget": "35 to 40 curated photos",
     "stagedSuffix": "-staged",
-    "_staging": "For each name in stagedRooms, the unstaged original is <name>.jpg and the staged version <name>-staged.jpg. The pipeline burns the label onto the staged file only and pairs the two in the manifest; the gallery toggles between them."
+    "_staging": "For each name in stagedRooms, the unstaged original is <name>.jpg and the staged version <name>-staged.jpg. The pipeline burns the label onto the staged file only and pairs the two in the manifest; the gallery toggles between them. Staged frames that have no same-angle unstaged original in assets/src are not used: the toggle needs the identical frame."
   },
   "tbc": [],
   "photographer": {

@@ -37,7 +37,7 @@ Type: Fraunces 300/400 for display, Inter for everything else. Structure: direct
 5. Plans: #117–120.
 6. The view: ridge wide (#11) lead, #12, #13, #10.
 
-Staged rooms (living-room, primary-bedroom, kitchen): unstaged original is `<name>.jpg`, staged is `<name>-staged.jpg`. Never label an unstaged image.
+Staged rooms (library, screened-porch, lower-level-bedroom-1, exterior-rear-porch — the four of Brian's staged frames that share an exact angle with a curated unstaged photo): unstaged original is `<name>.jpg`, staged is `<name>-staged.jpg`. Never label an unstaged image, and never use a staged frame without its same-angle original.
 
 ## Bedrooms and baths (confirmed)
 - Main floor: 1 bedroom (primary), 1 full bath with shower and jacuzzi, 1 half bath. Upper floor: 3 bedrooms, 1 full, 1 three-quarter. Lower level: 4 bedrooms (all with egress windows), 1 full bath. Building codes do not require a closet for a bedroom; egress, ceiling height and floor area do.
@@ -46,7 +46,7 @@ Staged rooms (living-room, primary-bedroom, kitchen): unstaged original is `<nam
 ## Still to get from the photographer
 - One photo from the deck or upper floor that shows the ridge (the claim buyers check first). None in the set.
 - Re-shoot or drop: garage with bins and bikes (#81, #82), balcony with chairs, gym with the weight bench (#115, #116).
-- The staged versions of the three rooms.
+- Unstaged originals (same frame) for the other staged shots Brian delivered: living room with the stove (IMG_4722), primary bedroom (4729, 4742), dining (4731), upstairs bedroom as office (4735), family room (4736), rec room (4810), lower bedroom as sitting room (4732). They are in his 121; only the same-angle originals are in our 46.
 
 ## Placeholders
 A `TBC` value is never shown. The build leaves the line, row or section out and says so; `npm run check` fails if one leaks. Write nothing on the page that reads as a note to ourselves ("not yet added", "to be confirmed", "see site.json"): if the fact is not confirmed, the page says nothing, and the spec sheet prints "on request".
