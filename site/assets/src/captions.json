@@ -1,243 +1,253 @@
 {
- "hero-twilight": {
-  "alt": "Cedarview House at twilight, every interior light on, seen from the drive",
-  "group": "hero"
- },
- "exterior-front": {
-  "alt": "Front of the house in autumn, natural white brick and dark window frames",
-  "group": "exterior"
- },
- "exterior-approach": {
-  "alt": "The house from the end of the cul-de-sac, framed by autumn trees",
-  "group": "exterior"
- },
- "entrance-steps": {
-  "alt": "Brick steps up to the front entrance with the composite deck landing",
-  "group": "exterior"
- },
- "front-door": {
-  "alt": "The cobalt-blue front door in the natural white brick",
-  "group": "exterior"
- },
- "deck-landing": {
-  "alt": "The deck landing beside the entrance, woods behind",
-  "group": "exterior"
- },
- "entrance-terrace": {
-  "alt": "Stone-paved terrace at the entrance with the blue door",
-  "group": "exterior"
- },
- "exterior-rear": {
-  "alt": "The rear of the house and screened porch from the lawn",
-  "group": "exterior"
- },
- "exterior-rear-porch": {
-  "alt": "Screened porch and rear elevation with the fire pit",
-  "group": "exterior"
- },
- "grounds-path": {
-  "alt": "Gravel path through the wooded grounds",
-  "group": "exterior"
- },
- "grounds-woods": {
-  "alt": "The wooded lot behind the house",
-  "group": "exterior"
- },
- "lot-aerial": {
-  "alt": "Aerial view of the house and lot from above",
-  "group": "exterior"
- },
- "lot-aerial-roof": {
-  "alt": "Aerial view over the roof toward the woods",
-  "group": "exterior"
- },
- "view-south-ridge": {
-  "alt": "Drone view south over the autumn canopy toward the Ellett ridgeline",
-  "group": "view"
- },
- "view-south-wide": {
-  "alt": "Wide drone view south, the mountains across the valley",
-  "group": "view"
- },
- "view-south-ridge-close": {
-  "alt": "The ridgeline to the south above the trees",
-  "group": "view"
- },
- "view-valley": {
-  "alt": "Drone view over Blacksburg toward the mountains",
-  "group": "view"
- },
- "living-room": {
-  "alt": "Living room with the open oak stair and sliding doors to the deck",
-  "group": "main"
- },
- "living-room-stove": {
-  "alt": "Living room with the wood stove under the cedar ceiling",
-  "group": "main"
- },
- "living-room-stair": {
-  "alt": "The open-tread oak staircase rising from the living room",
-  "group": "main"
- },
- "family-room": {
-  "alt": "Family room with the fireplace, cedar wall and doors to the screened porch",
-  "group": "main"
- },
- "family-room-cedar": {
-  "alt": "Cedar-clad wall and ceiling in the family room",
-  "group": "main"
- },
- "family-room-fireplace": {
-  "alt": "Fireplace with white built-in cabinetry and bookshelves",
-  "group": "main"
- },
- "library": {
-  "alt": "Library with white built-in shelving and oak floor",
-  "group": "main"
- },
- "dining": {
-  "alt": "Dining room with corner windows onto the trees",
-  "group": "main"
- },
- "kitchen": {
-  "alt": "Kitchen with cherry cabinets, granite island and range hood",
-  "group": "main"
- },
- "kitchen-island": {
-  "alt": "Kitchen island and skylight",
-  "group": "main"
- },
- "kitchen-window": {
-  "alt": "Kitchen sink window onto the woods",
-  "group": "main"
- },
- "breakfast-room": {
-  "alt": "Breakfast room with sliding doors to the deck",
-  "group": "main"
- },
- "screened-porch": {
-  "alt": "Screened porch with cedar ceiling",
-  "group": "main"
- },
- "screened-porch-view": {
-  "alt": "Screened porch looking out to the lawn",
-  "group": "main"
- },
- "primary-bath": {
-  "alt": "Primary bath with double vanity and skylit marble shower",
-  "group": "upper"
- },
- "primary-bath-skylight": {
-  "alt": "Skylight over the soaking tub in the primary bath",
-  "group": "upper"
- },
- "upper-landing": {
-  "alt": "Upper landing with oak slat balustrade",
-  "group": "upper"
- },
- "upper-hall": {
-  "alt": "Upper hallway with cedar ceiling",
-  "group": "upper"
- },
- "upper-bedroom": {
-  "alt": "Upper-floor bedroom with ceiling fan and oak floor",
-  "group": "upper"
- },
- "primary-bedroom": {
-  "alt": "Primary bedroom with ceiling fan and doors to the balcony",
-  "group": "upper"
- },
- "primary-bedroom-door": {
-  "alt": "Primary bedroom from the door, windows onto the trees",
-  "group": "upper"
- },
- "lower-level-bedroom-1": {
-  "alt": "Lower-level bedroom with egress window and light oak floor",
-  "group": "lower"
- },
- "lower-level-bedroom-2": {
-  "alt": "Lower-level bedroom with egress window",
-  "group": "lower"
- },
- "lower-level-rec-room": {
-  "alt": "Lower-level recreation room",
-  "group": "lower"
- },
- "lower-level-rec-room-wide": {
-  "alt": "Lower-level recreation room, looking toward the hall",
-  "group": "lower"
- },
- "lower-level-bath": {
-  "alt": "Lower-level full bath",
-  "group": "lower"
- },
- "lower-level-workshop": {
-  "alt": "Workshop with built-in benches on the lower level",
-  "group": "lower"
- },
- "lower-level-gym": {
-  "alt": "Lower-level room used as a gym",
-  "group": "lower"
- },
- "plan-main-floor": {
-  "alt": "Measured floor plan, main floor",
-  "group": "plans"
- },
- "plan-upper-floor": {
-  "alt": "Measured floor plan, upper floor",
-  "group": "plans"
- },
- "plan-lower-level": {
-  "alt": "Measured floor plan, lower level",
-  "group": "plans"
- },
- "_readme": "Alt text and group per source image, consumed by scripts/build-images.mjs. Generated from assets/src/photos.json; edit freely.",
- "primary-balcony": {
-  "alt": "Balcony off the primary bedroom with cable railing, looking into the trees",
-  "group": "upper"
- },
- "library-staged": {
-  "alt": "Library virtually staged as a study, with a desk at the window",
-  "group": "main"
- },
- "screened-porch-staged": {
-  "alt": "Screened porch virtually staged with a sofa and rattan chairs",
-  "group": "main"
- },
- "lower-level-bedroom-1-staged": {
-  "alt": "Lower-level bedroom virtually staged with a bed and reading chair",
-  "group": "lower"
- },
- "exterior-rear-porch-staged": {
-  "alt": "Rear elevation with the fire pit virtually staged with chairs",
-  "group": "exterior"
- },
- "primary-bedroom-staged": {
-  "alt": "Primary bedroom virtually staged as a sitting room with bookshelves",
-  "group": "upper"
- },
- "dining-staged": {
-  "alt": "Dining room virtually staged with a table for six",
-  "group": "main"
- },
- "family-room-staged": {
-  "alt": "Family room virtually staged with two armchairs by the fire",
-  "group": "main"
- },
- "living-room-stove-staged": {
-  "alt": "Living room virtually staged with a sectional by the wood stove",
-  "group": "main"
- },
- "primary-bedroom-door-staged": {
-  "alt": "Primary bedroom virtually staged with a bed",
-  "group": "upper"
- },
- "upper-bedroom-staged": {
-  "alt": "Upper-floor bedroom virtually staged as a home office",
-  "group": "upper"
- },
- "lower-level-rec-room-wide-staged": {
-  "alt": "Recreation room virtually staged as a lounge with a coffee bar",
-  "group": "lower"
- }
+    "hero-twilight": {
+        "alt": "Cedarview House at twilight, every interior light on, seen from the drive",
+        "group": "hero"
+    },
+    "exterior-front": {
+        "alt": "Front of the house in autumn, natural white brick and dark window frames",
+        "group": "exterior"
+    },
+    "exterior-approach": {
+        "alt": "The house from the end of the cul-de-sac, framed by autumn trees",
+        "group": "exterior"
+    },
+    "entrance-steps": {
+        "alt": "Brick steps up to the front entrance with the composite deck landing",
+        "group": "exterior"
+    },
+    "front-door": {
+        "alt": "The cobalt-blue front door in the natural white brick",
+        "group": "exterior"
+    },
+    "deck-landing": {
+        "alt": "The deck landing beside the entrance, woods behind",
+        "group": "exterior"
+    },
+    "entrance-terrace": {
+        "alt": "Stone-paved terrace at the entrance with the blue door",
+        "group": "exterior"
+    },
+    "exterior-rear": {
+        "alt": "The rear of the house and screened porch from the lawn",
+        "group": "exterior"
+    },
+    "exterior-rear-porch": {
+        "alt": "Screened porch and rear elevation with the fire pit",
+        "group": "exterior"
+    },
+    "grounds-path": {
+        "alt": "Gravel path through the wooded grounds",
+        "group": "exterior"
+    },
+    "grounds-woods": {
+        "alt": "The wooded lot behind the house",
+        "group": "exterior"
+    },
+    "lot-aerial": {
+        "alt": "Aerial view of the house and lot from above",
+        "group": "exterior"
+    },
+    "lot-aerial-roof": {
+        "alt": "Aerial view over the roof toward the woods",
+        "group": "exterior"
+    },
+    "view-south-ridge": {
+        "alt": "Drone view south over the autumn canopy toward the Ellett ridgeline",
+        "group": "view"
+    },
+    "view-south-wide": {
+        "alt": "Wide drone view south, the mountains across the valley",
+        "group": "view"
+    },
+    "view-south-ridge-close": {
+        "alt": "The ridgeline to the south above the trees",
+        "group": "view"
+    },
+    "view-valley": {
+        "alt": "Drone view over Blacksburg toward the mountains",
+        "group": "view"
+    },
+    "living-room": {
+        "alt": "Living room with the open oak stair and sliding doors to the deck",
+        "group": "main"
+    },
+    "living-room-stove": {
+        "alt": "Living room with the wood stove under the cedar ceiling",
+        "group": "main"
+    },
+    "living-room-stair": {
+        "alt": "The open-tread oak staircase rising from the living room",
+        "group": "main"
+    },
+    "family-room": {
+        "alt": "Family room with the fireplace, cedar wall and doors to the screened porch",
+        "group": "main"
+    },
+    "family-room-cedar": {
+        "alt": "Cedar-clad wall and ceiling in the family room",
+        "group": "main"
+    },
+    "family-room-fireplace": {
+        "alt": "Fireplace with white built-in cabinetry and bookshelves",
+        "group": "main"
+    },
+    "library": {
+        "alt": "Library with white built-in shelving and oak floor",
+        "group": "main"
+    },
+    "dining": {
+        "alt": "Dining room with corner windows onto the trees",
+        "group": "main"
+    },
+    "kitchen": {
+        "alt": "Kitchen with cherry cabinets, granite island and range hood",
+        "group": "main"
+    },
+    "kitchen-island": {
+        "alt": "Kitchen island and skylight",
+        "group": "main"
+    },
+    "kitchen-window": {
+        "alt": "Kitchen sink window onto the woods",
+        "group": "main"
+    },
+    "kitchen-night-light": {
+        "alt": "Kitchen in the evening, the recessed lights on their amber night-light setting",
+        "caption": "Kitchen after dark: the recessed LED downlights have a low amber night-light setting, so the kitchen is lit but not bright.",
+        "group": "main"
+    },
+    "kitchen-night-light-island": {
+        "alt": "Kitchen island and range under the amber night-light setting of the recessed LEDs",
+        "caption": "The same lights from the island side. A late-night glass of water without flooding the room.",
+        "group": "main"
+    },
+    "breakfast-room": {
+        "alt": "Breakfast room with sliding doors to the deck",
+        "group": "main"
+    },
+    "screened-porch": {
+        "alt": "Screened porch with cedar ceiling",
+        "group": "main"
+    },
+    "screened-porch-view": {
+        "alt": "Screened porch looking out to the lawn",
+        "group": "main"
+    },
+    "primary-bath": {
+        "alt": "Primary bath with double vanity and skylit marble shower",
+        "group": "upper"
+    },
+    "primary-bath-skylight": {
+        "alt": "Skylight over the soaking tub in the primary bath",
+        "group": "upper"
+    },
+    "upper-landing": {
+        "alt": "Upper landing with oak slat balustrade",
+        "group": "upper"
+    },
+    "upper-hall": {
+        "alt": "Upper hallway with cedar ceiling",
+        "group": "upper"
+    },
+    "upper-bedroom": {
+        "alt": "Upper-floor bedroom with ceiling fan and oak floor",
+        "group": "upper"
+    },
+    "primary-bedroom": {
+        "alt": "Primary bedroom with ceiling fan and doors to the balcony",
+        "group": "upper"
+    },
+    "primary-bedroom-door": {
+        "alt": "Primary bedroom from the door, windows onto the trees",
+        "group": "upper"
+    },
+    "lower-level-bedroom-1": {
+        "alt": "Lower-level bedroom with egress window and light oak floor",
+        "group": "lower"
+    },
+    "lower-level-bedroom-2": {
+        "alt": "Lower-level bedroom with egress window",
+        "group": "lower"
+    },
+    "lower-level-rec-room": {
+        "alt": "Lower-level recreation room",
+        "group": "lower"
+    },
+    "lower-level-rec-room-wide": {
+        "alt": "Lower-level recreation room, looking toward the hall",
+        "group": "lower"
+    },
+    "lower-level-bath": {
+        "alt": "Lower-level full bath",
+        "group": "lower"
+    },
+    "lower-level-workshop": {
+        "alt": "Workshop with built-in benches on the lower level",
+        "group": "lower"
+    },
+    "lower-level-gym": {
+        "alt": "Lower-level room used as a gym",
+        "group": "lower"
+    },
+    "plan-main-floor": {
+        "alt": "Measured floor plan, main floor",
+        "group": "plans"
+    },
+    "plan-upper-floor": {
+        "alt": "Measured floor plan, upper floor",
+        "group": "plans"
+    },
+    "plan-lower-level": {
+        "alt": "Measured floor plan, lower level",
+        "group": "plans"
+    },
+    "_readme": "Alt text and group per source image, consumed by scripts/build-images.mjs. Generated from assets/src/photos.json; edit freely.",
+    "primary-balcony": {
+        "alt": "Balcony off the primary bedroom with cable railing, looking into the trees",
+        "group": "upper"
+    },
+    "library-staged": {
+        "alt": "Library virtually staged as a study, with a desk at the window",
+        "group": "main"
+    },
+    "screened-porch-staged": {
+        "alt": "Screened porch virtually staged with a sofa and rattan chairs",
+        "group": "main"
+    },
+    "lower-level-bedroom-1-staged": {
+        "alt": "Lower-level bedroom virtually staged with a bed and reading chair",
+        "group": "lower"
+    },
+    "exterior-rear-porch-staged": {
+        "alt": "Rear elevation with the fire pit virtually staged with chairs",
+        "group": "exterior"
+    },
+    "primary-bedroom-staged": {
+        "alt": "Primary bedroom virtually staged as a sitting room with bookshelves",
+        "group": "upper"
+    },
+    "dining-staged": {
+        "alt": "Dining room virtually staged with a table for six",
+        "group": "main"
+    },
+    "family-room-staged": {
+        "alt": "Family room virtually staged with two armchairs by the fire",
+        "group": "main"
+    },
+    "living-room-stove-staged": {
+        "alt": "Living room virtually staged with a sectional by the wood stove",
+        "group": "main"
+    },
+    "primary-bedroom-door-staged": {
+        "alt": "Primary bedroom virtually staged with a bed",
+        "group": "upper"
+    },
+    "upper-bedroom-staged": {
+        "alt": "Upper-floor bedroom virtually staged as a home office",
+        "group": "upper"
+    },
+    "lower-level-rec-room-wide-staged": {
+        "alt": "Recreation room virtually staged as a lounge with a coffee bar",
+        "group": "lower"
+    }
 }

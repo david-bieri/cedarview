@@ -1638,6 +1638,108 @@
     "group": "main"
   },
   {
+    "name": "kitchen-night-light",
+    "alt": "Kitchen in the evening, the recessed lights on their amber night-light setting",
+    "caption": "Kitchen after dark: the recessed LED downlights have a low amber night-light setting, so the kitchen is lit but not bright.",
+    "staged": false,
+    "variant": "photo",
+    "width": 1600,
+    "height": 1200,
+    "aspect": 1.3333,
+    "color": "#180808",
+    "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQBACdASoYABIAPxF+s1QsKCQjKAqpgCIJQBYdghSmsf2w8I15zkY80REooGb6wAD+IWoM9+vbdSZRkxrwj7VIjJTpphVAZED8FonBSxfvnF357WHqqzJMVneiMhxsrtql4Il1bwvF7HKF8+Wh3qzgAAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-night-light-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-night-light-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-night-light-1200.webp"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-night-light-1600.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-night-light-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-night-light-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-night-light-1200.jpg"
+        },
+        {
+          "w": 1600,
+          "src": "assets/img/kitchen-night-light-1600.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
+    "name": "kitchen-night-light-island",
+    "alt": "Kitchen island and range under the amber night-light setting of the recessed LEDs",
+    "caption": "The same lights from the island side. A late-night glass of water without flooding the room.",
+    "staged": false,
+    "variant": "photo",
+    "width": 1536,
+    "height": 2048,
+    "aspect": 0.75,
+    "color": "#180808",
+    "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABwBACdASoYACAAPwForlArJiSit/qoAWAgCUAWcAJ4ZqJxEiGO3KVC8dPewAB6uAguz6T9ztqixaMqllVrqvAk3qvaM6zzY1NKK83zmT4jIQ3QCGcEh3xNzurCIXX81bRVa+STKcr5EyCHJn/8enSm163NVA7VTRSMimKt9SNJEX3kqAA=",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-night-light-island-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-night-light-island-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-night-light-island-1200.webp"
+        },
+        {
+          "w": 1536,
+          "src": "assets/img/kitchen-night-light-island-1536.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/kitchen-night-light-island-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/kitchen-night-light-island-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/kitchen-night-light-island-1200.jpg"
+        },
+        {
+          "w": 1536,
+          "src": "assets/img/kitchen-night-light-island-1536.jpg"
+        }
+      ]
+    },
+    "group": "main"
+  },
+  {
     "name": "breakfast-room",
     "alt": "Breakfast room with sliding doors to the deck",
     "caption": "",
