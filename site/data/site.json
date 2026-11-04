@@ -16,7 +16,7 @@
     "ogImageHeight": 1199,
     "analytics": {
       "provider": "Cloudflare Web Analytics",
-      "token": "TBC_CLOUDFLARE_TOKEN",
+      "token": "05688df25d914621b0c2a66c46ce25e0",
       "scriptSrc": "https://static.cloudflareinsights.com/beacon.min.js"
     },
     "repo": "cedarview-house"
@@ -865,9 +865,7 @@
     "stagedSuffix": "-staged",
     "_staging": "For each name in stagedRooms, the unstaged original is <name>.jpg and the staged version <name>-staged.jpg. The pipeline burns the label onto the staged file only and pairs the two in the manifest; the gallery toggles between them."
   },
-  "tbc": [
-    "Cloudflare Web Analytics token (site.analytics.token)"
-  ],
+  "tbc": [],
   "photographer": {
     "name": "Brian Sowers Photography",
     "deliveryPage": "https://show.tours/RVsABNt4t0vW02QqQHBV",

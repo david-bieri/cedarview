@@ -666,7 +666,7 @@ ${mapBlock ? `<link rel="stylesheet" href="css/leaflet.css">
 <script defer src="js/gallery.js"></script>
 <script defer src="js/site.js"></script>
 <script defer src="js/utm.js"></script>
-${ready(site.analytics.token) ? `<script defer src="${attr(site.analytics.scriptSrc)}" data-cf-beacon='${JSON.stringify({ token: site.analytics.token })}'></script>` : (omit('Cloudflare Web Analytics token (beacon not loaded)'), '')}
+${ready(site.analytics.token) ? `<script type="module" src="${attr(site.analytics.scriptSrc)}" data-cf-beacon='${JSON.stringify({ token: site.analytics.token })}'></script>` : (omit('Cloudflare Web Analytics token (beacon not loaded)'), '')}
 </head>`;
 
 const html = `${head}
