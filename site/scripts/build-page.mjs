@@ -231,9 +231,20 @@ ${data.atAGlance.map((c) => `<li class="card"><span class="card-label">${t(c.lab
 </div>
 </section>`;
 
+// The photographer's vertical fly-through sits beside the opening paragraphs; it is also the lead reel.
+const WV = P.video || {};
+const walkthrough = (WV.verticalWalkthrough && await exists(WV.verticalWalkthrough)) ? `<figure class="walkthrough">
+<video controls playsinline preload="none"${WV.walkthroughPoster && await exists(WV.walkthroughPoster) ? ` poster="${attr(WV.walkthroughPoster)}"` : ''} width="1080" height="1920">
+<source src="${attr(WV.verticalWalkthrough)}" type="video/mp4">
+</video>
+<figcaption><strong>${esc(WV.walkthroughHeading || 'Walk through')}</strong> ${esc(WV.walkthroughCaption || '')}</figcaption>
+</figure>` : (omit('Vertical walkthrough video'), '');
 const house = `<section id="house" class="wrap sec" aria-labelledby="house-h">
 ${secHead(S.house.heading, 'house')}
-${paragraphs(S.house.paragraphs)}
+<div class="house-intro${walkthrough ? ' has-walkthrough' : ''}">
+<div>${paragraphs(S.house.paragraphs)}</div>
+${walkthrough}
+</div>
 <div class="gal-bar">
 ${variantToggle('all', `Show every ${data.labels.virtuallyStaged.toLowerCase()} room as photographed or staged`)}
 </div>

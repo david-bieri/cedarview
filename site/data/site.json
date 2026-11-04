@@ -129,9 +129,13 @@
       "matterportId": "GC6VjEgsCfd"
     },
     "video": {
-      "verticalWalkthrough": "assets/video/cedarview-vertical.mp4",
+      "verticalWalkthrough": "assets/video/reels/walkthrough.mp4",
       "poster": "assets/img/hero-twilight-1200.jpg",
-      "photographerEmbed": "https://show.tours/v/69ybGPk"
+      "photographerEmbed": "https://show.tours/v/69ybGPk",
+      "walkthroughPoster": "assets/video/reels/walkthrough.jpg",
+      "walkthroughHeading": "Walk through",
+      "walkthroughCaption": "One minute, drive to deck. Video: Brian Sowers Photography.",
+      "_walkthrough": "Rendered beside the opening paragraphs of The House when the file exists; also the lead reel. Sound on by default here (it carries music) with the browser's own controls."
     },
     "exterior": {
       "brick": "Natural white brick with cedar siding on the upper storey",
@@ -272,9 +276,16 @@
         "intro": "Short clips from the house, newest first. The same clips go out on Instagram and TikTok.",
         "earlierLabel": "Earlier",
         "dir": "assets/video/reels",
-        "maxBytes": 15000000,
+        "maxBytes": 20000000,
         "_note": "Each reel: a 9:16 H.264 MP4 (1080x1920, 15-30 s, muted, captions burned in) under 15 MB in assets/video/reels/, with a JPEG poster of the same name. Newest first; the page shows the newest large and up to six earlier posters. Nothing renders until the first item is here and its file exists. Types: sunset (fixed tripod spot on the deck, time-lapse), walk-from-the-door (front door to the pool gate, 4x, real minutes in the caption), room-at-its-hour (10 s static, breakfast room at 7:30, living room at 4 pm).",
         "items": [
+          {
+            "file": "walkthrough",
+            "caption": "Brian Sowers's one-minute fly-through: the drive, the house, the deck, the ridge.",
+            "date": "2026-11-03",
+            "type": "tour",
+            "credit": "Video: Brian Sowers Photography"
+          },
           {
             "file": "view-from-the-deck",
             "caption": "The view from the deck, early November — a slow pan to the ridge.",
@@ -877,7 +888,7 @@
     "name": "Brian Sowers Photography",
     "deliveryPage": "https://show.tours/RVsABNt4t0vW02QqQHBV",
     "licence": "Covers owner's website and social posts (confirmed by owner)",
-    "credit": "Photography: Brian Sowers Photography"
+    "credit": "Photography and video: Brian Sowers Photography"
   },
   "design": {
     "_note": "Measured from the listing photographs (hero twilight, front elevation, door, deck, family room). Cream ground, cobalt accent from the front door, rust from the deck, honey oak from stair and floors, ridge blue for the View band.",
