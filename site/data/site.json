@@ -136,7 +136,7 @@
       "walkthroughPoster": "assets/video/reels/walkthrough.jpg",
       "walkthroughHeading": "Walk through",
       "walkthroughCaption": "One minute, drive to deck. Video: Brian Sowers Photography.",
-      "_walkthrough": "Full-width figure directly under At a glance. Plays the 16:9 landscapeWalkthrough (with landscapePoster) when that file exists; until then the vertical cut is centred in a 16:9 stage over a blurred copy of its poster. Not repeated in the reels. Sound on by default (it carries music) with the browser's own controls."
+      "_walkthrough": "Full-width figure directly under At a glance, shown once (not repeated in the reels). Brian shot the fly-through vertically (confirmed 4 Nov 2026), so there is no 16:9 version: the vertical cut is centred in a 16:9 stage over a blurred copy of its poster on wide screens and fills the width on phones. landscapeWalkthrough/landscapePoster are only honoured if such a file ever exists. Sound on by default (it carries music) with the browser's own controls."
     },
     "exterior": {
       "brick": "Natural white brick with cedar siding on the upper storey",
