@@ -8,7 +8,9 @@ A natural white brick and cedar contemporary (1983) in Forest Hills, Blacksburg,
 The exterior is painted brick with cedar siding on the upper storey; the cedar is also inside (family-room wall and ceiling, porch ceiling, open oak stair). The words that may never appear on the site are listed in `wordingRules.banned` in `data/site.json`; do not repeat them here or anywhere else in the repo.
 
 ## Voice
-- Describe the house and the place, never the buyer. Rooms, levels, materials, light, distances.
+- Lead with the house and the place: rooms, levels, materials, light, distances. Then say who it suits and how it can be used — remote work, intergenerational living, an au pair, a postdoc or visiting scholar, game-day guests. Never state a preference for or against a protected group ("adults only", "perfect for families").
+- Walking claims only where the measured time is a walk (pool, Nellie's Cave Park, the Meadow, First & Main, Kroger). Downtown and campus are a bike ride or a short drive.
+- Hosting: Blacksburg allows an owner-occupant to rent part of the home as a registered homestay. "Live upstairs, host downstairs" is fine; income figures, or the suite as a separate rental unit, are not until zoning is confirmed.
 - Plain, specific, measured. "1,491 finished sq ft on the lower level" beats a vague superlative.
 - Claims must be documented: permits, dates, measured plans, the deed. If it isn't in `site.json`, it isn't on the site.
 - Virtual staging is always labelled, on the image and beside it, and the unstaged photo is always one tap away.
