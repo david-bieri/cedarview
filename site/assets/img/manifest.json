@@ -3265,5 +3265,40 @@
       ]
     },
     "group": "lower"
+  },
+  {
+    "name": "breakfast-nook-dry-erase",
+    "alt": "The dry-erase wall in the breakfast nook, covered in homework",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 768,
+    "height": 1024,
+    "aspect": 0.75,
+    "color": "#988868",
+    "lqip": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBQCdASoYACAAPvVkp1AqpaOit+gBUB6JYgCsOUAAk/xmkJsIKcV1XLmpIaWhjUO0AAD9jwzqz/s9EfwPEBFsDsLeGBlq9fEX7ASJ8/eUcRGo3SU/gTml31sndeWGL+MMFg5oKp77a2Cnepfda/u5F9eB4eKMzMSmWSL/C0EPtEIA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/breakfast-nook-dry-erase-480.webp"
+        },
+        {
+          "w": 768,
+          "src": "assets/img/breakfast-nook-dry-erase-768.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/breakfast-nook-dry-erase-480.jpg"
+        },
+        {
+          "w": 768,
+          "src": "assets/img/breakfast-nook-dry-erase-768.jpg"
+        }
+      ]
+    },
+    "group": "closer"
   }
 ]

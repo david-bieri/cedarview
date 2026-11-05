@@ -277,7 +277,7 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 .closer-tile { margin: 0; display: grid; gap: .6rem; align-content: start; }
 .closer-media { position: relative; }
 .closer-media .tile-btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; border-radius: .25rem; overflow: hidden; }
-.closer-media img { display: block; width: 100%; aspect-ratio: 4 / 3 !important; object-fit: cover; }
+.closer-media img { display: block; width: 100%; aspect-ratio: 4 / 3 !important; object-fit: cover; object-position: center 30%; }
 .closer-placeholder { aspect-ratio: 4 / 3; border: 1px dashed var(--oak); border-radius: .25rem; background: var(--creamDeep); display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; font-size: .9rem; color: var(--muted); }
 .closer-tile figcaption { display: grid; gap: .2rem; }
 .closer-tile strong { font-family: var(--display); font-weight: 400; font-size: 1.3rem; }

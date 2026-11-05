@@ -263,5 +263,9 @@
     "lower-level-alcove-inside": {
         "alt": "Inside the reading alcove, freshly painted, with a ceiling light",
         "group": "lower"
+    },
+    "breakfast-nook-dry-erase": {
+        "alt": "The dry-erase wall in the breakfast nook, covered in homework",
+        "group": "closer"
     }
 }

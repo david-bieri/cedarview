@@ -75,7 +75,8 @@ const lowerImgs = manifest.filter((i) => i.group === 'lower');
 const planImgs = manifest.filter((i) => i.group === 'plans');
 const tourPoster = manifest.find((i) => i.name === data.property.tour.poster) || manifest.find((i) => i.group === 'main') || heroImg;
 // Main gallery: the interior groups; exterior, lower and view photographs have their own galleries.
-const galleryImgs = manifest.filter((i) => !['hero', 'plans', 'view', 'exterior', 'lower'].includes(i.group));
+// 'closer' is for photos that appear only as a Worth-a-closer-look tile (and in the lightbox), never in a gallery.
+const galleryImgs = manifest.filter((i) => !['hero', 'plans', 'view', 'exterior', 'lower', 'closer'].includes(i.group));
 // Every non-hero image (the plans included) gets one index into the lightbox list; paired tiles carry both variants under one index.
 const lightboxList = manifest.filter((i) => i.group !== 'hero');
 const lbIndex = new Map(lightboxList.map((img, i) => [img.name, i]));
