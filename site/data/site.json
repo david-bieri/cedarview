@@ -17,7 +17,13 @@
     "analytics": {
       "provider": "Cloudflare Web Analytics",
       "token": "05688df25d914621b0c2a66c46ce25e0",
-      "scriptSrc": "https://static.cloudflareinsights.com/beacon.min.js"
+      "scriptSrc": "https://static.cloudflareinsights.com/beacon.min.js",
+      "events": {
+        "provider": "GoatCounter",
+        "_note": "Cloudflare Web Analytics (above) counts visits but keeps no query strings and no click events, so it cannot say which channel sent a visitor or who opened the tour. GoatCounter adds both: it reads utm_source/utm_campaign from the landing URL and js/track.js sends named events. Free, no cookies. To switch it on, create a site at goatcounter.com and put its code here (the part before .goatcounter.com); until then the script is not loaded.",
+        "code": "TBC",
+        "scriptSrc": "https://gc.zgo.at/count.js"
+      }
     },
     "repo": "cedarview-house"
   },
@@ -942,10 +948,41 @@
     },
     {
       "key": "yard-sign",
-      "name": "Yard sign QR",
+      "name": "Yard sign rider QR",
       "utm": {
         "source": "yard-sign",
         "medium": "qr",
+        "campaign": "facing-ellett"
+      },
+      "short": "qr"
+    },
+    {
+      "key": "yard-sign-url",
+      "name": "Yard sign rider (typed URL)",
+      "short": "sign",
+      "utm": {
+        "source": "yard-sign",
+        "medium": "print",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "postcard",
+      "name": "Neighbourhood postcard",
+      "short": "go",
+      "utm": {
+        "source": "postcard",
+        "medium": "print",
+        "campaign": "facing-ellett"
+      }
+    },
+    {
+      "key": "referral-card",
+      "name": "Referral postcard",
+      "short": "card",
+      "utm": {
+        "source": "referral-card",
+        "medium": "print",
         "campaign": "facing-ellett"
       }
     },

@@ -9,10 +9,22 @@ TikTok → https://cedarview.house/?utm_source=tiktok&utm_medium=social&utm_camp
 YouTube Shorts → https://cedarview.house/?utm_source=youtube&utm_medium=social&utm_campaign=facing-ellett
 LinkedIn → https://cedarview.house/?utm_source=linkedin&utm_medium=social&utm_campaign=facing-ellett
 Nextdoor → https://cedarview.house/?utm_source=nextdoor&utm_medium=social&utm_campaign=facing-ellett
-Yard sign QR → https://cedarview.house/?utm_source=yard-sign&utm_medium=qr&utm_campaign=facing-ellett
+Yard sign rider QR → https://cedarview.house/?utm_source=yard-sign&utm_medium=qr&utm_campaign=facing-ellett
+Yard sign rider (typed URL) → https://cedarview.house/?utm_source=yard-sign&utm_medium=print&utm_campaign=facing-ellett
+Neighbourhood postcard → https://cedarview.house/?utm_source=postcard&utm_medium=print&utm_campaign=facing-ellett
+Referral postcard → https://cedarview.house/?utm_source=referral-card&utm_medium=print&utm_campaign=facing-ellett
 MLS → https://cedarview.house/?utm_source=mls&utm_medium=referral&utm_campaign=facing-ellett
 Personal notes and briefs → https://cedarview.house/?utm_source=email&utm_medium=email&utm_campaign=facing-ellett
 VT HR relocation → https://cedarview.house/?utm_source=vt-hr&utm_medium=referral&utm_campaign=facing-ellett
 Hospital physician recruitment → https://cedarview.house/?utm_source=hospital-recruiting&utm_medium=referral&utm_campaign=facing-ellett
 CRC employer HR → https://cedarview.house/?utm_source=crc-hr&utm_medium=referral&utm_campaign=facing-ellett
 NoVA and Richmond housing ads → https://cedarview.house/?utm_source=meta&utm_medium=paid&utm_campaign=facing-ellett-remote
+
+## Print short links
+
+What goes on paper. Each forwards to the tagged link.
+
+Yard sign rider QR → cedarview.house/qr → https://cedarview.house/?utm_source=yard-sign&utm_medium=qr&utm_campaign=facing-ellett
+Yard sign rider (typed URL) → cedarview.house/sign → https://cedarview.house/?utm_source=yard-sign&utm_medium=print&utm_campaign=facing-ellett
+Neighbourhood postcard → cedarview.house/go → https://cedarview.house/?utm_source=postcard&utm_medium=print&utm_campaign=facing-ellett
+Referral postcard → cedarview.house/card → https://cedarview.house/?utm_source=referral-card&utm_medium=print&utm_campaign=facing-ellett

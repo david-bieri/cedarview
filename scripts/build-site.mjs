@@ -17,6 +17,9 @@ fs.mkdirSync(dist, { recursive: true });
 
 // What the public site needs. Sources, scripts, data and docs stay out of dist/.
 const publish = ['index.html', 'sitemap.xml', 'css', 'js', 'robots.txt', 'CNAME', '.nojekyll', 'assets/img', 'assets/plans', 'assets/video', 'assets/cedarview-specs.pdf'];
+// Print short links (/go, /card, …) written by site/scripts/build-page.mjs from data/site.json channels.
+const shortList = path.join(site, 'scripts', 'short-links.json');
+if (fs.existsSync(shortList)) publish.push(...JSON.parse(fs.readFileSync(shortList, 'utf8')));
 for (const rel of publish) {
   const from = path.join(site, rel);
   if (!fs.existsSync(from)) continue;
