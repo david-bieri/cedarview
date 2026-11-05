@@ -65,7 +65,7 @@ const MANIFEST = path.join(ROOT, cfg.manifest);
 const OUT_DIR = path.dirname(MANIFEST);
 const STAGED_ROOMS = new Set(cfg.stagedRooms);
 const SUFFIX = cfg.stagedSuffix || '-staged';
-const GROUP_ORDER = ['hero', 'exterior', 'main', 'upper', 'lower', 'view', 'plans'];
+const GROUP_ORDER = ['hero', 'exterior', 'main', 'upper', 'lower', 'closer', 'view', 'plans'];
 
 const JPEG_OPTS = { quality: 82, progressive: true, mozjpeg: true, chromaSubsampling: '4:2:0' };
 const WEBP_OPTS = { quality: 78, effort: 5 };

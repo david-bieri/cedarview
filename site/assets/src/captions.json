@@ -255,5 +255,17 @@
     "upper-bedroom-staged": {
         "alt": "Upper-floor bedroom virtually staged as a home office",
         "group": "upper"
+    },
+    "lower-level-alcove": {
+        "alt": "The reading alcove in the largest lower-level bedroom, with its own window onto the garden",
+        "group": "lower"
+    },
+    "lower-level-alcove-inside": {
+        "alt": "Inside the reading alcove, freshly painted, with a ceiling light",
+        "group": "lower"
+    },
+    "breakfast-nook-dry-erase": {
+        "alt": "The dry-erase wall in the breakfast nook, covered in homework",
+        "group": "closer"
     }
 }

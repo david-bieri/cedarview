@@ -75,7 +75,8 @@ const lowerImgs = manifest.filter((i) => i.group === 'lower');
 const planImgs = manifest.filter((i) => i.group === 'plans');
 const tourPoster = manifest.find((i) => i.name === data.property.tour.poster) || manifest.find((i) => i.group === 'main') || heroImg;
 // Main gallery: the interior groups; exterior, lower and view photographs have their own galleries.
-const galleryImgs = manifest.filter((i) => !['hero', 'plans', 'view', 'exterior', 'lower'].includes(i.group));
+// 'closer' is for photos that appear only as a Worth-a-closer-look tile (and in the lightbox), never in a gallery.
+const galleryImgs = manifest.filter((i) => !['hero', 'plans', 'view', 'exterior', 'lower', 'closer'].includes(i.group));
 // Every non-hero image (the plans included) gets one index into the lightbox list; paired tiles carry both variants under one index.
 const lightboxList = manifest.filter((i) => i.group !== 'hero');
 const lbIndex = new Map(lightboxList.map((img, i) => [img.name, i]));
@@ -159,11 +160,12 @@ if (!letterReady && S.ownersLetter.enabled !== false) omit('Owner\'s letter (sec
 const hasPhone = ready(A.phone) && !/TBC/.test(A.phoneHref);
 const hasEmail = ready(A.email);
 const hasAgent = ready(A.name, A.brokerage);
-// Six items so the bar fits one line at 1024px; Updates, Life in Blacksburg and the letter are reached by scrolling or the footer.
+// Seven short items fit one line at 1024px; Updates, Life in Blacksburg and the letter are reached by scrolling or the footer.
 const navItems = [
   ['glance', glanceHeading],
   ['house', S.house.heading],
   ['lower-level', S.lowerLevel.navLabel || 'Lower level'],
+  ...(S.closerLook ? [['closer-look', S.closerLook.navLabel || S.closerLook.heading]] : []),
   ['tour', S.tour.navLabel || '3D tour'],
   ['view', S.view.heading],
   ['visit', S.visit.heading],
@@ -279,6 +281,36 @@ ${S.lowerLevel.facts.map((f) => `<li>${t(f)}</li>`).join('\n')}
 ${gallery(lowerImgs, 'lower-gallery', { cls: 'gallery-plain' })}
 </section>`;
 
+// Worth a closer look: numbered photo tiles for the things the plans don't show. The same numbers are pinned on the
+// plan thumbnails in the tour section (closerPins), so the tiles show and the plans locate.
+const CL = S.closerLook;
+const closerItems = CL ? CL.items.map((it, i) => ({ ...it, n: i + 1, img: isTbc(it.image) ? null : manifest.find((m) => m.name === it.image) })) : [];
+closerItems.filter((it) => !it.img && !isTbc(it.image)).forEach((it) => omit(`Closer look: image "${it.image}" not in the manifest`));
+const closerTile = (it) => {
+  const badge = `<span class="pin pin-tile" aria-hidden="true">${it.n}</span>`;
+  const media = it.img
+    ? `<button type="button" class="tile-btn" data-lb="${lbIndex.get(it.img.name)}" aria-label="${attr(`Enlarge: ${it.img.alt}`)}">${picture(it.img, { sizes: ROW_SIZES })}</button>`
+    : (REVIEW ? `<div class="closer-placeholder"><span class="tbc">${esc(it.image)}</span></div>` : (omit(`Closer look: photo for "${it.title}"`), ''));
+  if (!media) return '';
+  return `<figure class="closer-tile" id="closer-${it.n}">
+<div class="closer-media">${media}${badge}</div>
+<figcaption><strong>${t(it.title)}</strong><span>${t(it.line)}</span></figcaption>
+</figure>`;
+};
+const closerLook = CL ? `<section id="closer-look" class="wrap sec" aria-labelledby="closer-look-h">
+${secHead(CL.heading, 'closer-look')}
+${CL.subline ? `<p class="sub-line" lang="fr">${esc(CL.subline)}</p>` : ''}
+${p(t(CL.intro))}
+<div class="closer-grid">
+${closerItems.map(closerTile).filter(Boolean).join('\n')}
+</div>
+</section>` : '';
+/** Pins for one plan thumbnail: every closer-look item placed on that plan, linked back to its tile. */
+const closerPins = (label) => closerItems
+  .filter((it) => it.plan === label && Array.isArray(it.pins) && (it.img || REVIEW)) // no pin without a tile to land on
+  .flatMap((it) => it.pins.map((pt) => `<a class="pin pin-plan" href="#closer-${it.n}" style="left:${Number(pt.x)}%;top:${Number(pt.y)}%" aria-label="${attr(`${it.n}: ${it.title}`)}">${it.n}</a>`))
+  .join('');
+
 // The 3D tour: a still of the house with a "Start" button, and the iframe is only created on click (js/site.js).
 // Browsers without WebGL get a one-line note instead of a black canvas, and the direct Matterport link is always there.
 const tourEmbed = tourExternal
@@ -304,10 +336,17 @@ const allPlans = (S.tour.allPlansPdf && await exists(S.tour.allPlansPdf))
   ? `<p><a class="btn btn-outline" href="${attr(S.tour.allPlansPdf)}" download>${esc(S.tour.allPlansLabel || 'Download all plans (PDF)')}</a></p>` : '';
 const planThumbs = planImgs.map((img) => {
   const fp = S.tour.floorPlans.find((f) => planFor(f) === img);
-  return `<button type="button" class="plan-thumb" data-lb="${lbIndex.get(img.name)}" aria-label="${attr(`Enlarge: ${fp ? fp.label + ' plan' : img.alt}`)}">
+  // The closer-look pins are links placed over the thumbnail, as siblings of the enlarge button (never inside it).
+  const pins = fp ? closerPins(fp.label) : '';
+  return `<div class="plan-cell">
+<div class="plan-img">
+<button type="button" class="plan-thumb" data-lb="${lbIndex.get(img.name)}" aria-label="${attr(`Enlarge: ${fp ? fp.label + ' plan' : img.alt}`)}">
 ${picture(img, { sizes: '(min-width: 40rem) 25vw, 50vw' })}
-<span>${fp ? t(fp.label) : esc(img.alt)}</span>
-</button>`;
+</button>
+${pins}
+</div>
+<span class="plan-label">${fp ? t(fp.label) : esc(img.alt)}</span>
+</div>`;
 }).join('\n');
 
 const tour = `<section id="tour" class="wrap sec" aria-labelledby="tour-h">
@@ -324,28 +363,35 @@ ${planThumbs}
 ${allPlans}
 </section>`;
 
-// Work with a confirmed date, permit and inspection goes in the table; the rest is listed plainly with a note, never with blanks.
-const dated = S.updates.items.filter((u) => !u.undated && (REVIEW || ready(u.date, u.permit, u.finalInspection)));
-const undated = S.updates.items.filter((u) => !dated.includes(u));
-undated.filter((u) => !u.undated).forEach((u) => omit(`Updates: date/permit/inspection for "${u.work}"`));
-const updatesTable = dated.length ? `<table class="updates">
-<thead><tr><th scope="col">Date</th><th scope="col">Work</th><th scope="col">Permit</th><th scope="col">Final inspection</th></tr></thead>
-<tbody>
-${dated.map((u) => `<tr><td data-th="Date">${t(u.date)}</td><td data-th="Work">${t(u.work)}</td><td data-th="Permit">${t(u.permit)}</td><td data-th="Final inspection">${t(u.finalInspection)}</td></tr>`).join('\n')}
-</tbody>
-</table>` : '';
-const updatesList = undated.length ? `<h3 class="sub-tight">${esc(S.updates.undatedHeading || 'Also done')}</h3>
-<ul class="facts">
-${undated.map((u) => `<li>${esc(u.work)}</li>`).join('\n')}
+// Updates: one ruled group per area, in the order the areas first appear in site.json; the date (free text) sits at the
+// right edge and is simply absent when it is still TBC. Permits and inspections live in the spec sheet, not on the page.
+const updateAreas = [...new Set(S.updates.items.map((u) => u.area))];
+S.updates.items.filter((u) => isTbc(u.when)).forEach((u) => omit(`Updates: date for "${u.work}"`));
+const updateGroups = updateAreas.map((area) => `<div class="ugroup">
+<h3 class="ugroup-h">${esc(area)}</h3>
+<ul class="ulist">
+${S.updates.items.filter((u) => u.area === area).map((u) => `<li><span>${esc(u.work)}</span>${ready(u.when) ? `<span class="uwhen">${esc(u.when)}</span>` : (REVIEW ? `<span class="uwhen">${t(u.when)}</span>` : '')}</li>`).join('\n')}
 </ul>
-<p class="muted small">${esc(S.updates.undatedNote || 'Dates and permit records available on request.')}</p>` : '';
+</div>`).join('\n');
+const updatesImg = S.updates.photo ? manifest.find((i) => i.name === S.updates.photo) : null;
+const updatesFigure = updatesImg ? `<figure class="updates-photo">
+<button type="button" class="tile-btn" data-lb="${lbIndex.get(updatesImg.name)}" aria-label="${attr(`Enlarge: ${updatesImg.alt}`)}">
+${picture(updatesImg, { sizes: '(min-width: 64rem) 24rem, 100vw' })}
+</button>
+${S.updates.photoCaption ? `<figcaption>${esc(S.updates.photoCaption)}</figcaption>` : ''}
+</figure>` : '';
 const updates = `<section id="updates" class="wrap sec" aria-labelledby="updates-h">
 ${secHead(S.updates.heading, 'updates')}
 ${p(t(S.updates.intro))}
-${updatesList}
-${updatesTable}
-${(await exists(S.updates.specSheet.file)) ? `<p><a class="btn" href="${attr(S.updates.specSheet.file)}" download>${t(S.updates.specSheet.label)}</a></p>` : ''}
+<div class="updates-split">
+<div class="updates-grid">
+${updateGroups}
+</div>
+${updatesFigure}
+</div>
+<p class="updates-foot">${(await exists(S.updates.specSheet.file)) ? `<a class="btn" href="${attr(S.updates.specSheet.file)}" download>${t(S.updates.specSheet.label)}</a> ` : ''}${S.updates.note ? `<span class="muted small">${esc(S.updates.note)}</span>` : ''}</p>
 </section>`;
+
 
 const viewPoster = viewImg.sources.jpg.find((s) => s.w === 1200) || largest(viewImg.sources.jpg);
 const hasViewVideo = await exists(S.view.video);
@@ -688,6 +734,7 @@ ${glance}
 ${walkthrough}
 ${house}
 ${lower}
+${closerLook}
 ${tour}
 ${updates}
 ${view}

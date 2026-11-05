@@ -158,23 +158,6 @@ def table(header, rows, widths, bold_first=False, bold_rows=()):
 # ---------------------------------------------------------------- build
 
 
-def updates_differ(items, systems):
-    """True if sections.updates.items carries information not already in
-    specSheet.systems. Two lists are treated as the same set of work when they
-    have the same length and, row for row, the same date, permit number and
-    final-inspection value; wording of the description alone does not count."""
-    if len(items) != len(systems):
-        return True
-    for it, sy in zip(items, systems):
-        if it.get("undated"):
-            continue
-        a = (raw(it["date"]), raw(it["permit"]), raw(it["finalInspection"]))
-        b = (raw(sy["date"]), raw(sy["permit"]), raw(sy["finalInspection"]))
-        if a != b:
-            return True
-    return False
-
-
 def build(d):
     site, prop, spec, agent, foot = d["site"], d["property"], d["specSheet"], d["agent"], d["footer"]
     build_date = _dt.date.today().isoformat()
@@ -284,20 +267,7 @@ def build(d):
         bold_first=True,
     ))
 
-    # 5. Updates and permits (only when it adds something)
-    upd = d["sections"]["updates"]
-    if updates_differ(upd["items"], spec["systems"]):
-        F.append(P(s(upd["heading"]), "h2"))
-        F.append(P(s(upd["intro"]), "body"))
-        F.append(Spacer(1, 3))
-        F.append(table(
-            ["Date", "Work", "Permit number", "Final inspection"],
-            [[x.get("date", ON_REQUEST), x["work"], x.get("permit", ON_REQUEST), x.get("finalInspection", ON_REQUEST)] for x in upd["items"]],
-            [W * 0.12, W * 0.56, W * 0.16, W * 0.16],
-        ))
-        print("note: sections.updates.items differs from specSheet.systems; rendered both")
-    else:
-        print("note: sections.updates.items matches specSheet.systems (same dates, permits, inspections); not repeated")
+    # 5. (The page's Updates section is a by-area summary of the table above; permits and inspections live only here.)
 
     # 6. Appliances (a row that is nothing but placeholders is dropped; the section waits until one row is real)
     appliances = [a for a in spec["appliances"] if REVIEW or ready(a["item"])]

@@ -9,7 +9,7 @@
     "language": "en-US",
     "noindex": false,
     "listingLive": true,
-    "description": "Natural white brick and cedar contemporary on a private 1-acre cul-de-sac in Blacksburg, Virginia. 8 bedrooms, 5,305 finished sq ft, fully rewired, finished lower-level suite with its own entrance, mountain views to the south toward Ellett, GLO Fiber.",
+    "description": "Natural white brick and cedar contemporary on a private 1-acre cul-de-sac in Blacksburg, Virginia. 8 bedrooms, 5,305 finished sq ft, rewired on two levels, finished lower-level suite with its own entrance, mountain views to the south toward Ellett, GLO Fiber.",
     "ogImage": "assets/img/hero-twilight-1600.jpg",
     "ogImageAlt": "Cedarview House at twilight, every interior light on, seen from the drive",
     "ogImageWidth": 1600,
@@ -165,7 +165,7 @@
     {
       "label": "Built and updated",
       "value": "Built 1983",
-      "detail": "Fully rewired · lower level completely finished · GLO Fiber internet"
+      "detail": "Main and lower levels rewired · lower level completely finished · GLO Fiber internet"
     },
     {
       "label": "The view",
@@ -178,7 +178,7 @@
       "heading": "The house",
       "paragraphs": [
         "A natural white brick and cedar contemporary from 1983, set back on a wooded acre at the end of a cul-de-sac. Inside, cedar walls and ceilings, an open oak stair and tall windows carry the woods into the house; the main floor opens to the south, so the mountains are in view from the living room, the kitchen and the deck.",
-        "The house has been fully rewired, and the lower level is completely finished. The interior has been freshly painted throughout and is shown empty, with eleven views virtually staged by the owners and labelled as such; every one can be toggled back to the photograph."
+        "The main level and the lower level have been rewired, and the lower level is completely finished. The interior has been freshly painted throughout and is shown empty, with eleven views virtually staged by the owners and labelled as such; every one can be toggled back to the photograph."
       ],
       "grounds": {
         "heading": "The grounds",
@@ -199,6 +199,79 @@
         "1,491 finished sq ft"
       ],
       "navLabel": "Lower level"
+    },
+    "closerLook": {
+      "heading": "Worth a closer look",
+      "subline": "Vaut le détour.",
+      "intro": "The things the measured plans don’t show and a quick walkthrough can miss. Each is numbered on the floor plans below.",
+      "navLabel": "Closer look",
+      "_items": "`image` is a manifest name (its lightbox opens on tap); `plan` + `pins` place the number on that floor plan's thumbnail in the plans section (x, y as percent of the plan image). A TBC image renders a labelled placeholder in review mode and nothing public.",
+      "items": [
+        {
+          "title": "A jacuzzi under a skylight",
+          "line": "Primary bath, main floor, beside the marble shower.",
+          "image": "primary-bath-skylight",
+          "plan": "Main floor",
+          "pins": [
+            {
+              "x": 93,
+              "y": 22
+            }
+          ]
+        },
+        {
+          "title": "A real mudroom",
+          "line": "Inside the lower-level entrance: bench, hooks and racks for a household’s worth of shoes.",
+          "image": "lower-level-mudroom",
+          "plan": "Lower level",
+          "pins": [
+            {
+              "x": 74.5,
+              "y": 36
+            }
+          ]
+        },
+        {
+          "title": "A workshop, wired for it",
+          "line": "Built-in benches, cabinets and 220 V outlets. Lower level.",
+          "image": "lower-level-workshop",
+          "plan": "Lower level",
+          "pins": [
+            {
+              "x": 20,
+              "y": 33
+            }
+          ]
+        },
+        {
+          "title": "A reading alcove, tucked away",
+          "line": "Tucked into the largest lower-level bedroom, with a window of its own; easy to walk past.",
+          "image": "lower-level-alcove",
+          "plan": "Lower level",
+          "pins": [
+            {
+              "x": 21,
+              "y": 78
+            }
+          ]
+        },
+        {
+          "title": "Walls you can write on",
+          "line": "Dry-erase paint in the breakfast nook and the laundry: lists, menus, long division.",
+          "image": "breakfast-nook-dry-erase",
+          "plan": "Main floor",
+          "pins": [
+            {
+              "x": 26.5,
+              "y": 17.5
+            },
+            {
+              "x": 36.5,
+              "y": 19.5
+            }
+          ]
+        }
+      ]
     },
     "tour": {
       "heading": "3D tour and floor plans",
@@ -232,10 +305,11 @@
     },
     "updates": {
       "heading": "Updates",
-      "intro": "Dated work and permits. The full specification sheet lists every updated system by date and permit number.",
-      "undatedHeading": "Major work",
-      "undatedNote": "Dates and permit records for this work are available on request.",
-      "_undated": "An item whose date, permit or finalInspection is still TBC is listed under undatedHeading with undatedNote; once all three are filled in it moves into the dated table.",
+      "intro": "Work done since 2022, by area. Records for all of it are available on request, and the spec sheet lists every system.",
+      "note": "Dates and records on request.",
+      "photo": "kitchen-night-light",
+      "photoCaption": "The kitchen on its night-light setting: the downlights dim to amber after dark.",
+      "_items": "One entry per piece of work: `area` groups the page (groups appear in the order their area is first used), `work` is the line, `when` is free text (\"Dec 2022\", \"Spring 2023\", \"2025\") shown at the right edge; leave `when` out or TBC and no date is shown. Permit and inspection records belong in specSheet.systems, not here.",
       "specSheet": {
         "file": "assets/cedarview-specs.pdf",
         "label": "Download the spec sheet (PDF)",
@@ -243,28 +317,69 @@
       },
       "items": [
         {
-          "work": "Full electrical rewiring",
-          "undated": true
+          "area": "Whole house",
+          "work": "New electrical panels",
+          "when": "2025"
         },
         {
-          "work": "Lower level completely finished: four bedrooms with egress windows, full bath, exterior entrance",
-          "undated": true
+          "area": "Whole house",
+          "work": "Main level and lower level rewired",
+          "when": "2025"
         },
         {
-          "work": "Kitchen recessed lighting replaced with LED downlights that include an amber night-light setting",
-          "undated": true
-        },
-        {
-          "date": "2026",
-          "work": "New deck boards",
-          "permit": "n/a",
-          "finalInspection": "n/a"
-        },
-        {
-          "date": "2026",
+          "area": "Whole house",
           "work": "Interior repainted throughout",
-          "permit": "n/a",
-          "finalInspection": "n/a"
+          "when": "2026"
+        },
+        {
+          "area": "Whole house",
+          "work": "New ceiling fans",
+          "when": "2026"
+        },
+        {
+          "area": "Whole house",
+          "work": "Dry-erase walls in the laundry and breakfast nook",
+          "when": "Spring 2023"
+        },
+        {
+          "area": "Lower level",
+          "work": "Suite finished: four bedrooms with egress windows, full bath, own entrance",
+          "when": "2025"
+        },
+        {
+          "area": "Lower level",
+          "work": "New outlets, each with built-in USB-C fast charging",
+          "when": "2026"
+        },
+        {
+          "area": "Kitchen",
+          "work": "New GE refrigerator",
+          "when": "2026"
+        },
+        {
+          "area": "Kitchen",
+          "work": "LED downlights with an amber night-light setting",
+          "when": "2026"
+        },
+        {
+          "area": "Living room",
+          "work": "Wood stove installed",
+          "when": "Dec 2022"
+        },
+        {
+          "area": "Upstairs",
+          "work": "Both bathrooms upgraded",
+          "when": "Spring 2023"
+        },
+        {
+          "area": "Upstairs",
+          "work": "Main level and upstairs repainted",
+          "when": "Jan 2023"
+        },
+        {
+          "area": "Outside",
+          "work": "New deck boards",
+          "when": "2026"
         }
       ]
     },
@@ -635,8 +750,9 @@
     "preferred": {
       "basement": "finished lower level / lower-level suite",
       "5,400+ sq ft": "5,305 finished sq ft",
-      "complete luxury remodel": "fully rewired; lower level completely finished",
-      "fiber speeds": "GLO Fiber (no speed unless a plan is quoted)"
+      "complete luxury remodel": "main and lower levels rewired; lower level completely finished",
+      "fiber speeds": "GLO Fiber (no speed unless a plan is quoted)",
+      "fully rewired": "main and lower levels rewired (the upper floor was not)"
     },
     "principle": "Describe the house and the place, never the buyer."
   },
@@ -667,28 +783,91 @@
     "systems": [
       {
         "system": "Electrical",
-        "detail": "Fully rewired",
-        "date": "on request",
+        "detail": "New electrical panels",
+        "date": "2025",
+        "permit": "on request",
+        "finalInspection": "on request"
+      },
+      {
+        "system": "Electrical",
+        "detail": "Main level and lower level rewired",
+        "date": "2025",
+        "permit": "on request",
+        "finalInspection": "on request"
+      },
+      {
+        "system": "Electrical",
+        "detail": "Lower level: new outlets with built-in USB-C fast charging",
+        "date": "2026",
         "permit": "on request",
         "finalInspection": "on request"
       },
       {
         "system": "Lower level",
-        "detail": "Completely finished: 4 bedrooms with egress windows, full bath, exterior entrance",
-        "date": "on request",
+        "detail": "Suite completely finished: 4 bedrooms with egress windows, full bath, exterior entrance",
+        "date": "2025",
         "permit": "on request",
         "finalInspection": "on request"
       },
       {
-        "system": "Deck",
-        "detail": "New deck boards",
+        "system": "Heating",
+        "detail": "Wood stove installed in the living room",
+        "date": "Dec 2022",
+        "permit": "on request",
+        "finalInspection": "on request"
+      },
+      {
+        "system": "Bathrooms",
+        "detail": "Both upstairs bathrooms upgraded",
+        "date": "Spring 2023",
+        "permit": "on request",
+        "finalInspection": "on request"
+      },
+      {
+        "system": "Kitchen",
+        "detail": "GE refrigerator",
+        "date": "2026",
+        "permit": "n/a",
+        "finalInspection": "n/a"
+      },
+      {
+        "system": "Kitchen",
+        "detail": "Recessed lighting replaced with LED downlights (amber night-light setting)",
+        "date": "2026",
+        "permit": "on request",
+        "finalInspection": "on request"
+      },
+      {
+        "system": "Comfort",
+        "detail": "New ceiling fans",
         "date": "2026",
         "permit": "n/a",
         "finalInspection": "n/a"
       },
       {
         "system": "Interior",
+        "detail": "Main level and upstairs repainted",
+        "date": "Jan 2023",
+        "permit": "n/a",
+        "finalInspection": "n/a"
+      },
+      {
+        "system": "Interior",
+        "detail": "Dry-erase walls in the laundry and breakfast nook",
+        "date": "Spring 2023",
+        "permit": "n/a",
+        "finalInspection": "n/a"
+      },
+      {
+        "system": "Interior",
         "detail": "Repainted throughout",
+        "date": "2026",
+        "permit": "n/a",
+        "finalInspection": "n/a"
+      },
+      {
+        "system": "Deck",
+        "detail": "New deck boards",
         "date": "2026",
         "permit": "n/a",
         "finalInspection": "n/a"
