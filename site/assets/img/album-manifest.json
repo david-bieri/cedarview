@@ -1,10 +1,11 @@
 [
  {
   "name": "album-spring-cherry",
-  "alt": "The cherry in front of the house, the week it blooms.",
-  "caption": "The cherry in front of the house, the week it blooms.",
+  "caption": "Ten days a year it looks like this. Worth the wait.",
   "season": "Spring",
-  "date": "",
+  "group": "spring",
+  "alt": "Ten days a year it looks like this. Worth the wait.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#080808",
@@ -45,15 +46,15 @@
      "src": "assets/img/album-spring-cherry-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-spring-blossom",
-  "alt": "Blossom against a blue sky.",
-  "caption": "Blossom against a blue sky.",
+  "caption": "Flat on your back under it, looking up.",
   "season": "Spring",
-  "date": "",
+  "group": "spring",
+  "alt": "Flat on your back under it, looking up.",
+  "type": "photo",
   "width": 1500,
   "height": 2000,
   "color": "#888878",
@@ -94,15 +95,15 @@
      "src": "assets/img/album-spring-blossom-1500.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-spring-azaleas-house",
-  "alt": "The house the week the azaleas come out.",
-  "caption": "The house the week the azaleas come out.",
+  "caption": "The week everything by the front path decides to flower at once.",
   "season": "Late April",
-  "date": "",
+  "group": "spring",
+  "alt": "The week everything by the front path decides to flower at once.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#c8c8d8",
@@ -143,15 +144,15 @@
      "src": "assets/img/album-spring-azaleas-house-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-spring-rhododendron",
-  "alt": "The rhododendron by the drive.",
-  "caption": "The rhododendron by the drive.",
+  "caption": "Early May, and the rhododendron by the drive outdoes itself.",
   "season": "Early May",
-  "date": "",
+  "group": "spring",
+  "alt": "Early May, and the rhododendron by the drive outdoes itself.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#f8f8f8",
@@ -192,15 +193,15 @@
      "src": "assets/img/album-spring-rhododendron-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-summer-hydrangeas",
-  "alt": "Hydrangeas.",
-  "caption": "Hydrangeas.",
+  "caption": "Blue on this side of the house — which tells you something about the soil.",
   "season": "Early summer",
-  "date": "",
+  "group": "summer",
+  "alt": "Blue on this side of the house — which tells you something about the soil.",
+  "type": "photo",
   "width": 1500,
   "height": 2000,
   "color": "#283818",
@@ -241,15 +242,15 @@
      "src": "assets/img/album-summer-hydrangeas-1500.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-summer-garden-evening",
-  "alt": "A summer evening in the garden, seen from upstairs.",
-  "caption": "A summer evening in the garden, seen from upstairs.",
+  "caption": "From the upstairs window: umbrellas up, tables out, children ignoring both.",
   "season": "Summer",
-  "date": "",
+  "group": "summer",
+  "alt": "From the upstairs window: umbrellas up, tables out, children ignoring both.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#282818",
@@ -290,15 +291,15 @@
      "src": "assets/img/album-summer-garden-evening-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-summer-fire-pit",
-  "alt": "S'mores at the fire pit.",
-  "caption": "S'mores at the fire pit.",
+  "caption": "Marshmallow technique varies. The fire pit doesn't mind.",
   "season": "Summer",
-  "date": "",
+  "group": "summer",
+  "alt": "Marshmallow technique varies. The fire pit doesn't mind.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#d8d8d8",
@@ -339,113 +340,15 @@
      "src": "assets/img/album-summer-fire-pit-1600.jpg"
     }
    ]
-  },
-  "group": "album"
- },
- {
-  "name": "album-hammock-woodpile",
-  "alt": "The hammock, the woodpile and the picnic table under the pines.",
-  "caption": "The hammock, the woodpile and the picnic table under the pines.",
-  "season": "Autumn",
-  "date": "",
-  "width": 1600,
-  "height": 1200,
-  "color": "#382828",
-  "sources": {
-   "webp": [
-    {
-     "w": 480,
-     "src": "assets/img/album-hammock-woodpile-480.webp"
-    },
-    {
-     "w": 800,
-     "src": "assets/img/album-hammock-woodpile-800.webp"
-    },
-    {
-     "w": 1200,
-     "src": "assets/img/album-hammock-woodpile-1200.webp"
-    },
-    {
-     "w": 1600,
-     "src": "assets/img/album-hammock-woodpile-1600.webp"
-    }
-   ],
-   "jpg": [
-    {
-     "w": 480,
-     "src": "assets/img/album-hammock-woodpile-480.jpg"
-    },
-    {
-     "w": 800,
-     "src": "assets/img/album-hammock-woodpile-800.jpg"
-    },
-    {
-     "w": 1200,
-     "src": "assets/img/album-hammock-woodpile-1200.jpg"
-    },
-    {
-     "w": 1600,
-     "src": "assets/img/album-hammock-woodpile-1600.jpg"
-    }
-   ]
-  },
-  "group": "album"
- },
- {
-  "name": "album-kitchen-board",
-  "alt": "A board on the kitchen granite.",
-  "caption": "A board on the kitchen granite.",
-  "season": "Any Saturday",
-  "date": "",
-  "width": 1600,
-  "height": 1200,
-  "color": "#e8e8e8",
-  "sources": {
-   "webp": [
-    {
-     "w": 480,
-     "src": "assets/img/album-kitchen-board-480.webp"
-    },
-    {
-     "w": 800,
-     "src": "assets/img/album-kitchen-board-800.webp"
-    },
-    {
-     "w": 1200,
-     "src": "assets/img/album-kitchen-board-1200.webp"
-    },
-    {
-     "w": 1600,
-     "src": "assets/img/album-kitchen-board-1600.webp"
-    }
-   ],
-   "jpg": [
-    {
-     "w": 480,
-     "src": "assets/img/album-kitchen-board-480.jpg"
-    },
-    {
-     "w": 800,
-     "src": "assets/img/album-kitchen-board-800.jpg"
-    },
-    {
-     "w": 1200,
-     "src": "assets/img/album-kitchen-board-1200.jpg"
-    },
-    {
-     "w": 1600,
-     "src": "assets/img/album-kitchen-board-1600.jpg"
-    }
-   ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-porch-set",
-  "alt": "The screened porch, set for guests.",
-  "caption": "The screened porch, set for guests.",
+  "caption": "Set for the people who end up out here anyway.",
   "season": "Summer",
-  "date": "",
+  "group": "summer",
+  "alt": "Set for the people who end up out here anyway.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#f8f8f8",
@@ -486,15 +389,64 @@
      "src": "assets/img/album-porch-set-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
+ },
+ {
+  "name": "album-kitchen-board",
+  "caption": "Saturday afternoon on the granite. Nothing was cooked.",
+  "season": "Any Saturday",
+  "group": "",
+  "alt": "Saturday afternoon on the granite. Nothing was cooked.",
+  "type": "photo",
+  "width": 1600,
+  "height": 1200,
+  "color": "#e8e8e8",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-kitchen-board-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-kitchen-board-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-kitchen-board-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-kitchen-board-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-kitchen-board-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-kitchen-board-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-kitchen-board-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-kitchen-board-1600.jpg"
+    }
+   ]
+  }
  },
  {
   "name": "album-september-lawn",
-  "alt": "The back lawn, set for a gathering.",
-  "caption": "The back lawn, set for a gathering.",
+  "caption": "It takes a crowd to fill the back lawn. September obliges.",
   "season": "September",
-  "date": "",
+  "group": "autumn",
+  "alt": "It takes a crowd to fill the back lawn. September obliges.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#080808",
@@ -535,15 +487,64 @@
      "src": "assets/img/album-september-lawn-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
+ },
+ {
+  "name": "album-hammock-woodpile",
+  "caption": "Under the pines. The hammock is the best seat on the property.",
+  "season": "Autumn",
+  "group": "autumn",
+  "alt": "Under the pines. The hammock is the best seat on the property.",
+  "type": "photo",
+  "width": 1600,
+  "height": 1200,
+  "color": "#382828",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-hammock-woodpile-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-hammock-woodpile-800.webp"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-hammock-woodpile-1200.webp"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-hammock-woodpile-1600.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-hammock-woodpile-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-hammock-woodpile-800.jpg"
+    },
+    {
+     "w": 1200,
+     "src": "assets/img/album-hammock-woodpile-1200.jpg"
+    },
+    {
+     "w": 1600,
+     "src": "assets/img/album-hammock-woodpile-1600.jpg"
+    }
+   ]
+  }
  },
  {
   "name": "album-autumn-roses",
-  "alt": "The last roses by the drive.",
-  "caption": "The last roses by the drive.",
+  "caption": "The last roses by the drive, still going when the leaves start.",
   "season": "Autumn",
-  "date": "",
+  "group": "autumn",
+  "alt": "The last roses by the drive, still going when the leaves start.",
+  "type": "photo",
   "width": 1500,
   "height": 2000,
   "color": "#484838",
@@ -584,15 +585,15 @@
      "src": "assets/img/album-autumn-roses-1500.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-autumn-ridge-from-deck",
-  "alt": "The ridge from the deck, the week the colour peaks.",
-  "caption": "The ridge from the deck, the week the colour peaks.",
+  "caption": "Peak colour lasts about a week. You want to be home for it.",
   "season": "Autumn",
-  "date": "",
+  "group": "autumn",
+  "alt": "Peak colour lasts about a week. You want to be home for it.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#f8f8f8",
@@ -633,15 +634,15 @@
      "src": "assets/img/album-autumn-ridge-from-deck-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-autumn-dusk-deck",
-  "alt": "Dusk from the deck, the ridge going violet.",
-  "caption": "Dusk from the deck, the ridge going violet.",
+  "caption": "For ten minutes at dusk the ridge goes violet. Then it's gone.",
   "season": "Autumn",
-  "date": "",
+  "group": "autumn",
+  "alt": "For ten minutes at dusk the ridge goes violet. Then it's gone.",
+  "type": "photo",
   "width": 1500,
   "height": 2000,
   "color": "#f8d8b8",
@@ -682,15 +683,58 @@
      "src": "assets/img/album-autumn-dusk-deck-1500.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
+ },
+ {
+  "name": "album-view-from-the-roof",
+  "caption": "From the roof, a slow pan round to the ridge.",
+  "season": "Early November",
+  "group": "autumn",
+  "alt": "Clip: From the roof, a slow pan round to the ridge.",
+  "type": "clip",
+  "src": "assets/album/view-from-the-roof.mp4",
+  "seconds": 22,
+  "width": 1080,
+  "height": 1920,
+  "color": "#181828",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-view-from-the-roof-poster-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-view-from-the-roof-poster-800.webp"
+    },
+    {
+     "w": 1080,
+     "src": "assets/img/album-view-from-the-roof-poster-1080.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-view-from-the-roof-poster-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-view-from-the-roof-poster-800.jpg"
+    },
+    {
+     "w": 1080,
+     "src": "assets/img/album-view-from-the-roof-poster-1080.jpg"
+    }
+   ]
+  }
  },
  {
   "name": "album-sunset-facing-ellett",
-  "alt": "Sunset from the deck, facing Ellett.",
-  "caption": "Sunset from the deck, facing Ellett.",
+  "caption": "The sky over Ellett on a good evening, from the deck.",
   "season": "Late autumn",
-  "date": "",
+  "group": "autumn",
+  "alt": "The sky over Ellett on a good evening, from the deck.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#181808",
@@ -731,15 +775,15 @@
      "src": "assets/img/album-sunset-facing-ellett-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-autumn-twilight-pumpkins",
-  "alt": "Twilight, pumpkins on the steps.",
-  "caption": "Twilight, pumpkins on the steps.",
+  "caption": "Pumpkins on the steps, lights on inside. The house at its most welcoming.",
   "season": "Late autumn",
-  "date": "",
+  "group": "autumn",
+  "alt": "Pumpkins on the steps, lights on inside. The house at its most welcoming.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#080808",
@@ -780,15 +824,15 @@
      "src": "assets/img/album-autumn-twilight-pumpkins-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-winter-first-snow",
-  "alt": "First snow, at sunrise.",
-  "caption": "First snow, at sunrise.",
+  "caption": "First snow, at sunrise, before anyone has walked on it.",
   "season": "Winter",
-  "date": "",
+  "group": "winter",
+  "alt": "First snow, at sunrise, before anyone has walked on it.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#282818",
@@ -829,15 +873,15 @@
      "src": "assets/img/album-winter-first-snow-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-winter-sledding",
-  "alt": "Sledding on the front lawn.",
-  "caption": "Sledding on the front lawn.",
+  "caption": "The front lawn has exactly the right slope.",
   "season": "Winter",
-  "date": "",
+  "group": "winter",
+  "alt": "The front lawn has exactly the right slope.",
+  "type": "photo",
   "width": 1600,
   "height": 1200,
   "color": "#080808",
@@ -878,15 +922,15 @@
      "src": "assets/img/album-winter-sledding-1600.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
  },
  {
   "name": "album-winter-christmas",
-  "alt": "The tree, with snow outside the big window.",
-  "caption": "The tree, with snow outside the big window.",
+  "caption": "The big window earns its keep in December.",
   "season": "December",
-  "date": "",
+  "group": "winter",
+  "alt": "The big window earns its keep in December.",
+  "type": "photo",
   "width": 1291,
   "height": 1721,
   "color": "#886838",
@@ -927,7 +971,49 @@
      "src": "assets/img/album-winter-christmas-1291.jpg"
     }
    ]
-  },
-  "group": "album"
+  }
+ },
+ {
+  "name": "album-a-year-on-cedarview-drive",
+  "caption": "The whole year, in fourteen moments.",
+  "season": "The year",
+  "group": "",
+  "alt": "Clip: The whole year, in fourteen moments.",
+  "type": "clip",
+  "src": "assets/album/a-year-on-cedarview-drive.mp4",
+  "seconds": 42,
+  "width": 1080,
+  "height": 1920,
+  "color": "#283828",
+  "sources": {
+   "webp": [
+    {
+     "w": 480,
+     "src": "assets/img/album-a-year-on-cedarview-drive-poster-480.webp"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-a-year-on-cedarview-drive-poster-800.webp"
+    },
+    {
+     "w": 1080,
+     "src": "assets/img/album-a-year-on-cedarview-drive-poster-1080.webp"
+    }
+   ],
+   "jpg": [
+    {
+     "w": 480,
+     "src": "assets/img/album-a-year-on-cedarview-drive-poster-480.jpg"
+    },
+    {
+     "w": 800,
+     "src": "assets/img/album-a-year-on-cedarview-drive-poster-800.jpg"
+    },
+    {
+     "w": 1080,
+     "src": "assets/img/album-a-year-on-cedarview-drive-poster-1080.jpg"
+    }
+   ]
+  }
  }
 ]
