@@ -334,7 +334,7 @@
         {
           "area": "Whole house",
           "work": "New ceiling fans",
-          "when": "2026"
+          "when": "2023"
         },
         {
           "area": "Whole house",
@@ -349,7 +349,7 @@
         {
           "area": "Lower level",
           "work": "New outlets, each with built-in USB-C fast charging",
-          "when": "2026"
+          "when": "2025"
         },
         {
           "area": "Kitchen",
@@ -798,7 +798,7 @@
       {
         "system": "Electrical",
         "detail": "Lower level: new outlets with built-in USB-C fast charging",
-        "date": "2026",
+        "date": "2025",
         "permit": "on request",
         "finalInspection": "on request"
       },
@@ -840,7 +840,7 @@
       {
         "system": "Comfort",
         "detail": "New ceiling fans",
-        "date": "2026",
+        "date": "2023",
         "permit": "n/a",
         "finalInspection": "n/a"
       },
