@@ -324,7 +324,7 @@
         {
           "area": "Whole house",
           "work": "Main level and lower level rewired",
-          "when": "TBC year"
+          "when": "2025"
         },
         {
           "area": "Whole house",
@@ -359,7 +359,7 @@
         {
           "area": "Kitchen",
           "work": "LED downlights with an amber night-light setting",
-          "when": "TBC year"
+          "when": "2026"
         },
         {
           "area": "Living room",
@@ -791,7 +791,7 @@
       {
         "system": "Electrical",
         "detail": "Main level and lower level rewired",
-        "date": "on request",
+        "date": "2025",
         "permit": "on request",
         "finalInspection": "on request"
       },
@@ -833,7 +833,7 @@
       {
         "system": "Kitchen",
         "detail": "Recessed lighting replaced with LED downlights (amber night-light setting)",
-        "date": "on request",
+        "date": "2026",
         "permit": "on request",
         "finalInspection": "on request"
       },
