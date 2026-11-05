@@ -15,7 +15,7 @@ Single-page site for 709 Cedarview Drive, Blacksburg, Virginia. Plain HTML, CSS 
 - `pdf/build_plans.py` — writes the floor-plan PDFs in `assets/plans/` (one per plan plus all three together) from the plan images
 - `scripts/build-page.mjs` — writes `index.html` from `site.json` and the image manifest
 - `scripts/check-launch.mjs` — fails the build on a leaked placeholder, a bad `tel:`/`mailto:` link or a missing local file; stricter once `site.listingLive` is true
-- `css/`, `js/` — page styles; `js/gallery.js` (gallery and lightbox), `js/site.js` (phone section menu, sticky showing bar, click-to-start 3D tour with a no-WebGL fallback), `js/utm.js`
+- `css/`, `js/` — page styles; `js/gallery.js` (gallery and lightbox), `js/site.js` (phone section menu, sticky showing bar, click-to-start 3D tour with a no-WebGL fallback), `js/utm.js` (source capture), `js/track.js` (click events)
 - `CNAME`, `robots.txt` — GitHub Pages domain; crawling blocked until launch
 
 ## Page structure worth knowing
@@ -36,6 +36,13 @@ npm run serve      # http://localhost:8080
 1. Fill every `TBC` value in `data/site.json` — `npm run check` lists them by path. The agent's name, phone (E.164 in `phoneHref`) and email, the MLS number, the permit dates and numbers for the spec sheet, measured drive times, the owner's letter.
 2. Set `site.noindex` to `false` and `site.listingLive` to `true`; replace `robots.txt` Disallow with Allow. From then on the check refuses to build without the agent's contact details.
 3. `npm run build`, commit, push.
+
+## Measuring where visitors come from
+
+- **Visits** — Cloudflare Web Analytics (`site.analytics.token`). It counts pages and referrers but keeps no query strings and no click events.
+- **Channels and clicks** — GoatCounter (`site.analytics.events.code`; `TBC` until a free site is created at goatcounter.com, and the script is not loaded until then). GoatCounter reads `utm_source`/`utm_campaign` from the landing URL, and `js/track.js` sends one named event per action: `tour-start`, `tour-open-matterport`, `plan-view`, `plan-pdf`, `spec-sheet-pdf`, `contact-phone`, `contact-email`, each titled with the visit's source (or `direct`). No cookies.
+- **Tagged links** — every channel in `channels` gets a link in `scripts/tracked-links.md`. A channel with a `short` field also gets a forwarding page at `/<short>/` (written to `site/<short>/index.html`, published by `scripts/build-site.mjs`, `noindex`) so print can carry `cedarview.house/go` instead of a utm string. QR artwork lives in `print/` at the repo root.
+- **Inquiries** — on a tagged visit, `js/utm.js` adds the source to the subject of the email link ("Cedarview House inquiry (via postcard, print)"), so the agent's inquiry log can record it without asking.
 
 ## Lighthouse
 `npm run lighthouse` audits a launch-mode copy of the page (noindex off, built in a temp dir; the repo is untouched). The committed page keeps `noindex` until listing day, which alone lowers Lighthouse's SEO score. Needs Chrome on PATH or `CHROME_PATH`.
