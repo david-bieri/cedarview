@@ -735,9 +735,6 @@
   },
   "wordingRules": {
     "banned": [
-      "executive",
-      "multi-generational",
-      "multigenerational",
       "perfect for families",
       "luxury remodel",
       "5,400",
@@ -754,7 +751,7 @@
       "fiber speeds": "GLO Fiber (no speed unless a plan is quoted)",
       "fully rewired": "main and lower levels rewired (the upper floor was not)"
     },
-    "principle": "Describe the house and the place, never the buyer."
+    "principle": "Say who the house suits and how it can be used (remote work, intergenerational living, an au pair, visiting scholars, game-day guests), but never state a preference for or against a protected group. Every fact checkable: walking times only where the measured times are walks; hosting only as an owner-occupied, registered homestay."
   },
   "specSheet": {
     "title": "Cedarview House — Improvements and specifications",
