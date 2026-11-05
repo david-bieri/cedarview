@@ -218,24 +218,33 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 .leaflet-bar a { color: var(--ink); }
 @media print { .map-chips, .leaflet-control-container { display: none; } }
 
-/* reels: one 9:16 clip, earlier posters beneath */
-.reels, .album { margin-top: 3rem; }
-.reel-stage { display: grid; gap: .5rem; justify-items: start; }
-.reel { display: block; width: min(100%, 22rem); aspect-ratio: 9 / 16; height: auto; background: var(--ridge); border-radius: .5rem; }
-.reel-cap { max-width: 22rem; font-size: .95rem; margin: 0; }
-.reel-earlier { margin: 1.5rem 0 .5rem; font-family: var(--text); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
-.reel-row { display: flex; gap: .6rem; overflow-x: auto; padding-bottom: .5rem; scrollbar-width: thin; }
-.reel-thumb { flex: none; width: 10rem; display: grid; gap: .3rem; padding: 0; border: 0; background: none; font: inherit; font-size: .75rem; color: var(--muted); cursor: pointer; text-align: left; }
-.reel-thumb img, .reel-noposter { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: .35rem; background: var(--ridge); }
-.reel-thumb:hover img { outline: 2px solid var(--cobalt); }
-
-/* the owners' album: a horizontal strip of tilted, cream-framed phone photos */
+/* the owners' album: one strip for the year — tilted, cream-framed phone photos with short clips among them */
+.album { margin-top: 3rem; }
+.album-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem 2rem; flex-wrap: wrap; }
+.album-head .sub { margin-top: 0; }
+.album-head p { max-width: var(--measure); }
+.album-tabs { display: flex; gap: 1.1rem; flex-wrap: wrap; padding-bottom: .25rem; }
+.album-tabs button { min-height: 2.75rem; padding: 0; border: 0; background: none; font: inherit; font-size: .95rem; color: var(--muted); cursor: pointer; border-bottom: 1.5px solid transparent; }
+.album-tabs button:hover { color: var(--ink); }
+.album-tabs button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
 .album-strip { display: flex; align-items: flex-start; gap: 1.25rem; overflow-x: auto; padding: 1rem .5rem 1.25rem; scrollbar-width: thin; scroll-snap-type: x proximity; }
 .album-tile { flex: none; width: min(80vw, 18rem); margin: 0; padding: .6rem .6rem 0; background: #fff; border: 1px solid var(--rule); box-shadow: 0 6px 18px rgba(29, 36, 48, .12); transform: rotate(-1.2deg); scroll-snap-align: start; }
 .album-tile:nth-child(even) { transform: rotate(1deg); }
+.album-tile[hidden] { display: none; }
 .album-tile picture, .album-tile img { display: block; width: 100%; height: auto; }
 .album-tile figcaption { padding: .6rem .2rem .7rem; font-family: var(--display); font-style: italic; font-size: 1rem; line-height: 1.35; color: var(--ink); }
 .album-season { font-style: normal; font-family: var(--text); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--rust); margin-right: .35rem; }
+.album-count { margin: 0 .5rem; }
+/* a clip: a dark card, the poster with a play button; the video takes the poster's place when pressed */
+.album-clip { width: min(55vw, 12rem); background: var(--ink); border-color: var(--ink); color: var(--cream); }
+.album-clip figcaption { color: var(--cream); }
+.album-clip .album-season { color: var(--oak); }
+.clip-play { position: relative; display: block; width: 100%; padding: 0; border: 0; background: var(--ridge); cursor: pointer; color: var(--ink); }
+.clip-play img { aspect-ratio: 9 / 16; object-fit: cover; }
+.clip-glyph { position: absolute; left: 50%; top: 50%; width: 3rem; height: 3rem; margin: -1.5rem 0 0 -1.5rem; border-radius: 50%; background: rgba(239, 233, 220, .92); display: flex; align-items: center; justify-content: center; }
+.clip-play:hover .clip-glyph { background: var(--cream); }
+.clip-len { position: absolute; right: .5rem; top: .5rem; font-family: var(--text); font-size: .7rem; letter-spacing: .1em; background: rgba(29, 36, 48, .75); color: var(--cream); padding: .2rem .4rem; border-radius: 2px; }
+.album-clip video { display: block; width: 100%; aspect-ratio: 9 / 16; height: auto; background: var(--ridge); }
 @media (prefers-reduced-motion: reduce) { .album-tile { transform: none; } }
 .sub-tight { margin-top: 1.5rem; font-size: 1.25rem; }
 

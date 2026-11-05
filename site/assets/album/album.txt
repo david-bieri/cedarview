@@ -1,0 +1,38 @@
+# A year on Cedarview Drive — the owners' album
+#
+# One line per photo or clip, in the order they appear on the page:
+#
+#     file | season | caption
+#
+# file     the photo (.jpg/.jpeg/.png) or clip (.mp4, with a .jpg poster of the same name) in this folder
+# season   a short time label shown in small capitals before the caption — "Spring", "Late April", "Any Saturday".
+#          It also decides the season tab the item appears under (Spring / Summer / Autumn / Winter);
+#          a label the build can't place (e.g. "Any Saturday") shows under "All" only.
+# caption  one or two short sentences. Say what the picture can't show — when, how long it lasts, what it's
+#          like to be there — not what's already visible. The owners' voice. Plain apostrophes are fine.
+#
+# To add a photo: drop it in this folder and add a line. If you forget the line, the build adds a stub
+# ("[caption]") here and leaves that photo off the page until the caption is written.
+# Lines starting with # are ignored. Blank lines too.
+
+spring-cherry.jpg            | Spring        | Ten days a year it looks like this. Worth the wait.
+spring-blossom.jpg           | Spring        | Flat on your back under it, looking up.
+spring-azaleas-house.jpg     | Late April    | The week everything by the front path decides to flower at once.
+spring-rhododendron.jpg      | Early May     | Early May, and the rhododendron by the drive outdoes itself.
+summer-hydrangeas.jpg        | Early summer  | Blue on this side of the house — which tells you something about the soil.
+summer-garden-evening.jpg    | Summer        | From the upstairs window: umbrellas up, tables out, children ignoring both.
+summer-fire-pit.jpg          | Summer        | Marshmallow technique varies. The fire pit doesn't mind.
+porch-set.jpg                | Summer        | Set for the people who end up out here anyway.
+kitchen-board.jpg            | Any Saturday  | Saturday afternoon on the granite. Nothing was cooked.
+september-lawn.jpg           | September     | It takes a crowd to fill the back lawn. September obliges.
+hammock-woodpile.jpg         | Autumn        | Under the pines. The hammock is the best seat on the property.
+autumn-roses.jpg             | Autumn        | The last roses by the drive, still going when the leaves start.
+autumn-ridge-from-deck.jpg   | Autumn        | Peak colour lasts about a week. You want to be home for it.
+autumn-dusk-deck.jpg         | Autumn        | For ten minutes at dusk the ridge goes violet. Then it's gone.
+view-from-the-roof.mp4       | Early November| From the roof, a slow pan round to the ridge.
+sunset-facing-ellett.jpg     | Late autumn   | The sky over Ellett on a good evening, from the deck.
+autumn-twilight-pumpkins.jpg | Late autumn   | Pumpkins on the steps, lights on inside. The house at its most welcoming.
+winter-first-snow.jpg        | Winter        | First snow, at sunrise, before anyone has walked on it.
+winter-sledding.jpg          | Winter        | The front lawn has exactly the right slope.
+winter-christmas.jpg         | December      | The big window earns its keep in December.
+a-year-on-cedarview-drive.mp4| The year      | The whole year, in fourteen moments.

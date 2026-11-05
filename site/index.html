@@ -605,188 +605,178 @@
 </div>
 </div>
 <div class="wrap">
-<div class="gallery gallery-row" id="view-gallery">
-<figure class="tile">
-<button type="button" class="tile-btn" data-lb="13" aria-label="Enlarge: Wide drone view south, the mountains across the valley">
-<picture>
-<source type="image/webp" srcset="assets/img/view-south-wide-480.webp 480w, assets/img/view-south-wide-800.webp 800w, assets/img/view-south-wide-1200.webp 1200w, assets/img/view-south-wide-1600.webp 1600w" sizes="(min-width: 40rem) 33vw, 100vw">
-<img src="assets/img/view-south-wide-1600.jpg" srcset="assets/img/view-south-wide-480.jpg 480w, assets/img/view-south-wide-800.jpg 800w, assets/img/view-south-wide-1200.jpg 1200w, assets/img/view-south-wide-1600.jpg 1600w" sizes="(min-width: 40rem) 33vw, 100vw" alt="Wide drone view south, the mountains across the valley" width="1600" height="1066" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1066;background-color:#c8d8e8">
-</picture>
-</button>
-
-</figure>
-<figure class="tile">
-<button type="button" class="tile-btn" data-lb="14" aria-label="Enlarge: The ridgeline to the south above the trees">
-<picture>
-<source type="image/webp" srcset="assets/img/view-south-ridge-close-480.webp 480w, assets/img/view-south-ridge-close-800.webp 800w, assets/img/view-south-ridge-close-1200.webp 1200w, assets/img/view-south-ridge-close-1600.webp 1600w" sizes="(min-width: 40rem) 33vw, 100vw">
-<img src="assets/img/view-south-ridge-close-1600.jpg" srcset="assets/img/view-south-ridge-close-480.jpg 480w, assets/img/view-south-ridge-close-800.jpg 800w, assets/img/view-south-ridge-close-1200.jpg 1200w, assets/img/view-south-ridge-close-1600.jpg 1600w" sizes="(min-width: 40rem) 33vw, 100vw" alt="The ridgeline to the south above the trees" width="1600" height="1066" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1066;background-color:#b8d8e8">
-</picture>
-</button>
-
-</figure>
-<figure class="tile">
-<button type="button" class="tile-btn" data-lb="15" aria-label="Enlarge: Drone view over Blacksburg toward the mountains">
-<picture>
-<source type="image/webp" srcset="assets/img/view-valley-480.webp 480w, assets/img/view-valley-800.webp 800w, assets/img/view-valley-1200.webp 1200w, assets/img/view-valley-1600.webp 1600w" sizes="(min-width: 40rem) 33vw, 100vw">
-<img src="assets/img/view-valley-1600.jpg" srcset="assets/img/view-valley-480.jpg 480w, assets/img/view-valley-800.jpg 800w, assets/img/view-valley-1200.jpg 1200w, assets/img/view-valley-1600.jpg 1600w" sizes="(min-width: 40rem) 33vw, 100vw" alt="Drone view over Blacksburg toward the mountains" width="1600" height="1066" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1066;background-color:#a8d8f8">
-</picture>
-</button>
-
-</figure>
-</div>
-<div class="reels" id="reels">
-<h3 class="sub">Lately</h3>
-<p>Short clips from the house, added while the listing is live. The same clips go out on Instagram and TikTok.</p>
-<div class="reel-stage">
-<video id="reel-video" class="reel" controls muted playsinline preload="none" poster="assets/video/reels/view-from-the-roof.jpg" width="1080" height="1920">
-<source src="assets/video/reels/view-from-the-roof.mp4" type="video/mp4">
-</video>
-<p class="reel-cap"><span id="reel-cap">The view from the roof, early November — a slow pan to the ridge.</span> <span class="muted" id="reel-date">November 3, 2026</span></p>
-</div>
-<h4 class="reel-earlier">Earlier</h4>
-<div class="reel-row">
-<button type="button" class="reel-thumb" data-reel="1" aria-label="Play: A year on Cedarview Drive — fourteen moments from the owners&#39; album."><img src="assets/video/reels/a-year-on-cedarview-drive.jpg" alt="" loading="lazy" decoding="async" width="270" height="480"><span>November 3, 2026</span></button>
-</div>
-<script type="application/json" id="reel-data">[{"src":"assets/video/reels/view-from-the-roof.mp4","poster":"assets/video/reels/view-from-the-roof.jpg","caption":"The view from the roof, early November — a slow pan to the ridge.","date":"November 3, 2026"},{"src":"assets/video/reels/a-year-on-cedarview-drive.mp4","poster":"assets/video/reels/a-year-on-cedarview-drive.jpg","caption":"A year on Cedarview Drive — fourteen moments from the owners' album.","date":"November 3, 2026"}]</script>
-</div>
 <div class="album" id="album">
+<div class="album-head">
+<div>
 <h3 class="sub">A year on Cedarview Drive</h3>
-<p>From the owners&#39; album: the same places through the seasons, on a phone, not the photographer&#39;s camera.</p>
-<div class="album-strip">
-<figure class="album-tile">
+<p>From the owners&#39; album: the same places through the seasons, on a phone, not the photographer&#39;s camera. A few short clips sit where they fall in the year.</p>
+</div>
+<nav class="album-tabs" aria-label="Season">
+<button type="button" data-season="" aria-pressed="true">All</button>
+<button type="button" data-season="spring" aria-pressed="false">Spring</button>
+<button type="button" data-season="summer" aria-pressed="false">Summer</button>
+<button type="button" data-season="autumn" aria-pressed="false">Autumn</button>
+<button type="button" data-season="winter" aria-pressed="false">Winter</button>
+</nav>
+</div>
+<div class="album-strip" id="album-strip">
+<figure class="album-tile" data-group="spring">
 <picture>
 <source type="image/webp" srcset="assets/img/album-spring-cherry-480.webp 480w, assets/img/album-spring-cherry-800.webp 800w, assets/img/album-spring-cherry-1200.webp 1200w, assets/img/album-spring-cherry-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-spring-cherry-1600.jpg" srcset="assets/img/album-spring-cherry-480.jpg 480w, assets/img/album-spring-cherry-800.jpg 800w, assets/img/album-spring-cherry-1200.jpg 1200w, assets/img/album-spring-cherry-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The cherry in front of the house, the week it blooms." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#080808">
+<img src="assets/img/album-spring-cherry-1600.jpg" srcset="assets/img/album-spring-cherry-480.jpg 480w, assets/img/album-spring-cherry-800.jpg 800w, assets/img/album-spring-cherry-1200.jpg 1200w, assets/img/album-spring-cherry-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Ten days a year it looks like this. Worth the wait." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#080808">
 </picture>
-<figcaption><span class="album-season">Spring</span> The cherry in front of the house, the week it blooms.</figcaption>
+<figcaption><span class="album-season">Spring</span> Ten days a year it looks like this. Worth the wait.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="spring">
 <picture>
 <source type="image/webp" srcset="assets/img/album-spring-blossom-480.webp 480w, assets/img/album-spring-blossom-800.webp 800w, assets/img/album-spring-blossom-1200.webp 1200w, assets/img/album-spring-blossom-1500.webp 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-spring-blossom-1500.jpg" srcset="assets/img/album-spring-blossom-480.jpg 480w, assets/img/album-spring-blossom-800.jpg 800w, assets/img/album-spring-blossom-1200.jpg 1200w, assets/img/album-spring-blossom-1500.jpg 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Blossom against a blue sky." width="1500" height="2000" loading="lazy" decoding="async" style="aspect-ratio:1500 / 2000;background-color:#888878">
+<img src="assets/img/album-spring-blossom-1500.jpg" srcset="assets/img/album-spring-blossom-480.jpg 480w, assets/img/album-spring-blossom-800.jpg 800w, assets/img/album-spring-blossom-1200.jpg 1200w, assets/img/album-spring-blossom-1500.jpg 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Flat on your back under it, looking up." width="1500" height="2000" loading="lazy" decoding="async" style="aspect-ratio:1500 / 2000;background-color:#888878">
 </picture>
-<figcaption><span class="album-season">Spring</span> Blossom against a blue sky.</figcaption>
+<figcaption><span class="album-season">Spring</span> Flat on your back under it, looking up.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="spring">
 <picture>
 <source type="image/webp" srcset="assets/img/album-spring-azaleas-house-480.webp 480w, assets/img/album-spring-azaleas-house-800.webp 800w, assets/img/album-spring-azaleas-house-1200.webp 1200w, assets/img/album-spring-azaleas-house-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-spring-azaleas-house-1600.jpg" srcset="assets/img/album-spring-azaleas-house-480.jpg 480w, assets/img/album-spring-azaleas-house-800.jpg 800w, assets/img/album-spring-azaleas-house-1200.jpg 1200w, assets/img/album-spring-azaleas-house-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The house the week the azaleas come out." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#c8c8d8">
+<img src="assets/img/album-spring-azaleas-house-1600.jpg" srcset="assets/img/album-spring-azaleas-house-480.jpg 480w, assets/img/album-spring-azaleas-house-800.jpg 800w, assets/img/album-spring-azaleas-house-1200.jpg 1200w, assets/img/album-spring-azaleas-house-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The week everything by the front path decides to flower at once." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#c8c8d8">
 </picture>
-<figcaption><span class="album-season">Late April</span> The house the week the azaleas come out.</figcaption>
+<figcaption><span class="album-season">Late April</span> The week everything by the front path decides to flower at once.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="spring">
 <picture>
 <source type="image/webp" srcset="assets/img/album-spring-rhododendron-480.webp 480w, assets/img/album-spring-rhododendron-800.webp 800w, assets/img/album-spring-rhododendron-1200.webp 1200w, assets/img/album-spring-rhododendron-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-spring-rhododendron-1600.jpg" srcset="assets/img/album-spring-rhododendron-480.jpg 480w, assets/img/album-spring-rhododendron-800.jpg 800w, assets/img/album-spring-rhododendron-1200.jpg 1200w, assets/img/album-spring-rhododendron-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The rhododendron by the drive." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#f8f8f8">
+<img src="assets/img/album-spring-rhododendron-1600.jpg" srcset="assets/img/album-spring-rhododendron-480.jpg 480w, assets/img/album-spring-rhododendron-800.jpg 800w, assets/img/album-spring-rhododendron-1200.jpg 1200w, assets/img/album-spring-rhododendron-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Early May, and the rhododendron by the drive outdoes itself." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#f8f8f8">
 </picture>
-<figcaption><span class="album-season">Early May</span> The rhododendron by the drive.</figcaption>
+<figcaption><span class="album-season">Early May</span> Early May, and the rhododendron by the drive outdoes itself.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="summer">
 <picture>
 <source type="image/webp" srcset="assets/img/album-summer-hydrangeas-480.webp 480w, assets/img/album-summer-hydrangeas-800.webp 800w, assets/img/album-summer-hydrangeas-1200.webp 1200w, assets/img/album-summer-hydrangeas-1500.webp 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-summer-hydrangeas-1500.jpg" srcset="assets/img/album-summer-hydrangeas-480.jpg 480w, assets/img/album-summer-hydrangeas-800.jpg 800w, assets/img/album-summer-hydrangeas-1200.jpg 1200w, assets/img/album-summer-hydrangeas-1500.jpg 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Hydrangeas." width="1500" height="2000" loading="lazy" decoding="async" style="aspect-ratio:1500 / 2000;background-color:#283818">
+<img src="assets/img/album-summer-hydrangeas-1500.jpg" srcset="assets/img/album-summer-hydrangeas-480.jpg 480w, assets/img/album-summer-hydrangeas-800.jpg 800w, assets/img/album-summer-hydrangeas-1200.jpg 1200w, assets/img/album-summer-hydrangeas-1500.jpg 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Blue on this side of the house — which tells you something about the soil." width="1500" height="2000" loading="lazy" decoding="async" style="aspect-ratio:1500 / 2000;background-color:#283818">
 </picture>
-<figcaption><span class="album-season">Early summer</span> Hydrangeas.</figcaption>
+<figcaption><span class="album-season">Early summer</span> Blue on this side of the house — which tells you something about the soil.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="summer">
 <picture>
 <source type="image/webp" srcset="assets/img/album-summer-garden-evening-480.webp 480w, assets/img/album-summer-garden-evening-800.webp 800w, assets/img/album-summer-garden-evening-1200.webp 1200w, assets/img/album-summer-garden-evening-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-summer-garden-evening-1600.jpg" srcset="assets/img/album-summer-garden-evening-480.jpg 480w, assets/img/album-summer-garden-evening-800.jpg 800w, assets/img/album-summer-garden-evening-1200.jpg 1200w, assets/img/album-summer-garden-evening-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="A summer evening in the garden, seen from upstairs." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#282818">
+<img src="assets/img/album-summer-garden-evening-1600.jpg" srcset="assets/img/album-summer-garden-evening-480.jpg 480w, assets/img/album-summer-garden-evening-800.jpg 800w, assets/img/album-summer-garden-evening-1200.jpg 1200w, assets/img/album-summer-garden-evening-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="From the upstairs window: umbrellas up, tables out, children ignoring both." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#282818">
 </picture>
-<figcaption><span class="album-season">Summer</span> A summer evening in the garden, seen from upstairs.</figcaption>
+<figcaption><span class="album-season">Summer</span> From the upstairs window: umbrellas up, tables out, children ignoring both.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="summer">
 <picture>
 <source type="image/webp" srcset="assets/img/album-summer-fire-pit-480.webp 480w, assets/img/album-summer-fire-pit-800.webp 800w, assets/img/album-summer-fire-pit-1200.webp 1200w, assets/img/album-summer-fire-pit-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-summer-fire-pit-1600.jpg" srcset="assets/img/album-summer-fire-pit-480.jpg 480w, assets/img/album-summer-fire-pit-800.jpg 800w, assets/img/album-summer-fire-pit-1200.jpg 1200w, assets/img/album-summer-fire-pit-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="S&#39;mores at the fire pit." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#d8d8d8">
+<img src="assets/img/album-summer-fire-pit-1600.jpg" srcset="assets/img/album-summer-fire-pit-480.jpg 480w, assets/img/album-summer-fire-pit-800.jpg 800w, assets/img/album-summer-fire-pit-1200.jpg 1200w, assets/img/album-summer-fire-pit-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Marshmallow technique varies. The fire pit doesn&#39;t mind." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#d8d8d8">
 </picture>
-<figcaption><span class="album-season">Summer</span> S&#39;mores at the fire pit.</figcaption>
+<figcaption><span class="album-season">Summer</span> Marshmallow technique varies. The fire pit doesn&#39;t mind.</figcaption>
 </figure>
-<figure class="album-tile">
-<picture>
-<source type="image/webp" srcset="assets/img/album-hammock-woodpile-480.webp 480w, assets/img/album-hammock-woodpile-800.webp 800w, assets/img/album-hammock-woodpile-1200.webp 1200w, assets/img/album-hammock-woodpile-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-hammock-woodpile-1600.jpg" srcset="assets/img/album-hammock-woodpile-480.jpg 480w, assets/img/album-hammock-woodpile-800.jpg 800w, assets/img/album-hammock-woodpile-1200.jpg 1200w, assets/img/album-hammock-woodpile-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The hammock, the woodpile and the picnic table under the pines." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#382828">
-</picture>
-<figcaption><span class="album-season">Autumn</span> The hammock, the woodpile and the picnic table under the pines.</figcaption>
-</figure>
-<figure class="album-tile">
-<picture>
-<source type="image/webp" srcset="assets/img/album-kitchen-board-480.webp 480w, assets/img/album-kitchen-board-800.webp 800w, assets/img/album-kitchen-board-1200.webp 1200w, assets/img/album-kitchen-board-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-kitchen-board-1600.jpg" srcset="assets/img/album-kitchen-board-480.jpg 480w, assets/img/album-kitchen-board-800.jpg 800w, assets/img/album-kitchen-board-1200.jpg 1200w, assets/img/album-kitchen-board-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="A board on the kitchen granite." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#e8e8e8">
-</picture>
-<figcaption><span class="album-season">Any Saturday</span> A board on the kitchen granite.</figcaption>
-</figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="summer">
 <picture>
 <source type="image/webp" srcset="assets/img/album-porch-set-480.webp 480w, assets/img/album-porch-set-800.webp 800w, assets/img/album-porch-set-1200.webp 1200w, assets/img/album-porch-set-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-porch-set-1600.jpg" srcset="assets/img/album-porch-set-480.jpg 480w, assets/img/album-porch-set-800.jpg 800w, assets/img/album-porch-set-1200.jpg 1200w, assets/img/album-porch-set-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The screened porch, set for guests." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#f8f8f8">
+<img src="assets/img/album-porch-set-1600.jpg" srcset="assets/img/album-porch-set-480.jpg 480w, assets/img/album-porch-set-800.jpg 800w, assets/img/album-porch-set-1200.jpg 1200w, assets/img/album-porch-set-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Set for the people who end up out here anyway." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#f8f8f8">
 </picture>
-<figcaption><span class="album-season">Summer</span> The screened porch, set for guests.</figcaption>
+<figcaption><span class="album-season">Summer</span> Set for the people who end up out here anyway.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="">
+<picture>
+<source type="image/webp" srcset="assets/img/album-kitchen-board-480.webp 480w, assets/img/album-kitchen-board-800.webp 800w, assets/img/album-kitchen-board-1200.webp 1200w, assets/img/album-kitchen-board-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
+<img src="assets/img/album-kitchen-board-1600.jpg" srcset="assets/img/album-kitchen-board-480.jpg 480w, assets/img/album-kitchen-board-800.jpg 800w, assets/img/album-kitchen-board-1200.jpg 1200w, assets/img/album-kitchen-board-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Saturday afternoon on the granite. Nothing was cooked." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#e8e8e8">
+</picture>
+<figcaption><span class="album-season">Any Saturday</span> Saturday afternoon on the granite. Nothing was cooked.</figcaption>
+</figure>
+<figure class="album-tile" data-group="autumn">
 <picture>
 <source type="image/webp" srcset="assets/img/album-september-lawn-480.webp 480w, assets/img/album-september-lawn-800.webp 800w, assets/img/album-september-lawn-1200.webp 1200w, assets/img/album-september-lawn-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-september-lawn-1600.jpg" srcset="assets/img/album-september-lawn-480.jpg 480w, assets/img/album-september-lawn-800.jpg 800w, assets/img/album-september-lawn-1200.jpg 1200w, assets/img/album-september-lawn-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The back lawn, set for a gathering." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#080808">
+<img src="assets/img/album-september-lawn-1600.jpg" srcset="assets/img/album-september-lawn-480.jpg 480w, assets/img/album-september-lawn-800.jpg 800w, assets/img/album-september-lawn-1200.jpg 1200w, assets/img/album-september-lawn-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="It takes a crowd to fill the back lawn. September obliges." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#080808">
 </picture>
-<figcaption><span class="album-season">September</span> The back lawn, set for a gathering.</figcaption>
+<figcaption><span class="album-season">September</span> It takes a crowd to fill the back lawn. September obliges.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="autumn">
+<picture>
+<source type="image/webp" srcset="assets/img/album-hammock-woodpile-480.webp 480w, assets/img/album-hammock-woodpile-800.webp 800w, assets/img/album-hammock-woodpile-1200.webp 1200w, assets/img/album-hammock-woodpile-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
+<img src="assets/img/album-hammock-woodpile-1600.jpg" srcset="assets/img/album-hammock-woodpile-480.jpg 480w, assets/img/album-hammock-woodpile-800.jpg 800w, assets/img/album-hammock-woodpile-1200.jpg 1200w, assets/img/album-hammock-woodpile-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Under the pines. The hammock is the best seat on the property." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#382828">
+</picture>
+<figcaption><span class="album-season">Autumn</span> Under the pines. The hammock is the best seat on the property.</figcaption>
+</figure>
+<figure class="album-tile" data-group="autumn">
 <picture>
 <source type="image/webp" srcset="assets/img/album-autumn-roses-480.webp 480w, assets/img/album-autumn-roses-800.webp 800w, assets/img/album-autumn-roses-1200.webp 1200w, assets/img/album-autumn-roses-1500.webp 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-autumn-roses-1500.jpg" srcset="assets/img/album-autumn-roses-480.jpg 480w, assets/img/album-autumn-roses-800.jpg 800w, assets/img/album-autumn-roses-1200.jpg 1200w, assets/img/album-autumn-roses-1500.jpg 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The last roses by the drive." width="1500" height="2000" loading="lazy" decoding="async" style="aspect-ratio:1500 / 2000;background-color:#484838">
+<img src="assets/img/album-autumn-roses-1500.jpg" srcset="assets/img/album-autumn-roses-480.jpg 480w, assets/img/album-autumn-roses-800.jpg 800w, assets/img/album-autumn-roses-1200.jpg 1200w, assets/img/album-autumn-roses-1500.jpg 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The last roses by the drive, still going when the leaves start." width="1500" height="2000" loading="lazy" decoding="async" style="aspect-ratio:1500 / 2000;background-color:#484838">
 </picture>
-<figcaption><span class="album-season">Autumn</span> The last roses by the drive.</figcaption>
+<figcaption><span class="album-season">Autumn</span> The last roses by the drive, still going when the leaves start.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="autumn">
 <picture>
 <source type="image/webp" srcset="assets/img/album-autumn-ridge-from-deck-480.webp 480w, assets/img/album-autumn-ridge-from-deck-800.webp 800w, assets/img/album-autumn-ridge-from-deck-1200.webp 1200w, assets/img/album-autumn-ridge-from-deck-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-autumn-ridge-from-deck-1600.jpg" srcset="assets/img/album-autumn-ridge-from-deck-480.jpg 480w, assets/img/album-autumn-ridge-from-deck-800.jpg 800w, assets/img/album-autumn-ridge-from-deck-1200.jpg 1200w, assets/img/album-autumn-ridge-from-deck-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The ridge from the deck, the week the colour peaks." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#f8f8f8">
+<img src="assets/img/album-autumn-ridge-from-deck-1600.jpg" srcset="assets/img/album-autumn-ridge-from-deck-480.jpg 480w, assets/img/album-autumn-ridge-from-deck-800.jpg 800w, assets/img/album-autumn-ridge-from-deck-1200.jpg 1200w, assets/img/album-autumn-ridge-from-deck-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Peak colour lasts about a week. You want to be home for it." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#f8f8f8">
 </picture>
-<figcaption><span class="album-season">Autumn</span> The ridge from the deck, the week the colour peaks.</figcaption>
+<figcaption><span class="album-season">Autumn</span> Peak colour lasts about a week. You want to be home for it.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="autumn">
 <picture>
 <source type="image/webp" srcset="assets/img/album-autumn-dusk-deck-480.webp 480w, assets/img/album-autumn-dusk-deck-800.webp 800w, assets/img/album-autumn-dusk-deck-1200.webp 1200w, assets/img/album-autumn-dusk-deck-1500.webp 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-autumn-dusk-deck-1500.jpg" srcset="assets/img/album-autumn-dusk-deck-480.jpg 480w, assets/img/album-autumn-dusk-deck-800.jpg 800w, assets/img/album-autumn-dusk-deck-1200.jpg 1200w, assets/img/album-autumn-dusk-deck-1500.jpg 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Dusk from the deck, the ridge going violet." width="1500" height="2000" loading="lazy" decoding="async" style="aspect-ratio:1500 / 2000;background-color:#f8d8b8">
+<img src="assets/img/album-autumn-dusk-deck-1500.jpg" srcset="assets/img/album-autumn-dusk-deck-480.jpg 480w, assets/img/album-autumn-dusk-deck-800.jpg 800w, assets/img/album-autumn-dusk-deck-1200.jpg 1200w, assets/img/album-autumn-dusk-deck-1500.jpg 1500w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="For ten minutes at dusk the ridge goes violet. Then it&#39;s gone." width="1500" height="2000" loading="lazy" decoding="async" style="aspect-ratio:1500 / 2000;background-color:#f8d8b8">
 </picture>
-<figcaption><span class="album-season">Autumn</span> Dusk from the deck, the ridge going violet.</figcaption>
+<figcaption><span class="album-season">Autumn</span> For ten minutes at dusk the ridge goes violet. Then it&#39;s gone.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile album-clip" data-group="autumn" data-clip="assets/album/view-from-the-roof.mp4">
+<button type="button" class="clip-play" aria-label="Play: From the roof, a slow pan round to the ridge.">
+<picture>
+<source type="image/webp" srcset="assets/img/album-view-from-the-roof-poster-480.webp 480w, assets/img/album-view-from-the-roof-poster-800.webp 800w, assets/img/album-view-from-the-roof-poster-1080.webp 1080w" sizes="(min-width: 64rem) 12rem, (min-width: 40rem) 25vw, 55vw">
+<img src="assets/img/album-view-from-the-roof-poster-1080.jpg" srcset="assets/img/album-view-from-the-roof-poster-480.jpg 480w, assets/img/album-view-from-the-roof-poster-800.jpg 800w, assets/img/album-view-from-the-roof-poster-1080.jpg 1080w" sizes="(min-width: 64rem) 12rem, (min-width: 40rem) 25vw, 55vw" alt="Clip: From the roof, a slow pan round to the ridge." width="1080" height="1920" loading="lazy" decoding="async" style="aspect-ratio:1080 / 1920;background-color:#181828">
+</picture>
+<span class="clip-glyph" aria-hidden="true"><svg viewBox="0 0 18 18" width="18" height="18"><path d="M5 3.5v11l9-5.5z" fill="currentColor"/></svg></span>
+<span class="clip-len" aria-hidden="true">0:22</span>
+</button>
+<figcaption><span class="album-season">Early November</span> From the roof, a slow pan round to the ridge.</figcaption>
+</figure>
+<figure class="album-tile" data-group="autumn">
 <picture>
 <source type="image/webp" srcset="assets/img/album-sunset-facing-ellett-480.webp 480w, assets/img/album-sunset-facing-ellett-800.webp 800w, assets/img/album-sunset-facing-ellett-1200.webp 1200w, assets/img/album-sunset-facing-ellett-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-sunset-facing-ellett-1600.jpg" srcset="assets/img/album-sunset-facing-ellett-480.jpg 480w, assets/img/album-sunset-facing-ellett-800.jpg 800w, assets/img/album-sunset-facing-ellett-1200.jpg 1200w, assets/img/album-sunset-facing-ellett-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Sunset from the deck, facing Ellett." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#181808">
+<img src="assets/img/album-sunset-facing-ellett-1600.jpg" srcset="assets/img/album-sunset-facing-ellett-480.jpg 480w, assets/img/album-sunset-facing-ellett-800.jpg 800w, assets/img/album-sunset-facing-ellett-1200.jpg 1200w, assets/img/album-sunset-facing-ellett-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The sky over Ellett on a good evening, from the deck." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#181808">
 </picture>
-<figcaption><span class="album-season">Late autumn</span> Sunset from the deck, facing Ellett.</figcaption>
+<figcaption><span class="album-season">Late autumn</span> The sky over Ellett on a good evening, from the deck.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="autumn">
 <picture>
 <source type="image/webp" srcset="assets/img/album-autumn-twilight-pumpkins-480.webp 480w, assets/img/album-autumn-twilight-pumpkins-800.webp 800w, assets/img/album-autumn-twilight-pumpkins-1200.webp 1200w, assets/img/album-autumn-twilight-pumpkins-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-autumn-twilight-pumpkins-1600.jpg" srcset="assets/img/album-autumn-twilight-pumpkins-480.jpg 480w, assets/img/album-autumn-twilight-pumpkins-800.jpg 800w, assets/img/album-autumn-twilight-pumpkins-1200.jpg 1200w, assets/img/album-autumn-twilight-pumpkins-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Twilight, pumpkins on the steps." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#080808">
+<img src="assets/img/album-autumn-twilight-pumpkins-1600.jpg" srcset="assets/img/album-autumn-twilight-pumpkins-480.jpg 480w, assets/img/album-autumn-twilight-pumpkins-800.jpg 800w, assets/img/album-autumn-twilight-pumpkins-1200.jpg 1200w, assets/img/album-autumn-twilight-pumpkins-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Pumpkins on the steps, lights on inside. The house at its most welcoming." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#080808">
 </picture>
-<figcaption><span class="album-season">Late autumn</span> Twilight, pumpkins on the steps.</figcaption>
+<figcaption><span class="album-season">Late autumn</span> Pumpkins on the steps, lights on inside. The house at its most welcoming.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="winter">
 <picture>
 <source type="image/webp" srcset="assets/img/album-winter-first-snow-480.webp 480w, assets/img/album-winter-first-snow-800.webp 800w, assets/img/album-winter-first-snow-1200.webp 1200w, assets/img/album-winter-first-snow-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-winter-first-snow-1600.jpg" srcset="assets/img/album-winter-first-snow-480.jpg 480w, assets/img/album-winter-first-snow-800.jpg 800w, assets/img/album-winter-first-snow-1200.jpg 1200w, assets/img/album-winter-first-snow-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="First snow, at sunrise." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#282818">
+<img src="assets/img/album-winter-first-snow-1600.jpg" srcset="assets/img/album-winter-first-snow-480.jpg 480w, assets/img/album-winter-first-snow-800.jpg 800w, assets/img/album-winter-first-snow-1200.jpg 1200w, assets/img/album-winter-first-snow-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="First snow, at sunrise, before anyone has walked on it." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#282818">
 </picture>
-<figcaption><span class="album-season">Winter</span> First snow, at sunrise.</figcaption>
+<figcaption><span class="album-season">Winter</span> First snow, at sunrise, before anyone has walked on it.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="winter">
 <picture>
 <source type="image/webp" srcset="assets/img/album-winter-sledding-480.webp 480w, assets/img/album-winter-sledding-800.webp 800w, assets/img/album-winter-sledding-1200.webp 1200w, assets/img/album-winter-sledding-1600.webp 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-winter-sledding-1600.jpg" srcset="assets/img/album-winter-sledding-480.jpg 480w, assets/img/album-winter-sledding-800.jpg 800w, assets/img/album-winter-sledding-1200.jpg 1200w, assets/img/album-winter-sledding-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="Sledding on the front lawn." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#080808">
+<img src="assets/img/album-winter-sledding-1600.jpg" srcset="assets/img/album-winter-sledding-480.jpg 480w, assets/img/album-winter-sledding-800.jpg 800w, assets/img/album-winter-sledding-1200.jpg 1200w, assets/img/album-winter-sledding-1600.jpg 1600w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The front lawn has exactly the right slope." width="1600" height="1200" loading="lazy" decoding="async" style="aspect-ratio:1600 / 1200;background-color:#080808">
 </picture>
-<figcaption><span class="album-season">Winter</span> Sledding on the front lawn.</figcaption>
+<figcaption><span class="album-season">Winter</span> The front lawn has exactly the right slope.</figcaption>
 </figure>
-<figure class="album-tile">
+<figure class="album-tile" data-group="winter">
 <picture>
 <source type="image/webp" srcset="assets/img/album-winter-christmas-480.webp 480w, assets/img/album-winter-christmas-800.webp 800w, assets/img/album-winter-christmas-1200.webp 1200w, assets/img/album-winter-christmas-1291.webp 1291w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw">
-<img src="assets/img/album-winter-christmas-1291.jpg" srcset="assets/img/album-winter-christmas-480.jpg 480w, assets/img/album-winter-christmas-800.jpg 800w, assets/img/album-winter-christmas-1200.jpg 1200w, assets/img/album-winter-christmas-1291.jpg 1291w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The tree, with snow outside the big window." width="1291" height="1721" loading="lazy" decoding="async" style="aspect-ratio:1291 / 1721;background-color:#886838">
+<img src="assets/img/album-winter-christmas-1291.jpg" srcset="assets/img/album-winter-christmas-480.jpg 480w, assets/img/album-winter-christmas-800.jpg 800w, assets/img/album-winter-christmas-1200.jpg 1200w, assets/img/album-winter-christmas-1291.jpg 1291w" sizes="(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw" alt="The big window earns its keep in December." width="1291" height="1721" loading="lazy" decoding="async" style="aspect-ratio:1291 / 1721;background-color:#886838">
 </picture>
-<figcaption><span class="album-season">December</span> The tree, with snow outside the big window.</figcaption>
+<figcaption><span class="album-season">December</span> The big window earns its keep in December.</figcaption>
+</figure>
+<figure class="album-tile album-clip" data-group="" data-clip="assets/album/a-year-on-cedarview-drive.mp4">
+<button type="button" class="clip-play" aria-label="Play: The whole year, in fourteen moments.">
+<picture>
+<source type="image/webp" srcset="assets/img/album-a-year-on-cedarview-drive-poster-480.webp 480w, assets/img/album-a-year-on-cedarview-drive-poster-800.webp 800w, assets/img/album-a-year-on-cedarview-drive-poster-1080.webp 1080w" sizes="(min-width: 64rem) 12rem, (min-width: 40rem) 25vw, 55vw">
+<img src="assets/img/album-a-year-on-cedarview-drive-poster-1080.jpg" srcset="assets/img/album-a-year-on-cedarview-drive-poster-480.jpg 480w, assets/img/album-a-year-on-cedarview-drive-poster-800.jpg 800w, assets/img/album-a-year-on-cedarview-drive-poster-1080.jpg 1080w" sizes="(min-width: 64rem) 12rem, (min-width: 40rem) 25vw, 55vw" alt="Clip: The whole year, in fourteen moments." width="1080" height="1920" loading="lazy" decoding="async" style="aspect-ratio:1080 / 1920;background-color:#283828">
+</picture>
+<span class="clip-glyph" aria-hidden="true"><svg viewBox="0 0 18 18" width="18" height="18"><path d="M5 3.5v11l9-5.5z" fill="currentColor"/></svg></span>
+<span class="clip-len" aria-hidden="true">0:42</span>
+</button>
+<figcaption><span class="album-season">The year</span> The whole year, in fourteen moments.</figcaption>
 </figure>
 </div>
+<p class="album-count muted small">19 photographs and 2 clips, in the order of the year. New ones join where they belong in the season, not at the end.</p>
 </div>
 </div>
 </section>

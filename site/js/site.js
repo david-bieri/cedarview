@@ -3,7 +3,8 @@
       button and closes after a choice; on wide screens it is always open (no JS needed).
    2. Sticky showing bar: shown once the hero has scrolled out of view, hidden again while
       the Visit section (which carries the same contact details) is on screen.
-   3. 3D tour: the Matterport iframe is created only when "Start the 3D tour" is pressed.
+   3. Album: season tabs filter the strip; pressing a clip card swaps its poster for the video.
+   4. 3D tour: the Matterport iframe is created only when "Start the 3D tour" is pressed.
       Until then the visitor sees a still of the house. A browser without WebGL would only
       get a black canvas, so there the button is replaced by a note and the direct link. */
 (function () {
@@ -48,26 +49,36 @@
   document.addEventListener('pause', stopped, true);
   document.addEventListener('ended', stopped, true);
 
-  // ----- reels: an earlier poster swaps its clip into the stage -----
-  var reelData = document.getElementById('reel-data');
-  var reelVideo = document.getElementById('reel-video');
-  if (reelData && reelVideo) {
-    var reels = [];
-    try { reels = JSON.parse(reelData.textContent); } catch (e) { reels = []; }
-    document.addEventListener('click', function (e) {
-      var btn = e.target.closest && e.target.closest('.reel-thumb[data-reel]');
+  // ----- the album: season tabs filter the strip; a clip card plays in place -----
+  var strip = document.getElementById('album-strip');
+  if (strip) {
+    var tabs = document.querySelectorAll('.album-tabs button[data-season]');
+    for (var t = 0; t < tabs.length; t++) {
+      tabs[t].addEventListener('click', function () {
+        var season = this.getAttribute('data-season');
+        for (var i = 0; i < tabs.length; i++) tabs[i].setAttribute('aria-pressed', String(tabs[i] === this));
+        var tiles = strip.querySelectorAll('.album-tile');
+        for (var j = 0; j < tiles.length; j++) tiles[j].hidden = Boolean(season) && tiles[j].getAttribute('data-group') !== season;
+        strip.scrollTo({ left: 0, behavior: 'smooth' });
+      });
+    }
+    strip.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.clip-play');
       if (!btn) return;
-      var r = reels[parseInt(btn.getAttribute('data-reel'), 10)];
-      if (!r) return;
-      reelVideo.pause();
-      if (r.poster) reelVideo.poster = r.poster; else reelVideo.removeAttribute('poster');
-      reelVideo.querySelector('source').src = r.src;
-      reelVideo.load();
-      var cap = document.getElementById('reel-cap'), date = document.getElementById('reel-date');
-      if (cap) cap.textContent = r.caption || '';
-      if (date) date.textContent = r.date || '';
-      reelVideo.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-      reelVideo.play().catch(function () {});
+      var fig = btn.closest('.album-clip');
+      var src = fig && fig.getAttribute('data-clip');
+      if (!src) return;
+      var v = document.createElement('video');
+      v.controls = true; v.playsInline = true; v.preload = 'auto';
+      v.setAttribute('playsinline', '');
+      v.setAttribute('aria-label', btn.getAttribute('aria-label') || '');
+      var img = btn.querySelector('img');
+      if (img && img.currentSrc) v.poster = img.currentSrc;
+      var source = document.createElement('source');
+      source.src = src; source.type = 'video/mp4';
+      v.appendChild(source);
+      btn.replaceWith(v);
+      v.play().catch(function () {});
     });
   }
 

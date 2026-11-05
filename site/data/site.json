@@ -136,7 +136,8 @@
       "walkthroughPoster": "assets/video/reels/walkthrough.jpg",
       "walkthroughHeading": "Walk through",
       "walkthroughCaption": "One minute, drive to deck. Video: Brian Sowers Photography.",
-      "_walkthrough": "Full-width figure directly under At a glance, shown once (not repeated in the reels). Brian shot the fly-through vertically (confirmed 4 Nov 2026), so there is no 16:9 version: the vertical cut is centred in a 16:9 stage over a blurred copy of its poster on wide screens and fills the width on phones. landscapeWalkthrough/landscapePoster are only honoured if such a file ever exists. Sound on by default (it carries music) with the browser's own controls."
+      "_walkthrough": "Full-width figure directly under At a glance, shown once (not repeated in the reels). Brian shot the fly-through vertically (confirmed 4 Nov 2026), so there is no 16:9 version: the vertical cut is centred in a 16:9 stage over a blurred copy of its poster on wide screens and fills the width on phones. landscapeWalkthrough/landscapePoster are only honoured if such a file ever exists. Sound on by default (it carries music) with the browser's own controls.",
+      "maxBytes": 20000000
     },
     "exterior": {
       "brick": "Natural white brick with cedar siding on the upper storey",
@@ -276,30 +277,8 @@
       "_clipsNote": "Optional one-line note under the view paragraphs. Left empty on purpose: the sun sets behind the trees in November, so no daily-sunset promise; the reels block speaks for itself.",
       "video": "assets/video/view-from-the-roof.mp4",
       "videoPoster": "assets/img/view-south-1200.jpg",
-      "reels": {
-        "heading": "Lately",
-        "intro": "Short clips from the house, added while the listing is live. The same clips go out on Instagram and TikTok.",
-        "earlierLabel": "Earlier",
-        "dir": "assets/video/reels",
-        "maxBytes": 20000000,
-        "_note": "Each reel: a 9:16 H.264 MP4 (1080x1920, 15-30 s, muted, captions burned in) under 15 MB in assets/video/reels/, with a JPEG poster of the same name. Newest first; the page shows the newest large and up to six earlier posters. The photographer's fly-through lives under At a glance, not here. Nothing renders until the first item is here and its file exists. Types: sunset (fixed tripod spot on the deck, time-lapse), walk-from-the-door (front door to the pool gate, 4x, real minutes in the caption), room-at-its-hour (10 s static, breakfast room at 7:30, living room at 4 pm).",
-        "items": [
-          {
-            "file": "view-from-the-roof",
-            "caption": "The view from the roof, early November — a slow pan to the ridge.",
-            "date": "2026-11-03",
-            "type": "view"
-          },
-          {
-            "file": "a-year-on-cedarview-drive",
-            "caption": "A year on Cedarview Drive — fourteen moments from the owners' album.",
-            "date": "2026-11-03",
-            "type": "album"
-          }
-        ]
-      },
       "videoCaption": "A slow pan from the roof across the autumn canopy to the ridge, early November 2026. From the owners' album.",
-      "_video": "The landscape clip plays full-bleed with the first view photo as poster. Replace with a drone reveal when there is one; the pan then belongs in the reels."
+      "_video": "The landscape clip plays full-bleed with the first view photo as poster. Short owner clips go in the album strip (assets/album/album.txt), not in a separate block."
     },
     "blacksburg": {
       "heading": "Life in Blacksburg",
@@ -906,126 +885,12 @@
   },
   "album": {
     "heading": "A year on Cedarview Drive",
-    "intro": "From the owners' album: the same places through the seasons, on a phone, not the photographer's camera.",
+    "intro": "From the owners' album: the same places through the seasons, on a phone, not the photographer's camera. A few short clips sit where they fall in the year.",
     "label": "From the owners' album",
     "dir": "assets/album",
+    "list": "album.txt",
     "manifest": "assets/img/album-manifest.json",
-    "_note": "Drop phone photos into assets/album/ and list them here (file is the name without extension). The build sizes them, burns the label on every rendition and writes the manifest; the strip appears under The View once at least one listed file exists. No faces of children; nothing that dates the house.",
-    "items": [
-      {
-        "file": "spring-cherry",
-        "season": "Spring",
-        "caption": "The cherry in front of the house, the week it blooms.",
-        "source": "IMG_5118"
-      },
-      {
-        "file": "spring-blossom",
-        "season": "Spring",
-        "caption": "Blossom against a blue sky.",
-        "source": "IMG_5135"
-      },
-      {
-        "file": "spring-azaleas-house",
-        "season": "Late April",
-        "caption": "The house the week the azaleas come out.",
-        "source": "IMG_7139"
-      },
-      {
-        "file": "spring-rhododendron",
-        "season": "Early May",
-        "caption": "The rhododendron by the drive.",
-        "source": "IMG_7306"
-      },
-      {
-        "file": "summer-hydrangeas",
-        "season": "Early summer",
-        "caption": "Hydrangeas.",
-        "source": "IMG_5115"
-      },
-      {
-        "file": "summer-garden-evening",
-        "season": "Summer",
-        "caption": "A summer evening in the garden, seen from upstairs.",
-        "source": "IMG_5109"
-      },
-      {
-        "file": "summer-fire-pit",
-        "season": "Summer",
-        "caption": "S'mores at the fire pit.",
-        "source": "IMG_5137"
-      },
-      {
-        "file": "hammock-woodpile",
-        "season": "Autumn",
-        "caption": "The hammock, the woodpile and the picnic table under the pines.",
-        "source": "IMG_5161"
-      },
-      {
-        "file": "kitchen-board",
-        "season": "Any Saturday",
-        "caption": "A board on the kitchen granite.",
-        "source": "IMG_5133"
-      },
-      {
-        "file": "porch-set",
-        "season": "Summer",
-        "caption": "The screened porch, set for guests.",
-        "source": "IMG_5140"
-      },
-      {
-        "file": "september-lawn",
-        "season": "September",
-        "caption": "The back lawn, set for a gathering.",
-        "source": "IMG_0637"
-      },
-      {
-        "file": "autumn-roses",
-        "season": "Autumn",
-        "caption": "The last roses by the drive.",
-        "source": "IMG_5136"
-      },
-      {
-        "file": "autumn-ridge-from-deck",
-        "season": "Autumn",
-        "caption": "The ridge from the deck, the week the colour peaks.",
-        "source": "IMG_5160"
-      },
-      {
-        "file": "autumn-dusk-deck",
-        "season": "Autumn",
-        "caption": "Dusk from the deck, the ridge going violet.",
-        "source": "IMG_5134"
-      },
-      {
-        "file": "sunset-facing-ellett",
-        "season": "Late autumn",
-        "caption": "Sunset from the deck, facing Ellett.",
-        "source": "IMG_5111"
-      },
-      {
-        "file": "autumn-twilight-pumpkins",
-        "season": "Late autumn",
-        "caption": "Twilight, pumpkins on the steps.",
-        "source": "IMG_1318"
-      },
-      {
-        "file": "winter-first-snow",
-        "season": "Winter",
-        "caption": "First snow, at sunrise.",
-        "source": "IMG_5125"
-      },
-      {
-        "file": "winter-sledding",
-        "season": "Winter",
-        "caption": "Sledding on the front lawn.",
-        "source": "IMG_5132"
-      },
-      {
-        "file": "winter-christmas",
-        "season": "December",
-        "caption": "The tree, with snow outside the big window.",
-        "source": "IMG_5124"
-      }
-    ]
+    "outro": "New ones join where they belong in the season, not at the end.",
+    "_note": "Everything about the strip is in assets/album/album.txt (file | season | caption), one line per photo or clip, in page order. Drop a file in the folder, add a line, rebuild. The build burns the label on every photo rendition; clips (.mp4 + .jpg poster) are unlabelled. No faces of children; nothing that dates the house."
   }
 }

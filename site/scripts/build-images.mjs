@@ -265,6 +265,7 @@ const keep = new Set(entries.flatMap((e) => [
 ].map((s) => path.basename(s.src))));
 let removed = 0;
 for (const f of await fs.readdir(OUT_DIR)) {
+  if (f.startsWith('album-')) continue; // album-* renditions belong to build-album.mjs
   if (/-\d+\.(webp|jpg)$/.test(f) && !keep.has(f)) { await fs.unlink(path.join(OUT_DIR, f)); removed++; }
 }
 

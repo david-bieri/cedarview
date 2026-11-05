@@ -366,60 +366,54 @@ ${(S.view.clipsNote && (site.listingLive || REVIEW)) ? `<p class="band-note">${t
 </div>
 </div>
 <div class="wrap">
-${gallery(viewImgs.slice(1), 'view-gallery', { cls: 'gallery-row', sizes: ROW_SIZES })}
-${await reelsBlock()}
 ${await albumBlock()}
 </div>
 </section>`;
 
-// Reels: newest clip large (9:16, muted, poster), up to six earlier posters that swap it in. Nothing until the first exists.
-async function reelsBlock() {
-  const R = S.view.reels;
-  if (!R) return '';
-  const items = [];
-  for (const it of R.items || []) {
-    const file = `${R.dir}/${it.file}.mp4`, poster = `${R.dir}/${it.file}.jpg`;
-    if (!(await exists(file))) { omit(`Reel "${it.file}" (file missing)`); continue; }
-    items.push({ ...it, src: file, poster: (await exists(poster)) ? poster : null });
-  }
-  if (!items.length) { omit('Reels (none yet)'); return ''; }
-  items.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
-  const [first, ...rest] = items;
-  const dateFmt = (d) => (d ? new Date(`${d}T12:00:00`).toLocaleDateString(site.language, { day: 'numeric', month: 'long', year: 'numeric' }) : '');
-  const reelData = items.map((it) => ({ src: it.src, poster: it.poster, caption: it.caption, date: dateFmt(it.date) }));
-  return `<div class="reels" id="reels">
-<h3 class="sub">${esc(R.heading)}</h3>
-${p(esc(R.intro))}
-<div class="reel-stage">
-<video id="reel-video" class="reel" controls muted playsinline preload="none"${first.poster ? ` poster="${attr(first.poster)}"` : ''} width="1080" height="1920">
-<source src="${attr(first.src)}" type="video/mp4">
-</video>
-<p class="reel-cap"><span id="reel-cap">${esc(first.caption || '')}</span> <span class="muted" id="reel-date">${esc(dateFmt(first.date))}</span></p>
-</div>
-${rest.length ? `<h4 class="reel-earlier">${esc(R.earlierLabel || 'Earlier')}</h4>
-<div class="reel-row">
-${rest.slice(0, 6).map((it, i) => `<button type="button" class="reel-thumb" data-reel="${i + 1}" aria-label="${attr(`Play: ${it.caption || it.file}`)}">${it.poster ? `<img src="${attr(it.poster)}" alt="" loading="lazy" decoding="async" width="270" height="480">` : `<span class="reel-noposter"></span>`}<span>${esc(dateFmt(it.date))}</span></button>`).join('\n')}
-</div>` : ''}
-<script type="application/json" id="reel-data">${JSON.stringify(reelData).replace(/</g, '\\u003c')}</script>
-</div>`;
-}
-
-// The owners' album: a strip of phone photos, each carrying the album label burned on by scripts/build-album.mjs.
+// The owners' album: one strip for the whole year, photos and short clips together, in the order of
+// assets/album/album.txt. Season tabs filter it (js/site.js); a clip card plays in place when pressed.
 async function albumBlock() {
   const AL = data.album;
   if (!AL) return '';
   const man = (await exists(AL.manifest)) ? JSON.parse(await fs.readFile(path.join(ROOT, AL.manifest), 'utf8')) : [];
-  if (!man.length) { omit('Album photos (none yet)'); return ''; }
-  const cards = man.map((img) => `<figure class="album-tile">
-${picture(img, { sizes: '(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw' })}
-<figcaption>${img.season ? `<span class="album-season">${esc(img.season)}</span> ` : ''}${esc(img.caption)}</figcaption>
-</figure>`).join('\n');
+  if (!man.length) { omit('Album (none yet)'); return ''; }
+  const photos = man.filter((m) => m.type !== 'clip').length, clips = man.length - photos;
+  const groups = ['spring', 'summer', 'autumn', 'winter'].filter((g) => man.some((m) => m.group === g));
+  const tabLabel = { spring: 'Spring', summer: 'Summer', autumn: 'Autumn', winter: 'Winter' };
+  const mmss = (sec) => (sec ? `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}` : '');
+  const cards = man.map((it) => {
+    const season = it.season ? `<span class="album-season">${esc(it.season)}</span> ` : '';
+    if (it.type === 'clip') {
+      return `<figure class="album-tile album-clip" data-group="${attr(it.group || '')}" data-clip="${attr(it.src)}">
+<button type="button" class="clip-play" aria-label="${attr(`Play: ${it.caption}`)}">
+${picture(it, { sizes: '(min-width: 64rem) 12rem, (min-width: 40rem) 25vw, 55vw' })}
+<span class="clip-glyph" aria-hidden="true"><svg viewBox="0 0 18 18" width="18" height="18"><path d="M5 3.5v11l9-5.5z" fill="currentColor"/></svg></span>
+${it.seconds ? `<span class="clip-len" aria-hidden="true">${mmss(it.seconds)}</span>` : ''}
+</button>
+<figcaption>${season}${esc(it.caption)}</figcaption>
+</figure>`;
+    }
+    return `<figure class="album-tile" data-group="${attr(it.group || '')}">
+${picture(it, { sizes: '(min-width: 64rem) 18rem, (min-width: 40rem) 33vw, 80vw' })}
+<figcaption>${season}${esc(it.caption)}</figcaption>
+</figure>`;
+  }).join('\n');
+  const count = `${photos} photograph${photos === 1 ? '' : 's'}${clips ? ` and ${clips} clip${clips === 1 ? '' : 's'}` : ''}`;
   return `<div class="album" id="album">
+<div class="album-head">
+<div>
 <h3 class="sub">${esc(AL.heading)}</h3>
 ${p(esc(AL.intro))}
-<div class="album-strip">
+</div>
+${groups.length > 1 ? `<nav class="album-tabs" aria-label="Season">
+<button type="button" data-season="" aria-pressed="true">All</button>
+${groups.map((g) => `<button type="button" data-season="${g}" aria-pressed="false">${tabLabel[g]}</button>`).join('\n')}
+</nav>` : ''}
+</div>
+<div class="album-strip" id="album-strip">
 ${cards}
 </div>
+<p class="album-count muted small">${count}, in the order of the year.${AL.outro ? ` ${esc(AL.outro)}` : ''}</p>
 </div>`;
 }
 
