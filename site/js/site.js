@@ -25,13 +25,20 @@
     });
   }
 
-  // ----- sticky showing bar -----
+  // ----- sticky showing bar, and the pinned section bar on phones -----
   var bar = document.getElementById('cta-bar');
   var hero = document.querySelector('.hero');
+  var topnav = document.querySelector('.topnav');
   var visit = document.getElementById('visit');
   if (bar && hero && 'IntersectionObserver' in window) {
     var heroGone = false, visitShown = false;
-    var update = function () { bar.hidden = !(heroGone && !visitShown); };
+    var update = function () {
+      bar.hidden = !(heroGone && !visitShown);
+      if (topnav) {
+        topnav.classList.toggle('pinned', heroGone);
+        if (!heroGone && menu && !wide.matches) menu.open = false; // back at the hero: fold the menu away
+      }
+    };
     new IntersectionObserver(function (entries) {
       heroGone = !entries[0].isIntersecting; update();
     }, { rootMargin: '-25% 0px 0px 0px' }).observe(hero);

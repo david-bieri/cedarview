@@ -170,7 +170,9 @@ const navItems = [
   ['view', S.view.heading],
   ['visit', S.visit.heading],
 ];
+// The footer repeats every section, so the end of the page is a second way to any part of it.
 const footerNav = [
+  ...navItems,
   ['updates', S.updates.heading],
   ['blacksburg', S.blacksburg.heading],
   ...(letterReady ? [['letter', S.ownersLetter.heading]] : []),
