@@ -128,7 +128,7 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 /* gallery: square tiles, lead tile 2×2 on wide screens */
 .gallery { display: grid; gap: .6rem; grid-template-columns: repeat(2, 1fr); margin: 1rem 0 0; }
 .gallery-row { grid-template-columns: 1fr; }
-@media (max-width: 39.99rem) { .tile[data-pair] { grid-column: 1 / -1; } .tile[data-pair] img { aspect-ratio: 3 / 2 !important; } }
+@media (max-width: 39.99rem) { .tile[data-pair] { grid-column: 1 / -1; } .tile[data-pair] img { aspect-ratio: 4 / 3 !important; } }
 @media (min-width: 40rem) { .gallery, .gallery-row { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 64rem) {
   .gallery { grid-template-columns: repeat(4, 1fr); }
@@ -139,7 +139,7 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 .tile-btn { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; border-radius: .25rem; overflow: hidden; }
 .tile picture, .tile img { display: block; width: 100%; }
 .tile img { aspect-ratio: 1 / 1 !important; object-fit: cover; transition: transform .4s; }
-.gallery-row .tile img { aspect-ratio: 3 / 2 !important; }
+.gallery-row .tile img { aspect-ratio: 4 / 3 !important; }
 .tile-btn:hover img { transform: scale(1.03); }
 .tile figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem; padding: .4rem 0 0; font-size: .85rem; color: var(--muted); }
 /* the staged word in a caption, and the one-link flip per pair; the disclosure itself is burned into the file */
@@ -170,10 +170,17 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 .plans a { min-height: 2.75rem; display: inline-flex; align-items: center; }
 .plan-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); margin-top: 1rem; }
 @media (min-width: 40rem) { .plan-grid { grid-template-columns: repeat(4, 1fr); } }
-.plan-thumb { display: grid; gap: .4rem; padding: 0; border: 0; background: none; font: inherit; font-size: .9rem; color: var(--cobalt); text-align: left; cursor: pointer; }
+.plan-cell { display: grid; gap: .4rem; font-size: .9rem; }
+.plan-img { position: relative; }
+.plan-thumb { display: block; width: 100%; padding: 0; border: 0; background: none; font: inherit; cursor: pointer; }
 .plan-thumb picture, .plan-thumb img { display: block; width: 100%; border: 1px solid var(--rule); border-radius: .25rem; background: var(--creamDeep); }
 .plan-thumb:hover img { border-color: var(--cobalt); }
-.plan-thumb span { text-decoration: underline; text-underline-offset: .15em; }
+.plan-label { color: var(--cobalt); text-decoration: underline; text-underline-offset: .15em; }
+/* closer-look pins: a cobalt number on the plan thumbnail (links to its tile) and on the tile itself */
+.pin { display: inline-flex; align-items: center; justify-content: center; width: 1.6rem; height: 1.6rem; border-radius: 999px; background: var(--cobalt); color: var(--cream); font-family: var(--display); font-size: .95rem; line-height: 1; text-decoration: none; box-shadow: 0 0 0 2px var(--cream); }
+.pin-plan { position: absolute; transform: translate(-50%, -50%); }
+.pin-plan:hover, .pin-plan:focus-visible { background: var(--cobaltDeep); color: var(--cream); }
+.pin-tile { position: absolute; left: .75rem; top: .75rem; width: 1.9rem; height: 1.9rem; font-size: 1.05rem; box-shadow: 0 0 0 3px var(--cream); pointer-events: none; }
 .plans .sep { color: var(--muted); }
 
 /* nearby places: groups by how you get there, minutes with a mode glyph */
@@ -248,18 +255,36 @@ p { margin: 0 0 1rem; max-width: var(--measure); }
 @media (prefers-reduced-motion: reduce) { .album-tile { transform: none; } }
 .sub-tight { margin-top: 1.5rem; font-size: 1.25rem; }
 
-/* updates table */
-.updates { width: 100%; max-width: 60rem; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .95rem; }
-.updates th { text-align: left; font-weight: 500; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding: 0 .75rem .6rem 0; border-bottom: 1px solid var(--oak); }
-.updates td { padding: .85rem .75rem .85rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
-.updates td:first-child { font-family: var(--display); font-weight: 400; font-size: 1.1rem; white-space: nowrap; }
-@media (max-width: 39.99rem) {
-  .updates thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .updates tr { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; padding: .85rem 0; border-bottom: 1px solid var(--rule); }
-  .updates td { display: block; padding: .15rem 0; border: 0; }
-  .updates td:nth-child(-n+2) { grid-column: 1 / -1; }
-  .updates td:nth-child(n+3)::before { content: attr(data-th); display: block; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-}
+/* updates: ruled groups by area, the date at the right edge; the night-light kitchen beside them on wide screens */
+.updates-split { display: grid; gap: 2rem; margin-top: .5rem; }
+.updates-grid { display: grid; gap: 1.25rem 3rem; }
+.ugroup-h { font-size: 1.25rem; margin: 0 0 .15rem; padding-bottom: .4rem; border-bottom: 1px solid var(--oak); }
+.ulist { list-style: none; margin: 0; padding: 0; }
+.ulist li { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--rule); font-size: .98rem; line-height: 1.4; }
+.ulist li:last-child { border-bottom: 0; }
+.uwhen { font-family: var(--display); color: var(--muted); white-space: nowrap; }
+.updates-photo { margin: 0; display: grid; gap: .5rem; align-content: start; }
+.updates-photo .tile-btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; border-radius: .25rem; overflow: hidden; }
+.updates-photo img { display: block; width: 100%; }
+.updates-photo figcaption { font-size: .9rem; color: var(--muted); }
+.updates-foot { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; margin-top: 1.5rem; }
+@media (min-width: 40rem) { .updates-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 64rem) { .updates-split { grid-template-columns: 1fr 24rem; gap: 3.5rem; align-items: start; } }
+
+/* worth a closer look: numbered photo tiles */
+.sub-line { font-family: var(--display); font-style: italic; font-weight: 300; font-size: 1.25rem; color: var(--muted); margin: -1rem 0 1.25rem; }
+.closer-grid { display: grid; gap: 2rem 1.75rem; margin-top: .5rem; }
+.closer-tile { margin: 0; display: grid; gap: .6rem; align-content: start; }
+.closer-media { position: relative; }
+.closer-media .tile-btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; border-radius: .25rem; overflow: hidden; }
+.closer-media img { display: block; width: 100%; aspect-ratio: 4 / 3 !important; object-fit: cover; }
+.closer-placeholder { aspect-ratio: 4 / 3; border: 1px dashed var(--oak); border-radius: .25rem; background: var(--creamDeep); display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; font-size: .9rem; color: var(--muted); }
+.closer-tile figcaption { display: grid; gap: .2rem; }
+.closer-tile strong { font-family: var(--display); font-weight: 400; font-size: 1.3rem; }
+.closer-tile figcaption span { font-size: .92rem; line-height: 1.5; color: var(--muted); }
+.closer-tile .pin, .plan-img .pin { color: var(--cream); }
+@media (min-width: 40rem) { .closer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { .closer-grid { grid-template-columns: repeat(3, 1fr); } }
 
 /* tour: a still of the house with a Start button; the iframe is created on demand (js/site.js) */
 .tour-frame { position: relative; margin: 0 0 1.5rem; border-radius: .4rem; overflow: hidden; background: var(--ridge); }

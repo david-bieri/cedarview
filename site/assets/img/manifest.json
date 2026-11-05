@@ -3163,5 +3163,107 @@
       ]
     },
     "group": "upper"
+  },
+  {
+    "name": "lower-level-alcove",
+    "alt": "The reading alcove in the largest lower-level bedroom, with its own window onto the garden",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1536,
+    "height": 2048,
+    "aspect": 0.75,
+    "color": "#686868",
+    "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBQCdASoYACAAPxF2slGsJySiqA1RgCIJQBlWiLw/DpiXDWm3uVBbVibFWpbBITvAAPqMge9+FxPr+W3b88w8ostPdVNqxYX4ynjP/FfeXCs/XY9+y2ws3KGkKE5p5wsMCthxI4ImhOLBXQoYgAAA",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-alcove-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-alcove-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-alcove-1200.webp"
+        },
+        {
+          "w": 1536,
+          "src": "assets/img/lower-level-alcove-1536.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-alcove-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-alcove-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-alcove-1200.jpg"
+        },
+        {
+          "w": 1536,
+          "src": "assets/img/lower-level-alcove-1536.jpg"
+        }
+      ]
+    },
+    "group": "lower"
+  },
+  {
+    "name": "lower-level-alcove-inside",
+    "alt": "Inside the reading alcove, freshly painted, with a ceiling light",
+    "caption": "",
+    "staged": false,
+    "variant": "photo",
+    "width": 1536,
+    "height": 2048,
+    "aspect": 0.75,
+    "color": "#989898",
+    "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwBACdASoYACAAPxFwtFAsJiUisBgMAYAiCWkAAOul08ipMFgHYxz+spT76p0AAP6NHtSI1WFcSmBfFn4JMd61Rt6lEFlQn32aI8D07iAAAA==",
+    "sources": {
+      "webp": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-alcove-inside-480.webp"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-alcove-inside-800.webp"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-alcove-inside-1200.webp"
+        },
+        {
+          "w": 1536,
+          "src": "assets/img/lower-level-alcove-inside-1536.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 480,
+          "src": "assets/img/lower-level-alcove-inside-480.jpg"
+        },
+        {
+          "w": 800,
+          "src": "assets/img/lower-level-alcove-inside-800.jpg"
+        },
+        {
+          "w": 1200,
+          "src": "assets/img/lower-level-alcove-inside-1200.jpg"
+        },
+        {
+          "w": 1536,
+          "src": "assets/img/lower-level-alcove-inside-1536.jpg"
+        }
+      ]
+    },
+    "group": "lower"
   }
 ]
